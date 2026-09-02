@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-02",
+   "id": "1124679",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 3.0 - “What makes a good friend?"
+  },
+  {
    "date": "2026-09-01",
    "id": "1124453",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-02"
+ "fetchedAt": "2026-09-03"
 }

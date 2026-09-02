@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-02",
+   "id": "1124676",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Melody Keung - Taikoo Sugar 150th Anniversary",
+    "Kan Pang - Getting Transport Right"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-01",
    "id": "1124450",
    "parts": [
@@ -12,5 +23,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-02"
+ "fetchedAt": "2026-09-03"
 }
