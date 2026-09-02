@@ -1,0 +1,37 @@
+{
+ "episodes": [
+  {
+   "date": "2026-07-25",
+   "id": "1116542",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "World Artificial Intelligence Conference (WAIC)"
+  },
+  {
+   "date": "2026-07-18",
+   "id": "1115164",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Sino-European ties"
+  },
+  {
+   "date": "2026-07-11",
+   "id": "1112865",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Biotech and healthcare development"
+  },
+  {
+   "date": "2026-07-04",
+   "id": "1111668",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Development of the attention economy"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}

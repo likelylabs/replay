@@ -1,0 +1,49 @@
+{
+ "episodes": [
+  {
+   "date": "2026-02-22",
+   "id": "1072800",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "PUCCINI: Turandot 浦契尼: 杜蘭朵"
+  },
+  {
+   "date": "2026-02-15",
+   "id": "1072799",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "MEYERBEER: Les Huguenots 邁耶貝爾: 胡格諾教徒"
+  },
+  {
+   "date": "2026-02-08",
+   "id": "1072798",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "VERDI: Un ballo in maschera 威爾第: 假面舞會"
+  },
+  {
+   "date": "2026-02-01",
+   "id": "1062538",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "ROSSINI: La cenerentola 羅西尼: 灰姑娘"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}

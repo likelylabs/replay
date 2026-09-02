@@ -1,0 +1,49 @@
+{
+ "episodes": [
+  {
+   "date": "2026-04-26",
+   "id": "1087795",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "VERDI: La traviata 威爾第: 茶花女"
+  },
+  {
+   "date": "2026-04-19",
+   "id": "1087794",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "PONCHIELLI:La Gioconda"
+  },
+  {
+   "date": "2026-04-12",
+   "id": "1087793",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "DONIZETTI:Don Pasquale"
+  },
+  {
+   "date": "2026-04-05",
+   "id": "1087792",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "PUCCINI: Madama Butterfly"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}

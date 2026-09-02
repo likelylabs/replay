@@ -1,0 +1,49 @@
+{
+ "episodes": [
+  {
+   "date": "2026-06-28",
+   "id": "1102873",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "GOUNOD: Roméo et Juliette 古諾: 羅密歐與朱麗葉"
+  },
+  {
+   "date": "2026-06-21",
+   "id": "1102871",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "PUCCINI: Manon Lescaut  浦契尼: 曼儂．雷斯高"
+  },
+  {
+   "date": "2026-06-14",
+   "id": "1102870",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "GIORDANO: Andrea Chénier 佐丹奴: 安德里亞．尚尼耶"
+  },
+  {
+   "date": "2026-06-07",
+   "id": "1102869",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "WAGNER: Die fliegende Holländer  華格納: 漂泊的荷蘭人"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}

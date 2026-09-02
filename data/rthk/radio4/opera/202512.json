@@ -1,0 +1,49 @@
+{
+ "episodes": [
+  {
+   "date": "2025-12-28",
+   "id": "1058227",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "PUCCINI:La bohème 波希米亞的生涯"
+  },
+  {
+   "date": "2025-12-21",
+   "id": "1058226",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "LEHÁR: Die lustige Witwe 里夏: 風流寡婦"
+  },
+  {
+   "date": "2025-12-14",
+   "id": "1058225",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "VERDI: Falstaff 威爾第: 法斯塔夫"
+  },
+  {
+   "date": "2025-12-07",
+   "id": "1058224",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "DONIZETTI: Lucia di Lammermoor 唐尼采第: 嵐嶺痴盟"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}

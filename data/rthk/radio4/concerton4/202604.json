@@ -1,0 +1,171 @@
+{
+ "episodes": [
+  {
+   "date": "2026-04-30",
+   "id": "1087783",
+   "title": "Auckland Philharmonia: Bellincampi & Brahms"
+  },
+  {
+   "date": "2026-04-29",
+   "id": "1087781",
+   "title": "Orchestra dell’Accademia Nazionale di Santa Cecilia: Daniele Gatti conducts Wagner and Strauss"
+  },
+  {
+   "date": "2026-04-28",
+   "id": "1087780",
+   "title": "Mirror of Mirrors: Spectra and Julien Libeer"
+  },
+  {
+   "date": "2026-04-27",
+   "id": "1087778",
+   "title": "Berlin Philharmonic: François-Xavier Roth conducts The Rite of Spring"
+  },
+  {
+   "date": "2026-04-25",
+   "id": "1087775",
+   "title": "Polish Radio Choir - Lusławice: Ein deutsches Requiem"
+  },
+  {
+   "date": "2026-04-24",
+   "id": "1087785",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "A Musical Connection: Shanghai and Hong Kong in Unison Jazz Party Night"
+  },
+  {
+   "date": "2026-04-23",
+   "id": "1087770",
+   "title": "Auckland Philharmonia: Totally Trumpet"
+  },
+  {
+   "date": "2026-04-22",
+   "id": "1086632",
+   "title": "Orchestra dell’Accademia Nazionale di Santa Cecilia: Brahms' Double Concerto"
+  },
+  {
+   "date": "2026-04-21",
+   "id": "1086629",
+   "title": "Yunchan Lim and Minsoo Sohn: Two Pianos"
+  },
+  {
+   "date": "2026-04-20",
+   "id": "1086618",
+   "title": "Berlin Philharmonic: Kirill Petrenko conducts Brahms, Zimmermann and Schumann"
+  },
+  {
+   "date": "2026-04-18",
+   "id": "1086616",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "HK Phil: Celebrating Aristo Sham"
+  },
+  {
+   "date": "2026-04-17",
+   "id": "1086625",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "A Musical Connection: Shanghai and Hong Kong in Unison Time in Fold: Boyang Shi Piano Recital"
+  },
+  {
+   "date": "2026-04-16",
+   "id": "1086453",
+   "title": "Auckland Philharmonia: Shiyeon Sung and Inmo Yang"
+  },
+  {
+   "date": "2026-04-15",
+   "id": "1086450",
+   "title": "Remembering Tamás Vásáry: A Legendary Pianist and Conductor"
+  },
+  {
+   "date": "2026-04-14",
+   "id": "1086449",
+   "title": "Martha Argerich and Gabriela Montero in Lisbon"
+  },
+  {
+   "date": "2026-04-13",
+   "id": "1086448",
+   "title": "Berlin Philharmonic: Das Lied von der Erde"
+  },
+  {
+   "date": "2026-04-11",
+   "id": "1086440",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Cadenzas of Hong Kong 2.0"
+  },
+  {
+   "date": "2026-04-10",
+   "id": "1086620",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:40)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)",
+    "第三部份 Part 3 (HKT 22:05 - 22:40)"
+   ],
+   "title": "A Musical Connection:  Shanghai and Hong Kong in Unison  Kit Armstrong Piano Recital: Bach and His Time"
+  },
+  {
+   "date": "2026-04-09",
+   "id": "1086435",
+   "title": "Auckland Philharmonia: Beethoven 7"
+  },
+  {
+   "date": "2026-04-08",
+   "id": "1086433",
+   "title": "Remembering Tamás Vásáry: Recital in 1982"
+  },
+  {
+   "date": "2026-04-07",
+   "id": "1086432",
+   "title": "Remembering Helmuth Rilling: Bach Cantatas"
+  },
+  {
+   "date": "2026-04-06",
+   "id": "1086429",
+   "title": "Berlin Philharmonic: Waldbühne Concert with Gustavo Dudamel"
+  },
+  {
+   "date": "2026-04-04",
+   "id": "1086424",
+   "title": "Easter concert with Ars Nova Copenhagen"
+  },
+  {
+   "date": "2026-04-03",
+   "id": "1075403",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "A Musical Connection:  Shanghai and Hong Kong in Unison  Magnolia Quartet Plays Shostakovich"
+  },
+  {
+   "date": "2026-04-02",
+   "id": "1075401",
+   "title": "St. Matthew Passion"
+  },
+  {
+   "date": "2026-04-01",
+   "id": "1075399",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Chamber Music 'Par Excellence': Daniel Müller-Schott, Julia Fischer and Friends"
+  }
+ ],
+ "fetchedAt": "2026-09-02"
+}
