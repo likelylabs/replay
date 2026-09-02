@@ -1,0 +1,65 @@
+name: crawl
+
+# The daily pipeline (REPLAY.md §2.4/§2.5): fetch leg (tools/crawl.py, writes
+# data/) → process leg + publish gate (tools/build_catalog.py, the ONLY writer
+# of index.json + prog/) → commit → push. A gate failure exits non-zero before
+# anything is committed, so Pages keeps serving the last-good catalog.
+#
+# Push is retried against a moving main the same way likelylabs/news does it:
+# everything here is derived from data/, so on a rejected push we reset to
+# the new tip and rebuild rather than merge.
+
+on:
+  workflow_dispatch:
+    inputs:
+      budget:
+        description: "max HTTP requests this run (backfill drains within it)"
+        default: "2500"
+      extra_args:
+        description: "extra crawl.py flags, e.g. --skip-metro --no-backfill"
+        default: ""
+  schedule:
+    - cron: '30 19 * * *'   # 03:30 HKT daily (probe canary runs 03:15)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: crawl
+  cancel-in-progress: false
+
+jobs:
+  crawl:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch (polite, serial, budgeted)
+        run: |
+          set -euo pipefail
+          python3 tools/crawl.py --budget "${{ github.event.inputs.budget || '2500' }}" ${{ github.event.inputs.extra_args }}
+
+      - name: Build catalog behind the publish gate, commit, push
+        run: |
+          set -euo pipefail
+          git config user.name  "replay-bot"
+          git config user.email "replay-bot@users.noreply.github.com"
+          for attempt in 1 2 3 4 5; do
+            python3 tools/build_catalog.py
+            if [ -z "$(git status --porcelain)" ]; then
+              echo "Nothing to commit — catalog already current."
+              exit 0
+            fi
+            git add -A
+            git commit -q -m "chore(catalog): daily crawl $(date -u +%Y-%m-%dT%H:%MZ) [skip ci]"
+            if git push; then
+              exit 0
+            fi
+            echo "::notice::push rejected on attempt ${attempt}/5 — main moved. Resetting and rebuilding."
+            git fetch origin main
+            git reset --hard origin/main
+            sleep $(( attempt * 5 ))
+          done
+          echo "::error::could not land the catalog after 5 attempts"
+          exit 1

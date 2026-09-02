@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "replay prog/{channel}/{slug}.json (REPLAY.md §3.2)",
+  "type": "object",
+  "required": ["channel", "slug", "streamVersion", "episodes"],
+  "properties": {
+    "channel": {"type": "string"},
+    "slug": {"type": "string", "pattern": "^[A-Za-z0-9_]+$"},
+    "streamVersion": {"type": "integer"},
+    "episodes": {
+      "type": "array",
+      "description": "newest first; stream URL = index.streamTemplate filled with channel, slug, date (YYYYMMDD) unless streamUrl is present",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "date"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^\\d+$"},
+          "title": {"type": "string"},
+          "date": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+          "parts": {"type": "array", "items": {"type": "string"}, "description": "RTHK part labels (足本 Full, 第一部份 Part 1 …) for an optional chapter UI"},
+          "streamUrl": {"type": "string", "format": "uri", "description": "authoritative override from getEpisode when the derived template failed"}
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,543 @@
+{
+ "radio1/12oclocknews": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastEnumerated": "2026-09-02",
+  "lastMetaRefresh": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "12oclocknews",
+  "title_zh": "午間新聞天地"
+ },
+ "radio1/18heartfeltvibes": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastEnumerated": "2026-09-02",
+  "lastMetaRefresh": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/18heartfeltvibes/12172_115.jpg",
+  "slug": "18heartfeltvibes",
+  "title_zh": "十八好時光"
+ },
+ "radio1/2019_cny_special": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastEnumerateFailed": "2026-09-02",
+  "lastEnumerated": "2026-09-02",
+  "lastMetaRefresh": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "2019_cny_special",
+  "title_zh": "香港電台網站 : 電台"
+ },
+ "radio1/50YearsAfter": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastEnumerateFailed": "2026-09-02",
+  "lastEnumerated": "2026-09-02",
+  "lastMetaRefresh": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/50YearsAfter/3658_115.jpg",
+  "slug": "50YearsAfter",
+  "title_zh": "五十年後"
+ },
+ "radio1/6oclocknews": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastEnumerated": "2026-09-02",
+  "lastMetaRefresh": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "6oclocknews",
+  "title_zh": "傍晚新聞天地"
+ },
+ "radio1/Ballrock_special": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "Ballrock_special"
+ },
+ "radio1/BeautifulSunday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "BeautifulSunday"
+ },
+ "radio1/CareForDisabled": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "CareForDisabled"
+ },
+ "radio1/Free_as_the_wind": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "Free_as_the_wind",
+  "title_zh": "講東講西 (星期一至五)"
+ },
+ "radio1/HK2000": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "HK2000",
+  "title_zh": "千禧年代"
+ },
+ "radio1/Hongkongstory": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "Hongkongstory",
+  "title_zh": "香港故事"
+ },
+ "radio1/Liberal_Studies": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "Liberal_Studies"
+ },
+ "radio1/Moneyprogram": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/Moneyprogram/programme_photo.jpg",
+  "slug": "Moneyprogram",
+  "title_zh": "一桶金"
+ },
+ "radio1/NonstopClassics": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "NonstopClassics"
+ },
+ "radio1/NovaManagement": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "NovaManagement"
+ },
+ "radio1/People": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "People"
+ },
+ "radio1/Sundayevening": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "Sundayevening"
+ },
+ "radio1/World_in_a_Nutshell": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "World_in_a_Nutshell"
+ },
+ "radio1/YesWeCan": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "YesWeCan"
+ },
+ "radio1/accountability": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "accountability"
+ },
+ "radio1/always_by_your_side": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "always_by_your_side"
+ },
+ "radio1/blue_globe_special": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "blue_globe_special"
+ },
+ "radio1/cibs_we_broadcast": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "cibs_we_broadcast",
+  "title_zh": "CIBS人人廣播"
+ },
+ "radio1/city_snapshot2021": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "city_snapshot2021"
+ },
+ "radio1/city_snapshot_special": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "city_snapshot_special"
+ },
+ "radio1/climate_watcher2017": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "climate_watcher2017"
+ },
+ "radio1/cmg": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "cmg"
+ },
+ "radio1/cnr": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "cnr"
+ },
+ "radio1/delightinabite": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "delightinabite"
+ },
+ "radio1/elderly": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "elderly"
+ },
+ "radio1/eveningnews": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "eveningnews",
+  "title_zh": "晚間新聞天地"
+ },
+ "radio1/exploreclassicsdiscoverchina": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "exploreclassicsdiscoverchina"
+ },
+ "radio1/free_as_the_wind_2013": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "free_as_the_wind_2013"
+ },
+ "radio1/free_as_the_wind_sunday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "free_as_the_wind_sunday"
+ },
+ "radio1/fresh_morning": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "fresh_morning",
+  "title_zh": "清晨爽利 （與第五台聯播）"
+ },
+ "radio1/healthpedia": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/healthpedia/programme_photo.jpg",
+  "slug": "healthpedia",
+  "title_zh": "精靈一點"
+ },
+ "radio1/hkfootpath": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "hkfootpath"
+ },
+ "radio1/hkletter": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "hkletter"
+ },
+ "radio1/hktoday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "hktoday",
+  "title_zh": "晨早新聞天地"
+ },
+ "radio1/huantingshijie": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "huantingshijie"
+ },
+ "radio1/infinitefuture": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "infinitefuture"
+ },
+ "radio1/invest2": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "invest2"
+ },
+ "radio1/investment_era": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "investment_era"
+ },
+ "radio1/itsahappyday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "itsahappyday",
+  "title_zh": "是日快樂"
+ },
+ "radio1/legco_meeting": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "legco_meeting"
+ },
+ "radio1/madeinhk": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "madeinhk"
+ },
+ "radio1/musiclife": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "musiclife"
+ },
+ "radio1/news_about_rthk": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "news_about_rthk"
+ },
+ "radio1/newsatone": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "newsatone"
+ },
+ "radio1/nitechat_withdrhau": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "nitechat_withdrhau"
+ },
+ "radio1/noonnews": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "noonnews"
+ },
+ "radio1/one_minute_reading_sunday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "one_minute_reading_sunday"
+ },
+ "radio1/openline_openview": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "openline_openview",
+  "title_zh": "自由風自由PHONE"
+ },
+ "radio1/our_sportsday": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "our_sportsday"
+ },
+ "radio1/r1_cnyprog_20250129": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "r1_cnyprog_20250129"
+ },
+ "radio1/reading_by_moonlight": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "reading_by_moonlight"
+ },
+ "radio1/saturday_drama_fever": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "saturday_drama_fever"
+ },
+ "radio1/seesaw": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "seesaw",
+  "title_zh": "守下留情"
+ },
+ "radio1/sleepless_trio": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "sleepless_trio"
+ },
+ "radio1/sound_of_nature": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "sound_of_nature",
+  "title_zh": "大自然之聲"
+ },
+ "radio1/sport4life": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "sport4life",
+  "title_zh": "動力4射"
+ },
+ "radio1/sportinrthk": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "sportinrthk"
+ },
+ "radio1/standbyme_2011": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "standbyme_2011"
+ },
+ "radio1/tco": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "tco"
+ },
+ "radio1/the_nittygritty_of_law_2": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "the_nittygritty_of_law_2"
+ },
+ "radio1/thebrew": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "thebrew"
+ },
+ "radio1/those_were_the_days": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "those_were_the_days",
+  "title_zh": "那些年 張偉基"
+ },
+ "radio1/threesacrowd": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "threesacrowd"
+ },
+ "radio1/unclesiu_special": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "unclesiu_special"
+ },
+ "radio1/underthesun": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "underthesun"
+ },
+ "radio1/university_knowledge_platform": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "university_knowledge_platform"
+ },
+ "radio1/uxiubang": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "uxiubang"
+ },
+ "radio1/whatsupbro": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "whatsupbro"
+ },
+ "radio1/windband2026_r": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "windband2026_r"
+ },
+ "radio1/worldbook": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "worldbook"
+ },
+ "radio1/worlddiscovery": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "worlddiscovery"
+ },
+ "radio1/yolo": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenActive": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/yolo/programme_photo.jpg",
+  "slug": "yolo",
+  "title_zh": "港識生活館"
+ },
+ "radio1/young_politician": {
+  "channel": "radio1",
+  "discoveredAt": "2026-09-02",
+  "lastSeenAt": "2026-09-02",
+  "slug": "young_politician"
+ }
+}

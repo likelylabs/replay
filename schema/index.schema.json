@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "replay index.json (REPLAY.md §3.1 / §3.3)",
+  "type": "object",
+  "required": ["generatedAt", "crawlerVersion", "streamVersion", "streamTemplate", "channels"],
+  "properties": {
+    "generatedAt": {"type": "string", "description": "ISO-8601 +08:00"},
+    "crawlerVersion": {"type": "integer"},
+    "streamVersion": {"type": "integer", "description": "app ignores catalogs whose streamVersion > its RC replayStreamVersion"},
+    "retentionMonths": {"type": "integer"},
+    "streamTemplate": {"type": "string", "description": "RTHK HLS template with {channel},{slug},{date=YYYYMMDD}"},
+    "channels": {
+      "type": "array",
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "required": ["id", "source", "browse", "name_zh", "name_en", "programmes"],
+            "properties": {
+              "id": {"enum": ["radio1", "radio2", "radio3", "radio4", "radio5", "pth"]},
+              "source": {"const": "rthk"},
+              "browse": {"const": "programme"},
+              "name_zh": {"type": "string"}, "name_en": {"type": "string"},
+              "programmes": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": ["slug", "title_zh", "title_en", "active", "latestDate", "episodeCount"],
+                  "properties": {
+                    "slug": {"type": "string", "pattern": "^[A-Za-z0-9_]+$"},
+                    "title_zh": {"type": "string"}, "title_en": {"type": "string"},
+                    "logo": {"type": "string", "format": "uri"},
+                    "active": {"type": "boolean", "description": "on a channel schedule within the last 8 days"},
+                    "latestDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+                    "episodeCount": {"type": "integer", "minimum": 1},
+                    "streamOverride": {"type": "boolean", "description": "derived template failed a spot-check; episodes may carry streamUrl"}
+                  }
+                }
+              }
+            }
+          },
+          {
+            "type": "object",
+            "required": ["id", "source", "browse", "name_zh", "name_en", "freq", "earliestDate", "latestDate", "streamTemplate", "segmentMinutes"],
+            "properties": {
+              "id": {"enum": ["metro_mf", "metro_info", "metro_plus"]},
+              "source": {"const": "metro"},
+              "browse": {"const": "bytime"},
+              "name_zh": {"type": "string"}, "name_en": {"type": "string"},
+              "freq": {"enum": ["104", "997", "1044"]},
+              "earliestDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+              "latestDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
+              "streamTemplate": {"type": "string", "description": "hourly MP3 template with {freq},{date=YYYYMMDD},{datetime=YYYYMMDDHHMM}; a 404 is a gap"},
+              "segmentMinutes": {"const": 60}
+            }
+          }
+        ]
+      }
+    }
+  }
+}

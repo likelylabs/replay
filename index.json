@@ -1,0 +1,92 @@
+{
+ "generatedAt": "2026-09-02T12:43:20+08:00",
+ "crawlerVersion": 1,
+ "streamVersion": 1,
+ "retentionMonths": 12,
+ "streamTemplate": "https://rthkaod2022.akamaized.net/m4a/radio/archive/{channel}/{slug}/m4a/{date}.m4a/master.m3u8",
+ "channels": [
+  {
+   "id": "radio1",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "第一台",
+   "name_en": "Radio 1",
+   "programmes": [
+    {
+     "slug": "6oclocknews",
+     "title_zh": "傍晚新聞天地",
+     "title_en": "傍晚新聞天地",
+     "active": true,
+     "latestDate": "2026-09-01",
+     "episodeCount": 31
+    },
+    {
+     "slug": "18heartfeltvibes",
+     "title_zh": "十八好時光",
+     "title_en": "十八好時光",
+     "active": true,
+     "latestDate": "2026-09-01",
+     "episodeCount": 110,
+     "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/18heartfeltvibes/12172_115.jpg"
+    },
+    {
+     "slug": "12oclocknews",
+     "title_zh": "午間新聞天地",
+     "title_en": "午間新聞天地",
+     "active": true,
+     "latestDate": "2026-09-02",
+     "episodeCount": 186
+    },
+    {
+     "slug": "50YearsAfter",
+     "title_zh": "五十年後",
+     "title_en": "五十年後",
+     "active": false,
+     "latestDate": "2026-08-29",
+     "episodeCount": 22,
+     "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/50YearsAfter/3658_115.jpg"
+    }
+   ]
+  },
+  {
+   "id": "radio2",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "第二台",
+   "name_en": "Radio 2",
+   "programmes": []
+  },
+  {
+   "id": "radio3",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "第三台",
+   "name_en": "Radio 3",
+   "programmes": []
+  },
+  {
+   "id": "radio4",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "第四台",
+   "name_en": "Radio 4",
+   "programmes": []
+  },
+  {
+   "id": "radio5",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "第五台",
+   "name_en": "Radio 5",
+   "programmes": []
+  },
+  {
+   "id": "pth",
+   "source": "rthk",
+   "browse": "programme",
+   "name_zh": "普通話台",
+   "name_en": "Putonghua Channel",
+   "programmes": []
+  }
+ ]
+}

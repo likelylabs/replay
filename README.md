@@ -1,9 +1,67 @@
 # likelylabs/replay
 
-Server-side catalog for the radio app's Replay (重溫) section — a daily crawl of
-public broadcaster catch-up listings, published as static JSON. The app never
-talks to a broadcaster for metadata; it reads this catalog and streams audio
-from the broadcaster's own public CDN.
+Server-side catalog for the radio app's **Replay (重溫)** section: a daily,
+polite crawl of public broadcaster catch-up listings, published as static JSON
+on GitHub Pages. The app never contacts a broadcaster for metadata — it reads
+this catalog and streams audio straight from the broadcaster's own public CDN.
 
-Spec and operating tenets live in the private coordination repo
-(`~/localdev/radioapp-hq`: `REPLAY.md`, `CLAUDE.md`). No secrets here, ever.
+Spec, tenets and decisions live in the private coordination repo
+(`~/localdev/radioapp-hq`: `REPLAY.md`, `CLAUDE.md`). **No secrets here, ever.**
+
+## Pipeline
+
+```
+ broadcaster sites                this repo (GitHub Actions)              the app
+ ─────────────────                ─────────────────────────────           ───────
+ RTHK sitemap + channel pages ─┐  crawl.yml (daily 03:30 HKT)             GET index.json
+ RTHK catchUp JSON (per month) ─┼─► tools/crawl.py   → data/  (cache)      → channel / programme browse
+ RTHK Akamai HLS (spot-check)  ─┤  tools/build_catalog.py → index.json     GET prog/{ch}/{slug}.json
+ Metro hourly MP3 (window)     ─┘     (publish gate)      + prog/           → episode list → derived stream URL
+                                   pages-deploy.yml → Pages (last-good)
+```
+
+- `tools/probe.py` / `probe.yml` — daily canary that every source still
+  answers 200 from a hosted runner (red = runner-IP block or path change).
+- `tools/crawl.py` — the only code that talks to broadcasters. Serial,
+  ~1 req/s, realistic UA + Referer, backoff, a per-run request budget and a
+  circuit breaker. Writes only `data/`.
+- `tools/build_catalog.py` — the only writer of `index.json` + `prog/`.
+  Validates, drops dormant programmes, and refuses to publish a catalog that
+  shrank past the safety floor (≥90% programmes / ≥80% episodes of last-good).
+- `pages-deploy.yml` — publishes the public surface (`index.json`, `prog/`,
+  `robots.txt`) with 3 fresh deploy attempts + a 30-min drift reconciler.
+  Gated on the `PAGES_ENABLED` repository variable; `PUBLIC_BASE_URL` tells
+  the reconciler where the live catalog is.
+
+## Catalog contract (app-facing)
+
+- `index.json` — every channel with its programme list (RTHK, `browse:
+  "programme"`) or its by-time window (Metro, `browse: "bytime"`). Schema:
+  `schema/index.schema.json`.
+- `prog/{channel}/{slug}.json` — one programme's episodes, newest first.
+  Schema: `schema/programme.schema.json`.
+- Stream URLs are **derived client-side**: `index.streamTemplate` filled with
+  `channel`, `slug`, `date` (YYYYMMDD) — unless an episode carries `streamUrl`.
+  Metro: the channel's `streamTemplate` with `freq`, `date`, `datetime`
+  (YYYYMMDDHH00); a 404 is a gap.
+- `streamVersion` is a forward-compat guard: the app ignores catalogs whose
+  version exceeds what it understands.
+
+## Local dev (stdlib only)
+
+```bash
+python3 tools/probe.py                                    # sources alive?
+python3 tools/crawl.py --only radio1 --limit 5 --budget 100 --no-backfill --skip-metro
+python3 tools/build_catalog.py                            # gate + write index.json / prog/
+```
+
+## Go-live checklist (owner)
+
+1. Flip the repo **public** (Pages is public-repo-only on this org's plan).
+2. Settings → Pages → Source = **GitHub Actions**.
+3. Repo variables: `PAGES_ENABLED=true`; `PUBLIC_BASE_URL=https://likelylabs.github.io/replay`
+   (switch to `https://replay.likelylabs.com` once the CNAME is live).
+4. Run `pages-deploy` → verify `index.json` on the github.io URL.
+5. Cloudflare DNS: `replay CNAME likelylabs.github.io` (DNS-only / grey cloud).
+6. Commit `CNAME` (`replay.likelylabs.com`), enforce HTTPS in Pages settings,
+   update `PUBLIC_BASE_URL`.
