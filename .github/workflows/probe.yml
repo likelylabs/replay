@@ -1,0 +1,22 @@
+name: probe
+
+# REPLAY.md §2.4 validation step 1 + standing canary: prove from a hosted
+# runner that RTHK discovery, catchUpByMonth, the Akamai HLS path and the Metro
+# hourly archive all answer clean 200s. Red here = a runner-IP block or a path
+# change — the signal to move the fetch leg to the GAE fallback (§2.4).
+
+on:
+  workflow_dispatch: {}
+  schedule:
+    - cron: '15 19 * * *'   # 03:15 HKT daily, ahead of the crawl
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/probe.py
