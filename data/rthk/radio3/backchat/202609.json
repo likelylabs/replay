@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-09-03",
+   "id": "1124885",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Assessment of suspected fighting dogs",
+    "Lionel Messi retires from international football",
+    "Dolly Parton's legacy",
+    "Ombudsman's report on eTAX system flaws"
+   ],
+   "title": "Assessment of suspected fighting dogs / Lionel Messi retires from international football / Dolly Parton's legacy / Ombudsman's report on eTAX system flaws"
+  },
+  {
    "date": "2026-09-02",
    "id": "1124671",
    "parts": [
@@ -25,5 +37,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-03"
+ "fetchedAt": "2026-09-04"
 }

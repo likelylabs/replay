@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-03"
+ "episodes": [
+  {
+   "date": "2026-09-03",
+   "id": "1124898",
+   "parts": [
+    "足本 Full (HKT 14:00 - 15:00)"
+   ],
+   "title": "The Long March Symphony (Repeat) 長征交響曲—紅軍長征勝利九十周年（重播）"
+  }
+ ],
+ "fetchedAt": "2026-09-04"
 }

@@ -244,11 +244,6 @@
   {
    "date": "2026-08-03",
    "id": "1102851",
-   "parts": [
-    "足本 Full (HKT 20:05 - 22:00)",
-    "第一部份 Part 1 (HKT 20:05 - 21:00)",
-    "第二部份 Part 2 (HKT 21:00 - 22:00)"
-   ],
    "title": "Berlin Philharmonic: Simon Rattle and Janine Jansen"
   },
   {
@@ -262,5 +257,5 @@
    "title": "Academy Cello Festival 2026 - Opening Concert - Celestial Harmonies"
   }
  ],
- "fetchedAt": "2026-09-03"
+ "fetchedAt": "2026-09-04"
 }

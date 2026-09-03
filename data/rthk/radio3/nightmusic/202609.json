@@ -4,10 +4,12 @@
    "date": "2026-09-03",
    "id": "1124881",
    "parts": [
+    "足本 Full (HKT 01:05 - 06:00)",
     "第一部份 Part 1 (HKT 01:05 - 02:00)",
     "第二部份 Part 2 (HKT 02:05 - 03:00)",
     "第三部份 Part 3 (HKT 03:05 - 04:00)",
-    "第四部份 Part 4 (HKT 04:05 - 05:00)"
+    "第四部份 Part 4 (HKT 04:05 - 05:00)",
+    "第五部份 Part 5 (HKT 05:05 - 06:00)"
    ],
    "title": "Night Music on Radio 3"
   },
@@ -38,5 +40,5 @@
    "title": "Night Music on Radio 3"
   }
  ],
- "fetchedAt": "2026-09-03"
+ "fetchedAt": "2026-09-04"
 }

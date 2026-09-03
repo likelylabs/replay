@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-03",
+   "id": "1124890",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Manjeet Brar - Business of Sport"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-02",
    "id": "1124676",
    "parts": [
@@ -23,5 +33,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-03"
+ "fetchedAt": "2026-09-04"
 }

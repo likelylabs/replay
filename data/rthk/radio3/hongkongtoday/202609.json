@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-09-03",
+   "id": "1124883",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Xi meets with Sisi in first Egypt visit in a decade",
+    "Xi, El-Sisi call for unhindered entry of aid into Gaza",
+    "'AFCD won't label fighting dogs based on looks'",
+    "National Day fireworks to feature sun patterns",
+    "CityU probes orientation camp misconduct",
+    "ICAC sets integrity standards for govt computers",
+    "Lawmakers calls out ads claiming to prevent cancers",
+    "Palace Museum vows more special exhibitions",
+    "Breakthrough in regional medical arbitration",
+    "China reopens road leading to Nepal border",
+    "Honduras judge dismisses case against former leader",
+    "US threatens more strikes against Iran",
+    "Iran says it has hit back after US attacks",
+    "Netanyahu vows to keep troops in Gaza",
+    "New York City to ban AI use up to 8th grade",
+    "NBA comes down hard on LA Clippers"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-09-02",
    "id": "1124669",
    "parts": [
@@ -49,5 +75,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-03"
+ "fetchedAt": "2026-09-04"
 }
