@@ -1,0 +1,48 @@
+{
+ "episodes": [
+  {
+   "date": "2026-05-30",
+   "id": "1104961",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
+   "title": "Saturday Early"
+  },
+  {
+   "date": "2026-05-23",
+   "id": "1103635",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
+   "title": "Saturday Early"
+  },
+  {
+   "date": "2026-05-16",
+   "id": "1102216",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
+   "title": "Saturday Early"
+  },
+  {
+   "date": "2026-05-09",
+   "id": "1097622",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
+   "title": "Saturday Early"
+  },
+  {
+   "date": "2026-05-02",
+   "id": "1096204",
+   "parts": [
+    "足本 Full (HKT 06:05 - 08:35)",
+    "第一部份 Part 1 (HKT 06:05 - 07:00)",
+    "第二部份 Part 2 (HKT 07:10 - 07:35)",
+    "第三部份 Part 3 (HKT 08:10 - 08:35)"
+   ],
+   "title": "Saturday Early"
+  }
+ ],
+ "fetchedAt": "2026-09-05"
+}

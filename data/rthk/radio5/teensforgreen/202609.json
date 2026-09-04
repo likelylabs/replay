@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-04"
+ "episodes": [
+  {
+   "date": "2026-09-04",
+   "id": "1125135",
+   "parts": [
+    "足本 Full (HKT 21:04 - 22:00)"
+   ],
+   "title": "綠TEEN工作"
+  }
+ ],
+ "fetchedAt": "2026-09-05"
 }

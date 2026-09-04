@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-04",
+   "id": "1125098",
+   "parts": [
+    "足本 Full (HKT 13:00 - 15:00)",
+    "第一部份 Part 1 (HKT 13:04 - 14:00)",
+    "第二部份 Part 2 (HKT 14:04 - 15:00)"
+   ],
+   "title": "Made in Hong Kong 李志剛"
+  },
+  {
    "date": "2026-09-03",
    "id": "1124874",
    "parts": [
@@ -31,5 +41,5 @@
    "title": "Made in Hong Kong 李志剛"
   }
  ],
- "fetchedAt": "2026-09-04"
+ "fetchedAt": "2026-09-05"
 }

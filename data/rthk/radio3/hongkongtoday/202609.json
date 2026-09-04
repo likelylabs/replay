@@ -1,6 +1,29 @@
 {
  "episodes": [
   {
+   "date": "2026-09-04",
+   "id": "1125107",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "HK 'ready to show unique strengths in Apec summits'",
+    "Festival seeks tourism bonanza in finer things in life",
+    "Dog reclassification possible during routine checks",
+    "SPCA says most dogs are well behaved",
+    "No sign of WT1 jab in vaccines crackdown",
+    "Three women in court over Kwun Tong mall fight",
+    "CE leads ceremony to mark victory over Japan in WWII",
+    "US to investigate Iran wedding attack, Vance says",
+    "Lawmaker urges digital upgrade for eTAX system",
+    "Indonesia wildfires spark health concerns elsewhere",
+    "Germany probing suspected arson attack",
+    "West Bank teens buried as Israel looks to clear Gaza",
+    "Venezuela opposition figure wants democratic transition"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-09-03",
    "id": "1124883",
    "parts": [
@@ -75,5 +98,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-04"
+ "fetchedAt": "2026-09-05"
 }
