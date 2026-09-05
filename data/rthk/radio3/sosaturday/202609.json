@@ -1,4 +1,16 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-05"
+ "episodes": [
+  {
+   "date": "2026-09-05",
+   "id": "1125392",
+   "parts": [
+    "足本 Full (HKT 12:05 - 15:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:10 - 14:00)",
+    "第三部份 Part 3 (HKT 14:05 - 15:00)"
+   ],
+   "title": "So Saturday with Jeff Cheung"
+  }
+ ],
+ "fetchedAt": "2026-09-06"
 }

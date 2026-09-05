@@ -1,4 +1,17 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-05"
+ "episodes": [
+  {
+   "date": "2026-09-05",
+   "id": "1125397",
+   "parts": [
+    "足本 Full (HKT 18:10 - 22:00)",
+    "第一部份 Part 1 (HKT 18:10 - 19:00)",
+    "第二部份 Part 2 (HKT 19:05 - 20:00)",
+    "第三部份 Part 3 (HKT 20:05 - 21:00)",
+    "第四部份 Part 4 (HKT 21:05 - 22:00)"
+   ],
+   "title": "Radio 3 Mixtape"
+  }
+ ],
+ "fetchedAt": "2026-09-06"
 }

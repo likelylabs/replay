@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-05"
+ "episodes": [
+  {
+   "date": "2026-09-05",
+   "id": "1125394",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Vien Tsang of HK Kiddos Floorball / Curling with Coach Mike"
+  }
+ ],
+ "fetchedAt": "2026-09-06"
 }

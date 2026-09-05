@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-05",
+   "id": "1125400",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
+   "title": "Aubade"
+  },
+  {
    "date": "2026-09-04",
    "id": "1125120",
    "parts": [
@@ -33,5 +41,5 @@
    "title": "Aubade"
   }
  ],
- "fetchedAt": "2026-09-05"
+ "fetchedAt": "2026-09-06"
 }
