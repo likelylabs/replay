@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-06"
+ "episodes": [
+  {
+   "date": "2026-09-06",
+   "id": "1109661",
+   "parts": [
+    "足本 Full (HKT 22:05 - 23:00)"
+   ],
+   "title": "Epi 10 : Education: From Sekolah to the World"
+  }
+ ],
+ "fetchedAt": "2026-09-07"
 }

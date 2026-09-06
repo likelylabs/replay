@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-06"
+ "episodes": [
+  {
+   "date": "2026-09-06",
+   "id": "1124850",
+   "parts": [
+    "足本 Full (HKT 07:00 - 07:30)"
+   ],
+   "title": "英式英語一分鐘 with 蕭叔叔"
+  }
+ ],
+ "fetchedAt": "2026-09-07"
 }

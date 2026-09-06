@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-06"
+ "episodes": [
+  {
+   "date": "2026-09-06",
+   "id": "1124032",
+   "parts": [
+    "足本 Full (HKT 20:00 - 20:30)"
+   ],
+   "title": "西班牙語篇#19 - El Corazón Guaraní 巴拉圭：南美洲嘅瓜拉尼心臟"
+  }
+ ],
+ "fetchedAt": "2026-09-07"
 }
