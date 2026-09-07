@@ -1,6 +1,31 @@
 {
  "episodes": [
   {
+   "date": "2026-09-07",
+   "id": "1125656",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Horse racing boosts mega event economy: CE",
+    "Five-year plan to improve livelihoods, CE says",
+    "HK crucial in helping firms go global: FS",
+    "B&R summit to align with 15th five-year plan",
+    "Belt and Road summit 'to let SMEs tap new markets'",
+    "High praise for Hong Kong's ties with Fujian",
+    "Govt to push location-based data in smart city drive",
+    "Call for employers to manage heat risks in workplace",
+    "Xi Jinping's recent visits highlight role of international law",
+    "Zelenskyy expects conflict to stretch into winter",
+    "Volcanic activity strands tens of thousands in Indonesia",
+    "Jaguar Land Rover to discuss job cuts with government",
+    "Far right party surges in Germany's eastern state vote",
+    "Iran looks to resolve economic ills caused by sanctions",
+    "United held by Everton as Gunners end Chelsea's run"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-09-04",
    "id": "1125107",
    "parts": [
@@ -98,5 +123,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-07"
+ "fetchedAt": "2026-09-08"
 }

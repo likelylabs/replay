@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-07",
+   "id": "1125664",
+   "parts": [
+    "足本 Full (HKT 18:00 - 18:35)"
+   ],
+   "title": "Newswrap"
+  },
+  {
    "date": "2026-09-04",
    "id": "1125115",
    "parts": [
@@ -33,5 +41,5 @@
    "title": "Newswrap"
   }
  ],
- "fetchedAt": "2026-09-07"
+ "fetchedAt": "2026-09-08"
 }

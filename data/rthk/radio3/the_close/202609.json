@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-07",
+   "id": "1125663",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - David Roche and Richard Harris",
+    "Startup Spotlight - Pascal Podvin",
+    "Shaman Chellaram - Hong Kong Hotel Market Snapshot H1 2026"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-04",
    "id": "1125114",
    "parts": [
@@ -44,5 +55,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-07"
+ "fetchedAt": "2026-09-08"
 }

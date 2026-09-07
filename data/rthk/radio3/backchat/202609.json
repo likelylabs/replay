@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-07",
+   "id": "1125658",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "China's farmland protection law",
+    "Stingray sightings in Tai Po",
+    "CUHK's new discovery on biofertilizer"
+   ],
+   "title": "China's farmland protection law / Stingray sightings in Tai Po / CUHK's new discovery on biofertilizer"
+  },
+  {
    "date": "2026-09-04",
    "id": "1125109",
    "parts": [
@@ -49,5 +60,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-07"
+ "fetchedAt": "2026-09-08"
 }
