@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-08",
+   "id": "1125961",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "In the Common Room"
+  },
+  {
    "date": "2026-09-07",
    "id": "1125666",
    "parts": [
@@ -41,5 +49,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }

@@ -1,6 +1,31 @@
 {
  "episodes": [
   {
+   "date": "2026-09-08",
+   "id": "1125951",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Tour guide, agencies' licences revoked for misconduct",
+    "Lawmaker says move to punish agencies is pro-active",
+    "Call for investors to establish presence in GBA",
+    "HK fully committed to Central Asian partnerships: CE",
+    "'More jab options available as HK sees flu peak'",
+    "HK 'to scale up green drive with capital accelerator'",
+    "'Govt focused on making HK a global philanthropic hub'",
+    "Two arrested for alleged illegal import of pests",
+    "Cleaner waters attracts stingrays, expert says",
+    "'Capital injection will ease solvency pressures'",
+    "German far right party riding high in polls",
+    "Merz 'deeply shocked' by AfD state victory",
+    "Nepals marks day of mourning for flood victims",
+    "Board of Peace official pessimistic on two-state solution",
+    "Israeli strikes in Lebanon kill at least 12"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-09-07",
    "id": "1125656",
    "parts": [
@@ -123,5 +148,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }

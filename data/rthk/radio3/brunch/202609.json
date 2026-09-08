@@ -1,14 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-09-08",
+   "id": "1125954",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Wallace Chan - Jewellery",
+    "Shenel Johns - Jazz"
+   ],
+   "title": "Wallace Chan - Jewellery / Shenel Johns - Jazz"
+  },
+  {
    "date": "2026-09-07",
    "id": "1125659",
    "parts": [
     "足本 Full (HKT 10:05 - 12:00)",
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
-    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Neema Naz - Hong Kong Comedy",
+    "Atul Khatri - Hong Kong Comedy"
    ],
-   "title": "Brunch"
+   "title": "Neema Naz - Hong Kong Comedy / Atul Khatri - Hong Kong Comedy"
   },
   {
    "date": "2026-09-04",
@@ -62,5 +76,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }

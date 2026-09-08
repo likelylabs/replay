@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-08",
+   "id": "1125958",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy, and Xiaolin Chen",
+    "Mini Menon vandePol - Risk of cross-border investigations, part 1",
+    "Business of Media and Entertainment - Paul Robinson"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-07",
    "id": "1125663",
    "parts": [
@@ -55,5 +66,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }

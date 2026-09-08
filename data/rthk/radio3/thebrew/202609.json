@@ -1,14 +1,27 @@
 {
  "episodes": [
   {
-   "date": "2026-09-07",
-   "id": "1125660",
+   "date": "2026-09-08",
+   "id": "1125955",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)"
    ],
    "title": "The Brew"
+  },
+  {
+   "date": "2026-09-07",
+   "id": "1125660",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Robbie McRobbie - Live from the Kai Tak Sports Park",
+    "Tim Huxley - Formula 1",
+    "Neil Runcieman - Ho Chi Minh City"
+   ],
+   "title": "Robbie McRobbie - Live from the Kai Tak Sports Park / Tim Huxley - Formula 1 / Neil Runcieman - Ho Chi Minh City"
   },
   {
    "date": "2026-09-04",
@@ -57,5 +70,5 @@
    "title": "Jarrod Watt - live from Melbourne"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }

@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-08",
+   "id": "1125953",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Hong Kong Fashion Fest",
+    "PolyU study on social frailty in elderly",
+    "Preserving printed books in the age of AI"
+   ],
+   "title": "Hong Kong Fashion Fest / PolyU study on social frailty in elderly / Preserving printed books in the age of AI"
+  },
+  {
    "date": "2026-09-07",
    "id": "1125658",
    "parts": [
@@ -60,5 +71,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-08"
+ "fetchedAt": "2026-09-09"
 }
