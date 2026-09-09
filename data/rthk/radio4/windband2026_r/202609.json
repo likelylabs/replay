@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-09",
+   "id": "1126191",
+   "parts": [
+    "足本 Full (HKT 14:00 - 15:00)"
+   ],
+   "title": "All about windband music (Repeat) 盡在不弦中（重播）"
+  },
+  {
    "date": "2026-09-02",
    "id": "1124684",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "All about windband music (Repeat) 盡在不弦中（重播）"
   }
  ],
- "fetchedAt": "2026-09-09"
+ "fetchedAt": "2026-09-10"
 }

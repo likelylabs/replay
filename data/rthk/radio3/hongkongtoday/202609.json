@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-09-09",
+   "id": "1126175",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Former CE Tung Chee-hwa dies at 89",
+    "SZ-HK-Guangzhou cluster tops innovation index again",
+    "'Contractors pushed to fix QMH lifts by Q4'",
+    "MTR seeks police action over alleged mass fare evasion",
+    "'HK students very strong in digital learning'",
+    "Fashion Fest a boost for local designers",
+    "Rewards for tipoffs 'can help cut out forced shopping'",
+    "Xi Jinping urges Burnham to seek 'common ground'",
+    "Extreme heat caused glacier collapse, climate body says",
+    "China says imports and exports surged in August",
+    "Investment product sales hit record HK$9.9tn in 2025",
+    "Librarian urges caution when using AI for searches",
+    "Orbis, HKU launch joint anti-myopia programme",
+    "Govt launches sixth round of food coupons",
+    "Israel closing British consulate in East Jerusalem",
+    "Winning start for Real Madrid in Europe"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-09-08",
    "id": "1125951",
    "parts": [
@@ -148,5 +174,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-09"
+ "fetchedAt": "2026-09-10"
 }

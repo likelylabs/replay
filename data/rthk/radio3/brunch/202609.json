@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-09-09",
+   "id": "1126178",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Rachel Liu - Mid Autumn festival",
+    "Albert Leung and Andrew Chan - Movie / The Bright Side",
+    "The Bright Side"
+   ],
+   "title": "Rachel Liu - Mid Autumn festival / Albert Leung and Andrew Chan - Movie / The Bright Side"
+  },
+  {
    "date": "2026-09-08",
    "id": "1125954",
    "parts": [
@@ -76,5 +89,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-09"
+ "fetchedAt": "2026-09-10"
 }

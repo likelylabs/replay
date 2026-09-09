@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-09",
+   "id": "1126182",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Mini Menon vandePol - Cross-Border Investigations p2",
+    "Peisi Deng - The Next Generation of Wealth"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-08",
    "id": "1125958",
    "parts": [
@@ -66,5 +77,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-09"
+ "fetchedAt": "2026-09-10"
 }

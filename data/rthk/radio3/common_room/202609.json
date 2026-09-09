@@ -1,12 +1,20 @@
 {
  "episodes": [
   {
+   "date": "2026-09-09",
+   "id": "1126185",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 3.0 - “What’s your favorite type of role in a group (leader, builder, organiser, etc.)?”"
+  },
+  {
    "date": "2026-09-08",
    "id": "1125961",
    "parts": [
     "足本 Full (HKT 21:05 - 22:00)"
    ],
-   "title": "In the Common Room"
+   "title": "Open Space - Buddhist Kok Kwong Secondary School"
   },
   {
    "date": "2026-09-07",
@@ -49,5 +57,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-09"
+ "fetchedAt": "2026-09-10"
 }
