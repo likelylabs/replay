@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-10",
+   "id": "1126414",
+   "parts": [
+    "足本 Full (HKT 13:00 - 13:20)"
+   ],
+   "title": "News at One"
+  },
+  {
    "date": "2026-09-09",
    "id": "1126180",
    "parts": [
@@ -73,5 +81,5 @@
    "title": "News at One"
   }
  ],
- "fetchedAt": "2026-09-10"
+ "fetchedAt": "2026-09-11"
 }

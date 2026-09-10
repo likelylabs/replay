@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-10"
+ "episodes": [
+  {
+   "date": "2026-09-10",
+   "id": "1126425",
+   "parts": [
+    "足本 Full (HKT 14:00 - 15:00)"
+   ],
+   "title": "Classical Music ABC (Repeat) 古典音樂ABC（重播）"
+  }
+ ],
+ "fetchedAt": "2026-09-11"
 }

@@ -1,12 +1,40 @@
 {
  "episodes": [
   {
-   "date": "2026-09-09",
-   "id": "1126175",
+   "date": "2026-09-10",
+   "id": "1126409",
    "parts": [
     "足本 Full (HKT 06:30 - 08:00)",
     "第一部份 Part 1 (HKT 06:30 - 07:00)",
     "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "CE expresses sorrow over Tung Chee-hwa's passing",
+    "Tributes pour in for Tung Chee-hwa",
+    "Political groups vow to uphold Tung's vision",
+    "SAR astronaut Lai Ka-ying delivers class from space",
+    "HK a 'gateway for Belt and Road economies': CE",
+    "Globalisation key to facing geopolitical challenges",
+    "Consultants and contractors charged over Wang Fuk fire",
+    "Govt to help firms set up childcare in NM: Chris Sun",
+    "SAR badminton stars on a high before Asian Games",
+    "Belt and Road summit delegates put faith in HK",
+    "HK and Central Asian firms show growing interest in trade",
+    "Over 100 primary schools scrapped exams",
+    "China price levels continue moderate recovery",
+    "Iran and US continue to exchange fire",
+    "AI researcher warns of threat to human lives",
+    "Nepal to ask wealthier nations for financial help",
+    "Winning starts for PSG, Arsenal and Liverpool"
+   ],
+   "title": "Thursday"
+  },
+  {
+   "date": "2026-09-09",
+   "id": "1126175",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "Part 3",
+    "Part 4",
+    "Part 5",
     "Former CE Tung Chee-hwa dies at 89",
     "SZ-HK-Guangzhou cluster tops innovation index again",
     "'Contractors pushed to fix QMH lifts by Q4'",
@@ -174,5 +202,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-10"
+ "fetchedAt": "2026-09-11"
 }

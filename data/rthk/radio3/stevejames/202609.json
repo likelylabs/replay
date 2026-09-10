@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-10",
+   "id": "1126415",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:05 - 16:00)",
+    "第三部份 Part 3 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Steve James - With Harry Wong joining us after 4"
+  },
+  {
    "date": "2026-09-09",
    "id": "1126181",
    "parts": [
@@ -9,7 +20,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With the best excuse for being late you’ve heard…or used / Words you will never hear James Bond say"
   },
   {
    "date": "2026-09-08",
@@ -20,7 +31,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Tunesday Chat' after 4"
   },
   {
    "date": "2026-09-07",
@@ -31,7 +42,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With my neighbours hate me because / Unlikely cookbook titles"
   },
   {
    "date": "2026-09-04",
@@ -42,7 +53,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With lame super-villains / Words and phrases that instantly show your age"
   },
   {
    "date": "2026-09-03",
@@ -53,7 +64,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With stupid questions for Australians / Lame super-villains"
   },
   {
    "date": "2026-09-02",
@@ -64,7 +75,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With things you'd do if you were taller / Stupid stuff men do"
   },
   {
    "date": "2026-09-01",
@@ -78,5 +89,5 @@
    "title": "Steve James - With Perry Martin's 'Tunesday Chat' after 4"
   }
  ],
- "fetchedAt": "2026-09-10"
+ "fetchedAt": "2026-09-11"
 }

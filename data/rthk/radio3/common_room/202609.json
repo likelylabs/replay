@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-10",
+   "id": "1126419",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - Fanling Public School"
+  },
+  {
    "date": "2026-09-09",
    "id": "1126185",
    "parts": [
@@ -57,5 +65,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-10"
+ "fetchedAt": "2026-09-11"
 }
