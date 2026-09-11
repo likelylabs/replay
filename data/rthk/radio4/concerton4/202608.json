@@ -173,12 +173,6 @@
   {
    "date": "2026-08-11",
    "id": "1115623",
-   "parts": [
-    "足本 Full (HKT 20:00 - 22:00)",
-    "第一部份 Part 1 (HKT 20:05 - 21:00)",
-    "第二部份 Part 2 (HKT 21:00 - 22:00)",
-    "第三部份 Part 3 (HKT 22:00 - 22:15)"
-   ],
    "title": "Adieu à Paris – Historical Reconstruction of Chopin’s Final Paris Concert"
   },
   {
@@ -242,5 +236,5 @@
    "title": "Academy Cello Festival 2026 - Opening Concert - Celestial Harmonies"
   }
  ],
- "fetchedAt": "2026-09-11"
+ "fetchedAt": "2026-09-12"
 }

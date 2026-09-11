@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-11",
+   "id": "1120974",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "HK Phil: François-Frédéric Guy's Beethoven Piano Concertos I"
+  },
+  {
    "date": "2026-09-10",
    "id": "1120971",
    "parts": [
@@ -91,5 +101,5 @@
    "title": "Wigmore Hall 125th Anniversary Festival: Gala Concert"
   }
  ],
- "fetchedAt": "2026-09-11"
+ "fetchedAt": "2026-09-12"
 }

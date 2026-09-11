@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-09-11",
+   "id": "1126672",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Cigarette packs to get a plain look starting in March",
+    "HK's new tobacco rules 'similar to other countries'",
+    "HK, Shenzhen strike agreements to deepen cooperation",
+    "IOMed marks first year with 47 signatories",
+    "HK offers mediation support for mainland firms",
+    "Hong Kong ready to be biotech bridge, says Paul Chan",
+    "Pakistan vows deeper Belt and Road ties at HK summit",
+    "Suicide research centre to cover social media",
+    "Expert urges stronger action against rogue travel agencies",
+    "Govt launches new round of recruitment",
+    "'August hottest month ever recorded globally'",
+    "Apple unveils foldable Duo and latest iPhones",
+    "Houthis seize control of strategic Red Sea port",
+    "Britain allows mayors to impose tourist tax",
+    "Bayeux Tapestry mania sweeps UK as exhibition opens",
+    "Big wins for Bayern and United in Champions League"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-09-10",
    "id": "1126409",
    "parts": [
@@ -202,5 +228,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-11"
+ "fetchedAt": "2026-09-12"
 }

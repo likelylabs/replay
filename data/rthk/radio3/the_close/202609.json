@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-11",
+   "id": "1126679",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Paco Chan - Travelling with Pets",
+    "Sean Duca - AI and Cybersecurity",
+    "Business and Markets Discussion"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-10",
    "id": "1126416",
    "parts": [
@@ -86,5 +97,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-11"
+ "fetchedAt": "2026-09-12"
 }
