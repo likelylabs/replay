@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-12",
+   "id": "1126764",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Peter Downie of Clearwater Bay Golf Club / Veteran athletics with Collin Whittington from AVOHK"
+  },
+  {
    "date": "2026-09-05",
    "id": "1125394",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Vien Tsang of HK Kiddos Floorball / Curling with Coach Mike"
   }
  ],
- "fetchedAt": "2026-09-12"
+ "fetchedAt": "2026-09-13"
 }
