@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1109662",
+   "title": "Epi 11 : Pop Culture: From Mamak Nights to Viral Trends"
+  },
+  {
    "date": "2026-09-06",
    "id": "1109661",
    "parts": [
@@ -9,5 +14,5 @@
    "title": "Epi 10 : Education: From Sekolah to the World"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1120588",
+   "title": "Episode 11：Kenneth Russell Setiawan -  Badminton enthusiast"
+  },
+  {
    "date": "2026-09-06",
    "id": "1120587",
    "parts": [
@@ -9,5 +14,5 @@
    "title": "Episode 10：Sabiha Marium – The First Whistle"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1127031",
+   "parts": [
+    "足本 Full (HKT 06:05 - 08:00)",
+    "第一部份 Part 1 (HKT 06:05 - 07:00)",
+    "第二部份 Part 2 (HKT 07:10 - 08:00)"
+   ],
+   "title": "Sunday Early"
+  },
+  {
    "date": "2026-09-06",
    "id": "1125523",
    "parts": [
@@ -11,5 +21,5 @@
    "title": "Sunday Early"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

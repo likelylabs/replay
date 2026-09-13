@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1126517",
+   "title": "THE CULTURE SHOW"
+  },
+  {
    "date": "2026-09-06",
    "id": "1125548",
    "parts": [
@@ -9,5 +14,5 @@
    "title": "The Culture Show 音樂之旅"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

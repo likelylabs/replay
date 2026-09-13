@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1126858",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Clap Hands!"
+  },
+  {
    "date": "2026-09-06",
    "id": "1124928",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "The Cavern Before The Beatles"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

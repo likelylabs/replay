@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1127071",
+   "parts": [
+    "足本 Full (HKT 09:30 - 10:00)"
+   ],
+   "title": "Halo Jakarta! Hello Hong Kong!"
+  },
+  {
    "date": "2026-09-06",
    "id": "1125563",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Halo Jakarta! Hello Hong Kong!"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-13",
+   "id": "1127054",
+   "parts": [
+    "足本 Full (HKT 12:05 - 13:00)"
+   ],
+   "title": "Church Service"
+  },
+  {
    "date": "2026-09-06",
    "id": "1125546",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Church Service"
   }
  ],
- "fetchedAt": "2026-09-13"
+ "fetchedAt": "2026-09-14"
 }
