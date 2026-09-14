@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-14",
+   "id": "1127160",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-11",
    "id": "1126679",
    "parts": [
@@ -97,5 +105,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-14"
+ "fetchedAt": "2026-09-15"
 }

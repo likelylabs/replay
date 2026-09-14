@@ -3,6 +3,9 @@
   {
    "date": "2026-09-13",
    "id": "1127041",
+   "parts": [
+    "足本 Full (HKT 18:15 - 18:50)"
+   ],
    "title": "Hong Kong Heritage"
   },
   {
@@ -11,7 +14,7 @@
    "parts": [
     "足本 Full (HKT 07:30 - 08:00)"
    ],
-   "title": "Hong Kong Heritage"
+   "title": "Hong Kong Heritage (repeat) – Nepalese in Hong Kong"
   },
   {
    "date": "2026-09-06",
@@ -30,5 +33,5 @@
    "title": "Hong Kong Heritage (repeat) – Mark O’Neill on Three Visionary Leaders of HSBC"
   }
  ],
- "fetchedAt": "2026-09-14"
+ "fetchedAt": "2026-09-15"
 }

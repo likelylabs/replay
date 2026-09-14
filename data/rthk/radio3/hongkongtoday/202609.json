@@ -1,6 +1,27 @@
 {
  "episodes": [
   {
+   "date": "2026-09-14",
+   "id": "1127153",
+   "parts": [
+    "Xi proposes initiatives on Brics cooperation",
+    "CE to wear lapel pin symbolising HK's blueprint",
+    "FS hails deepening HK, Belt-Road connections",
+    "Tung Chee-hwa lauded for contributions to HK",
+    "Banks sound alarm over fraudulent iPhone purchases",
+    "FSDC urges more effort to boost patient capital",
+    "'Music helps to ease agitation in dementia patients'",
+    "Youth body wants dedicated chapter on five-year plan",
+    "At least six dead after Indonesia ferry capsizes",
+    "OpenAI boss rules out listing this year",
+    "Trump hits out at critics of AI development",
+    "Ukraine says passenger train hit earn Polish border",
+    "Zverev wins US Open for second Grand Slam title",
+    "City beat rivals United in dramatic Manchester derby"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-09-11",
    "id": "1126672",
    "parts": [
@@ -228,5 +249,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-14"
+ "fetchedAt": "2026-09-15"
 }

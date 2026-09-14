@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-14",
+   "id": "1127155",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Orbis v HKU anti myopia initiative",
+    "LCSD's \"three major ball games\" sports day",
+    "Belt and Road Summit recap"
+   ],
+   "title": "Orbis v HKU anti myopia initiative / LCSD's \"three major ball games\" sports day /  Belt and Road Summit recap"
+  },
+  {
    "date": "2026-09-11",
    "id": "1126674",
    "parts": [
@@ -107,5 +118,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-14"
+ "fetchedAt": "2026-09-15"
 }
