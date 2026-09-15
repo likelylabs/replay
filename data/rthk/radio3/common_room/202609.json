@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-15",
+   "id": "1127444",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - St Francis Xavier's College"
+  },
+  {
    "date": "2026-09-14",
    "id": "1127163",
    "parts": [
@@ -81,5 +89,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-15"
+ "fetchedAt": "2026-09-16"
 }

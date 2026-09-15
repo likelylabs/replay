@@ -1,4 +1,21 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-15"
+ "episodes": [
+  {
+   "date": "2026-09-13",
+   "id": "1122438",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Jacky Wan - recruitment professional and disability inclusion advocate"
+  },
+  {
+   "date": "2026-09-06",
+   "id": "1120820",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Myrian Fan - registered nurse and mother of a child with autism"
+  }
+ ],
+ "fetchedAt": "2026-09-16"
 }

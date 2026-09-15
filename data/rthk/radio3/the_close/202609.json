@@ -1,10 +1,24 @@
 {
  "episodes": [
   {
+   "date": "2026-09-15",
+   "id": "1127441",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Ton van den Bosch; Mahesh Rai - Floating Production Storage",
+    "Mansha Deswani - Business of Media and Entertainment"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-14",
    "id": "1127160",
    "parts": [
-    "足本 Full (HKT 17:05 - 18:00)"
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Startup Spotlight - Gonka",
+    "Understanding The Mythos Era"
    ],
    "title": "The Close"
   },
@@ -105,5 +119,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-15"
+ "fetchedAt": "2026-09-16"
 }

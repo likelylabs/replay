@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-09-15",
+   "id": "1127434",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "HK's first five-year plan will uphold core systems: CE",
+    "Lawmaker says Apple retailers should bear responsibility",
+    "Apple looking to identify and cancel fake transactions",
+    "'Online discounts not necessarily make things cheaper'",
+    "Consumer Council tests online prices for 222 products",
+    "Sanitary pad labelling found wanting: Consumer Council",
+    "Call for residents to get vaccinated against flu",
+    "Mainland to boost support for child-bearing",
+    "'More than 60 deals at Belt and Road summit'",
+    "Lawmaker urges swift concrete testing at Tung Chung site",
+    "'Booking system key to high-quality ecotourism'",
+    "Indonesian rescuers search for missing ferry passengers",
+    "Yemen fighting raises concerns on global oil supplies",
+    "Israel seeks to identify documentary sources",
+    "Africa's richest man launches continent's biggest IPO",
+    "Cycling team aim for five medals at Asian Games",
+    "Wushu athletes eye success at Nagoya Games"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-09-14",
    "id": "1127153",
    "parts": [
@@ -249,5 +276,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-15"
+ "fetchedAt": "2026-09-16"
 }

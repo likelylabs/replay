@@ -1,26 +1,26 @@
 {
  "aborted": null,
- "backfilled_months": 0,
+ "backfilled_months": 60,
  "backlog_months": 1,
  "budget": 2500,
- "enumerated": 385,
+ "enumerated": 391,
  "failures": 3,
- "finishedAt": "2026-09-15T06:54:43+08:00",
- "meta_refreshed": 0,
+ "finishedAt": "2026-09-16T06:41:39+08:00",
+ "meta_refreshed": 6,
  "metro": {
-  "104": "2026-06-01..2026-09-15",
-  "1044": "2026-06-01..2026-09-15",
-  "997": "2026-06-01..2026-09-15"
+  "104": "2026-06-01..2026-09-16",
+  "1044": "2026-06-01..2026-09-16",
+  "997": "2026-06-01..2026-09-16"
  },
  "month_failures": 1,
- "months_fetched": 771,
+ "months_fetched": 843,
  "months_pruned": 0,
- "programmes_known": 385,
- "requests": 1026,
- "seconds": 1045,
+ "programmes_known": 391,
+ "requests": 1156,
+ "seconds": 1179,
  "sitemap_programmes": 295,
  "spot_checks": 12,
  "spot_misses": 0,
- "startedAt": "2026-09-15T06:37:17+08:00",
+ "startedAt": "2026-09-16T06:22:00+08:00",
  "warnings": []
 }
