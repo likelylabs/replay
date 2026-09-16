@@ -76,7 +76,7 @@ def main():
           f"{st} {len(body)}B {dtime:.1f}s active={len(active)}")
 
     # 3. catchUpByMonth — current + previous month (the daily incremental window)
-    latest_date = None
+    dates = []  # newest first: the listing is newest first, current month before previous
     hdr = {"X-Requested-With": "XMLHttpRequest", "Referer": f"{WWW}/radio/{CH}/programme/{SLUG}"}
     for off in (0, 1):
         m = month_str(off)
@@ -85,21 +85,24 @@ def main():
             d = json.loads(body.decode("utf-8"))
             n = len(d.get("content", []))
             ok = st == 200 and d.get("status") == "1" and (n > 0 or off == 0)
-            if n and latest_date is None:
-                latest_date = d["content"][0]["date"]
+            dates += [e["date"] for e in d.get("content", [])]
             check(f"catchUpByMonth {CH}/{SLUG} m={m}", ok,
                   f"{st} {ct} {dtime:.1f}s status={d.get('status')} episodes={n} nextPage={d.get('nextPage')}")
         except Exception as e:
             check(f"catchUpByMonth {CH}/{SLUG} m={m}", False, f"{st} {ct} unparseable: {e!r} head={body[:80]!r}")
 
-    # 4. Akamai HLS master for the latest episode
-    if latest_date:
-        d8 = dt.datetime.strptime(latest_date, "%d/%m/%Y").strftime("%Y%m%d")
+    # 4. Akamai HLS master — newest episode, else the next-newest. RTHK lists an
+    # episode before its archive is uploaded, so one late upload must not go red;
+    # a runner block or path change still fails both.
+    ok, notes = False, []
+    for date in dates[:2]:
+        d8 = dt.datetime.strptime(date, "%d/%m/%Y").strftime("%Y%m%d")
         st, ct, body, dtime = fetch(CDN.format(c=CH, p=SLUG, d=d8))
-        check("akamai master.m3u8", st == 200 and body.startswith(b"#EXTM3U"),
-              f"{st} {ct} {dtime:.1f}s date={d8} head={body[:40]!r}")
-    else:
-        check("akamai master.m3u8", False, "no episode date to derive from")
+        ok = st == 200 and body.startswith(b"#EXTM3U")
+        notes.append(f"{st} {ct} {dtime:.1f}s date={d8} head={body[:40]!r}")
+        if ok:
+            break
+    check("akamai master.m3u8", ok, " → ".join(notes) or "no episode date to derive from")
 
     # 5. Metro hourly MP3 — yesterday 08:00 HKT, all three frequencies
     yday = (dt.datetime.utcnow() + dt.timedelta(hours=8) - dt.timedelta(days=1)).strftime("%Y%m%d")
