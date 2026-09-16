@@ -1,6 +1,37 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127614",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "John Lee set to deliver Hong Kong's first five-year plan",
+    "Five-year plan's blue cover reflects progress, stability",
+    "CE wants accountability for faulty QMH lifts",
+    "City ready for Golden Week holiday travellers: CE",
+    "Visitor arrivals surge 6pc to 5.46m in August",
+    "HA calls for early flu vaccination amid infection rise",
+    "Flat-selection ballot held for Wang Fuk Court owners",
+    "Academy to bolster HK's status as global wealth hub",
+    "Hong Kong, China gymnasts take aim at Asian Games",
+    "Beijing urges US to stop space war preparations",
+    "Wang Yi to host Iranian foreign minister",
+    "WTO in dire warning on global trading system",
+    "19-year high for 10-year US Treasuries",
+    "Chinese factory output shows resilience to rise 5.3pc",
+    "AI companies to work on creating regulatory body",
+    "Some baby deaths preventable, British probe finds",
+    "Kennedy Center board votes to close institution",
+    "Comedy 'Widow's Bay' dominates Emmy Awards",
+    "Hundreds protest at Toronto's investment summit",
+    "Liverpool and Arsenal power into round of 16",
+    "Nairobi awarded 2029 world outdoor athletics event"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127434",
    "parts": [
@@ -276,5 +307,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

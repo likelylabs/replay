@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127615",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View from the Semiconductor Sector"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127435",
    "parts": [
@@ -122,5 +133,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

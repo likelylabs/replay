@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127625",
+   "title": "After Hours with Michael Lance"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127445",
    "parts": [
@@ -122,5 +127,5 @@
    "title": "After Hours with Michael Lance"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

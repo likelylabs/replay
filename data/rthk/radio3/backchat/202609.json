@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127616",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "2026 Policy Address and First Five-Year Plan preview",
+    "Cigarette packs to get plain look",
+    "LIV Golf filed for bankruptcy"
+   ],
+   "title": "2026 Policy Address and First Five-Year Plan preview / Cigarette packs to get plain look / LIV Golf filed for bankruptcy"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127436",
    "parts": [
@@ -130,5 +141,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

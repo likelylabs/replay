@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127617",
+   "parts": [
+    "足本 Full (HKT 10:05 - 11:00)"
+   ],
+   "title": "Brunch"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127437",
    "parts": [
@@ -134,5 +142,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

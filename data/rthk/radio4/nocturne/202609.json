@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1125763",
+   "title": "Nocturne 夜心曲"
+  },
+  {
    "date": "2026-09-15",
    "id": "1125762",
    "parts": [
@@ -111,5 +116,5 @@
    "title": "Nocturne 夜心曲"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }

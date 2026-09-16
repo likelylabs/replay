@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-16",
+   "id": "1127607",
+   "title": "SoDun歌學院 SoDun Exam (SDE)︳本週主考官：Kendy Suen"
+  },
+  {
    "date": "2026-09-15",
    "id": "1127427",
    "parts": [
@@ -111,5 +116,5 @@
    "title": "winifai林靜翬訪問 ︳「林靜翬灑汗水」︳呢個世界有好多老師但林靜翬只得一個~"
   }
  ],
- "fetchedAt": "2026-09-16"
+ "fetchedAt": "2026-09-17"
 }
