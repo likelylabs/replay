@@ -1,6 +1,34 @@
 {
  "episodes": [
   {
+   "date": "2026-09-17",
+   "id": "1127830",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Stakeholders welcome inaugural five-year plan",
+    "HK aims for economic breakthrough, NM boost: blueprint",
+    "'Businesses, investors gain confidence from blueprint'",
+    "Govt target to cut public housing wait to under 4 yrs",
+    "Shorter public housing wait 'achievable'",
+    "HK to give $30k for second child and beyond",
+    "Lawmaker welcomes 11 measures to increase births",
+    "DAB's Lam pleased with childcare services plan",
+    "Exchange Fund could buy more gold to boost trade",
+    "CE vows to ensure safety in AI development",
+    "CE vows reform drive for building-maintenance work",
+    "Andrew Leung welcomes first five-year plan",
+    "Plan offers 'clarity and direction for investment'",
+    "CE vows to speed up development of NM university towns",
+    "Boost for NM campuses with govt financial backing",
+    "Clashes erupte between Yemeni forces and Houthis",
+    "Sheeran under fire over Macklemore controversy",
+    "United out of League Cup after Brighton defeat"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-09-16",
    "id": "1127614",
    "parts": [
@@ -307,5 +335,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-17"
+ "fetchedAt": "2026-09-18"
 }

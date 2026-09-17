@@ -1,8 +1,25 @@
 {
  "episodes": [
   {
+   "date": "2026-09-17",
+   "id": "1127837",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Steffanie Yuen - Retirement Confidence in the Age of AI Part 2",
+    "Scott Przirembel - Business of Sport"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-16",
    "id": "1127621",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Policy Address and the First Five Year Plan",
+    "Ton van den Bosch; Mahesh Rai - Floating Production Storage Part 2",
+    "Steffanie Yuen - Retirement Confidence in the Age of AI Part 1"
+   ],
    "title": "The Close"
   },
   {
@@ -124,5 +141,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-17"
+ "fetchedAt": "2026-09-18"
 }

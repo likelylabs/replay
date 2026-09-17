@@ -1,8 +1,23 @@
 {
  "episodes": [
   {
+   "date": "2026-09-17",
+   "id": "1120988",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Rundfunk-Sinfonieorchester Berlin: Edward Gardner conducts Szymanowski’s ‘Stabat mater’"
+  },
+  {
    "date": "2026-09-16",
    "id": "1120984",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
    "title": "Prague Spring 2026: Barbara Hannigan & Czech Philharmonic"
   },
   {
@@ -136,5 +151,5 @@
    "title": "Wigmore Hall 125th Anniversary Festival: Gala Concert"
   }
  ],
- "fetchedAt": "2026-09-17"
+ "fetchedAt": "2026-09-18"
 }
