@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-18",
+   "id": "1128140",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Lee Ka-shun, Hong Kong rugby star"
+  },
+  {
    "date": "2026-09-17",
    "id": "1127840",
    "parts": [
@@ -105,5 +113,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-18"
+ "fetchedAt": "2026-09-19"
 }

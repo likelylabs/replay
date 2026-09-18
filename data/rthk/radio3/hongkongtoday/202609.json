@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-09-18",
+   "id": "1128130",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "CE says five-year plan aims to benefit all",
+    "Policy move lauded for bringing down manpower shortage",
+    "Applications open for Hung Shui Kiu uni town campuses",
+    "'AI City Brain' is for emergency services: govt",
+    "'Hong Kong Stadium may be used to host tennis events'",
+    "Basketballer and wushu star to carry Asian Games flag",
+    "Man arrested after wife found dead in Heng Fa Chuen",
+    "HKMA warns of uncertainties after raising rates",
+    "Policy sustainability must be taken into account: CE",
+    "'Lure of NM homes depends on transport links'",
+    "Xi urges advanced manufacturing in modernisation drive",
+    "Wang Yi speaks to Rubio ahead of Xi-Trump meeting",
+    "Swedish PM submits resignation after election count",
+    "South Africans in fear after series of killings",
+    "Kitchee held by S Korea's Gangwon in ACL opener",
+    "Philippines' Eala to headline HK Tennis Open"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-09-17",
    "id": "1127830",
    "parts": [
@@ -90,6 +116,9 @@
    "date": "2026-09-14",
    "id": "1127153",
    "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
     "Xi proposes initiatives on Brics cooperation",
     "CE to wear lapel pin symbolising HK's blueprint",
     "FS hails deepening HK, Belt-Road connections",
@@ -335,5 +364,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-18"
+ "fetchedAt": "2026-09-19"
 }

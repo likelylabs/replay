@@ -1,14 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-09-18",
+   "id": "1128133",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Elena Collins and Colby Jones - How curiosity, empathy and human connection can reshape the way we work and collaborate",
+    "The Adventure Clean Up Challenge"
+   ],
+   "title": "Elena Collins and Colby Jones - How curiosity, empathy and human connection can reshape the way we work and collaborate / The Adventure Clean Up Challenge"
+  },
+  {
    "date": "2026-09-17",
    "id": "1127833",
    "parts": [
     "足本 Full (HKT 10:05 - 12:00)",
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
-    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Mae-Lee Gibson - Identity, transitions and the turbulence",
+    "Dr Mat Seymour - Cetaceans"
    ],
-   "title": "Brunch"
+   "title": "Mae-Lee Gibson - Identity, transitions and the turbulence / Dr Mat Seymour - Cetaceans"
   },
   {
    "date": "2026-09-16",
@@ -24,9 +38,12 @@
    "parts": [
     "足本 Full (HKT 10:05 - 12:00)",
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
-    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Sorabh Pant - Comedian",
+    "Dr. Benjamin Chan - Preparing young people for the changing job market, and the importance of lifelong learning",
+    "Raphael Blet - The Bright Side"
    ],
-   "title": "Brunch"
+   "title": "Sorabh Pant - Comedian / Dr. Benjamin Chan - Preparing young people for the changing job market, and the importance of lifelong learning / Raphael Blet - The Bright Side"
   },
   {
    "date": "2026-09-14",
@@ -34,9 +51,12 @@
    "parts": [
     "足本 Full (HKT 10:05 - 12:00)",
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
-    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Amy McCann - Music",
+    "Melissa Tan - Hong Kong Dignity Institute",
+    "The Bright Side - Raphael Blet"
    ],
-   "title": "Brunch"
+   "title": "Amy McCann - Music / Melissa Tan - Hong Kong Dignity Institute / The Bright Side - Raphael Blet"
   },
   {
    "date": "2026-09-11",
@@ -152,5 +172,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-18"
+ "fetchedAt": "2026-09-19"
 }

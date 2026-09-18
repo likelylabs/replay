@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-09-18"
+ "episodes": [
+  {
+   "date": "2026-09-18",
+   "id": "1128131",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)"
+   ],
+   "title": "The Chief Executive's 2026 Phone-in"
+  }
+ ],
+ "fetchedAt": "2026-09-19"
 }
