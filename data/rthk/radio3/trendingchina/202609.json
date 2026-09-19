@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-19",
+   "id": "1128219",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Development of Chinese mainland's altitude economy"
+  },
+  {
    "date": "2026-09-12",
    "id": "1122939",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Use of AI psychotherapy on the Chinese mainland"
   }
  ],
- "fetchedAt": "2026-09-19"
+ "fetchedAt": "2026-09-20"
 }

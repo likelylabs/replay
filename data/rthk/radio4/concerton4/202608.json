@@ -103,11 +103,6 @@
   {
    "date": "2026-08-19",
    "id": "1115637",
-   "parts": [
-    "足本 Full (HKT 20:00 - 22:00)",
-    "第一部份 Part 1 (HKT 20:05 - 21:00)",
-    "第二部份 Part 2 (HKT 21:00 - 22:00)"
-   ],
    "title": "Orchestre de la Suisse Romande: Images"
   },
   {
@@ -216,5 +211,5 @@
    "title": "Academy Cello Festival 2026 - Opening Concert - Celestial Harmonies"
   }
  ],
- "fetchedAt": "2026-09-19"
+ "fetchedAt": "2026-09-20"
 }
