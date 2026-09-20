@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-20",
+   "id": "1128492",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:05 - 22:00)"
+   ],
+   "title": "Sunday Classics 周日古典"
+  },
+  {
    "date": "2026-09-13",
    "id": "1127057",
    "parts": [
@@ -21,5 +31,5 @@
    "title": "Sunday Classics 周日古典"
   }
  ],
- "fetchedAt": "2026-09-20"
+ "fetchedAt": "2026-09-21"
 }

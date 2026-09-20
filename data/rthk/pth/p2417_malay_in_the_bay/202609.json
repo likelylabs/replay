@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-09-20",
+   "id": "1109663",
+   "title": "Epi 12 : Climate: Monsoons, Heat, and Humidity"
+  },
+  {
    "date": "2026-09-13",
    "id": "1109662",
    "parts": [
@@ -17,5 +22,5 @@
    "title": "Epi 10 : Education: From Sekolah to the World"
   }
  ],
- "fetchedAt": "2026-09-20"
+ "fetchedAt": "2026-09-21"
 }

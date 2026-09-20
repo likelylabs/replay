@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-09-20T05:51:02+08:00",
+ "generatedAt": "2026-09-21T05:59:26+08:00",
  "crawlerVersion": 1,
  "streamVersion": 1,
  "retentionMonths": 12,
@@ -17,8 +17,8 @@
      "title_zh": "Beautiful Sunday (與第二台聯播)",
      "title_en": "Beautiful Sunday (與第二台聯播)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/BeautifulSunday/programme_photo_s.jpg"
     },
     {
@@ -53,8 +53,8 @@
      "title_zh": "一分鐘閱讀(精華版)",
      "title_en": "一分鐘閱讀(精華版)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 51
+     "latestDate": "2026-09-20",
+     "episodeCount": 52
     },
     {
      "slug": "our_sportsday",
@@ -79,8 +79,8 @@
      "title_zh": "中國復刻與新潮",
      "title_en": "中國復刻與新潮",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 37,
+     "latestDate": "2026-09-20",
+     "episodeCount": 38,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/chinese_revival_new_trends/11542_115.jpg"
     },
     {
@@ -97,8 +97,8 @@
      "title_zh": "傍晚新聞天地",
      "title_en": "傍晚新聞天地",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 353
+     "latestDate": "2026-09-20",
+     "episodeCount": 354
     },
     {
      "slug": "sport4life",
@@ -141,8 +141,8 @@
      "title_zh": "午間新聞天地",
      "title_en": "午間新聞天地",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 355
+     "latestDate": "2026-09-20",
+     "episodeCount": 356
     },
     {
      "slug": "People",
@@ -158,8 +158,8 @@
      "title_zh": "周末午夜場",
      "title_en": "周末午夜場",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/saturday_drama_fever/5883_115.jpg"
     },
     {
@@ -167,8 +167,8 @@
      "title_zh": "周末鬥秀場",
      "title_en": "周末鬥秀場",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/showdown/12007_115.jpg"
     },
     {
@@ -176,8 +176,8 @@
      "title_zh": "大地書香",
      "title_en": "大地書香",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/worldbook/10286_115.jpg"
     },
     {
@@ -185,8 +185,8 @@
      "title_zh": "大城小事",
      "title_en": "大城小事",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 100,
+     "latestDate": "2026-09-20",
+     "episodeCount": 101,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/city_snapshot2021/9293_115.jpg"
     },
     {
@@ -194,8 +194,8 @@
      "title_zh": "大學堂",
      "title_en": "大學堂",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/halls_of_knowledge/11865_115.jpg"
     },
     {
@@ -212,8 +212,8 @@
      "title_zh": "大自然之聲",
      "title_en": "大自然之聲",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 304,
+     "latestDate": "2026-09-21",
+     "episodeCount": 305,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/sound_of_nature/7766_115.jpg"
     },
     {
@@ -221,8 +221,8 @@
      "title_zh": "太陽底下新鮮事",
      "title_en": "太陽底下新鮮事",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 48,
+     "latestDate": "2026-09-20",
+     "episodeCount": 49,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/underthesun/9455_115.jpg"
     },
     {
@@ -257,8 +257,8 @@
      "title_zh": "日出前告白",
      "title_en": "日出前告白",
      "active": true,
-     "latestDate": "2026-09-14",
-     "episodeCount": 34,
+     "latestDate": "2026-09-21",
+     "episodeCount": 35,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/echo_before_dawn/12368_115.jpg"
     },
     {
@@ -284,16 +284,16 @@
      "title_zh": "晚間新聞天地",
      "title_en": "晚間新聞天地",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354
+     "latestDate": "2026-09-20",
+     "episodeCount": 355
     },
     {
      "slug": "hktoday",
      "title_zh": "晨早新聞天地",
      "title_en": "晨早新聞天地",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/hktoday/programme_photo.jpg"
     },
     {
@@ -301,8 +301,8 @@
      "title_zh": "月光書情",
      "title_en": "月光書情",
      "active": true,
-     "latestDate": "2026-09-14",
-     "episodeCount": 50,
+     "latestDate": "2026-09-21",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/reading_by_moonlight/11116_115.jpg"
     },
     {
@@ -328,8 +328,8 @@
      "title_zh": "港台講台",
      "title_en": "港台講台",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/news_about_rthk/programme_photo_s.jpg"
     },
     {
@@ -379,8 +379,8 @@
      "title_zh": "管理新思維",
      "title_en": "管理新思維",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 41,
+     "latestDate": "2026-09-20",
+     "episodeCount": 42,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/NovaManagement/programme_photo_s.jpg"
     },
     {
@@ -415,8 +415,8 @@
      "title_zh": "舊日的足跡",
      "title_en": "舊日的足跡",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 51,
+     "latestDate": "2026-09-20",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/hkfootpath/1144_115.jpg"
     },
     {
@@ -424,8 +424,8 @@
      "title_zh": "英式英語一分鐘 with 蕭叔叔",
      "title_en": "英式英語一分鐘 with 蕭叔叔",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/unclesiu_special/9724_115.jpg"
     },
     {
@@ -433,8 +433,8 @@
      "title_zh": "萬千寵愛",
      "title_en": "萬千寵愛",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 51,
+     "latestDate": "2026-09-20",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/Sundayevening/programme_photo_s.jpg"
     },
     {
@@ -442,8 +442,8 @@
      "title_zh": "藍地球(精華版)",
      "title_en": "藍地球(精華版)",
      "active": true,
-     "latestDate": "2026-09-14",
-     "episodeCount": 50,
+     "latestDate": "2026-09-21",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/blue_globe_special/9029_115.jpg"
     },
     {
@@ -460,8 +460,8 @@
      "title_zh": "講東講西 - 週日版",
      "title_en": "講東講西 - 週日版",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 48,
+     "latestDate": "2026-09-20",
+     "episodeCount": 49,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/free_as_the_wind_sunday/8404_115.jpg"
     },
     {
@@ -495,8 +495,8 @@
      "title_zh": "非常人物生活雜誌",
      "title_en": "非常人物生活雜誌",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio1/CareForDisabled/programme_photo_s.jpg"
     },
     {
@@ -556,8 +556,8 @@
      "title_zh": "2000 靚歌再重聚",
      "title_en": "2000 靚歌再重聚",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/reunion/419_115.jpg"
     },
     {
@@ -574,8 +574,8 @@
      "title_zh": "Beautiful Sunday (0600-0700 與一台、五台、普通話台聯播)",
      "title_en": "Beautiful Sunday (0600-0700 與一台、五台、普通話台聯播)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/beautifulsunday/programme_photo_s.jpg"
     },
     {
@@ -601,8 +601,8 @@
      "title_zh": "Music Angel",
      "title_en": "Music Angel",
      "active": true,
-     "latestDate": "2026-09-14",
-     "episodeCount": 50,
+     "latestDate": "2026-09-21",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/musicangel/11115_115.jpg"
     },
     {
@@ -610,8 +610,8 @@
      "title_zh": "Sci時間",
      "title_en": "Sci時間",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/popularscience/11027_115.jpg"
     },
     {
@@ -619,8 +619,8 @@
      "title_zh": "Sun 生活",
      "title_en": "Sun 生活",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/sunny_day/9841_115.jpg"
     },
     {
@@ -646,8 +646,8 @@
      "title_zh": "京港話你知",
      "title_en": "京港話你知",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/beijing_and_hong_kong/11489_115.jpg"
     },
     {
@@ -655,8 +655,8 @@
      "title_zh": "全球華語流行歌曲榜",
      "title_en": "全球華語流行歌曲榜",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 11,
+     "latestDate": "2026-09-20",
+     "episodeCount": 12,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/globalchinesepopchart/programme_photo_s.jpg"
     },
     {
@@ -691,8 +691,8 @@
      "title_zh": "好心情經理人",
      "title_en": "好心情經理人",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/agent_alex/9858_115.jpg"
     },
     {
@@ -736,8 +736,8 @@
      "title_zh": "有尾相伴",
      "title_en": "有尾相伴",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/tailwithlove/12482_115.jpg"
     },
     {
@@ -745,8 +745,8 @@
      "title_zh": "有音樂 有快樂",
      "title_en": "有音樂 有快樂",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50
+     "latestDate": "2026-09-20",
+     "episodeCount": 51
     },
     {
      "slug": "bayareaguide",
@@ -762,8 +762,8 @@
      "title_zh": "玩玩星期天",
      "title_en": "玩玩星期天",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/sundayplayground/programme_photo_s.jpg"
     },
     {
@@ -816,8 +816,8 @@
      "title_zh": "華語音樂風",
      "title_en": "華語音樂風",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/cpopvibe/12484_115.jpg"
     },
     {
@@ -834,8 +834,8 @@
      "title_zh": "語妙天下",
      "title_en": "語妙天下",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/languageacademy/8470_115.jpg"
     },
     {
@@ -843,8 +843,8 @@
      "title_zh": "輕談淺唱不夜天",
      "title_en": "輕談淺唱不夜天",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 353,
+     "latestDate": "2026-09-20",
+     "episodeCount": 354,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/keepuco/407_115.jpg"
     },
     {
@@ -888,8 +888,8 @@
      "title_zh": "音樂無界",
      "title_en": "音樂無界",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio2/musicunbound/12483_115.jpg"
     },
     {
@@ -960,8 +960,8 @@
      "title_zh": "100 Billion Ways",
      "title_en": "100 Billion Ways",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/100/12488_115.jpg"
     },
     {
@@ -1013,8 +1013,8 @@
      "title_zh": "Feeling Kinda Sunday",
      "title_en": "Feeling Kinda Sunday",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/kinda_sunday/11164_115.jpg"
     },
     {
@@ -1022,8 +1022,8 @@
      "title_zh": "Hong Kong Heritage",
      "title_en": "Hong Kong Heritage",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 96,
+     "latestDate": "2026-09-20",
+     "episodeCount": 97,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/hongkongheritage/520_115.jpg"
     },
     {
@@ -1031,8 +1031,8 @@
      "title_zh": "Hong Kong Ki Shaam ہانگ کانگ کی شام (Urdu)",
      "title_en": "Hong Kong Ki Shaam ہانگ کانگ کی شام (Urdu)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/urdu/programme_photo_s.jpg"
     },
     {
@@ -1075,8 +1075,8 @@
      "title_zh": "Network South Asia",
      "title_en": "Network South Asia",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/nsa/programme_photo.jpeg"
     },
     {
@@ -1084,16 +1084,16 @@
      "title_zh": "News at Eleven",
      "title_en": "News at Eleven",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 320
+     "latestDate": "2026-09-20",
+     "episodeCount": 321
     },
     {
      "slug": "newsatone",
      "title_zh": "News at One",
      "title_en": "News at One",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 352,
+     "latestDate": "2026-09-20",
+     "episodeCount": 353,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/newsatone/programme_photo.jpg"
     },
     {
@@ -1109,8 +1109,8 @@
      "title_zh": "Night Music on Radio 3",
      "title_en": "Night Music on Radio 3",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/nightmusic/512_115.jpg"
     },
     {
@@ -1118,8 +1118,8 @@
      "title_zh": "PhilKongers",
      "title_en": "PhilKongers",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/philkongers/11998_115.jpg"
     },
     {
@@ -1127,8 +1127,8 @@
      "title_zh": "RTHK News",
      "title_en": "RTHK News",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 69,
+     "latestDate": "2026-09-20",
+     "episodeCount": 70,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/rthknews/programme_photo.jpg"
     },
     {
@@ -1145,8 +1145,8 @@
      "title_zh": "Saptahik Sandesh साप्ताहिक सन्देश (Nepali)",
      "title_en": "Saptahik Sandesh साप्ताहिक सन्देश (Nepali)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/nepali/programme_photo_s.jpg"
     },
     {
@@ -1180,8 +1180,8 @@
      "title_zh": "Snack Attack",
      "title_en": "Snack Attack",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/snackattack/12487_115.jpg"
     },
     {
@@ -1216,8 +1216,8 @@
      "title_zh": "Sunday Early",
      "title_en": "Sunday Early",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/sunearlyshow/programme_photo_s.jpg"
     },
     {
@@ -1225,8 +1225,8 @@
      "title_zh": "Sunday Late with Kevin Lewis",
      "title_en": "Sunday Late with Kevin Lewis",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/sundaylate/586_115.jpg"
     },
     {
@@ -1243,8 +1243,8 @@
      "title_zh": "That's an Idea!",
      "title_en": "That's an Idea!",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 38,
+     "latestDate": "2026-09-20",
+     "episodeCount": 39,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/thatsanidea/12286_115.jpg"
     },
     {
@@ -1287,8 +1287,8 @@
      "title_zh": "The Latest and Greatest",
      "title_en": "The Latest and Greatest",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/latestandgreatest/12485_115.jpg"
     },
     {
@@ -1296,8 +1296,8 @@
      "title_zh": "The Sunday Escape",
      "title_en": "The Sunday Escape",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/sunday_escape/6525_115.jpg"
     },
     {
@@ -1305,8 +1305,8 @@
      "title_zh": "Thought for the Week",
      "title_en": "Thought for the Week",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/thought_for_the_week/programme_photo_s.jpg"
     },
     {
@@ -1323,8 +1323,8 @@
      "title_zh": "Vintage Chart Toppers",
      "title_en": "Vintage Chart Toppers",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio3/vintage_chart_toppers/7164_115.jpg"
     },
     {
@@ -1341,8 +1341,8 @@
      "title_zh": "Weekend Roundup",
      "title_en": "Weekend Roundup",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 101
+     "latestDate": "2026-09-20",
+     "episodeCount": 102
     },
     {
      "slug": "hashtaghk",
@@ -1427,8 +1427,8 @@
      "title_zh": "All about windband music 盡在不弦中",
      "title_en": "All about windband music 盡在不弦中",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 7,
+     "latestDate": "2026-09-20",
+     "episodeCount": 8,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/windband2026/12615_115.jpg"
     },
     {
@@ -1445,8 +1445,8 @@
      "title_zh": "Aubade",
      "title_en": "Aubade",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 353,
+     "latestDate": "2026-09-20",
+     "episodeCount": 354,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/Aubade/600_1920_s.jpg"
     },
     {
@@ -1463,8 +1463,8 @@
      "title_zh": "Church Service",
      "title_en": "Church Service",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 51,
+     "latestDate": "2026-09-20",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/churchservice/629_115.jpg"
     },
     {
@@ -1480,8 +1480,8 @@
      "title_zh": "Classical Music ABC 古典音樂ABC",
      "title_en": "Classical Music ABC 古典音樂ABC",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 2,
+     "latestDate": "2026-09-20",
+     "episodeCount": 3,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/classicalmusicabc2026/12652_115.jpg"
     },
     {
@@ -1507,8 +1507,8 @@
      "title_zh": "Delight in a Bite 一時之選",
      "title_en": "Delight in a Bite 一時之選",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/delightinabite/10310_115.jpg"
     },
     {
@@ -1534,8 +1534,8 @@
      "title_zh": "Jazzing Up 爵士靈感",
      "title_en": "Jazzing Up 爵士靈感",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/JazzingUp/2628_1920_s.jpg"
     },
     {
@@ -1570,8 +1570,8 @@
      "title_zh": "Music from China 樂在神州",
      "title_en": "Music from China 樂在神州",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/MusicfromChina/2640_1920_s.jpg"
     },
     {
@@ -1588,8 +1588,8 @@
      "title_zh": "Night Music 長夜細聽",
      "title_en": "Night Music 長夜細聽",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 353,
+     "latestDate": "2026-09-20",
+     "episodeCount": 354,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/nightmusic/615_115.jpg"
     },
     {
@@ -1660,8 +1660,8 @@
      "title_zh": "Sunday Classics 周日古典",
      "title_en": "Sunday Classics 周日古典",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/sundayclassics/11308_115.jpg"
     },
     {
@@ -1669,8 +1669,8 @@
      "title_zh": "Sunday Divertimento 星夜樂逍遙",
      "title_en": "Sunday Divertimento 星夜樂逍遙",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/sundaydivertimento/634_115.jpg"
     },
     {
@@ -1678,8 +1678,8 @@
      "title_zh": "Sunday Opera 歌劇世界",
      "title_en": "Sunday Opera 歌劇世界",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/opera/630_115.jpg"
     },
     {
@@ -1705,8 +1705,8 @@
      "title_zh": "The Culture Show 音樂之旅",
      "title_en": "The Culture Show 音樂之旅",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/thecultureshow/11148_115.jpg"
     },
     {
@@ -1723,8 +1723,8 @@
      "title_zh": "Traditional Cantonese Singing - Banngan and Lungjau 傳統廣東說唱—板眼及龍舟",
      "title_en": "Traditional Cantonese Singing - Banngan and Lungjau 傳統廣東說唱—板眼及龍舟",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 2,
+     "latestDate": "2026-09-20",
+     "episodeCount": 3,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/bannganlundjau/12654_115.jpg"
     },
     {
@@ -1732,8 +1732,8 @@
      "title_zh": "Tunes to Remember 人約黃昏後",
      "title_en": "Tunes to Remember 人約黃昏後",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio4/tunes_to_remember/5565_115.jpg"
     },
     {
@@ -1767,8 +1767,8 @@
      "title_zh": "Beautiful Sunday（與第二台聯播）",
      "title_en": "Beautiful Sunday（與第二台聯播）",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/beautifulsunday/programme_photo_s.jpg"
     },
     {
@@ -1784,16 +1784,16 @@
      "title_zh": "五台新歌推介",
      "title_en": "五台新歌推介",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50
+     "latestDate": "2026-09-20",
+     "episodeCount": 51
     },
     {
      "slug": "6oclocknews",
      "title_zh": "傍晚新聞天地（與第一台聯播）",
      "title_en": "傍晚新聞天地（與第一台聯播）",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354
+     "latestDate": "2026-09-20",
+     "episodeCount": 355
     },
     {
      "slug": "what_a_cozy_evening",
@@ -1818,8 +1818,8 @@
      "title_zh": "周末午夜場(與第一台聯播)",
      "title_en": "周末午夜場(與第一台聯播)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/radiodramaonsaturday/programme_photo_s.jpg"
     },
     {
@@ -1836,16 +1836,16 @@
      "title_zh": "基哥K歌",
      "title_en": "基哥K歌",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50
+     "latestDate": "2026-09-20",
+     "episodeCount": 51
     },
     {
      "slug": "sunservice",
      "title_zh": "天降甘霖",
      "title_en": "天降甘霖",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/sunservice/735_115.jpg"
     },
     {
@@ -1925,8 +1925,8 @@
      "title_zh": "我的成長號",
      "title_en": "我的成長號",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 24,
+     "latestDate": "2026-09-20",
+     "episodeCount": 25,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/tween_life_journey/12500_115.jpg"
     },
     {
@@ -1934,8 +1934,8 @@
      "title_zh": "戲曲之夜",
      "title_en": "戲曲之夜",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/tconight/736_115.jpg"
     },
     {
@@ -1943,8 +1943,8 @@
      "title_zh": "戲曲天地",
      "title_en": "戲曲天地",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/tco/programme_photo_s.jpg"
     },
     {
@@ -1961,8 +1961,8 @@
      "title_zh": "星月爭輝",
      "title_en": "星月爭輝",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/starandmoon_eric/programme_photo_s.jpg"
     },
     {
@@ -1970,8 +1970,8 @@
      "title_zh": "晚間新聞天地（與第一台聯播）",
      "title_en": "晚間新聞天地（與第一台聯播）",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354
+     "latestDate": "2026-09-20",
+     "episodeCount": 355
     },
     {
      "slug": "hktoday",
@@ -1996,8 +1996,8 @@
      "title_zh": "有緣相會",
      "title_en": "有緣相會",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/music_of_my_life/programme_photo_s.jpg"
     },
     {
@@ -2040,8 +2040,8 @@
      "title_zh": "空中結緣",
      "title_en": "空中結緣",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/chances/731_115.jpg"
     },
     {
@@ -2075,8 +2075,8 @@
      "title_zh": "美麗人生",
      "title_en": "美麗人生",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/merry_mary/9276_115.jpg"
     },
     {
@@ -2119,8 +2119,8 @@
      "title_zh": "越夜粵精彩",
      "title_en": "越夜粵精彩",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 304,
+     "latestDate": "2026-09-21",
+     "episodeCount": 305,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/radio5/tcoexcitingnight/6315_115.jpg"
     },
     {
@@ -2191,8 +2191,8 @@
      "title_zh": "621 金曲專門店",
      "title_en": "621 金曲專門店",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 101,
+     "latestDate": "2026-09-20",
+     "episodeCount": 102,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/OldiesStationWX/2258_115.jpg"
     },
     {
@@ -2209,8 +2209,8 @@
      "title_zh": "Beautiful Sunday(與一、二、五台聯播)",
      "title_en": "Beautiful Sunday(與一、二、五台聯播)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50
+     "latestDate": "2026-09-20",
+     "episodeCount": 51
     },
     {
      "slug": "p2407_barriers_to_bridges",
@@ -2226,8 +2226,8 @@
      "title_zh": "CIBS Programme：Inspiration & Beyond: Young Ethnic Diverse Professionals in HK",
      "title_en": "CIBS Programme：Inspiration & Beyond: Young Ethnic Diverse Professionals in HK",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 11,
+     "latestDate": "2026-09-20",
+     "episodeCount": 12,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/p2386_young_ethnic_diverse/12591_115.jpg"
     },
     {
@@ -2235,8 +2235,8 @@
      "title_zh": "CIBS Programme：Malay in the Bay",
      "title_en": "CIBS Programme：Malay in the Bay",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 11,
+     "latestDate": "2026-09-20",
+     "episodeCount": 12,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/p2417_malay_in_the_bay/12592_115.jpg"
     },
     {
@@ -2253,8 +2253,8 @@
      "title_zh": "CIBS Programme：The EMpowered Athlete",
      "title_en": "CIBS Programme：The EMpowered Athlete",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 11,
+     "latestDate": "2026-09-20",
+     "episodeCount": 12,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/p2380_empowered_athlete/12590_115.jpg"
     },
     {
@@ -2370,8 +2370,8 @@
      "title_zh": "Halo Jakarta! Hello Hong Kong!",
      "title_en": "Halo Jakarta! Hello Hong Kong!",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/halojakarta_hellohongkong/11064_115.jpg"
     },
     {
@@ -2379,8 +2379,8 @@
      "title_zh": "Sunday隨想曲",
      "title_en": "Sunday隨想曲",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/sundaysuixiangqu/5177_115.jpg"
     },
     {
@@ -2397,8 +2397,8 @@
      "title_zh": "U秀幫周日版",
      "title_en": "U秀幫周日版",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 37,
+     "latestDate": "2026-09-20",
+     "episodeCount": 38,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/elitebunchsunday/8016_115.jpg"
     },
     {
@@ -2451,8 +2451,8 @@
      "title_zh": "好young音樂 (週日版)",
      "title_en": "好young音樂 (週日版)",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 52,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/2025youngmusicsun/11912_115.jpg"
     },
     {
@@ -2468,8 +2468,8 @@
      "title_zh": "孟想運動周刊",
      "title_en": "孟想運動周刊",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/2017sportsmeng/7522_115.jpg"
     },
     {
@@ -2531,8 +2531,8 @@
      "title_zh": "月夜樂逍遙",
      "title_en": "月夜樂逍遙",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 354,
+     "latestDate": "2026-09-20",
+     "episodeCount": 355,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/MoonlightDejavu1/4596_115.jpg"
     },
     {
@@ -2575,8 +2575,8 @@
      "title_zh": "輕談淺唱不夜天（與第二台聯播）",
      "title_en": "輕談淺唱不夜天（與第二台聯播）",
      "active": true,
-     "latestDate": "2026-09-19",
-     "episodeCount": 353,
+     "latestDate": "2026-09-20",
+     "episodeCount": 354,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/keepuco/programme_photo_s.jpg"
     },
     {
@@ -2584,8 +2584,8 @@
      "title_zh": "音樂之光",
      "title_en": "音樂之光",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/2017musiclight/7607_115.jpg"
     },
     {
@@ -2602,8 +2602,8 @@
      "title_zh": "飛越大中華",
      "title_en": "飛越大中華",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 50,
+     "latestDate": "2026-09-20",
+     "episodeCount": 51,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/greaterchina2018/8163_115.jpg"
     },
     {
@@ -2611,8 +2611,8 @@
      "title_zh": "魅力中國",
      "title_en": "魅力中國",
      "active": true,
-     "latestDate": "2026-09-13",
-     "episodeCount": 49,
+     "latestDate": "2026-09-20",
+     "episodeCount": 50,
      "logo": "https://webstatic.rthk.hk/oldassets/images/rthk/pth/charmingchina/3952_115.jpg"
     },
     {
@@ -2651,7 +2651,7 @@
    "name_en": "Metro Finance",
    "freq": "104",
    "earliestDate": "2026-06-01",
-   "latestDate": "2026-09-20",
+   "latestDate": "2026-09-21",
    "streamTemplate": "https://arch.metroradio.hk/{freq}/{date}/{freq}_{datetime}.mp3",
    "segmentMinutes": 60
   },
@@ -2663,7 +2663,7 @@
    "name_en": "Metro Info",
    "freq": "997",
    "earliestDate": "2026-06-01",
-   "latestDate": "2026-09-20",
+   "latestDate": "2026-09-21",
    "streamTemplate": "https://arch.metroradio.hk/{freq}/{date}/{freq}_{datetime}.mp3",
    "segmentMinutes": 60
   },
@@ -2675,7 +2675,7 @@
    "name_en": "Metro Plus",
    "freq": "1044",
    "earliestDate": "2026-06-01",
-   "latestDate": "2026-09-20",
+   "latestDate": "2026-09-21",
    "streamTemplate": "https://arch.metroradio.hk/{freq}/{date}/{freq}_{datetime}.mp3",
    "segmentMinutes": 60
   }

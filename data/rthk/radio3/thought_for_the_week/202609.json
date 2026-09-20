@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-20",
+   "id": "1128470",
+   "parts": [
+    "足本 Full (HKT 08:25 - 08:35)"
+   ],
+   "title": "Thought for the Week"
+  },
+  {
    "date": "2026-09-13",
    "id": "1127034",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Thought for the Week"
   }
  ],
- "fetchedAt": "2026-09-20"
+ "fetchedAt": "2026-09-21"
 }
