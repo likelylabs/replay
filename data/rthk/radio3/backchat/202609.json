@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-21",
+   "id": "1128607",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Policy Address review - Aviation and transportation",
+    "President Xi Jinping's state visit to Egypt",
+    "World Alzheimer's Day"
+   ],
+   "title": "Policy Address review - Aviation and transportation / President Xi Jinping's state visit to Egypt / World Alzheimer's Day"
+  },
+  {
    "date": "2026-09-18",
    "id": "1128132",
    "parts": [
@@ -161,5 +172,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-21"
+ "fetchedAt": "2026-09-22"
 }

@@ -1,6 +1,30 @@
 {
  "episodes": [
   {
+   "date": "2026-09-21",
+   "id": "1128605",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "Part 3",
+    "Part 4",
+    "Part 5",
+    "Hong Kong bids farewell to Tung Chee-hwa",
+    "FS says HK key to national financial goals",
+    "Northern Metropolis will power up HK economy: CE",
+    "Lawmaker says mediation an alternative to court",
+    "'Synergy effect will be achieved in uni towns'",
+    "Qualified carers need three years experience: lawmaker",
+    "Trump's 'AI Force' aimed at keeping US at the forefront",
+    "Two silvers for Hong Kong, China at Asian Games",
+    "Carney and Macron meeting highlights closer ties",
+    "Vice Premier He Lifeng in New York for key meeting",
+    "Merz under pressure after fresh election defeat",
+    "Ukraine launches biggest drone attack on Moscow",
+    "City surge to the top after win over Sunderland"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-09-18",
    "id": "1128130",
    "parts": [
@@ -364,5 +388,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-21"
+ "fetchedAt": "2026-09-22"
 }

@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-21",
+   "id": "1128606",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View from China"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-09-17",
    "id": "1127831",
    "parts": [
@@ -144,5 +155,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-09-21"
+ "fetchedAt": "2026-09-22"
 }
