@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-22",
+   "id": "1128843",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - The Chinese Foundation Secondary School"
+  },
+  {
    "date": "2026-09-21",
    "id": "1128615",
    "parts": [
@@ -121,5 +129,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-22"
+ "fetchedAt": "2026-09-23"
 }

@@ -1,10 +1,24 @@
 {
  "episodes": [
   {
+   "date": "2026-09-22",
+   "id": "1128840",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy and Xiaolin Chen",
+    "Chris Humphrey - ASEAN-EU Business Summit",
+    "Business Of Entertainment: Marcel Fenez, President of Fenez Media"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-21",
    "id": "1128612",
    "parts": [
-    "足本 Full (HKT 17:05 - 18:00)"
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Startup Spotlight - Ray Yeng",
+    "How to Properly Close a Company"
    ],
    "title": "The Close"
   },
@@ -160,5 +174,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-22"
+ "fetchedAt": "2026-09-23"
 }

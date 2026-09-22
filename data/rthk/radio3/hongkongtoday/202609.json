@@ -1,6 +1,30 @@
 {
  "episodes": [
   {
+   "date": "2026-09-22",
+   "id": "1128833",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "AFCD to step up threat assessments on feral dogs",
+    "'Two dogs linked to fatal attack are microchipped'",
+    "Lawmaker wants govt to regulate feeding of dogs",
+    "Sports, culture key to HK's global status: chambers",
+    "Top chambers' heads back Hong Kong's five-year plan",
+    "RCEP establishes accession working group for HK",
+    "HK set to unveil Green Energy Corridor partner city",
+    "Special offers being rolled out for National Day",
+    "Hong Kong marks world Alzheimer's Day",
+    "Beijing 'seeks strategic stability with US in Xi trip'",
+    "US media outlets sue over White House press ban",
+    "Houthis push to take strategic mountains in Yemen",
+    "Two women appear in court over South Africa killing",
+    "Haughey and Sham strike gold for Hong Kong, China"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-09-21",
    "id": "1128605",
    "parts": [
@@ -388,5 +412,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-22"
+ "fetchedAt": "2026-09-23"
 }

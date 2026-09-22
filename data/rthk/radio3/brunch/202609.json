@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-09-22",
+   "id": "1128836",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Carlos Escueta - Asian Games",
+    "Mohammed Magdi - Comedy and life in Hong Kong",
+    "The Bright Side - Raphael Blet"
+   ],
+   "title": "Carlos Escueta - Asian Games / Mohammed Magdi - Comedy and life in Hong Kong / The Bright Side - Raphael Blet"
+  },
+  {
    "date": "2026-09-21",
    "id": "1128608",
    "parts": [
@@ -8,9 +21,10 @@
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
     "第二部份 Part 2 (HKT 11:05 - 12:00)",
     "Carlos Escueta - Asian Games",
-    "Chris Wan Feng - Art"
+    "Chris Wan Feng - Art",
+    "The Bright Side - Raphael Blet"
    ],
-   "title": "Carlos Escueta - Asian Games / Chris Wan Feng - Art"
+   "title": "Carlos Escueta - Asian Games / Chris Wan Feng - Art / The Bright Side - Raphael Blet"
   },
   {
    "date": "2026-09-18",
@@ -184,5 +198,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-22"
+ "fetchedAt": "2026-09-23"
 }
