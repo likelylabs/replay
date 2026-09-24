@@ -104,7 +104,7 @@ def main():
             break
     check("akamai master.m3u8", ok, " → ".join(notes) or "no episode date to derive from")
 
-    # 5. Metro hourly MP3 — yesterday 08:00 HKT, all three frequencies
+    # 5. Metro half-hour MP3 — yesterday's 08:00 slot, all three frequencies
     yday = (dt.datetime.utcnow() + dt.timedelta(hours=8) - dt.timedelta(days=1)).strftime("%Y%m%d")
     for f in ("104", "997", "1044"):
         st, ct, _, dtime = fetch(METRO.format(f=f, d=yday, hh="08"), method="HEAD")

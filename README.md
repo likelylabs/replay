@@ -16,7 +16,7 @@ Spec, tenets and decisions live in the private coordination repo
  RTHK sitemap + channel pages ─┐  crawl.yml (daily 03:30 HKT)             GET index.json
  RTHK catchUp JSON (per month) ─┼─► tools/crawl.py   → data/  (cache)      → channel / programme browse
  RTHK Akamai HLS (spot-check)  ─┤  tools/build_catalog.py → index.json     GET prog/{ch}/{slug}.json
- Metro hourly MP3 (window)     ─┘     (publish gate)      + prog/           → episode list → derived stream URL
+ Metro half-hour MP3 (window)  ─┘     (publish gate)      + prog/           → episode list → derived stream URL
                                    pages-deploy.yml → Pages (last-good)
 ```
 
@@ -24,10 +24,14 @@ Spec, tenets and decisions live in the private coordination repo
   answers 200 from a hosted runner (red = runner-IP block or path change).
 - `tools/crawl.py` — the only code that talks to broadcasters. Serial,
   ~1 req/s, realistic UA + Referer, backoff, a per-run request budget and a
-  circuit breaker. Writes only `data/`.
+  circuit breaker. Writes only `data/`. Metro costs a handful of HEADs per
+  frequency per day: the window search plus ONE `:30`-slot grid canary
+  (Content-Length ÷ 64 kbps ≈ 30 min, else a `grid drift?` warning in
+  `data/last-run.json`; warn-only, `metro_segment_sec` records the reading).
 - `tools/build_catalog.py` — the only writer of `index.json` + `prog/`.
-  Validates, drops dormant programmes, and refuses to publish a catalog that
-  shrank past the safety floor (≥90% programmes / ≥80% episodes of last-good).
+  Validates, drops dormant programmes, blanks uninformative episode titles
+  (below), and refuses to publish a catalog that shrank past the safety floor
+  (≥90% programmes / ≥80% episodes of last-good).
 - `pages-deploy.yml` — publishes the public surface (`index.json`, `prog/`,
   `robots.txt`) with 3 fresh deploy attempts + a 30-min drift reconciler.
   Gated on the `PAGES_ENABLED` repository variable; `PUBLIC_BASE_URL` tells
@@ -39,11 +43,18 @@ Spec, tenets and decisions live in the private coordination repo
   "programme"`) or its by-time window (Metro, `browse: "bytime"`). Schema:
   `schema/index.schema.json`.
 - `prog/{channel}/{slug}.json` — one programme's episodes, newest first.
-  Schema: `schema/programme.schema.json`.
+  Schema: `schema/programme.schema.json`. An episode `title` of `""` means RTHK
+  gave no episode title — only the programme name (after an NFKC / case /
+  punctuation fold, or contained in it) or a fixed label carried by ≥80% of a
+  programme's ≥4 episodes (節目內容, 歌曲選播, a host's show name). Show the
+  programme title instead. Real titles are published verbatim.
 - Stream URLs are **derived client-side**: `index.streamTemplate` filled with
   `channel`, `slug`, `date` (YYYYMMDD) — unless an episode carries `streamUrl`.
-  Metro: the channel's `streamTemplate` with `freq`, `date`, `datetime`
-  (YYYYMMDDHH00); a 404 is a gap.
+  Metro: the archive is a **half-hour grid** — one ~30-min MP3 per slot, slots
+  every `segmentMinutes` (30) from 00:00 HKT, 48 a day. Fill the channel's
+  `streamTemplate` with `freq`, `date`, `datetime` = the slot START
+  (YYYYMMDDHHMM, MM ∈ {00, 30}); a 404 is a gap. `segmentMinutes` drives the
+  slot grid, URL and label only — it is not a playback duration.
 - `streamVersion` is a forward-compat guard: the app ignores catalogs whose
   version exceeds what it understands.
 
@@ -53,7 +64,12 @@ Spec, tenets and decisions live in the private coordination repo
 python3 tools/probe.py                                    # sources alive?
 python3 tools/crawl.py --only radio1 --limit 5 --budget 100 --no-backfill --skip-metro
 python3 tools/build_catalog.py                            # gate + write index.json / prog/
+python3 -m unittest discover -s tests                     # offline tests (no network)
 ```
+
+`index.json` + `prog/` are committed by the daily crawl Action — don't commit a
+local rebuild. The tests build the committed `data/` into a temp dir instead;
+the JSON-schema checks run when `jsonschema` is installed and skip otherwise.
 
 ## Go-live checklist (owner)
 
