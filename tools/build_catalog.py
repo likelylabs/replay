@@ -11,6 +11,8 @@ Gate:
   - the last crawl must not have tripped the circuit breaker
   - every programme/episode validates against the shape below
   - programmes with 0 episodes in the retention window are dropped
+  - uninformative episode titles (the programme name, a fixed label) are
+    blanked to "" so the app falls back to the programme title (S31b)
   - safety floor vs last-good: >= 90% of programmes and >= 80% of episodes,
     else refuse (a bad crawl must never nuke the section)
 
@@ -20,6 +22,8 @@ import datetime as dt
 import json
 import re
 import sys
+import unicodedata
+from collections import Counter
 
 from common import (CRAWLER_VERSION, HKT, INDEX_PATH, LAST_RUN_PATH, METRO_CHANNELS,
                     METRO_SEGMENT_MINUTES, METRO_TEMPLATE, METRO_WINDOW_PATH,
@@ -33,6 +37,9 @@ FLOOR_EPISODES = 0.80
 SLUG_RE = re.compile(r"^[A-Za-z0-9_]+$")
 DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
 ID_RE = re.compile(r"^\d+$")
+NON_WORD_RE = re.compile(r"[\W_]+")
+LABEL_SHARE = 0.80              # a title on >= 80 % of a programme's episodes is a label...
+LABEL_MIN_EPISODES = 4          # ...once the programme has at least this many episodes
 
 
 def fail(msg):
@@ -61,6 +68,34 @@ def load_programme(p, window_months, overrides, today):
             rec["streamUrl"] = ov
         out.append(rec)
     return out
+
+
+def _tkey(s):
+    """Title comparison key: NFKC → drop punctuation / spaces / underscores →
+    casefold. '《講東講西》' / '講東講西 ' / 'ＦＲＥＥ as_the-Wind' fold alike."""
+    return NON_WORD_RE.sub("", unicodedata.normalize("NFKC", s or "")).casefold()
+
+
+def blank_non_titles(programme, episodes):
+    """S31b: RTHK often sends the programme name or a fixed label (節目內容,
+    歌曲選播, a host's show name) as the episode `title`. Blank those to "" —
+    the app then falls back to the programme title — and keep real titles.
+    An episode title is blanked when its key is empty, is contained in the
+    programme's title_zh / title_en key, or (programme has >= 4 episodes) is
+    carried by >= 80 % of them. Mutates `episodes`; returns how many changed."""
+    names = [k for k in (_tkey(programme.get("title_zh")), _tkey(programme.get("title_en"))) if k]
+    keys = [_tkey(ep.get("title")) for ep in episodes]
+    n = len(episodes)
+    labels = set()
+    if n >= LABEL_MIN_EPISODES:
+        labels = {k for k, c in Counter(k for k in keys if k).items() if c >= LABEL_SHARE * n}
+    blanked = 0
+    for ep, k in zip(episodes, keys):
+        if not k or k in labels or any(k in name for name in names):
+            if ep.get("title"):
+                blanked += 1
+            ep["title"] = ""
+    return blanked
 
 
 def validate_programme(p, episodes):
@@ -96,6 +131,7 @@ def main():
     dropped = []          # malformed programmes: dropped with a warning, not fatal
     candidates = 0
     total_eps = 0
+    blanked_titles = 0
     for ch, meta in RTHK_CHANNELS.items():
         entries = []
         for p in sorted(programmes.values(), key=lambda p: p["slug"]):
@@ -104,14 +140,16 @@ def main():
             episodes = load_programme(p, window_months, overrides, today)
             if not episodes:
                 continue                                   # dormant: dropped (§2.5)
+            # §2.1 fallbacks: no Chinese title anywhere → humanised slug.
+            title_zh = (p.get("title_zh") or "").strip() or p["slug"].replace("_", " ")
+            title_en = (p.get("title_en") or "").strip() or title_zh   # §2.1 fallback
+            # Against the PUBLISHED titles — the ones the app falls back to.
+            blanked_titles += blank_non_titles({"title_zh": title_zh, "title_en": title_en}, episodes)
             probs = validate_programme(p, episodes)
             if probs:
                 dropped += [f"{ch}/{p['slug']}: {x}" for x in probs]
                 continue
             candidates += 1
-            # §2.1 fallbacks: no Chinese title anywhere → humanised slug.
-            title_zh = (p.get("title_zh") or "").strip() or p["slug"].replace("_", " ")
-            title_en = (p.get("title_en") or "").strip() or title_zh   # §2.1 fallback
             seen = p.get("lastSeenActive")
             active = bool(seen) and dt.date.fromisoformat(seen) >= active_cutoff
             entry = {"slug": p["slug"], "title_zh": title_zh, "title_en": title_en,
@@ -185,7 +223,8 @@ def main():
     log(f"index.json written: {n_prog} programmes / {total_eps} episodes across "
         f"{sum(1 for c in channels if c['source']=='rthk')} RTHK + "
         f"{sum(1 for c in channels if c['source']=='metro')} Metro channels, {size_kb} KB; "
-        f"{len(written)} prog files, {len(existing - written)} stale removed")
+        f"{len(written)} prog files, {len(existing - written)} stale removed; "
+        f"{blanked_titles} uninformative episode titles blanked")
     return 0
 
 
