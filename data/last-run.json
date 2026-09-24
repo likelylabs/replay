@@ -5,22 +5,27 @@
  "budget": 2500,
  "enumerated": 395,
  "failures": 3,
- "finishedAt": "2026-09-23T06:39:26+08:00",
+ "finishedAt": "2026-09-25T06:53:27+08:00",
  "meta_refreshed": 0,
  "metro": {
-  "104": "2026-06-01..2026-09-23",
-  "1044": "2026-06-01..2026-09-23",
-  "997": "2026-06-01..2026-09-23"
+  "104": "2026-06-01..2026-09-25",
+  "1044": "2026-06-01..2026-09-25",
+  "997": "2026-06-01..2026-09-25"
+ },
+ "metro_segment_sec": {
+  "104": 1791.7,
+  "1044": 1791.5,
+  "997": 1791.5
  },
  "month_failures": 1,
  "months_fetched": 791,
  "months_pruned": 0,
  "programmes_known": 395,
- "requests": 1118,
- "seconds": 1141,
+ "requests": 1127,
+ "seconds": 1153,
  "sitemap_programmes": 295,
  "spot_checks": 12,
  "spot_misses": 0,
- "startedAt": "2026-09-23T06:20:25+08:00",
+ "startedAt": "2026-09-25T06:34:14+08:00",
  "warnings": []
 }

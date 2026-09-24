@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1129490",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Attila Gonczy - A new performance",
+    "Check in at 11: Ahmed Hannan Amjad",
+    "Dr CK Lee - Bone marrow donation"
+   ],
+   "title": "Attila - A new performance / Dr CK Lee - Bone marrow donation"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1129078",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Carlos Escueta - Asian Games",
+    "Saaj Raja - Comedy and life in Hong Kong",
+    "The Bright Side: Raphael Blet"
+   ],
+   "title": "Carlos Escueta - Asian Games / Saaj Raja - Comedy and life in Hong Kong / The Bright Side: Raphael Blet"
+  },
+  {
    "date": "2026-09-22",
    "id": "1128836",
    "parts": [
@@ -198,5 +224,5 @@
    "title": "Nick Florent - Music, life on Cheung Chau / The Bright Side - Samantha Fong"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }

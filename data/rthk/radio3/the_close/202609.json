@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1129494",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Reshmi Khurana - Women in the AI Era",
+    "Michael Cheng - Business of Sport"
+   ],
+   "title": "The Close"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1129082",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Asian Development Outlook - September 2026",
+    "Padraig Seif - Asian Gaelic Games",
+    "Aseem Goyal - International Business Expansion"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-22",
    "id": "1128840",
    "parts": [
@@ -174,5 +196,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }

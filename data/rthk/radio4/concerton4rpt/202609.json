@@ -1,6 +1,26 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1120991",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "HK Phil: François-Frédéric Guy's Beethoven Piano Concertos II"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1120989",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Rundfunk-Sinfonieorchester Berlin: Edward Gardner conducts Szymanowski’s ‘Stabat mater’"
+  },
+  {
    "date": "2026-09-22",
    "id": "1120985",
    "parts": [
@@ -131,5 +151,5 @@
    "title": "Orchestre de la Suisse Romande: Eun Sun Kim Conducts Beethoven 5"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }

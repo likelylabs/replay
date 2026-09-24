@@ -1,6 +1,58 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1129487",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "President Xi arrives to rare Trump tarmac welcome",
+    "Shorter public housing queue by 2027: housing chief",
+    "Police nabbed nearly 1,600 young people as of June",
+    "NGO warns of alarming rise in child abuse cases",
+    "CE calls on public to get their flu jabs",
+    "Police find no evidence of tampering in sports drinks",
+    "Fifa Asean Cup set to kick off",
+    "Make most of trade opportunities: HKPC chairman",
+    "'Dual-circulation strategy offers HK opportunities'",
+    "Commerce chief confident in HK business environment",
+    "'Links between obesity and physical abuse'",
+    "'Criminals exploiting young people's ignorance'",
+    "Hong Kong's overall inflation stays moderate",
+    "Hong Kong, China sixth at AG after four more medals",
+    "Iran's president says Tehran will not bow to pressure",
+    "Ethiopia rivals accuse each other of staring new war"
+   ],
+   "title": "Thursday"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1129075",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "CCTV cameras installed at dog attack scene",
+    "16 students unwell after consuming free sports drinks",
+    "Lee says 'no hub succeeds alone' in collaboration push",
+    "Labour shortage eases, but entry-level jobs hit by AI",
+    "Call for college students to adapt amid AI",
+    "Diagonal crossing for pedestrians in Sha Tin",
+    "China and Europe should avoid trade wars: Wang Yi",
+    "China ramps up efforts to boost tourism",
+    "Top China companies report billions in revenue",
+    "Zeman hails Five-Year Plan and Police Address",
+    "Expert urges more value to boost tourism",
+    "More medals for Hong Kong, China in Nagoya",
+    "Sri Lanka convicts 15 in 2019 Easter bombings",
+    "At least 7 dead as Typhoon Dujuan lashes Japan",
+    "Iran hardening its stance to end conflict with US",
+    "Greenland, Denmark and US sign mililtary agreement"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-09-22",
    "id": "1128833",
    "parts": [
@@ -412,5 +464,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }

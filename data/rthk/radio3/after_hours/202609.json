@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1129498",
+   "parts": [
+    "足本 Full (HKT 22:05 - 01:00)",
+    "第一部份 Part 1 (HKT 22:05 - 23:00)",
+    "第二部份 Part 2 (HKT 23:15 - 24:00)",
+    "第三部份 Part 3 (HKT 00:05 - 01:00)"
+   ],
+   "title": "After Hours with Michael Lance"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1129086",
+   "parts": [
+    "足本 Full (HKT 22:05 - 01:00)",
+    "第一部份 Part 1 (HKT 22:05 - 23:00)",
+    "第二部份 Part 2 (HKT 23:15 - 24:00)",
+    "第三部份 Part 3 (HKT 00:05 - 01:00)"
+   ],
+   "title": "After Hours with Michael Lance"
+  },
+  {
    "date": "2026-09-22",
    "id": "1128844",
    "parts": [
@@ -177,5 +199,5 @@
    "title": "After Hours with Michael Lance"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }

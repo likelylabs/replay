@@ -1,6 +1,26 @@
 {
  "episodes": [
   {
+   "date": "2026-09-24",
+   "id": "1129504",
+   "parts": [
+    "足本 Full (HKT 17:05 - 19:00)",
+    "第一部份 Part 1 (HKT 17:05 - 18:00)",
+    "第二部份 Part 2 (HKT 18:18 - 19:00)"
+   ],
+   "title": "Sunset Music Diary 日樂誌"
+  },
+  {
+   "date": "2026-09-23",
+   "id": "1129091",
+   "parts": [
+    "足本 Full (HKT 17:05 - 19:00)",
+    "第一部份 Part 1 (HKT 17:05 - 18:00)",
+    "第二部份 Part 2 (HKT 18:18 - 19:00)"
+   ],
+   "title": "Sunset Music Diary 日樂誌"
+  },
+  {
    "date": "2026-09-22",
    "id": "1128849",
    "parts": [
@@ -161,5 +181,5 @@
    "title": "Sunset Music Diary 日樂誌"
   }
  ],
- "fetchedAt": "2026-09-23"
+ "fetchedAt": "2026-09-25"
 }
