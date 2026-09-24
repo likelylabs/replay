@@ -53,7 +53,16 @@ METRO_CHANNELS = {
     "1044": {"id": "metro_plus", "name_zh": "新城采訊台", "name_en": "Metro Plus"},
 }
 METRO_TEMPLATE = "https://arch.metroradio.hk/{freq}/{date}/{freq}_{datetime}.mp3"
-METRO_SEGMENT_MINUTES = 60
+# Metro's archive is a HALF-HOUR grid (DECISIONS S31, probed 2026-09-24): one
+# file per 30-minute slot starting at HH:00 and HH:30 — 48 a day — so
+# {datetime} = YYYYMMDDHHMM with MM ∈ {00, 30} (the slot START). Each file is
+# one ~30-min MPEG-2 Layer III, 64 kbps CBR, 22.05 kHz MP3 ≈ 14.33 MB
+# (~1,792 s). The old "hourly, ~14 MB/hour" reading was wrong: 14 MB at
+# 64 kbps IS 30 minutes. Published as index.json `segmentMinutes`.
+METRO_SEGMENT_MINUTES = 30
+# Canary only (crawl.py grid check: Content-Length × 8 ÷ this ≈ the slot's
+# seconds). Never published — the app never derives a duration from it.
+METRO_BITRATE_BPS = 64_000
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
       "(KHTML, like Gecko) Version/17.5 Safari/605.1.15")
@@ -78,6 +87,7 @@ class Client:
         self.breaker_ratio = breaker_ratio
         self.breaker_min = breaker_min
         self.log = log
+        self.last_length = 0      # Content-Length of the last response (0 = absent)
         self._last = 0.0
 
     def _pace(self):
@@ -89,7 +99,10 @@ class Client:
     def get(self, url, headers=None, method="GET", timeout=40, tries=3, ok=(200,)):
         """Return (status, content_type, body). Retries with backoff on any
         non-ok status or transport error; raises BudgetExhausted / CircuitOpen.
-        A 404 is returned immediately (it is an answer, not a failure)."""
+        A 404 is returned immediately (it is an answer, not a failure).
+        Sets self.last_length to the final response's Content-Length (0 when
+        absent or unparseable) — a HEAD's size without downloading the body."""
+        self.last_length = 0
         if self.requests >= self.budget:
             raise BudgetExhausted(f"request budget {self.budget} exhausted")
         req_headers = {"User-Agent": UA, "Accept-Language": "zh-HK,zh;q=0.9,en;q=0.8"}
@@ -99,10 +112,12 @@ class Client:
             self._pace()
             self.requests += 1
             req = urllib.request.Request(url, method=method, headers=req_headers)
+            self.last_length = 0
             try:
                 with urllib.request.urlopen(req, timeout=timeout) as r:
                     body = b"" if method == "HEAD" else r.read()
                     last = (r.status, r.headers.get("Content-Type", ""), body)
+                    self.last_length = _content_length(r.headers)
             except urllib.error.HTTPError as e:
                 last = (e.code, e.headers.get("Content-Type", "") if e.headers else "", b"")
                 if e.code == 404:
@@ -131,6 +146,13 @@ class Client:
             return st, json.loads(body.decode("utf-8"))   # JSON despite text/html
         except (UnicodeDecodeError, json.JSONDecodeError):
             return st, None
+
+
+def _content_length(headers):
+    try:
+        return max(0, int(str(headers.get("Content-Length") or 0).strip()))
+    except (AttributeError, TypeError, ValueError):
+        return 0
 
 
 def read_json(path, default=None):

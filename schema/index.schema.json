@@ -50,8 +50,8 @@
               "freq": {"enum": ["104", "997", "1044"]},
               "earliestDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
               "latestDate": {"type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$"},
-              "streamTemplate": {"type": "string", "description": "hourly MP3 template with {freq},{date=YYYYMMDD},{datetime=YYYYMMDDHHMM}; a 404 is a gap"},
-              "segmentMinutes": {"const": 60}
+              "streamTemplate": {"type": "string", "description": "per-slot MP3, {datetime} = slot start: template with {freq},{date=YYYYMMDD},{datetime=YYYYMMDDHHMM}; a 404 is a gap"},
+              "segmentMinutes": {"enum": [30, 60], "description": "one archive file per slot; slots start every segmentMinutes from 00:00 HKT"}
             }
           }
         ]

@@ -17,8 +17,10 @@ Daily run (all bounded by --budget requests, serial ~1 req/s):
   3. Stream spot-check — a sample of recent episodes per channel against the
      derived Akamai template; on a miss, getEpisode's authoritative `file:`
      is stored as a per-episode override (data/rthk/overrides.json).
-  4. Metro window — binary-search the earliest hourly MP3 still served per
-     frequency; confirm the latest day. (data/metro/window.json)
+  4. Metro window — binary-search the earliest day still served per
+     frequency (probing its 08:00 slot); confirm the latest day; one HEAD on a
+     :30 slot per frequency as the half-hour grid canary (S31, warn-only).
+     (data/metro/window.json)
 Writes data/last-run.json so the build gate can refuse to publish a run that
 aborted (circuit breaker) or drifted.
 
@@ -35,7 +37,8 @@ import time
 import xml.etree.ElementTree as ET
 
 from common import (BudgetExhausted, CircuitOpen, Client, INCREMENTAL_MONTHS,
-                    METRO_CHANNELS, METRO_DATA, METRO_TEMPLATE, METRO_WINDOW_PATH,
+                    METRO_BITRATE_BPS, METRO_CHANNELS, METRO_DATA, METRO_SEGMENT_MINUTES,
+                    METRO_TEMPLATE, METRO_WINDOW_PATH,
                     OVERRIDES_PATH, PROGRAMMES_PATH, RETENTION_MONTHS, RTHK_CHANNELS,
                     RTHK_DATA, STREAM_TEMPLATE, WWW, HKT, LAST_RUN_PATH, iso_from_ddmmyyyy,
                     log, month_key, months_back, read_json, today_hkt, write_json)
@@ -44,6 +47,7 @@ META_REFRESH_DAYS = 30      # re-read a programme page this often
 META_REFRESH_CAP = 25       # ...but at most this many refreshes per run (new slugs exempt)
 SPOT_CHECK_PER_CHANNEL = 2
 SLUG_RE = re.compile(r"^[A-Za-z0-9_]+$")
+METRO_GRID_TOLERANCE = 0.05   # canary: warn when a slot's size-derived length is off by > 5 %
 
 
 def clean_page_title(t):
@@ -329,19 +333,47 @@ def spot_check(client, programmes, overrides, only, run):
 # ---------------------------------------------------------------------------
 # 4. Metro retention window (§3.3)
 # ---------------------------------------------------------------------------
-def metro_ok(client, freq, d, hh="08"):
-    url = METRO_TEMPLATE.format(freq=freq, date=d.strftime("%Y%m%d"),
-                                datetime=d.strftime("%Y%m%d") + hh + "00")
-    st, _, _ = client.get(url, method="HEAD", tries=2)
+def metro_url(freq, d, hh="08", mm="00"):
+    """The archive file for the slot starting at hh:mm HKT on day d
+    ({datetime} = YYYYMMDDHHMM = the slot START; S31)."""
+    ymd = d.strftime("%Y%m%d")
+    return METRO_TEMPLATE.format(freq=freq, date=ymd, datetime=ymd + hh + mm)
+
+
+def metro_ok(client, freq, d, hh="08", mm="00"):
+    st, _, _ = client.get(metro_url(freq, d, hh, mm), method="HEAD", tries=2)
     return st == 200
+
+
+def metro_grid_canary(client, freq, day, run):
+    """S31 half-hour grid canary — exactly ONE HEAD (plus its one retry on a
+    non-404 miss) per frequency per run, on the day's 08:30 slot. The file's
+    Content-Length at the 64 kbps CBR rate must come to ~METRO_SEGMENT_MINUTES;
+    a missing :30 file or a length off by more than 5 % means Metro changed its
+    grid. Warn-only: it never blocks the window or the catalog."""
+    run["metro_segment_sec"][freq] = None
+    if not metro_ok(client, freq, day, "08", "30"):
+        run["warnings"].append(f"metro {freq}: {day} 08:30 slot missing — grid drift?")
+        return
+    expected = METRO_SEGMENT_MINUTES * 60
+    if not client.last_length:
+        run["warnings"].append(f"metro {freq}: {day} 08:30 slot has no Content-Length — grid canary blind")
+        return
+    secs = client.last_length * 8 / METRO_BITRATE_BPS
+    run["metro_segment_sec"][freq] = round(secs, 1)
+    if abs(secs - expected) > METRO_GRID_TOLERANCE * expected:
+        run["warnings"].append(f"metro {freq}: {day} 08:30 slot is ~{secs:.0f}s "
+                               f"({client.last_length} B at {METRO_BITRATE_BPS // 1000} kbps), "
+                               f"expected {expected}s — grid drift?")
 
 
 def metro_window(client, window, run):
     today = today_hkt()
     run["metro"] = {}
+    run["metro_segment_sec"] = {}
     for freq, meta in METRO_CHANNELS.items():
         prev = window.get(freq, {})
-        # latest: yesterday is complete; today counts once its first hour exists
+        # latest: yesterday is complete; today counts once its 00:00 slot exists
         latest = None
         for cand in (today, today - dt.timedelta(days=1), today - dt.timedelta(days=2)):
             if metro_ok(client, freq, cand, "00"):
@@ -373,6 +405,10 @@ def metro_window(client, window, run):
         window[freq] = {"earliestDate": earliest.isoformat(), "latestDate": latest.isoformat(),
                         "checkedAt": today.isoformat()}
         run["metro"][freq] = f"{earliest}..{latest}"
+        # Grid canary on a COMPLETE day (the 03:30 HKT run finds today's 00:00
+        # slot, but today's 08:30 has not aired). Runs after the window is
+        # recorded so a budget stop here never costs the window update.
+        metro_grid_canary(client, freq, min(latest, today - dt.timedelta(days=1)), run)
 
 
 # ---------------------------------------------------------------------------
@@ -407,7 +443,7 @@ def main():
         if not args.skip_metro:
             log("== metro window")
             metro_window(client, window, run)
-            log(f"   {run['metro']}")
+            log(f"   {run['metro']}; 08:30 slot seconds {run['metro_segment_sec']}")
     except (BudgetExhausted, CircuitOpen) as e:
         run["aborted"] = f"{type(e).__name__}: {e}"
         log(f"!! {run['aborted']}")
