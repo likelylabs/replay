@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-25",
+   "id": "1121004",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Asian Youth Orchestra – Hong Kong Tour Concert 1"
+  },
+  {
    "date": "2026-09-24",
    "id": "1121003",
    "parts": [
@@ -211,5 +221,5 @@
    "title": "Wigmore Hall 125th Anniversary Festival: Gala Concert"
   }
  ],
- "fetchedAt": "2026-09-25"
+ "fetchedAt": "2026-09-26"
 }

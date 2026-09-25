@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-09-25",
+   "id": "1129706",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Xi Jinping urges US to peacefully manage rivalry",
+    "Govt expands talent, invited guest visa-free schemes",
+    "HA to raise staff alertness after fatal feeding error",
+    "Arrests made over body found in TST",
+    "AFCD catches eight dogs as joint-operation ends",
+    "Tse calls for stronger dog owner responsibility",
+    "Po Pin Chau slots filled for start of Golden Week",
+    "Over 3.8k eateries to offer discounts on National Day",
+    "Hotels and food courts join Golden Week campaign",
+    "Lawmaker urges balance in sustaining financial centre status",
+    "Substantial progress in HK gold hub push: Hui",
+    "Workers should get 2.8pc pay rise in 2026: survey",
+    "AI to play a role in better managing cancer: Lo",
+    "HK exports surge to nearly all major markets",
+    "Netanyahu lashes out at enemies and allies at UN",
+    "HK rowers add gold, bronze at Asian Games",
+    "Portugal off to winning start in Uefa Nations League"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-09-24",
    "id": "1129487",
    "parts": [
@@ -464,5 +491,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-25"
+ "fetchedAt": "2026-09-26"
 }

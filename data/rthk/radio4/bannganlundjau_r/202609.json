@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-25",
+   "id": "1129721",
+   "parts": [
+    "足本 Full (HKT 14:05 - 15:00)"
+   ],
+   "title": "Traditional Cantonese Singing - Banngan and Lungjau (Repeat) 傳統廣東說唱—板眼及龍舟（重播）"
+  },
+  {
    "date": "2026-09-18",
    "id": "1128145",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Traditional Cantonese Singing - Banngan and Lungjau (Repeat) 傳統廣東說唱—板眼及龍舟（重播）"
   }
  ],
- "fetchedAt": "2026-09-25"
+ "fetchedAt": "2026-09-26"
 }

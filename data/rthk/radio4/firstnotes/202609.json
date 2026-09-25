@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-09-25",
+   "id": "1128411",
+   "parts": [
+    "足本 Full (HKT 07:05 - 10:00)",
+    "第一部份 Part 1 (HKT 07:05 - 08:00)",
+    "第二部份 Part 2 (HKT 08:05 - 09:00)",
+    "第三部份 Part 3 (HKT 09:05 - 10:00)",
+    "First Notes Connect: Zitong Wang",
+    "Today's Playlist: Mid-Autumn Festival"
+   ],
+   "title": "First Notes 由聆開始 / First Notes Connect: Zitong Wang"
+  },
+  {
    "date": "2026-09-24",
    "id": "1129501",
    "parts": [
@@ -215,5 +228,5 @@
    "title": "First Notes 由聆開始"
   }
  ],
- "fetchedAt": "2026-09-25"
+ "fetchedAt": "2026-09-26"
 }

@@ -1,10 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-09-25",
+   "id": "1129716",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Lara Schats"
+  },
+  {
    "date": "2026-09-24",
    "id": "1129497",
    "parts": [
-    "足本 Full (HKT 21:05 - 22:00)"
+    "足本 Full (HKT 21:00 - 22:00)"
    ],
    "title": "Open Space - CCC Wan Chai Church Kei To Primary School"
   },
@@ -145,5 +153,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-25"
+ "fetchedAt": "2026-09-26"
 }
