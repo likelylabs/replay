@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-26",
+   "id": "1129908",
+   "parts": [
+    "足本 Full (HKT 07:30 - 08:00)"
+   ],
+   "title": "Hong Kong Heritage (repeat) – Mani Vaccha"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128223",
    "parts": [
@@ -49,5 +57,5 @@
    "title": "Hong Kong Heritage (repeat) – Mark O’Neill on Three Visionary Leaders of HSBC"
   }
  ],
- "fetchedAt": "2026-09-26"
+ "fetchedAt": "2026-09-27"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-26",
+   "id": "1108197",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Episode 13: Carmen Portela – Spain"
+  },
+  {
    "date": "2026-09-19",
    "id": "1108196",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Episode 10: Uros Poleksic – Serbia"
   }
  ],
- "fetchedAt": "2026-09-26"
+ "fetchedAt": "2026-09-27"
 }

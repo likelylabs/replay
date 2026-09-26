@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-26",
+   "id": "1128927",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Chinese mainland \"Tidal schools\""
+  },
+  {
    "date": "2026-09-19",
    "id": "1128219",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Use of AI psychotherapy on the Chinese mainland"
   }
  ],
- "fetchedAt": "2026-09-26"
+ "fetchedAt": "2026-09-27"
 }

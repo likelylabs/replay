@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-26",
+   "id": "1129945",
+   "parts": [
+    "足本 Full (HKT 16:05 - 18:00)",
+    "第一部份 Part 1 (HKT 16:05 - 17:00)",
+    "第二部份 Part 2 (HKT 17:05 - 18:00)"
+   ],
+   "title": "Music Insider 新聲事務所"
+  },
+  {
    "date": "2026-09-19",
    "id": "1128271",
    "parts": [
@@ -31,5 +41,5 @@
    "title": "Music Insider 新聲事務所"
   }
  ],
- "fetchedAt": "2026-09-26"
+ "fetchedAt": "2026-09-27"
 }
