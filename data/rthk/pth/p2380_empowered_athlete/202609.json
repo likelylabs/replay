@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1120591",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 13：Manzoor Muhammad Amish - Strengthen the body, serve society"
+  },
+  {
    "date": "2026-09-20",
    "id": "1120589",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Episode 10：Sabiha Marium – The First Whistle"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

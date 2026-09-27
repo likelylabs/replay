@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130153",
+   "parts": [
+    "足本 Full (HKT 07:10 - 08:00)"
+   ],
+   "title": "Jazzing Up 爵士靈感"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128484",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Jazzing Up 爵士靈感"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

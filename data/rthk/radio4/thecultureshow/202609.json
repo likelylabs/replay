@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1129140",
+   "parts": [
+    "足本 Full (HKT 19:05 - 20:00)"
+   ],
+   "title": "THE CULTURE SHOW"
+  },
+  {
    "date": "2026-09-20",
    "id": "1127984",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "The Culture Show 音樂之旅"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

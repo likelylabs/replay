@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1109665",
+   "parts": [
+    "足本 Full (HKT 22:05 - 23:00)"
+   ],
+   "title": "Epi 13 : Daily Life: The Malaysian Way of Living"
+  },
+  {
    "date": "2026-09-20",
    "id": "1109663",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Epi 10 : Education: From Sekolah to the World"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

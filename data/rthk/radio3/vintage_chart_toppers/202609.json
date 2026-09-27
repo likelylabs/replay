@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130058",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Sing Sing Sing"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128027",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "The Cavern Before The Beatles"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

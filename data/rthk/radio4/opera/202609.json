@@ -1,6 +1,22 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130159",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "Sunday Opera 歌劇世界"
+  },
+  {
+   "date": "2026-09-24",
+   "id": "1129593",
+   "title": "Rossini: Elisabetta 羅西尼：英女皇伊利沙伯"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128490",
    "parts": [
@@ -34,5 +50,5 @@
    "title": "Puccini: Tosca 浦契尼：托斯卡"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

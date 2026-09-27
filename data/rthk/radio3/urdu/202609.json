@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130148",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Hong Kong Ki Shaam ہانگ کانگ کی شام (Urdu)"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128479",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Hong Kong Ki Shaam ہانگ کانگ کی شام (Urdu)"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

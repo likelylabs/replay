@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130149",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Network South Asia"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128480",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Network South Asia"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

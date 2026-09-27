@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1128690",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Walter Tsui -  social entrepreneur, disability inclusion leader, and co‑founder of CareER"
+  },
+  {
    "date": "2026-09-20",
    "id": "1127516",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Myrian Fan - registered nurse and mother of a child with autism"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

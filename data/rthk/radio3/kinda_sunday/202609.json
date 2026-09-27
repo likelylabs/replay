@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130143",
+   "parts": [
+    "足本 Full (HKT 14:05 - 15:00)"
+   ],
+   "title": "Feeling Kinda Sunday"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128474",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Feeling Kinda Sunday"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }

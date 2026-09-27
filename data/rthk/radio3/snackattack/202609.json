@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-27",
+   "id": "1130138",
+   "parts": [
+    "足本 Full (HKT 08:10 - 08:30)"
+   ],
+   "title": "Snack Attack"
+  },
+  {
    "date": "2026-09-20",
    "id": "1128469",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Condiments and sauces"
   }
  ],
- "fetchedAt": "2026-09-27"
+ "fetchedAt": "2026-09-28"
 }
