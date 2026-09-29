@@ -768,6 +768,22 @@ class Probe(Harness):
         self.assertEqual(run["logo_small"], 1)
         self.assertNotIn("logoFull", other)
 
+    def test_a_current_memo_costs_no_cache_read(self):
+        # ~300 small-logo programmes x up to 12 month files a day: the
+        # episode check runs only for a programme that would be asked.
+        cur = prog("pth", "cur", s115("pth", "cur"), {"from": s115("pth", "cur"), "url": photo_l("pth", "cur"),
+                                                      "status": 200, "bytes": 69_275, "checkedAt": "2026-09-20"})
+        due = prog("pth", "due", s115("pth", "due"))
+        self.cache(cur, due)
+        seen = []
+        real = crawl.has_cached_episodes
+        with mock.patch.object(crawl, "has_cached_episodes", lambda p, w: seen.append(p["slug"]) or real(p, w)):
+            fake = FakeStatic()
+            _, run = self.upgrade({"pth/cur": cur, "pth/due": due}, fake)
+        self.assertEqual(seen, ["due"])
+        self.assertEqual(fake.urls(), [photo_l("pth", "due")])
+        self.assertEqual((run["logo_small"], run["logo_upgraded"]), (2, 2))
+
     def test_budget_is_respected(self):
         a = prog("pth", "a", s115("pth", "a"))
         self.cache(a)

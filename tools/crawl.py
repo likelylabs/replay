@@ -390,12 +390,13 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
             p.pop("logoFull", None)                # not (or no longer) a small logo
             p.pop("logoTriedAt", None)
             continue
+        memo = p.get("logoFull")
+        if logo_memo_current(memo, logo, today):
+            small.append(p)                        # answered within 30 d: no request, no cache read
+            continue
         if not has_cached_episodes(p, window):
             continue                               # dormant: never published, not worth a request
         small.append(p)
-        memo = p.get("logoFull")
-        if logo_memo_current(memo, logo, today):
-            continue
         last = str(memo.get("checkedAt") or "") if logo_memo_answers(memo, logo) else ""
         last = max(last, str(p.get("logoTriedAt") or ""))   # a programme asked without an answer rotates back
         due.append((last, key, p, cands))
