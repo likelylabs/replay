@@ -13,8 +13,8 @@ Gate:
   - programmes with 0 episodes in the retention window are dropped
   - uninformative episode titles (the programme name, a fixed label) are
     blanked to "" so the app falls back to the programme title (S31b)
-  - a programme's "_s" small-thumbnail logo publishes as its full-size photo
-    once crawl.py has verified it (S37b; `logo` stays a URL string)
+  - a programme's small RTHK logo ("_s" / "{id}_115") publishes as the larger
+    square artwork crawl.py verified for it (S37b/S37c; `logo` stays a URL string)
   - safety floor vs last-good: >= 90% of programmes and >= 80% of episodes,
     else refuse (a bad crawl must never nuke the section)
 
@@ -101,9 +101,9 @@ def blank_non_titles(programme, episodes):
 
 
 def published_logo(p):
-    """S37b: the full-size photo crawl.py verified for this exact "_s"
-    thumbnail (memo `logoFull`, still `from` the current logo), else the
-    crawler's own pick. Always a URL string or None — the schema is unchanged."""
+    """S37b/S37c: the larger artwork crawl.py verified for this exact small
+    logo (memo `logoFull`, still `from` the current logo), else the crawler's
+    own pick. Always a URL string or None — the schema is unchanged."""
     logo = p.get("logo")
     memo = p.get("logoFull") or {}
     full = memo.get("url")
