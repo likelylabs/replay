@@ -519,7 +519,8 @@ class Probe(Harness):
         client, run = self.upgrade(programmes, fake)
         self.assertEqual(len(fake.reqs), 9)                             # 3 programmes x (2 + the control)
         self.assertEqual(client.failures, 3)
-        self.assertEqual(programmes, before)                            # every published upgrade stands
+        self.assertEqual({k: p["logoFull"] for k, p in programmes.items()},
+                         {k: p["logoFull"] for k, p in before.items()})   # every published upgrade stands
         self.assertIn("stopped after 3 failed HEADs", run["warnings"][-1])
         for p in programmes.values():
             self.assertEqual(published_logo(p), p["logoFull"]["url"])
@@ -591,6 +592,63 @@ class Probe(Harness):
         self.assertEqual([programmes[f"radio1/{s}"]["logoFull"]["url"] for s in names],
                          [None] * (n - 1) + [photo_l("radio1", names[n - 1])] + [None] * (n - 1))
         self.assertEqual(run["logo_deferred"], 0)
+
+    def test_programmes_that_keep_failing_rotate_behind_the_rest(self):
+        # Three directories at the head of the queue that answer 503 every
+        # day must not spend the 3-failure allowance at the start of every run.
+        names = [f"p{i:02d}" for i in range(8)]
+        programmes = {f"radio1/{s}": prog("radio1", s, s115("radio1", s)) for s in names}
+        self.cache(*programmes.values())
+        broken = {photo_l("radio1", s): 503 for s in names[:3]}
+        fake = FakeStatic(broken)
+        _, run = self.upgrade(programmes, fake)
+        self.assertEqual(fake.urls(), [photo_l("radio1", s) for s in names[:3]])
+        self.assertTrue(all(programmes[f"radio1/{s}"]["logoTriedAt"] == "2026-09-29" for s in names[:3]))
+        fake = FakeStatic(broken)
+        _, run = self.upgrade(programmes, fake, today=TODAY + dt.timedelta(days=1))
+        self.assertEqual(fake.urls(), [photo_l("radio1", s) for s in names[3:] + names[:3]])
+        for s in names[3:]:
+            self.assertEqual(programmes[f"radio1/{s}"]["logoFull"]["url"], photo_l("radio1", s))
+            self.assertNotIn("logoTriedAt", programmes[f"radio1/{s}"])
+        self.assertEqual(programmes["radio1/p00"]["logoTriedAt"], "2026-09-30")
+        # An answer clears the stamp; a logo that moves off a small variant drops it.
+        self.upgrade(programmes, FakeStatic(), today=TODAY + dt.timedelta(days=2))
+        self.assertNotIn("logoTriedAt", programmes["radio1/p00"])
+        programmes["radio1/p01"]["logoTriedAt"] = "2026-10-01"
+        programmes["radio1/p01"]["logo"] = photo("radio1", "p01")
+        self.upgrade(programmes, FakeStatic(), today=TODAY + dt.timedelta(days=2))
+        self.assertNotIn("logoTriedAt", programmes["radio1/p01"])
+
+    def test_a_tripped_streak_rotates_its_programmes_back_too(self):
+        n = crawl.LOGO_MISS_STREAK
+        names = [f"p{i:02d}" for i in range(n + 2)]
+        programmes = {f"radio1/{s}": prog("radio1", s, s115("radio1", s)) for s in names}
+        self.cache(*programmes.values())
+        answers = {}
+        for s in names[:n]:
+            answers[photo_l("radio1", s)] = "missing"
+            answers[photo("radio1", s)] = "missing"
+        _, run = self.upgrade(programmes, FakeStatic(answers))
+        self.assertEqual(len(run["warnings"]), 1)
+        fake = FakeStatic(answers)
+        self.upgrade(programmes, fake, today=TODAY + dt.timedelta(days=1))
+        self.assertEqual(fake.urls()[:2], [photo_l("radio1", s) for s in names[n:]])
+
+    def test_a_marked_upgrade_is_asked_again_on_the_next_run(self):
+        prev = {"from": s115("pth", "a"), "url": photo_l("pth", "a"), "status": 200, "bytes": 69_275,
+                "checkedAt": "2026-08-20"}
+        a = prog("pth", "z", s115("pth", "z"), dict(prev, **{"from": s115("pth", "z"), "url": photo_l("pth", "z")}))
+        b = prog("pth", "b", s115("pth", "b"), {"from": s115("pth", "b"), "url": None, "status": 403,
+                                                 "checkedAt": "2026-08-25"})             # due, newer
+        self.cache(a, b)
+        gone = {photo_l("pth", "z"): "missing", photo("pth", "z"): "missing"}
+        self.upgrade({"pth/z": a}, FakeStatic(gone))
+        self.assertEqual(a["logoFull"]["missAt"], "2026-09-29")
+        self.assertNotIn("logoTriedAt", a)                  # marked, not failed: it keeps its place
+        fake = FakeStatic(gone)
+        self.upgrade({"pth/z": a, "pth/b": b}, fake, today=TODAY + dt.timedelta(days=1), cap=1)
+        self.assertEqual(fake.urls(), [photo_l("pth", "z"), photo("pth", "z"), s115("pth", "z")])
+        self.assertIsNone(a["logoFull"]["url"])
 
     def test_the_storages_missing_403_is_an_answer_not_a_failure(self):
         n = crawl.LOGO_MISS_STREAK - 1

@@ -353,9 +353,11 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
     `p["logo"]` is never changed here: build_catalog publishes memo["url"]
     while memo["from"] still equals the logo, so a meta refresh that moves the
     logo simply retires the memo. Never-checked programmes go first, then the
-    oldest answers; at most `cap` programmes a run, and the step stops after
-    LOGO_PROBE_MAX_FAILURES failed HEADs so a blocked image host costs a
-    handful of requests, never the run. The storage's "missing" 403 is an
+    oldest answers; a programme asked without an answer is stamped
+    `logoTriedAt` and rotates behind them, so a few directories that keep
+    failing can never starve the queue. At most `cap` programmes a run, and
+    the step stops after LOGO_PROBE_MAX_FAILURES failed HEADs so a blocked
+    image host costs a handful of requests, never the run. The storage's "missing" 403 is an
     answer (LOGO_HEAD_ANSWERS), so the client neither retries nor counts it;
     a response the step judges a failure although the client took it as an
     answer (a 403 block page) is counted on the client (Client.count_failure),
@@ -382,6 +384,7 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
         cands = logo_candidates(logo)
         if not cands:
             p.pop("logoFull", None)                # not (or no longer) a small logo
+            p.pop("logoTriedAt", None)
             continue
         if not has_cached_episodes(p, window):
             continue                               # dormant: never published, not worth a request
@@ -390,6 +393,7 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
         if logo_memo_current(memo, logo, today):
             continue
         last = str(memo.get("checkedAt") or "") if logo_memo_answers(memo, logo) else ""
+        last = max(last, str(p.get("logoTriedAt") or ""))   # a programme asked without an answer rotates back
         due.append((last, key, p, cands))
     due.sort(key=lambda t: (t[0], t[1]))
 
@@ -410,18 +414,22 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
         if not counted:
             client.count_failure()                 # an "answer" the step judged a block
 
-    def write_miss(key, p, memo):
+    def write(p, memo):
         nonlocal answered
+        p["logoFull"] = memo
+        p.pop("logoTriedAt", None)
+        answered += 1
+
+    def write_miss(key, p, memo):
         prev = p.get("logoFull")
         if logo_memo_answers(prev, memo["from"]) and prev["url"]:
             first = _iso_date(prev.get("missAt"))
             if first is None or first >= today:    # (b) the first all-miss only marks it
-                prev["missAt"] = iso if first is None else prev["missAt"]
+                prev["missAt"] = iso if first is None else prev["missAt"]   # stays due, near the front
                 log(f"  logo {key}: nothing larger today — keeps {prev['url'].rsplit('/', 1)[1]} "
                     f"until a later run agrees")
                 return
-        p["logoFull"] = memo
-        answered += 1
+        write(p, memo)
         log(f"  logo {key}: → keeps the small logo")
 
     for _, key, p, cands in due[:cap]:
@@ -460,7 +468,8 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
                         f"no answer, retry next run")
                     memo = None
         if memo is None:
-            continue                               # the previous memo (if any) stands
+            p["logoTriedAt"] = iso                 # the previous memo (if any) stands; rotate to the back
+            continue
         if memo["url"] is None:
             held.append((key, p, memo))
             if len(held) >= LOGO_MISS_STREAK:      # (c) a run of misses is a block until proven otherwise
@@ -470,10 +479,11 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
         for miss in held:
             write_miss(*miss)
         held = []
-        p["logoFull"] = memo
-        answered += 1
+        write(p, memo)
         log(f"  logo {key}: → {memo['url'].rsplit('/', 1)[1]}")
     if tripped:
+        for _, p, _ in held:
+            p["logoTriedAt"] = iso
         run["warnings"].append(f"logo upgrade stopped: {LOGO_MISS_STREAK} programmes in a row had nothing "
                                f"larger although their own logos answered — a soft block or a changed "
                                f"layout? none of them memoised")
