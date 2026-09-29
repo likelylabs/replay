@@ -1,5 +1,6 @@
 """S37b/S37c — an RTHK small logo ("{id}_115.jpg" or an "_s" thumbnail)
-publishes as the largest usable square artwork in its own directory:
+publishes as a larger square artwork from its own directory — the 720 px
+rendition first, the original only where that is absent and <= 500 KB:
 crawl.logo_candidates derives the ordered candidates per family,
 crawl.upgrade_small_logos HEADs them in order through the shared polite client
 and memoises the answer — positive or "nothing larger" — in programmes.json
@@ -70,7 +71,7 @@ class FakeStatic:
     (200 image without a Content-Length), ("bytes", n) (200 image of n bytes)
     or "reset" (a transport error)."""
 
-    def __init__(self, answers=None, length=423_679):
+    def __init__(self, answers=None, length=69_275):
         self.answers, self.length = answers or {}, length
         self.reqs = []
 
@@ -158,30 +159,30 @@ class Harness(unittest.TestCase):
 
 
 class Derivation(unittest.TestCase):
-    def test_the_115_family_tries_the_square_original_then_its_720_rendition(self):
+    def test_the_115_family_tries_the_720_rendition_then_the_square_original(self):
         for logo in (f"{BASE}/radio1/whatsupbro/11215_115.jpg",
                      f"{BASE}/radio1/whatsupbro/11215_115.jpeg",
                      f"{BASE}/radio1/whatsupbro/11215_115.JPG"):
             with self.subTest(logo=logo):
-                self.assertEqual(logo_candidates(logo), [f"{BASE}/radio1/whatsupbro/programme_photo.jpg",
-                                                         f"{BASE}/radio1/whatsupbro/programme_photo_l.jpg"])
+                self.assertEqual(logo_candidates(logo), [f"{BASE}/radio1/whatsupbro/programme_photo_l.jpg",
+                                                         f"{BASE}/radio1/whatsupbro/programme_photo.jpg"])
 
     def test_the_s_family_adds_its_s37b_sibling_last_unless_it_is_the_original(self):
         cases = (
             (f"{BASE}/pth/keepuco/programme_photo_s.jpg",
-             [f"{BASE}/pth/keepuco/programme_photo.jpg", f"{BASE}/pth/keepuco/programme_photo_l.jpg"]),
+             [f"{BASE}/pth/keepuco/programme_photo_l.jpg", f"{BASE}/pth/keepuco/programme_photo.jpg"]),
             (f"{BASE}/radio3/dannylau/10622_1920_s.jpg",
-             [f"{BASE}/radio3/dannylau/programme_photo.jpg", f"{BASE}/radio3/dannylau/programme_photo_l.jpg",
+             [f"{BASE}/radio3/dannylau/programme_photo_l.jpg", f"{BASE}/radio3/dannylau/programme_photo.jpg",
               f"{BASE}/radio3/dannylau/10622_1920.jpg"]),
             (f"{BASE}/radio1/x/programme_photo_s.jpeg",
-             [f"{BASE}/radio1/x/programme_photo.jpg", f"{BASE}/radio1/x/programme_photo_l.jpg",
+             [f"{BASE}/radio1/x/programme_photo_l.jpg", f"{BASE}/radio1/x/programme_photo.jpg",
               f"{BASE}/radio1/x/programme_photo.jpeg"]),
             (f"{BASE}/radio1/x/PHOTO_S.JPG",
-             [f"{BASE}/radio1/x/programme_photo.jpg", f"{BASE}/radio1/x/programme_photo_l.jpg",
+             [f"{BASE}/radio1/x/programme_photo_l.jpg", f"{BASE}/radio1/x/programme_photo.jpg",
               f"{BASE}/radio1/x/PHOTO.JPG"]),
             ("https://programme.rthk.hk/a/b/programme_photo_s.jpg",
-             ["https://programme.rthk.hk/a/b/programme_photo.jpg",
-              "https://programme.rthk.hk/a/b/programme_photo_l.jpg"]))
+             ["https://programme.rthk.hk/a/b/programme_photo_l.jpg",
+              "https://programme.rthk.hk/a/b/programme_photo.jpg"]))
         for logo, cands in cases:
             with self.subTest(logo=logo):
                 self.assertEqual(logo_candidates(logo), cands)
@@ -221,7 +222,7 @@ class Derivation(unittest.TestCase):
             cands = logo_candidates(u)
             if u in smalls:
                 folder = u.rsplit("/", 1)[0]
-                self.assertEqual(cands[:2], [f"{folder}/programme_photo.jpg", f"{folder}/programme_photo_l.jpg"], u)
+                self.assertEqual(cands[:2], [f"{folder}/programme_photo_l.jpg", f"{folder}/programme_photo.jpg"], u)
                 self.assertTrue(all(c.rsplit("/", 1)[0] == folder for c in cands), u)
                 self.assertNotIn(u, cands)
             else:
@@ -231,7 +232,7 @@ class Derivation(unittest.TestCase):
         self.assertEqual(crawl.LOGO_RECHECK_DAYS, 30)
         self.assertEqual(crawl.LOGO_PROGRAMMES_PER_RUN, 60)
         self.assertEqual(crawl.LOGO_PROBE_MAX_FAILURES, 3)
-        self.assertEqual(crawl.LOGO_MAX_BYTES, 2_000_000)
+        self.assertEqual(crawl.LOGO_MAX_BYTES, 500_000)
 
 
 class Verdict(unittest.TestCase):
@@ -261,7 +262,7 @@ class Verdict(unittest.TestCase):
 
 
 class Probe(Harness):
-    def test_one_polite_head_per_programme_when_the_original_is_usable(self):
+    def test_one_polite_head_per_programme_when_the_720_rendition_is_usable(self):
         a = prog("radio1", "whatsupbro", s115("radio1", "whatsupbro", "11215"))
         b = prog("pth", "keepuco", small("pth", "keepuco"))
         full = prog("radio3", "hongkongtoday", photo("radio3", "hongkongtoday"))
@@ -269,7 +270,7 @@ class Probe(Harness):
         programmes = {"radio1/whatsupbro": a, "pth/keepuco": b, "radio3/hongkongtoday": full}
         fake = FakeStatic()
         client, run = self.upgrade(programmes, fake)
-        self.assertEqual(fake.urls(), [photo("pth", "keepuco"), photo("radio1", "whatsupbro")])
+        self.assertEqual(fake.urls(), [photo_l("pth", "keepuco"), photo_l("radio1", "whatsupbro")])
         self.assertEqual(client.requests, 2)
         for req in fake.reqs:
             self.assertEqual(req.get_method(), "HEAD")
@@ -277,9 +278,9 @@ class Probe(Harness):
             self.assertIn("zh-HK", req.get_header("Accept-language"))
         self.assertEqual(fake.reqs[1].get_header("Referer"), "https://www.rthk.hk/radio/radio1/programme/whatsupbro")
         self.assertEqual(a["logoFull"], {"from": s115("radio1", "whatsupbro", "11215"),
-                                         "url": photo("radio1", "whatsupbro"),
-                                         "status": 200, "bytes": 423_679, "checkedAt": "2026-09-29"})
-        self.assertEqual(b["logoFull"]["url"], photo("pth", "keepuco"))
+                                         "url": photo_l("radio1", "whatsupbro"),
+                                         "status": 200, "bytes": 69_275, "checkedAt": "2026-09-29"})
+        self.assertEqual(b["logoFull"]["url"], photo_l("pth", "keepuco"))
         self.assertEqual(a["logo"], s115("radio1", "whatsupbro", "11215"))   # the raw pick is never rewritten
         self.assertNotIn("logoFull", full)
         self.assertEqual((run["logo_small"], run["logo_checked"], run["logo_probes"],
@@ -292,7 +293,7 @@ class Probe(Harness):
         self.cache(a, b)
         client = common.Client(pace_s=1.0, budget=10, log=lambda *_: None)
         paced = []
-        with mock.patch("urllib.request.urlopen", FakeStatic({photo("pth", "a"): "missing"})), \
+        with mock.patch("urllib.request.urlopen", FakeStatic({photo_l("pth", "a"): "missing"})), \
                 mock.patch.object(crawl, "RTHK_DATA", self.rthk), \
                 mock.patch.object(crawl, "today_hkt", lambda: TODAY), \
                 mock.patch.object(crawl, "log", lambda *_: None), \
@@ -305,24 +306,53 @@ class Probe(Harness):
         self.assertIn(len(paced), (2, 3))
         self.assertTrue(all(w > 0.9 for w in paced[-2:]))
 
-    def test_a_heavy_missing_or_unsized_original_falls_back_to_the_720_rendition(self):
-        cases = {"heavy": ("bytes", 19_398_471), "missing": "missing", "nolen": "nolen",
+    def test_without_a_usable_720_rendition_a_light_original_is_taken(self):
+        cases = {"heavy": ("bytes", crawl.LOGO_MAX_BYTES + 1), "missing": "missing", "nolen": "nolen",
                  "html": "html", "redir": "redirect", "gone": 404}
         programmes = {f"radio2/{s}": prog("radio2", s, s115("radio2", s)) for s in cases}
         self.cache(*programmes.values())
         answers = {}
         for s, a in cases.items():
-            answers[photo("radio2", s)] = a
-            answers[photo_l("radio2", s)] = ("bytes", 69_275)
+            answers[photo_l("radio2", s)] = a
+            answers[photo("radio2", s)] = ("bytes", 185_340)
         fake = FakeStatic(answers)
         client, run = self.upgrade(programmes, fake)
         self.assertEqual(len(fake.reqs), 2 * len(cases))
         for s in cases:
             with self.subTest(case=s):
                 self.assertEqual(programmes[f"radio2/{s}"]["logoFull"],
-                                 {"from": s115("radio2", s), "url": photo_l("radio2", s), "status": 200,
-                                  "bytes": 69_275, "checkedAt": "2026-09-29"})
+                                 {"from": s115("radio2", s), "url": photo("radio2", s), "status": 200,
+                                  "bytes": 185_340, "checkedAt": "2026-09-29"})
         self.assertEqual((client.failures, run["logo_upgraded"], run["warnings"]), (0, len(cases), []))
+
+    def test_an_original_over_the_cap_is_never_taken(self):
+        # 18 of the 31 sampled originals are over 2 MB and they run to 19.4 MB:
+        # decoded at full size a 3001 px original is ~36 MB per tile.
+        for size in (crawl.LOGO_MAX_BYTES + 1, 2_000_000, 19_398_471):
+            with self.subTest(size=size):
+                a = prog("radio1", "big", s115("radio1", "big"))
+                self.cache(a)
+                fake = FakeStatic({photo_l("radio1", "big"): "missing", photo("radio1", "big"): ("bytes", size)})
+                self.upgrade({"radio1/big": a}, fake)
+                self.assertEqual(fake.urls(), [photo_l("radio1", "big"), photo("radio1", "big")])
+                self.assertIsNone(a["logoFull"]["url"])
+                self.assertEqual(published_logo(a), s115("radio1", "big"))
+
+    def test_a_memo_an_earlier_rule_wrote_is_asked_again_first_and_never_published(self):
+        # bfa1afb5 accepted originals up to 2 MB: such a memo is retired by
+        # today's cap — not published, and due ahead of every other memo.
+        old = {"from": s115("pth", "z_old"), "url": photo("pth", "z_old"), "status": 200,
+               "bytes": 1_900_000, "checkedAt": TODAY.isoformat()}
+        a = prog("pth", "z_old", s115("pth", "z_old"), dict(old))
+        stale = prog("pth", "a_stale", s115("pth", "a_stale"),
+                     {"from": s115("pth", "a_stale"), "url": None, "status": 403, "checkedAt": "2026-08-01"})
+        self.cache(a, stale)
+        self.assertEqual(published_logo(a), s115("pth", "z_old"))
+        fake = FakeStatic()
+        self.upgrade({"pth/z_old": a, "pth/a_stale": stale}, fake, cap=1)
+        self.assertEqual(fake.urls(), [photo_l("pth", "z_old")])       # ahead of a 59-day-old memo
+        self.assertEqual(a["logoFull"]["url"], photo_l("pth", "z_old"))
+        self.assertEqual(published_logo(a), photo_l("pth", "z_old"))
 
     def test_a_1920_s_thumbnail_takes_its_banner_only_when_no_square_exists(self):
         ch, slug = "radio4", "Aubade"
@@ -330,14 +360,14 @@ class Probe(Harness):
         self.cache(a)
         fake = FakeStatic({photo(ch, slug): "missing", photo_l(ch, slug): "missing"})
         self.upgrade({f"{ch}/{slug}": a}, fake)
-        self.assertEqual(fake.urls(), [photo(ch, slug), photo_l(ch, slug), f"{d(ch, slug)}/600_1920.jpg"])
+        self.assertEqual(fake.urls(), [photo_l(ch, slug), photo(ch, slug), f"{d(ch, slug)}/600_1920.jpg"])
         self.assertEqual(a["logoFull"]["url"], f"{d(ch, slug)}/600_1920.jpg")
         b = prog(ch, "JazzingUp", small(ch, "JazzingUp", "2628_1920"))
         self.cache(b)
         fake = FakeStatic()
         self.upgrade({f"{ch}/JazzingUp": b}, fake)
-        self.assertEqual(fake.urls(), [photo(ch, "JazzingUp")])     # the square original wins
-        self.assertEqual(b["logoFull"]["url"], photo(ch, "JazzingUp"))
+        self.assertEqual(fake.urls(), [photo_l(ch, "JazzingUp")])   # the 720 px square wins
+        self.assertEqual(b["logoFull"]["url"], photo_l(ch, "JazzingUp"))
 
     def test_nothing_larger_is_a_negative_memo_asked_again_after_30_days(self):
         ch, slug = "radio3", "thisday"
@@ -402,7 +432,7 @@ class Probe(Harness):
         self.cache(a)
         fake = FakeStatic()
         self.upgrade({"pth/a": a}, fake)
-        self.assertEqual(fake.urls(), [photo("pth", "a")])
+        self.assertEqual(fake.urls(), [photo_l("pth", "a")])
 
     def test_a_changed_logo_retires_the_memo(self):
         a = prog("pth", "keepuco", s115("pth", "keepuco", "9"),
@@ -411,7 +441,7 @@ class Probe(Harness):
         self.cache(a)
         fake = FakeStatic()
         self.upgrade({"pth/keepuco": a}, fake)
-        self.assertEqual(fake.urls(), [photo("pth", "keepuco")])
+        self.assertEqual(fake.urls(), [photo_l("pth", "keepuco")])
         self.assertEqual(a["logoFull"]["from"], s115("pth", "keepuco", "9"))
 
     def test_logo_moved_off_a_small_variant_drops_the_memo_without_a_request(self):
@@ -428,16 +458,16 @@ class Probe(Harness):
                 self.assertEqual(a.get("logo"), logo)
 
     def test_no_answer_keeps_the_previous_memo_and_retries_next_run_without_retrying_now(self):
-        prev = {"from": s115("pth", "a"), "url": photo("pth", "a"),
-                "status": 200, "bytes": 5, "checkedAt": "2026-08-20"}          # 40 d old: due
+        prev = {"from": s115("pth", "a"), "url": photo_l("pth", "a"),
+                "status": 200, "bytes": 69_275, "checkedAt": "2026-08-20"}     # 40 d old: due
         a = prog("pth", "a", s115("pth", "a"), dict(prev))
         b = prog("pth", "b", s115("pth", "b"))
         self.cache(a, b)
-        fake = FakeStatic({photo("pth", "a"): 503,
-                           photo("pth", "b"): ("bytes", 5_000_000),             # a miss...
-                           photo_l("pth", "b"): "reset"})                        # ...then no answer
+        fake = FakeStatic({photo_l("pth", "a"): 503,
+                           photo_l("pth", "b"): ("bytes", 5_000_000),           # a miss...
+                           photo("pth", "b"): "reset"})                          # ...then no answer
         client, run = self.upgrade({"pth/a": a, "pth/b": b}, fake)
-        self.assertEqual(fake.urls(), [photo("pth", "b"), photo_l("pth", "b"), photo("pth", "a")])
+        self.assertEqual(fake.urls(), [photo_l("pth", "b"), photo("pth", "b"), photo_l("pth", "a")])
         self.assertEqual(client.failures, 2)                       # ONE HEAD per candidate: tries=1
         self.assertEqual(a["logoFull"], prev)                      # the earlier answer stands
         self.assertNotIn("logoFull", b)                            # no half answer is written
@@ -445,7 +475,7 @@ class Probe(Harness):
         fake2 = FakeStatic()
         self.upgrade({"pth/a": a, "pth/b": b}, fake2, today=TODAY + dt.timedelta(days=1))
         self.assertEqual(len(fake2.reqs), 2)
-        self.assertEqual(b["logoFull"]["url"], photo("pth", "b"))
+        self.assertEqual(b["logoFull"]["url"], photo_l("pth", "b"))
 
     def test_the_storages_missing_403_is_an_answer_not_a_failure(self):
         programmes = {f"radio1/p{i:02d}": prog("radio1", f"p{i:02d}", s115("radio1", f"p{i:02d}"))
@@ -466,7 +496,7 @@ class Probe(Harness):
                 programmes = {f"radio1/p{i:02d}": prog("radio1", f"p{i:02d}", s115("radio1", f"p{i:02d}"))
                               for i in range(10)}
                 self.cache(*programmes.values())
-                fake = FakeStatic({photo("radio1", f"p{i:02d}"): answer for i in range(10)})
+                fake = FakeStatic({photo_l("radio1", f"p{i:02d}"): answer for i in range(10)})
                 client, run = self.upgrade(programmes, fake)
                 self.assertEqual(len(fake.reqs), 3)
                 self.assertEqual(client.failures, 0 if answer == "blocked" else 3)
@@ -478,10 +508,10 @@ class Probe(Harness):
     def test_a_stop_mid_programme_writes_no_memo(self):
         programmes = {f"radio1/p{i}": prog("radio1", f"p{i}", s115("radio1", f"p{i}")) for i in range(3)}
         self.cache(*programmes.values())
-        fake = FakeStatic({photo("radio1", "p0"): 503, photo("radio1", "p1"): 503,
-                           photo("radio1", "p2"): 400})                          # a miss, but the 3rd failure
+        fake = FakeStatic({photo_l("radio1", "p0"): 503, photo_l("radio1", "p1"): 503,
+                           photo_l("radio1", "p2"): 400})                        # a miss, but the 3rd failure
         _, run = self.upgrade(programmes, fake)
-        self.assertEqual(len(fake.reqs), 3)                                      # p2's 720 is never asked
+        self.assertEqual(len(fake.reqs), 3)                                      # p2's original is never asked
         self.assertTrue(all("logoFull" not in p for p in programmes.values()))
         self.assertEqual(run["logo_deferred"], 3)
 
@@ -536,7 +566,7 @@ class Probe(Harness):
                       "radio3/book_club": empty, "radio4/Aubade": other}
         fake = FakeStatic()
         _, run = self.upgrade(programmes, fake, only={"radio1", "pth", "radio3"})
-        self.assertEqual(fake.urls(), [photo("radio1", "live")])
+        self.assertEqual(fake.urls(), [photo_l("radio1", "live")])
         self.assertEqual(run["logo_small"], 1)
         self.assertNotIn("logoFull", other)
 
@@ -554,7 +584,7 @@ class Probe(Harness):
         client = common.Client(pace_s=0, budget=500, log=lambda *_: None)
         client.requests, client.failures = 40, 10                    # a run already at the 25 % line
         with self.assertRaises(common.CircuitOpen):
-            self.upgrade({"pth/a": a}, FakeStatic({photo("pth", "a"): 503}), client=client)
+            self.upgrade({"pth/a": a}, FakeStatic({photo_l("pth", "a"): 503}), client=client)
         self.assertNotIn("logoFull", a)
 
 
@@ -590,14 +620,24 @@ class Publish(unittest.TestCase):
     def test_verified_larger_artwork_wins(self):
         for logo, url in ((self.SMALL, self.FULL), (self.S115, self.L720)):
             with self.subTest(logo=logo):
-                p = {"logo": logo, "logoFull": {"from": logo, "url": url, "status": 200}}
+                p = {"logo": logo, "logoFull": {"from": logo, "url": url, "status": 200, "bytes": 69_275}}
                 self.assertEqual(published_logo(p), url)
 
     def test_falls_back_to_the_crawlers_pick(self):
-        for memo in (None, {}, {"from": self.SMALL, "url": None, "status": 403},
-                     {"from": "https://other/x_s.jpg", "url": self.FULL},     # logo moved on
-                     {"from": self.SMALL, "url": "http://insecure/x.jpg"},
-                     {"from": self.SMALL, "url": 7}):
+        for memo in (None, {}, [], {"from": self.SMALL, "url": None, "status": 403},
+                     {"from": "https://other/x_s.jpg", "url": self.FULL, "bytes": 69_275},   # logo moved on
+                     {"from": self.SMALL, "url": "http://insecure/x.jpg", "bytes": 69_275},
+                     {"from": self.SMALL, "url": 7, "bytes": 69_275},
+                     # an https URL the derivation could never produce: off-host, another directory
+                     {"from": self.SMALL, "url": "https://example.com/pth/keepuco/programme_photo.jpg",
+                      "bytes": 69_275},
+                     {"from": self.SMALL, "url": f"{BASE}/pth/other/programme_photo_l.jpg", "bytes": 69_275},
+                     # the right URL, but no size or one over today's cap (an earlier rule's memo)
+                     {"from": self.SMALL, "url": self.FULL},
+                     {"from": self.SMALL, "url": self.FULL, "bytes": 0},
+                     {"from": self.SMALL, "url": self.FULL, "bytes": "69275"},
+                     {"from": self.SMALL, "url": self.FULL, "bytes": True},
+                     {"from": self.SMALL, "url": self.FULL, "bytes": crawl.LOGO_MAX_BYTES + 1}):
             with self.subTest(memo=memo):
                 p = {"logo": self.SMALL}
                 if memo is not None:
@@ -606,7 +646,7 @@ class Publish(unittest.TestCase):
 
     def test_no_logo_stays_none(self):
         self.assertIsNone(published_logo({}))
-        self.assertIsNone(published_logo({"logoFull": {"from": None, "url": self.FULL}}))
+        self.assertIsNone(published_logo({"logoFull": {"from": None, "url": self.FULL, "bytes": 69_275}}))
 
 
 class PublishedCatalog(unittest.TestCase):
@@ -656,10 +696,11 @@ class PublishedCatalog(unittest.TestCase):
                 self.skipTest("the committed data lacks a published _115 or _s logo")
             memoed = copy.deepcopy(programmes)
             want = {}
-            for key, pick in ((s115_key, 1), (s_key, 0)):              # the 720 rendition, the original
+            for key, pick in ((s115_key, 1), (s_key, 0)):              # the original, the 720 rendition
                 p = memoed[f"{key[0]}/{key[1]}"]
                 want[key] = logo_candidates(p["logo"])[pick]
-                p["logoFull"] = {"from": p["logo"], "url": want[key], "status": 200, "checkedAt": "2026-09-29"}
+                p["logoFull"] = {"from": p["logo"], "url": want[key], "status": 200, "bytes": 69_275,
+                                 "checkedAt": "2026-09-29"}
             after = self.logos(self.build(memoed, Path(b)))
         for key, url in want.items():
             self.assertEqual(after[key], url)
@@ -673,7 +714,8 @@ class PublishedCatalog(unittest.TestCase):
         for p in memoed.values():
             cands = logo_candidates(p.get("logo"))
             if cands:
-                p["logoFull"] = {"from": p["logo"], "url": cands[0], "status": 200, "checkedAt": "2026-09-29"}
+                p["logoFull"] = {"from": p["logo"], "url": cands[0], "status": 200, "bytes": 69_275,
+                                 "checkedAt": "2026-09-29"}
                 n += 1
         self.assertGreater(n, 0)
         with tempfile.TemporaryDirectory() as a, tempfile.TemporaryDirectory() as b:

@@ -31,8 +31,9 @@ Spec, tenets and decisions live in the private coordination repo
   Logo upgrade: a publishing programme whose logo is one of RTHK's small
   variants (`{id}_115.jpg` 115 px, `…_s.jpg` 272 px) gets a HEAD on each larger
   artwork in the same directory, in order, until one is a usable image: the
-  square original `programme_photo.jpg` (≤ 2 MB — originals run to 19 MB), its
-  720 px `programme_photo_l.jpg`, and for `_s` the sibling with `_s` dropped.
+  720 px square `programme_photo_l.jpg`, the square original
+  `programme_photo.jpg` only where no 720 px answers (≤ 500 KB — originals run
+  to 19 MB and 3001 px), and for `_s` the sibling with `_s` dropped.
   The answer (or "none larger") is memoised in `data/rthk/programmes.json`
   `logoFull` and re-checked at most every 30 days — a few HEADs on most days,
   ≤ 60 programmes (≤ 3 HEADs each) in any run, stops after 3 failed HEADs.
@@ -50,10 +51,11 @@ Spec, tenets and decisions live in the private coordination repo
 - `index.json` — every channel with its programme list (RTHK, `browse:
   "programme"`) or its by-time window (Metro, `browse: "bytime"`). Schema:
   `schema/index.schema.json`. A programme's optional `logo` is an image URL
-  on RTHK's own host — the largest square programme artwork ≤ 2 MB wherever
-  the crawl has verified one (the original photo, 1134–3001 px, else its 720 px
-  rendition; a 16:9 `_1920_s` thumbnail may fall back to its 1920 px banner;
-  scale it down for tiles), else what the programme page or schedule offered.
+  on RTHK's own host — a larger square programme artwork ≤ 500 KB wherever the
+  crawl has verified one (the 720 × 720 rendition; where RTHK has none, the
+  original photo, which can be 1134–3001 px; a 16:9 `_1920_s` thumbnail may
+  fall back to its 1920 px banner — decode it to the tile's size, never at
+  full size), else what the programme page or schedule offered.
 - `prog/{channel}/{slug}.json` — one programme's episodes, newest first.
   Schema: `schema/programme.schema.json`. An episode `title` of `""` means RTHK
   gave no episode title — only the programme name (after an NFKC / case /

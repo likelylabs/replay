@@ -12,9 +12,9 @@ Daily run (all bounded by --budget requests, serial ~1 req/s):
   1b. Logo upgrade (S37b/S37c) — a publishing programme whose logo is one of
      RTHK's small variants ("{id}_115.jpg" or an "_s" thumbnail) gets a HEAD
      on each larger artwork in the same directory, in order, until one is a
-     usable image: the square original "programme_photo.jpg" (<= 2 MB), its
-     720 px "programme_photo_l.jpg", and for "_s" the S37b sibling ("_s"
-     dropped). The answer — or "none larger" — is memoised in programmes.json
+     usable image: the 720 px square "programme_photo_l.jpg", the square
+     original "programme_photo.jpg" (<= 500 KB), and for "_s" the S37b sibling
+     ("_s" dropped). The answer — or "none larger" — is memoised in programmes.json
      `logoFull` and re-checked at most every 30 days, so a normal day sends
      few; at most 60 programmes a run, and the step stops itself after 3
      failed HEADs (it can never trip the breaker on its own). `logo` stays
@@ -74,11 +74,17 @@ METRO_GRID_TOLERANCE = 0.05   # canary: warn when a slot's size-derived length i
 # feed, so neither is a candidate. The client centre-crops to a square, so a
 # square is preferred over a banner; every candidate's square side is >= 2x
 # the small logo's (115 -> 720+, 272 -> 720+, 270 -> 720+).
+# The 720 px rendition goes FIRST, not the original: 720 px is already >= 2x
+# every tile (120 pt @3x = 360 px) and above the 169 pt hero @3x (507 px),
+# ~2 MB decoded, where a 3001 px original decodes to ~36 MB per tile on a
+# client that draws at full size (the iOS tiles do). The original is asked
+# only where no 720 px rendition answers, and only under LOGO_MAX_BYTES.
 SMALL_115_RE = re.compile(r"^\d+_115\.jpe?g$", re.IGNORECASE)      # on the file name
 SMALL_LOGO_RE = re.compile(r"(?<=[^/])_s(\.jpe?g)$", re.IGNORECASE)  # "_s": the S37b sibling drops it
 LOGO_PHOTO = "programme_photo.jpg"       # the square original
 LOGO_PHOTO_L = "programme_photo_l.jpg"   # its 720 px square rendition
-LOGO_MAX_BYTES = 2_000_000    # a candidate heavier than this is skipped (originals run to 19.4 MB)
+LOGO_MAX_BYTES = 500_000      # a candidate heavier than this is skipped (the 720 px runs 47-95 KB,
+                              # the 1920 banner 92-268 KB, originals 70 KB-19.4 MB)
 LOGO_RECHECK_DAYS = 30        # re-verify a memoised answer at most this often
 LOGO_PROGRAMMES_PER_RUN = 60  # programmes checked per run (<= 3 HEADs each); the first pass spreads over ~5 runs
 LOGO_PROBE_MAX_FAILURES = 3   # the step stops after this many failed HEADs in one run
@@ -231,7 +237,7 @@ def logo_candidates(url):
     logo — [] for anything else, so every other logo is never requested.
     Small = an https URL on an rthk.hk host (no query / fragment) whose file
     is "{id}_115.jpg" or ends in "_s.jpg" / "_s.jpeg". Candidates, all in the
-    logo's own directory: the square original, its 720 px square rendition,
+    logo's own directory: the 720 px square rendition, the square original,
     then (for "_s" only) the S37b sibling with the "_s" dropped — which for
     '{id}_1920_s.jpg' is the 1920 x 1080 banner, the same shape as today's
     logo; for 'programme_photo_s.jpg' it repeats the original and is dropped."""
@@ -251,7 +257,7 @@ def logo_candidates(url):
     else:
         return []
     out = []
-    for cand in (f"{folder}/{LOGO_PHOTO}", f"{folder}/{LOGO_PHOTO_L}", *own):
+    for cand in (f"{folder}/{LOGO_PHOTO_L}", f"{folder}/{LOGO_PHOTO}", *own):
         if cand != url and cand not in out:
             out.append(cand)
     return out
@@ -264,13 +270,31 @@ def has_cached_episodes(p, window):
                for m in window)
 
 
+def logo_memo_answers(memo, logo):
+    """The memo answers for this exact logo under TODAY's rule: it was written
+    `from` this logo, and its url is None ("nothing larger") or one of
+    logo_candidates(logo) with a recorded size in (0, LOGO_MAX_BYTES]. A memo
+    an earlier rule wrote (a heavier cap, a URL off the derivation) answers
+    nothing: build_catalog does not publish it and the crawl asks again first.
+    The one predicate both legs share, so the publish gate re-checks the rule."""
+    if not isinstance(memo, dict) or not isinstance(logo, str) or not logo or memo.get("from") != logo:
+        return False
+    url = memo.get("url")
+    if url is None:
+        return True
+    size = memo.get("bytes")
+    return (url in logo_candidates(logo) and isinstance(size, int) and not isinstance(size, bool)
+            and 0 < size <= LOGO_MAX_BYTES)
+
+
 def logo_memo_current(memo, logo, today):
-    """A memo answers for this exact logo and is younger than LOGO_RECHECK_DAYS."""
-    if not memo or memo.get("from") != logo:
+    """A memo answers for this exact logo under today's rule and is younger
+    than LOGO_RECHECK_DAYS."""
+    if not logo_memo_answers(memo, logo):
         return False
     try:
         age = (today - dt.date.fromisoformat(memo.get("checkedAt") or "")).days
-    except ValueError:
+    except (TypeError, ValueError):
         return False
     return 0 <= age < LOGO_RECHECK_DAYS
 
@@ -329,7 +353,7 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
         memo = p.get("logoFull")
         if logo_memo_current(memo, logo, today):
             continue
-        last = memo.get("checkedAt", "") if memo and memo.get("from") == logo else ""
+        last = str(memo.get("checkedAt") or "") if logo_memo_answers(memo, logo) else ""
         due.append((last, key, p, cands))
     due.sort(key=lambda t: (t[0], t[1]))
 
@@ -370,8 +394,8 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
     run["logo_checked"] = checked
     run["logo_probes"] = heads
     run["logo_deferred"] = len(due) - answered
-    run["logo_upgraded"] = sum(1 for p in small if (p.get("logoFull") or {}).get("from") == p["logo"]
-                               and (p.get("logoFull") or {}).get("url"))
+    run["logo_upgraded"] = sum(1 for p in small if logo_memo_answers(p.get("logoFull"), p["logo"])
+                               and p["logoFull"]["url"])
 
 
 # ---------------------------------------------------------------------------

@@ -14,7 +14,8 @@ Gate:
   - uninformative episode titles (the programme name, a fixed label) are
     blanked to "" so the app falls back to the programme title (S31b)
   - a programme's small RTHK logo ("_s" / "{id}_115") publishes as the larger
-    square artwork crawl.py verified for it (S37b/S37c; `logo` stays a URL string)
+    square artwork crawl.py verified for it, re-checked here against the same
+    rule (crawl.logo_memo_answers; S37b/S37c; `logo` stays a URL string)
   - safety floor vs last-good: >= 90% of programmes and >= 80% of episodes,
     else refuse (a bad crawl must never nuke the section)
 
@@ -32,6 +33,7 @@ from common import (CRAWLER_VERSION, HKT, INDEX_PATH, LAST_RUN_PATH, METRO_CHANN
                     OVERRIDES_PATH, PROGRAMMES_PATH, PROG_DIR, RETENTION_MONTHS,
                     RTHK_CHANNELS, RTHK_DATA, STREAM_TEMPLATE, STREAM_VERSION,
                     log, months_back, read_json, today_hkt)
+from crawl import logo_memo_answers   # the logo rule both legs share (no network at import)
 
 ACTIVE_WINDOW_DAYS = 8          # seen on a channel schedule within this many days ⇒ active
 FLOOR_PROGRAMMES = 0.90
@@ -102,13 +104,14 @@ def blank_non_titles(programme, episodes):
 
 def published_logo(p):
     """S37b/S37c: the larger artwork crawl.py verified for this exact small
-    logo (memo `logoFull`, still `from` the current logo), else the crawler's
-    own pick. Always a URL string or None — the schema is unchanged."""
+    logo (memo `logoFull`, still `from` the current logo, its URL one the
+    derivation produces and its size within today's cap — the publish gate
+    re-checks the rule rather than trusting any https string), else the
+    crawler's own pick. Always a URL string or None — the schema is unchanged."""
     logo = p.get("logo")
-    memo = p.get("logoFull") or {}
-    full = memo.get("url")
-    if logo and memo.get("from") == logo and isinstance(full, str) and full.startswith("https://"):
-        return full
+    memo = p.get("logoFull")
+    if logo_memo_answers(memo, logo) and memo["url"]:
+        return memo["url"]
     return logo
 
 
