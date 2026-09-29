@@ -203,6 +203,10 @@ class Derivation(unittest.TestCase):
                     f"{BASE}/radio1/x/programme_photo_s.png",
                     f"{BASE}/radio1/x/1234_115.jpg?v=2",             # query string
                     f"{BASE}/radio1/x/programme_photo_s.jpg#a",
+                    f"{BASE}/radio1/x/logo.jpg?u=/1234_115.jpg",     # a query that ends like a small logo
+                    f"{BASE}/radio1/x/logo.jpg?u=/programme_photo_s.jpg",
+                    f"{BASE}/radio1/x/logo.jpg#/1234_115.jpg",       # ...and a fragment
+                    f"{BASE}/radio1/x/logo.jpg#/programme_photo_s.jpg",
                     f"{BASE}/radio1/x/_s.jpg",                       # nothing before "_s"
                     f"{BASE}/radio1/x_s.jpg/programme_photo.jpg",    # "_s" not in the file name
                     f"{BASE}/radio1/x/programme_photo_ss.jpg",
