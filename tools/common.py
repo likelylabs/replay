@@ -140,6 +140,13 @@ class Client:
                 time.sleep(back)
         return last
 
+    def count_failure(self):
+        """Record a response the caller judged a failure although it arrived as
+        an answer (`ok=`), e.g. a 403 block page on an image HEAD — the run
+        ledger and the breaker see it like any other failure."""
+        self.failures += 1
+        self._check_breaker()
+
     def _check_breaker(self):
         if self.requests >= self.breaker_min and self.failures / self.requests > self.breaker_ratio:
             raise CircuitOpen(f"{self.failures}/{self.requests} requests failed — stopping so a block is not hammered")

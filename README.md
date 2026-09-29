@@ -36,7 +36,12 @@ Spec, tenets and decisions live in the private coordination repo
   to 19 MB and 3001 px), and for `_s` the sibling with `_s` dropped.
   The answer (or "none larger") is memoised in `data/rthk/programmes.json`
   `logoFull` and re-checked at most every 30 days — a few HEADs on most days,
-  ≤ 60 programmes (≤ 3 HEADs each) in any run, stops after 3 failed HEADs.
+  ≤ 60 programmes (≤ 4 HEADs each) in any run, stops after 3 failed HEADs.
+  RTHK's storage answers a denied request exactly like a missing object, so
+  "none larger" needs evidence: one control HEAD on the small logo itself
+  (not a 200 image = no answer, counted as a failure), a published upgrade is
+  withdrawn only when a later run agrees, and 5 programmes in a row with
+  nothing larger stop the step without memoising any of them.
 - `tools/build_catalog.py` — the only writer of `index.json` + `prog/`.
   Validates, drops dormant programmes, blanks uninformative episode titles
   (below), and refuses to publish a catalog that shrank past the safety floor

@@ -17,8 +17,12 @@ Daily run (all bounded by --budget requests, serial ~1 req/s):
      ("_s" dropped). The answer — or "none larger" — is memoised in programmes.json
      `logoFull` and re-checked at most every 30 days, so a normal day sends
      few; at most 60 programmes a run, and the step stops itself after 3
-     failed HEADs (it can never trip the breaker on its own). `logo` stays
-     the crawler's raw pick; build_catalog publishes the verified URL.
+     failed HEADs (it can never trip the breaker on its own). "Nothing
+     larger" needs evidence — a control HEAD on the small logo itself, a
+     second run before a published upgrade is withdrawn, and a stop after 5
+     all-miss programmes in a row — because the storage answers a denied
+     request exactly as a missing object. `logo` stays the crawler's raw
+     pick; build_catalog publishes the verified URL.
   2. RTHK enumeration — for every programme: current + previous month always
      (catchUp?m=&page= walked to nextPage=-1); older months inside the
      12-month window only when missing from the cache (backfill drains over
@@ -86,9 +90,11 @@ LOGO_PHOTO_L = "programme_photo_l.jpg"   # its 720 px square rendition
 LOGO_MAX_BYTES = 500_000      # a candidate heavier than this is skipped (the 720 px runs 47-95 KB,
                               # the 1920 banner 92-268 KB, originals 70 KB-19.4 MB)
 LOGO_RECHECK_DAYS = 30        # re-verify a memoised answer at most this often
-LOGO_PROGRAMMES_PER_RUN = 60  # programmes checked per run (<= 3 HEADs each); the first pass spreads over ~5 runs
+LOGO_PROGRAMMES_PER_RUN = 60  # programmes checked per run (<= 4 HEADs each, the control included);
+                              # the first pass spreads over ~5 runs
 LOGO_PROBE_MAX_FAILURES = 3   # the step stops after this many failed HEADs in one run
 LOGO_HEAD_ANSWERS = (200, 403, 410)   # returned as answers, never retried or counted by the client
+LOGO_MISS_STREAK = 5          # this many programmes in a row with nothing larger stop the step (~6 % miss naturally)
 
 
 def clean_page_title(t):
@@ -318,6 +324,21 @@ def logo_head_verdict(st, ct, same_url, length):
     return "none"
 
 
+def logo_control_ok(st, ct, same_url):
+    """The control HEAD on the programme's own small logo (known to exist)
+    answered as it should: a 200 image from that URL itself. Anything else
+    means the host is not answering us honestly this run."""
+    ctype = (ct or "").split(";")[0].strip().lower()
+    return st == 200 and ctype.startswith("image/") and same_url
+
+
+def _iso_date(s):
+    try:
+        return dt.date.fromisoformat(s)
+    except (TypeError, ValueError):
+        return None
+
+
 def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_RUN):
     """For each publishing programme whose `logo` is an RTHK small variant
     (logo_candidates), HEAD its candidates in order (one try each, no retry)
@@ -335,8 +356,23 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
     oldest answers; at most `cap` programmes a run, and the step stops after
     LOGO_PROBE_MAX_FAILURES failed HEADs so a blocked image host costs a
     handful of requests, never the run. The storage's "missing" 403 is an
-    answer (LOGO_HEAD_ANSWERS), so it never counts toward the breaker."""
+    answer (LOGO_HEAD_ANSWERS), so the client neither retries nor counts it;
+    a response the step judges a failure although the client took it as an
+    answer (a 403 block page) is counted on the client (Client.count_failure),
+    so the run ledger and the shared breaker see it.
+
+    "Nothing larger" is believed only with evidence, because the storage
+    answers a denied request (IP, Referer, UA) exactly as a missing object
+    and a challenge page is a 200: (a) when every candidate misses, ONE
+    control HEAD asks for the small logo itself — not a 200 image means no
+    answer (a failure; nothing written); (b) a memo that publishes a larger
+    artwork is downgraded only by a SECOND all-miss on a later run — the
+    first marks it `missAt` and it keeps publishing; (c) LOGO_MISS_STREAK
+    programmes in a row with nothing larger stop the step with a warning
+    and none of them is memoised. A hit vouches for the host and writes the
+    all-miss answers held before it."""
     today = today_hkt()
+    iso = today.isoformat()
     window = months_back(RETENTION_MONTHS, today)
     small, due = [], []
     for key, p in sorted(programmes.items()):
@@ -358,35 +394,92 @@ def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROGRAMMES_PER_R
     due.sort(key=lambda t: (t[0], t[1]))
 
     heads = checked = answered = failed = 0
+    held = []                                      # all-miss answers, written once a hit or the end vouches
+    tripped = False
+
+    def head(url, referer):
+        nonlocal heads
+        f0 = client.failures
+        st, ct, _ = client.get(url, referer, method="HEAD", tries=1, ok=LOGO_HEAD_ANSWERS)
+        heads += 1
+        return st, ct, client.failures > f0
+
+    def failure(counted):
+        nonlocal failed
+        failed += 1
+        if not counted:
+            client.count_failure()                 # an "answer" the step judged a block
+
+    def write_miss(key, p, memo):
+        nonlocal answered
+        prev = p.get("logoFull")
+        if logo_memo_answers(prev, memo["from"]) and prev["url"]:
+            first = _iso_date(prev.get("missAt"))
+            if first is None or first >= today:    # (b) the first all-miss only marks it
+                prev["missAt"] = iso if first is None else prev["missAt"]
+                log(f"  logo {key}: nothing larger today — keeps {prev['url'].rsplit('/', 1)[1]} "
+                    f"until a later run agrees")
+                return
+        p["logoFull"] = memo
+        answered += 1
+        log(f"  logo {key}: → keeps the small logo")
+
     for _, key, p, cands in due[:cap]:
         if failed >= LOGO_PROBE_MAX_FAILURES:
             break
         checked += 1
+        logo = p["logo"]
         referer = {"Referer": f"{WWW}/radio/{p['channel']}/programme/{p['slug']}"}
-        memo = {"from": p["logo"], "url": None, "status": None, "checkedAt": today.isoformat()}
+        memo = {"from": logo, "url": None, "status": None, "checkedAt": iso}
         for cand in cands:
             if failed >= LOGO_PROBE_MAX_FAILURES:
                 memo = None                        # stopped mid-programme: no answer
                 break
-            f0 = client.failures
-            st, ct, _ = client.get(cand, referer, method="HEAD", tries=1, ok=LOGO_HEAD_ANSWERS)
-            heads += 1
+            st, ct, counted = head(cand, referer)
             verdict = logo_head_verdict(st, ct, client.last_url == cand, client.last_length)
-            if client.failures > f0 or verdict == "none":
-                failed += 1
             if verdict == "none":
+                failure(counted)
                 log(f"  logo {key}: HEAD {st} on {cand.rsplit('/', 1)[1]} — no answer, retry next run")
                 memo = None
                 break
+            if counted:                            # a 4xx miss the client counted (e.g. 400)
+                failed += 1
             memo["status"] = st
             if verdict == "hit":
                 memo.update(url=cand, bytes=client.last_length)
                 break
+        if memo is not None and memo["url"] is None:
+            # (a) Every candidate missed: is the host answering us at all?
+            if failed >= LOGO_PROBE_MAX_FAILURES:
+                memo = None
+            else:
+                st, ct, counted = head(logo, referer)
+                if not logo_control_ok(st, ct, client.last_url == logo):
+                    failure(counted)
+                    log(f"  logo {key}: nothing larger, but HEAD {st} on the logo itself — "
+                        f"no answer, retry next run")
+                    memo = None
         if memo is None:
             continue                               # the previous memo (if any) stands
+        if memo["url"] is None:
+            held.append((key, p, memo))
+            if len(held) >= LOGO_MISS_STREAK:      # (c) a run of misses is a block until proven otherwise
+                tripped = True
+                break
+            continue
+        for miss in held:
+            write_miss(*miss)
+        held = []
         p["logoFull"] = memo
         answered += 1
-        log(f"  logo {key}: → {memo['url'].rsplit('/', 1)[1] if memo['url'] else 'keeps the small logo'}")
+        log(f"  logo {key}: → {memo['url'].rsplit('/', 1)[1]}")
+    if tripped:
+        run["warnings"].append(f"logo upgrade stopped: {LOGO_MISS_STREAK} programmes in a row had nothing "
+                               f"larger although their own logos answered — a soft block or a changed "
+                               f"layout? none of them memoised")
+    else:
+        for miss in held:
+            write_miss(*miss)
     if failed >= LOGO_PROBE_MAX_FAILURES:
         run["warnings"].append(f"logo upgrade stopped after {LOGO_PROBE_MAX_FAILURES} failed HEADs "
                                f"({len(due) - answered} due left for the next run)")

@@ -5,8 +5,10 @@ crawl.logo_candidates derives the ordered candidates per family,
 crawl.upgrade_small_logos HEADs them in order through the shared polite client
 and memoises the answer — positive or "nothing larger" — in programmes.json
 `logoFull` (re-checked at most every 30 days, <= 60 programmes a run, stops
-after 3 failed HEADs, fails soft), and build_catalog.published_logo publishes
-it with the schema unchanged. Every response is mocked — nothing touches the
+after 3 failed HEADs, fails soft; "nothing larger" only with a control HEAD
+on the small logo, a second run before a published upgrade is withdrawn, and
+a stop after 5 all-miss programmes in a row), and build_catalog.published_logo
+publishes it with the schema unchanged. Every response is mocked — nothing touches the
 network (REPLAY.md §2.4)."""
 import contextlib
 import copy
@@ -334,7 +336,8 @@ class Probe(Harness):
                 self.cache(a)
                 fake = FakeStatic({photo_l("radio1", "big"): "missing", photo("radio1", "big"): ("bytes", size)})
                 self.upgrade({"radio1/big": a}, fake)
-                self.assertEqual(fake.urls(), [photo_l("radio1", "big"), photo("radio1", "big")])
+                self.assertEqual(fake.urls(), [photo_l("radio1", "big"), photo("radio1", "big"),
+                                               s115("radio1", "big")])            # + the control
                 self.assertIsNone(a["logoFull"]["url"])
                 self.assertEqual(published_logo(a), s115("radio1", "big"))
 
@@ -377,11 +380,11 @@ class Probe(Harness):
         missing = {photo(ch, slug): "missing", photo_l(ch, slug): "missing"}
         fake = FakeStatic(missing)
         client, run = self.upgrade(programmes, fake)
-        self.assertEqual(len(fake.reqs), 2)
+        self.assertEqual(fake.urls(), [photo_l(ch, slug), photo(ch, slug), s115(ch, slug, "11396")])
         self.assertEqual(a["logoFull"], {"from": s115(ch, slug, "11396"), "url": None, "status": 403,
                                          "checkedAt": "2026-09-29"})
         self.assertEqual((client.failures, run["logo_upgraded"], run["logo_deferred"]), (0, 0, 0))
-        for days, heads in ((1, 0), (29, 0), (30, 2)):
+        for days, heads in ((1, 0), (29, 0), (30, 3)):
             with self.subTest(days=days):
                 fake = FakeStatic(missing)
                 self.upgrade(programmes, fake, today=TODAY + dt.timedelta(days=days))
@@ -392,26 +395,23 @@ class Probe(Harness):
     def test_every_definitive_miss_is_remembered(self):
         cases = {"n404": 404, "n410": 410, "n400": 400, "xml403": "missing", "html": "html",
                  "redir": "redirect", "heavy": ("bytes", crawl.LOGO_MAX_BYTES + 1)}
-        programmes = {f"pth/{s}": prog("pth", s, s115("pth", s)) for s in cases}
-        self.cache(*programmes.values())
-        answers = {}
-        for s, a in cases.items():
-            answers[photo("pth", s)] = a
-            answers[photo_l("pth", s)] = a
-        fake = FakeStatic(answers)
-        client, run = self.upgrade(programmes, fake)
-        self.assertEqual(len(fake.reqs), 2 * len(cases))
         for s, a in cases.items():
             with self.subTest(case=s):
-                memo = programmes[f"pth/{s}"]["logoFull"]
+                p = prog("pth", s, s115("pth", s))
+                self.cache(p)
+                programmes = {f"pth/{s}": p}
+                fake = FakeStatic({photo_l("pth", s): a, photo("pth", s): a})
+                client, run = self.upgrade(programmes, fake)
+                self.assertEqual(fake.urls(), [photo_l("pth", s), photo("pth", s), s115("pth", s)])
+                memo = p["logoFull"]
                 self.assertIsNone(memo["url"])
                 self.assertEqual(memo["status"], a if isinstance(a, int) else 403 if a == "missing" else 200)
                 self.assertNotIn("bytes", memo)
-        self.assertEqual(run["logo_upgraded"], 0)
-        self.assertEqual(client.failures, 2)                        # only the 400s count against the run
-        fake2 = FakeStatic()
-        self.upgrade(programmes, fake2, today=TODAY + dt.timedelta(days=1))
-        self.assertEqual(fake2.reqs, [])
+                self.assertEqual(run["logo_upgraded"], 0)
+                self.assertEqual(client.failures, 2 if a == 400 else 0)   # only a 400 counts against the run
+                fake2 = FakeStatic()
+                self.upgrade(programmes, fake2, today=TODAY + dt.timedelta(days=1))
+                self.assertEqual(fake2.reqs, [])
 
     def test_memo_suppresses_daily_reprobes_until_30_days(self):
         a = prog("pth", "keepuco", s115("pth", "keepuco"))
@@ -477,17 +477,133 @@ class Probe(Harness):
         self.assertEqual(len(fake2.reqs), 2)
         self.assertEqual(b["logoFull"]["url"], photo_l("pth", "b"))
 
-    def test_the_storages_missing_403_is_an_answer_not_a_failure(self):
+    def test_all_miss_is_believed_only_when_the_small_logo_itself_answers(self):
+        # (a) The storage answers a denied request exactly as a missing
+        # object, and a challenge page is a 200: the control HEAD on the
+        # programme's own small logo tells a block from a real "nothing larger".
+        for control in ("missing", "blocked", "html", "redirect", 503, "reset"):
+            with self.subTest(control=control):
+                prev = {"from": s115("pth", "a"), "url": None, "status": 403, "checkedAt": "2026-08-01"}
+                a = prog("pth", "a", s115("pth", "a"), dict(prev))
+                self.cache(a)
+                fake = FakeStatic({photo_l("pth", "a"): "missing", photo("pth", "a"): "missing",
+                                   s115("pth", "a"): control})
+                client, run = self.upgrade({"pth/a": a}, fake)
+                self.assertEqual(fake.urls(), [photo_l("pth", "a"), photo("pth", "a"), s115("pth", "a")])
+                self.assertEqual(a["logoFull"], prev)                   # nothing written
+                self.assertEqual(client.failures, 1)                    # counted once, by whoever saw it
+                self.assertEqual(run["logo_deferred"], 1)
+        # The control answering as it should makes the all-miss an answer.
+        a = prog("pth", "b", s115("pth", "b"))
+        self.cache(a)
+        fake = FakeStatic({photo_l("pth", "b"): "missing", photo("pth", "b"): "missing"})
+        client, _ = self.upgrade({"pth/b": a}, fake)
+        self.assertEqual((a["logoFull"]["url"], a["logoFull"]["status"], client.failures), (None, 403, 0))
+
+    def test_a_storage_that_denies_everything_costs_three_programmes_and_no_published_artwork(self):
+        # The review's offline simulation: 70 due programmes holding positive
+        # memos, every HEAD answers the storage's 403 application/xml.
+        programmes = {}
+        for i in range(70):
+            k = f"radio2/p{i:02d}"
+            programmes[k] = prog("radio2", f"p{i:02d}", s115("radio2", f"p{i:02d}"),
+                                 {"from": s115("radio2", f"p{i:02d}"), "url": photo_l("radio2", f"p{i:02d}"),
+                                  "status": 200, "bytes": 69_275, "checkedAt": "2026-08-20"})
+        self.cache(*programmes.values())
+        before = copy.deepcopy(programmes)
+        denied = {}
+        for i in range(70):
+            for u in (photo_l("radio2", f"p{i:02d}"), photo("radio2", f"p{i:02d}"), s115("radio2", f"p{i:02d}")):
+                denied[u] = "missing"
+        fake = FakeStatic(denied)
+        client, run = self.upgrade(programmes, fake)
+        self.assertEqual(len(fake.reqs), 9)                             # 3 programmes x (2 + the control)
+        self.assertEqual(client.failures, 3)
+        self.assertEqual(programmes, before)                            # every published upgrade stands
+        self.assertIn("stopped after 3 failed HEADs", run["warnings"][-1])
+        for p in programmes.values():
+            self.assertEqual(published_logo(p), p["logoFull"]["url"])
+
+    def test_a_published_upgrade_is_withdrawn_only_by_a_second_run_that_agrees(self):
+        # (b) The first all-miss marks the memo; it keeps publishing. A
+        # same-day rerun does not confirm; a later run does. A hit in
+        # between clears the mark.
+        prev = {"from": s115("pth", "a"), "url": photo_l("pth", "a"), "status": 200, "bytes": 69_275,
+                "checkedAt": "2026-08-20"}                                # 40 d old: due
+        a = prog("pth", "a", s115("pth", "a"), dict(prev))
+        self.cache(a)
+        gone = {photo_l("pth", "a"): "missing", photo("pth", "a"): "missing"}
+        fake = FakeStatic(gone)
+        _, run = self.upgrade({"pth/a": a}, fake)
+        self.assertEqual(len(fake.reqs), 3)
+        self.assertEqual(a["logoFull"], dict(prev, missAt="2026-09-29"))
+        self.assertEqual(published_logo(a), photo_l("pth", "a"))
+        self.assertEqual((run["logo_upgraded"], run["logo_deferred"]), (1, 1))
+        self.upgrade({"pth/a": a}, FakeStatic(gone))                    # the same day: still marked only
+        self.assertEqual(a["logoFull"], dict(prev, missAt="2026-09-29"))
+        withdrawn = copy.deepcopy(a)
+        self.upgrade({"pth/a": withdrawn}, FakeStatic(gone), today=TODAY + dt.timedelta(days=1))
+        self.assertEqual(withdrawn["logoFull"], {"from": s115("pth", "a"), "url": None, "status": 403,
+                                                 "checkedAt": "2026-09-30"})
+        self.assertEqual(published_logo(withdrawn), s115("pth", "a"))
+        back = copy.deepcopy(a)
+        self.upgrade({"pth/a": back}, FakeStatic(), today=TODAY + dt.timedelta(days=1))
+        self.assertEqual(back["logoFull"], {"from": s115("pth", "a"), "url": photo_l("pth", "a"),
+                                            "status": 200, "bytes": 69_275, "checkedAt": "2026-09-30"})
+        for bad in ("not-a-date", 7):                                   # a malformed mark restarts the wait
+            with self.subTest(missAt=bad):
+                m = prog("pth", "a", s115("pth", "a"), dict(prev, missAt=bad))
+                self.upgrade({"pth/a": m}, FakeStatic(gone))
+                self.assertEqual(m["logoFull"], dict(prev, missAt="2026-09-29"))
+
+    def test_a_run_of_all_miss_programmes_stops_the_step_and_memoises_none_of_them(self):
+        # (c) Five programmes in a row with nothing larger (the natural rate
+        # is ~6 %) are a block until proven otherwise.
+        n = crawl.LOGO_MISS_STREAK
         programmes = {f"radio1/p{i:02d}": prog("radio1", f"p{i:02d}", s115("radio1", f"p{i:02d}"))
-                      for i in range(10)}
+                      for i in range(n + 3)}
         self.cache(*programmes.values())
         answers = {}
-        for i in range(10):
+        for i in range(n + 3):
+            answers[photo_l("radio1", f"p{i:02d}")] = "missing"
+            answers[photo("radio1", f"p{i:02d}")] = "missing"
+        fake = FakeStatic(answers)
+        client, run = self.upgrade(programmes, fake)
+        self.assertEqual(len(fake.reqs), 3 * n)                        # the sixth is never asked
+        self.assertTrue(all("logoFull" not in p for p in programmes.values()))
+        self.assertEqual(client.failures, 0)
+        self.assertEqual((run["logo_checked"], run["logo_deferred"]), (n, n + 3))
+        self.assertEqual(len(run["warnings"]), 1)
+        self.assertIn(f"{n} programmes in a row had nothing larger", run["warnings"][0])
+
+    def test_a_hit_vouches_for_the_misses_before_it(self):
+        n = crawl.LOGO_MISS_STREAK
+        names = [f"p{i:02d}" for i in range(2 * n - 1)]                # n-1 misses, a hit, n-1 misses
+        programmes = {f"radio1/{s}": prog("radio1", s, s115("radio1", s)) for s in names}
+        self.cache(*programmes.values())
+        answers = {}
+        for i, s in enumerate(names):
+            if i != n - 1:
+                answers[photo_l("radio1", s)] = "missing"
+                answers[photo("radio1", s)] = "missing"
+        _, run = self.upgrade(programmes, FakeStatic(answers))
+        self.assertEqual(run["warnings"], [])
+        self.assertEqual([programmes[f"radio1/{s}"]["logoFull"]["url"] for s in names],
+                         [None] * (n - 1) + [photo_l("radio1", names[n - 1])] + [None] * (n - 1))
+        self.assertEqual(run["logo_deferred"], 0)
+
+    def test_the_storages_missing_403_is_an_answer_not_a_failure(self):
+        n = crawl.LOGO_MISS_STREAK - 1
+        programmes = {f"radio1/p{i:02d}": prog("radio1", f"p{i:02d}", s115("radio1", f"p{i:02d}"))
+                      for i in range(n)}
+        self.cache(*programmes.values())
+        answers = {}
+        for i in range(n):
             answers[photo("radio1", f"p{i:02d}")] = "missing"
             answers[photo_l("radio1", f"p{i:02d}")] = "missing"
         fake = FakeStatic(answers)
         client, run = self.upgrade(programmes, fake)
-        self.assertEqual((len(fake.reqs), client.failures, run["warnings"]), (20, 0, []))
+        self.assertEqual((len(fake.reqs), client.failures, run["warnings"]), (3 * n, 0, []))
         self.assertTrue(all(p["logoFull"]["url"] is None for p in programmes.values()))
 
     def test_stops_after_three_failed_heads(self):
@@ -499,7 +615,7 @@ class Probe(Harness):
                 fake = FakeStatic({photo_l("radio1", f"p{i:02d}"): answer for i in range(10)})
                 client, run = self.upgrade(programmes, fake)
                 self.assertEqual(len(fake.reqs), 3)
-                self.assertEqual(client.failures, 0 if answer == "blocked" else 3)
+                self.assertEqual(client.failures, 3)       # a 403 block page too: the ledger + breaker see it
                 self.assertEqual((run["logo_checked"], run["logo_probes"], run["logo_deferred"]), (3, 3, 10))
                 self.assertTrue(all("logoFull" not in p for p in programmes.values()))
                 self.assertEqual(len(run["warnings"]), 1)
@@ -514,6 +630,14 @@ class Probe(Harness):
         self.assertEqual(len(fake.reqs), 3)                                      # p2's original is never asked
         self.assertTrue(all("logoFull" not in p for p in programmes.values()))
         self.assertEqual(run["logo_deferred"], 3)
+        # The third failure on a programme's LAST candidate: no control HEAD
+        # is sent after the stop, and the all-miss is not written.
+        fake = FakeStatic({photo_l("radio1", "p0"): 503, photo_l("radio1", "p1"): 503,
+                           photo_l("radio1", "p2"): "missing", photo("radio1", "p2"): 400})
+        _, run = self.upgrade(programmes, fake)
+        self.assertEqual(fake.urls(), [photo_l("radio1", "p0"), photo_l("radio1", "p1"),
+                                       photo_l("radio1", "p2"), photo("radio1", "p2")])
+        self.assertTrue(all("logoFull" not in p for p in programmes.values()))
 
     def test_never_more_than_60_programmes_a_run_never_checked_first(self):
         programmes = {}
@@ -609,6 +733,16 @@ class ClientAnswers(unittest.TestCase):
             st, _, _ = c.get("https://x.test/g.jpg", method="HEAD", tries=3, ok=crawl.LOGO_HEAD_ANSWERS)
             self.assertEqual(st, 410)
         self.assertEqual((c.requests, c.failures, len(fake.reqs)), (2, 0, 2))
+
+
+class ClientCountFailure(unittest.TestCase):
+    def test_an_externally_judged_failure_reaches_the_ledger_and_the_breaker(self):
+        c = common.Client(pace_s=0, budget=100, log=lambda *_: None)
+        c.count_failure()
+        self.assertEqual((c.requests, c.failures), (0, 1))
+        c.requests, c.failures = 40, 10                                  # at the 25 % line
+        with self.assertRaises(common.CircuitOpen):
+            c.count_failure()
 
 
 class Publish(unittest.TestCase):
