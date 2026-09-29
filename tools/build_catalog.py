@@ -13,6 +13,8 @@ Gate:
   - programmes with 0 episodes in the retention window are dropped
   - uninformative episode titles (the programme name, a fixed label) are
     blanked to "" so the app falls back to the programme title (S31b)
+  - a programme's "_s" small-thumbnail logo publishes as its full-size photo
+    once crawl.py has verified it (S37b; `logo` stays a URL string)
   - safety floor vs last-good: >= 90% of programmes and >= 80% of episodes,
     else refuse (a bad crawl must never nuke the section)
 
@@ -98,6 +100,18 @@ def blank_non_titles(programme, episodes):
     return blanked
 
 
+def published_logo(p):
+    """S37b: the full-size photo crawl.py verified for this exact "_s"
+    thumbnail (memo `logoFull`, still `from` the current logo), else the
+    crawler's own pick. Always a URL string or None — the schema is unchanged."""
+    logo = p.get("logo")
+    memo = p.get("logoFull") or {}
+    full = memo.get("url")
+    if logo and memo.get("from") == logo and isinstance(full, str) and full.startswith("https://"):
+        return full
+    return logo
+
+
 def validate_programme(p, episodes):
     problems = []
     if p["channel"] not in RTHK_CHANNELS:
@@ -155,8 +169,9 @@ def main():
             entry = {"slug": p["slug"], "title_zh": title_zh, "title_en": title_en,
                      "active": active, "latestDate": episodes[0]["date"],
                      "episodeCount": len(episodes)}
-            if p.get("logo"):
-                entry["logo"] = p["logo"]
+            logo = published_logo(p)
+            if logo:
+                entry["logo"] = logo
             if p.get("streamDrift"):
                 entry["streamOverride"] = True
             entries.append(entry)

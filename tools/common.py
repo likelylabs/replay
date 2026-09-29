@@ -88,6 +88,7 @@ class Client:
         self.breaker_min = breaker_min
         self.log = log
         self.last_length = 0      # Content-Length of the last response (0 = absent)
+        self.last_url = ""        # final URL of the last 2xx response, after redirects ("" = none)
         self._last = 0.0
 
     def _pace(self):
@@ -101,8 +102,11 @@ class Client:
         non-ok status or transport error; raises BudgetExhausted / CircuitOpen.
         A 404 is returned immediately (it is an answer, not a failure).
         Sets self.last_length to the final response's Content-Length (0 when
-        absent or unparseable) — a HEAD's size without downloading the body."""
+        absent or unparseable) — a HEAD's size without downloading the body —
+        and self.last_url to the URL that answered (differs from `url` only
+        when urllib followed a redirect; "" when no 2xx arrived)."""
         self.last_length = 0
+        self.last_url = ""
         if self.requests >= self.budget:
             raise BudgetExhausted(f"request budget {self.budget} exhausted")
         req_headers = {"User-Agent": UA, "Accept-Language": "zh-HK,zh;q=0.9,en;q=0.8"}
@@ -113,11 +117,13 @@ class Client:
             self.requests += 1
             req = urllib.request.Request(url, method=method, headers=req_headers)
             self.last_length = 0
+            self.last_url = ""
             try:
                 with urllib.request.urlopen(req, timeout=timeout) as r:
                     body = b"" if method == "HEAD" else r.read()
                     last = (r.status, r.headers.get("Content-Type", ""), body)
                     self.last_length = _content_length(r.headers)
+                    self.last_url = getattr(r, "url", None) or url
             except urllib.error.HTTPError as e:
                 last = (e.code, e.headers.get("Content-Type", "") if e.headers else "", b"")
                 if e.code == 404:

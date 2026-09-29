@@ -9,6 +9,14 @@ Daily run (all bounded by --budget requests, serial ~1 req/s):
      schedule-only), today's schedule XML for English titles, programme pages
      for logo + canonical title (new slugs first, then a rolling 30-day
      refresh, capped per run).
+  1b. Logo upgrade (S37b) — a programme whose logo is RTHK's "_s" small
+     thumbnail gets ONE HEAD on its full-size sibling (same path, "_s"
+     dropped), only when it has cached episodes (would publish). The answer
+     is memoised in programmes.json `logoFull` and re-checked at most every
+     30 days, so a normal day sends none; at most 41 HEADs a run, and the
+     step stops itself after 3 failed ones (it can never trip the breaker on
+     its own). `logo` stays the crawler's raw pick; build_catalog publishes
+     the verified full-size URL.
   2. RTHK enumeration — for every programme: current + previous month always
      (catchUp?m=&page= walked to nextPage=-1); older months inside the
      12-month window only when missing from the cache (backfill drains over
@@ -34,6 +42,7 @@ import random
 import re
 import sys
 import time
+import urllib.parse
 import xml.etree.ElementTree as ET
 
 from common import (BudgetExhausted, CircuitOpen, Client, INCREMENTAL_MONTHS,
@@ -48,6 +57,13 @@ META_REFRESH_CAP = 25       # ...but at most this many refreshes per run (new sl
 SPOT_CHECK_PER_CHANNEL = 2
 SLUG_RE = re.compile(r"^[A-Za-z0-9_]+$")
 METRO_GRID_TOLERANCE = 0.05   # canary: warn when a slot's size-derived length is off by > 5 %
+# S37b logo upgrade. RTHK's small thumbnail ('programme_photo_s.jpg',
+# '{id}_1920_s.jpg') has its full-size photo beside it without the "_s"
+# (HEAD-probed 41/41 on 2026-09-29, same host + path, no redirects).
+SMALL_LOGO_RE = re.compile(r"(?<=[^/])_s(\.jpe?g)$", re.IGNORECASE)
+LOGO_RECHECK_DAYS = 30        # re-verify a memoised answer at most this often
+LOGO_PROBE_CAP = 41           # never more HEADs than this per run (the 41 published "_s" logos)
+LOGO_PROBE_MAX_FAILURES = 3   # the step stops after this many failed HEADs in one run
 
 
 def clean_page_title(t):
@@ -186,6 +202,108 @@ def discover(client, programmes, only, run, limit=0):
             if m and "programme" in m.group(1):
                 p["logo"] = html.unescape(m.group(1))
     run["meta_refreshed"] = len(todo)
+
+
+# ---------------------------------------------------------------------------
+# 1b. Logo upgrade (S37b)
+# ---------------------------------------------------------------------------
+def full_logo_candidate(url):
+    """The full-size sibling of an RTHK "_s" JPEG thumbnail: the same URL with
+    the trailing "_s" dropped and the extension kept ('…/programme_photo_s.jpg'
+    → '…/programme_photo.jpg'). None for anything else — an https URL on an
+    rthk.hk host whose path ends in "_s.jpg"/"_s.jpeg" (no query) is the only
+    shape upgraded, so every other logo is never requested."""
+    if not isinstance(url, str):
+        return None
+    parts = urllib.parse.urlsplit(url)
+    host = (parts.hostname or "").lower()
+    if parts.scheme != "https" or not (host == "rthk.hk" or host.endswith(".rthk.hk")):
+        return None
+    if parts.query or parts.fragment or not SMALL_LOGO_RE.search(parts.path):
+        return None
+    return SMALL_LOGO_RE.sub(r"\1", url)
+
+
+def has_cached_episodes(p, window):
+    """True when a cached month in the retention window holds an episode —
+    i.e. build_catalog would publish the programme (it drops the rest)."""
+    return any((read_json(month_path(p["channel"], p["slug"], m)) or {}).get("episodes")
+               for m in window)
+
+
+def logo_memo_current(memo, logo, today):
+    """A memo answers for this exact logo and is younger than LOGO_RECHECK_DAYS."""
+    if not memo or memo.get("from") != logo:
+        return False
+    try:
+        age = (today - dt.date.fromisoformat(memo.get("checkedAt") or "")).days
+    except ValueError:
+        return False
+    return 0 <= age < LOGO_RECHECK_DAYS
+
+
+def upgrade_small_logos(client, programmes, only, run, cap=LOGO_PROBE_CAP):
+    """For each publishing programme whose `logo` is an "_s" thumbnail, verify
+    the full-size sibling with ONE HEAD (no retry) through the shared client
+    — its pacing, UA, budget and breaker — plus the programme page as
+    Referer, and memoise the answer as p["logoFull"] = {"from": the "_s" URL,
+    "url": the full URL or None, "status", ["bytes"], "checkedAt"}.
+    A 200 counts only when it is an image served from the candidate URL itself
+    (no redirect); a 4xx is a definitive "not served"; a transport error, 429
+    or 5xx is no answer — the previous memo stands and the next run retries.
+    `p["logo"]` is never changed here: build_catalog publishes memo["url"]
+    while memo["from"] still equals the logo, so a meta refresh that moves the
+    logo simply retires the memo. Never-checked candidates go first, then the
+    oldest answers; at most `cap` HEADs, and the step stops after
+    LOGO_PROBE_MAX_FAILURES failed ones so a blocked image host costs a
+    handful of requests, never the run."""
+    today = today_hkt()
+    window = months_back(RETENTION_MONTHS, today)
+    small, due = [], []
+    for key, p in sorted(programmes.items()):
+        if only and p["channel"] not in only:
+            continue
+        logo = p.get("logo")
+        cand = full_logo_candidate(logo)
+        if not cand:
+            p.pop("logoFull", None)                # not (or no longer) an "_s" logo
+            continue
+        if not has_cached_episodes(p, window):
+            continue                               # dormant: never published, not worth a request
+        small.append(p)
+        memo = p.get("logoFull")
+        if logo_memo_current(memo, logo, today):
+            continue
+        last = memo.get("checkedAt", "") if memo and memo.get("from") == logo else ""
+        due.append((last, key, p, cand))
+    due.sort(key=lambda t: (t[0], t[1]))
+
+    probes, fail0 = 0, client.failures
+    for _, key, p, cand in due[:cap]:
+        if client.failures - fail0 >= LOGO_PROBE_MAX_FAILURES:
+            run["warnings"].append(f"logo upgrade stopped after {LOGO_PROBE_MAX_FAILURES} failed HEADs "
+                                   f"({len(due) - probes} due left for the next run)")
+            break
+        referer = {"Referer": f"{WWW}/radio/{p['channel']}/programme/{p['slug']}"}
+        st, ct, _ = client.get(cand, referer, method="HEAD", tries=1)
+        probes += 1
+        memo = {"from": p["logo"], "url": None, "status": st, "checkedAt": today.isoformat()}
+        if st == 200:
+            is_image = ct.split(";")[0].strip().lower().startswith("image/")
+            if is_image and client.last_url == cand:
+                memo["url"] = cand
+                if client.last_length:
+                    memo["bytes"] = client.last_length
+        elif not (400 <= st < 500 and st != 429):
+            log(f"  logo {key}: HEAD {st} — no answer, retry next run")
+            continue
+        p["logoFull"] = memo
+        log(f"  logo {key}: HEAD {st} → {'full-size' if memo['url'] else 'keeps _s'}")
+    run["logo_small"] = len(small)
+    run["logo_probes"] = probes
+    run["logo_deferred"] = len(due) - probes
+    run["logo_full"] = sum(1 for p in small if (p.get("logoFull") or {}).get("from") == p["logo"]
+                           and (p.get("logoFull") or {}).get("url"))
 
 
 # ---------------------------------------------------------------------------
@@ -434,6 +552,11 @@ def main():
         log("== discovery")
         discover(client, programmes, only, run, args.limit)
         log(f"   {run['programmes_known']} programmes known ({run['sitemap_programmes']} from sitemap), meta refreshed {run.get('meta_refreshed', 0)}")
+        log("== logo upgrade")
+        upgrade_small_logos(client, programmes, only, run,
+                            min(LOGO_PROBE_CAP, args.limit) if args.limit else LOGO_PROBE_CAP)
+        log(f"   {run['logo_small']} \"_s\" logos, {run['logo_probes']} HEADs, "
+            f"{run['logo_full']} publish full-size, {run['logo_deferred']} deferred")
         log("== enumeration")
         enumerate_programmes(client, programmes, only, args.limit, not args.no_backfill, run)
         log(f"   {run['enumerated']} programmes, {run['months_fetched']} month fetches, {run['month_failures']} failed, backlog {run['backlog_months']} months")

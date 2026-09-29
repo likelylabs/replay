@@ -28,6 +28,10 @@ Spec, tenets and decisions live in the private coordination repo
   frequency per day: the window search plus ONE `:30`-slot grid canary
   (Content-Length ÷ 64 kbps ≈ 30 min, else a `grid drift?` warning in
   `data/last-run.json`; warn-only, `metro_segment_sec` records the reading).
+  Logo upgrade: a publishing programme whose logo is RTHK's `_s` small
+  thumbnail gets ONE HEAD on the full-size sibling (same path, `_s` dropped),
+  memoised in `data/rthk/programmes.json` `logoFull` and re-checked at most
+  every 30 days — 0 HEADs on most days, ≤ 41 in any run, stops after 3 failures.
 - `tools/build_catalog.py` — the only writer of `index.json` + `prog/`.
   Validates, drops dormant programmes, blanks uninformative episode titles
   (below), and refuses to publish a catalog that shrank past the safety floor
@@ -41,7 +45,10 @@ Spec, tenets and decisions live in the private coordination repo
 
 - `index.json` — every channel with its programme list (RTHK, `browse:
   "programme"`) or its by-time window (Metro, `browse: "bytime"`). Schema:
-  `schema/index.schema.json`.
+  `schema/index.schema.json`. A programme's optional `logo` is an image URL
+  on RTHK's own host — the full-size photo wherever the crawl has verified
+  one (up to ~2 MB; scale it down for tiles), else what the programme page or
+  schedule offered.
 - `prog/{channel}/{slug}.json` — one programme's episodes, newest first.
   Schema: `schema/programme.schema.json`. An episode `title` of `""` means RTHK
   gave no episode title — only the programme name (after an NFKC / case /
