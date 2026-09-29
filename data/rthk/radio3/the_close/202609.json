@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-29",
+   "id": "1130514",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy and Xiaolin Chen",
+    "Laurent Pelletier - Decarbonisation of Buildings",
+    "Tracy Cui - China’s Semiconductor Sector"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-28",
    "id": "1130264",
    "parts": [
@@ -211,11 +222,11 @@
    "parts": [
     "足本 Full (HKT 17:05 - 18:00)",
     "Business and Market Discussion - Peter Guy",
-    "Rajeev Peshwarian - The Naked Economy, part 2",
+    "Rajeev Peshawaria - The Naked Economy, part 2",
     "Thanh Tai Vo - Deepfakes and Reputational risk"
    ],
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-29"
+ "fetchedAt": "2026-09-30"
 }

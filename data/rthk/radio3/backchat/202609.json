@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-29",
+   "id": "1130509",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Future-Proofing Healthcare forum",
+    "OnlyMarms conservation project",
+    "Social support services for ethnic minority elderly"
+   ],
+   "title": "Future-Proofing Healthcare forum / OnlyMarms conservation project / Social support services for ethnic minority elderly"
+  },
+  {
    "date": "2026-09-28",
    "id": "1130259",
    "parts": [
@@ -225,5 +236,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-29"
+ "fetchedAt": "2026-09-30"
 }

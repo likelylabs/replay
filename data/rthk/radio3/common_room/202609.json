@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-29",
+   "id": "1130517",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - Buddhist Ho Nam Kam College"
+  },
+  {
    "date": "2026-09-28",
    "id": "1130267",
    "parts": [
@@ -161,5 +169,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-29"
+ "fetchedAt": "2026-09-30"
 }
