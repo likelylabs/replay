@@ -38,6 +38,10 @@ Spec, tenets and decisions live in the private coordination repo
   The answer (or "none larger") is memoised in `data/rthk/programmes.json`
   `logoFull` and re-checked at most every 30 days — a few HEADs on most days,
   ≤ 60 programmes (≤ 4 HEADs each) in any run, stops after 3 failed HEADs.
+  Cost: the first pass over the 247 publishing small logos spreads over 5
+  daily runs of ~60–70 HEADs (one each where the 720 px answers), then ~8
+  programmes a day come due for their 30-day re-check. A programme asked
+  without an answer is stamped `logoTriedAt` and rotates to the back.
   RTHK's storage answers a denied request exactly like a missing object, so
   "none larger" needs evidence: one control HEAD on the small logo itself
   (not a 200 image = no answer, counted as a failure), a published upgrade is
