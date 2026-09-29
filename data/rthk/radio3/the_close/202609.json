@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-09-28",
+   "id": "1130264",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Richard Harris",
+    "Startup Spotlight -  Raghuraman Chandrashekhar",
+    "Andrew Barclay - HK SMEs and Taxes"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-09-25",
    "id": "1129713",
    "parts": [
@@ -49,7 +60,7 @@
    "parts": [
     "足本 Full (HKT 17:05 - 18:00)",
     "Business and Market Discussion",
-    "Startup Spotlight - Ray Yeng",
+    "Startup Spotlight - Ray Yang",
     "How to Properly Close a Company"
    ],
    "title": "The Close"
@@ -206,5 +217,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-09-28"
+ "fetchedAt": "2026-09-29"
 }

@@ -1,6 +1,37 @@
 {
  "episodes": [
   {
+   "date": "2026-09-29",
+   "id": "1130507",
+   "parts": [
+    "第一部份 Part 1 (HKT 06:30 - 07:00)"
+   ],
+   "title": "Hong Kong Today"
+  },
+  {
+   "date": "2026-09-28",
+   "id": "1130257",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Two giant pandas arrive in US from China",
+    "Hong Kong requires AI talent: FS",
+    "IT chief welcomes competition at Northern Metropolis",
+    "Race to get ball rolling in Victoria Park court revamp",
+    "Nursing graduates not jobless, health chief says",
+    "Trade truce 'does not reset China-US relations\"",
+    "Self-belief powers Chiu to Asian Games rowing gold",
+    "Rugby captain Chloe Chan eyes Asian Games glory",
+    "British police arrest several over alleged 'terrorist act'",
+    "Spain housing protesters maintain pressure on Sanchez",
+    "Pope vows action on clergy abuse after meeting survivors",
+    "Hong Kong, China strike gold in AG squash",
+    "Hosts thrash Laos in Fifa Asean Cup opener"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-09-25",
    "id": "1129706",
    "parts": [
@@ -491,5 +522,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-28"
+ "fetchedAt": "2026-09-29"
 }

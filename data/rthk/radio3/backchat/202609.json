@@ -1,6 +1,15 @@
 {
  "episodes": [
   {
+   "date": "2026-09-28",
+   "id": "1130259",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "President Xi Jinping's US visit"
+   ],
+   "title": "President Xi Jinping's US visit"
+  },
+  {
    "date": "2026-09-25",
    "id": "1129708",
    "parts": [
@@ -216,5 +225,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-28"
+ "fetchedAt": "2026-09-29"
 }
