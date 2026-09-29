@@ -235,16 +235,20 @@ class Derivation(unittest.TestCase):
         self.assertEqual(crawl.LOGO_PROGRAMMES_PER_RUN, 60)
         self.assertEqual(crawl.LOGO_PROBE_MAX_FAILURES, 3)
         self.assertEqual(crawl.LOGO_MAX_BYTES, 500_000)
+        self.assertEqual(crawl.LOGO_MIN_BYTES, 15_000)
 
 
 class Verdict(unittest.TestCase):
     def test_one_heads_meaning(self):
-        cap = crawl.LOGO_MAX_BYTES
+        cap, floor = crawl.LOGO_MAX_BYTES, crawl.LOGO_MIN_BYTES
         for args, want in (
                 ((200, "image/jpeg", True, 185_340), "hit"),
                 ((200, "image/jpeg", True, cap), "hit"),
-                ((200, "IMAGE/JPEG; x=y", True, 1), "hit"),
+                ((200, "IMAGE/JPEG; x=y", True, floor), "hit"),
                 ((200, "image/jpeg", True, cap + 1), "miss"),      # too heavy for a tile
+                ((200, "image/jpeg", True, floor - 1), "miss"),    # a stub, not an upgrade
+                ((200, "image/jpeg", True, 3_500), "miss"),        # the size of the 115 px it replaces
+                ((200, "image/jpeg", True, 1), "miss"),
                 ((200, "image/jpeg", True, 0), "miss"),            # size unknown
                 ((200, "image/jpeg", False, 1000), "miss"),        # a redirect
                 ((200, "text/html", True, 1000), "miss"),
@@ -326,6 +330,14 @@ class Probe(Harness):
                                  {"from": s115("radio2", s), "url": photo("radio2", s), "status": 200,
                                   "bytes": 185_340, "checkedAt": "2026-09-29"})
         self.assertEqual((client.failures, run["logo_upgraded"], run["warnings"]), (0, len(cases), []))
+
+    def test_a_stub_is_never_taken_as_the_upgrade(self):
+        a = prog("radio1", "stub", s115("radio1", "stub"))
+        self.cache(a)
+        fake = FakeStatic({photo_l("radio1", "stub"): ("bytes", 4_000), photo("radio1", "stub"): ("bytes", 90_000)})
+        self.upgrade({"radio1/stub": a}, fake)
+        self.assertEqual(a["logoFull"]["url"], photo("radio1", "stub"))
+        self.assertEqual(a["logoFull"]["bytes"], 90_000)
 
     def test_an_original_over_the_cap_is_never_taken(self):
         # 18 of the 31 sampled originals are over 2 MB and they run to 19.4 MB:
@@ -827,6 +839,7 @@ class Publish(unittest.TestCase):
                      # the right URL, but no size or one over today's cap (an earlier rule's memo)
                      {"from": self.SMALL, "url": self.FULL},
                      {"from": self.SMALL, "url": self.FULL, "bytes": 0},
+                     {"from": self.SMALL, "url": self.FULL, "bytes": crawl.LOGO_MIN_BYTES - 1},
                      {"from": self.SMALL, "url": self.FULL, "bytes": "69275"},
                      {"from": self.SMALL, "url": self.FULL, "bytes": True},
                      {"from": self.SMALL, "url": self.FULL, "bytes": crawl.LOGO_MAX_BYTES + 1}):

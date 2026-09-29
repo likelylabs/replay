@@ -30,10 +30,11 @@ Spec, tenets and decisions live in the private coordination repo
   `data/last-run.json`; warn-only, `metro_segment_sec` records the reading).
   Logo upgrade: a publishing programme whose logo is one of RTHK's small
   variants (`{id}_115.jpg` 115 px, `…_s.jpg` 272 px) gets a HEAD on each larger
-  artwork in the same directory, in order, until one is a usable image: the
-  720 px square `programme_photo_l.jpg`, the square original
-  `programme_photo.jpg` only where no 720 px answers (≤ 500 KB — originals run
-  to 19 MB and 3001 px), and for `_s` the sibling with `_s` dropped.
+  artwork in the same directory, in order, until one is a usable image
+  (15–500 KB; lighter is a stub): the 720 px square `programme_photo_l.jpg`,
+  the square original `programme_photo.jpg` only where no 720 px answers
+  (originals run to 19 MB and 3001 px), and for `_s` the sibling with `_s`
+  dropped.
   The answer (or "none larger") is memoised in `data/rthk/programmes.json`
   `logoFull` and re-checked at most every 30 days — a few HEADs on most days,
   ≤ 60 programmes (≤ 4 HEADs each) in any run, stops after 3 failed HEADs.

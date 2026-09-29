@@ -89,6 +89,8 @@ LOGO_PHOTO = "programme_photo.jpg"       # the square original
 LOGO_PHOTO_L = "programme_photo_l.jpg"   # its 720 px square rendition
 LOGO_MAX_BYTES = 500_000      # a candidate heavier than this is skipped (the 720 px runs 47-95 KB,
                               # the 1920 banner 92-268 KB, originals 70 KB-19.4 MB)
+LOGO_MIN_BYTES = 15_000       # ...and one lighter than this is a stub, not an upgrade (the 272 px
+                              # "_s" thumbnail is ~14 KB; the lightest real candidate measured, 47 KB)
 LOGO_RECHECK_DAYS = 30        # re-verify a memoised answer at most this often
 LOGO_PROGRAMMES_PER_RUN = 60  # programmes checked per run (<= 4 HEADs each, the control included);
                               # the first pass spreads over ~5 runs
@@ -279,7 +281,7 @@ def has_cached_episodes(p, window):
 def logo_memo_answers(memo, logo):
     """The memo answers for this exact logo under TODAY's rule: it was written
     `from` this logo, and its url is None ("nothing larger") or one of
-    logo_candidates(logo) with a recorded size in (0, LOGO_MAX_BYTES]. A memo
+    logo_candidates(logo) with a recorded size in [LOGO_MIN_BYTES, LOGO_MAX_BYTES]. A memo
     an earlier rule wrote (a heavier cap, a URL off the derivation) answers
     nothing: build_catalog does not publish it and the crawl asks again first.
     The one predicate both legs share, so the publish gate re-checks the rule."""
@@ -290,7 +292,7 @@ def logo_memo_answers(memo, logo):
         return True
     size = memo.get("bytes")
     return (url in logo_candidates(logo) and isinstance(size, int) and not isinstance(size, bool)
-            and 0 < size <= LOGO_MAX_BYTES)
+            and LOGO_MIN_BYTES <= size <= LOGO_MAX_BYTES)
 
 
 def logo_memo_current(memo, logo, today):
@@ -309,13 +311,15 @@ def logo_head_verdict(st, ct, same_url, length):
     """What one HEAD on a candidate says: "hit" (use it), "miss" (a definitive
     no for this candidate — try the next) or "none" (no answer this run).
     A hit is a 200 image served from the candidate URL itself (no redirect)
-    with a Content-Length in (0, LOGO_MAX_BYTES]. A 404 / 410, the storage's
+    with a Content-Length in [LOGO_MIN_BYTES, LOGO_MAX_BYTES] — an unsized
+    answer or a stub smaller than the thumbnail it would replace is a miss,
+    as is anything heavier than a tile should fetch. A 404 / 410, the storage's
     403 application/xml (how webstatic answers a missing object) and any
     other 4xx but 429 are misses. A transport error, 429, 5xx or a 403 that
     is not the storage's (a block, not an answer) is no answer."""
     ctype = (ct or "").split(";")[0].strip().lower()
     if st == 200:
-        usable = ctype.startswith("image/") and same_url and 0 < length <= LOGO_MAX_BYTES
+        usable = ctype.startswith("image/") and same_url and LOGO_MIN_BYTES <= length <= LOGO_MAX_BYTES
         return "hit" if usable else "miss"
     if st == 403:
         return "miss" if "xml" in ctype else "none"
