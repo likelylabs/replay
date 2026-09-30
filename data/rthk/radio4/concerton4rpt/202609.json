@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-09-30",
+   "id": "1121002",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Rundfunk-Sinfonieorchester Berlin: Valentin Uryupin and Anna Vinnitskaya"
+  },
+  {
    "date": "2026-09-29",
    "id": "1121001",
    "parts": [
@@ -171,5 +181,5 @@
    "title": "Orchestre de la Suisse Romande: Eun Sun Kim Conducts Beethoven 5"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }

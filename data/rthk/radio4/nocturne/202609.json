@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-30",
+   "id": "1128938",
+   "parts": [
+    "第一部份 Part 1 (HKT 22:05 - 23:00)"
+   ],
+   "title": "Nocturne 夜心曲"
+  },
+  {
    "date": "2026-09-29",
    "id": "1128934",
    "parts": [
@@ -211,5 +219,5 @@
    "title": "Nocturne 夜心曲"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }

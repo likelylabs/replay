@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-09-30",
+   "id": "1130765",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Hong Kong to pulp all waste paper locally",
+    "Rising trend in child abuse cases",
+    "HKU's study on Chinese innovation development",
+    "\"Eat Well Together\" campaign"
+   ],
+   "title": "Hong Kong to pulp all waste paper locally / Rising trend in child abuse cases / HKU's study on Chinese innovation development / \"Eat Well Together\" campaign"
+  },
+  {
    "date": "2026-09-29",
    "id": "1130509",
    "parts": [
@@ -236,5 +248,5 @@
    "title": "China-Nepal border floods / The world's first snake to undergo human cancer treatment / Asian Cities Internationality Index 2026 / Enhanced heat stress warnings"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }

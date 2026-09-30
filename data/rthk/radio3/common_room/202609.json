@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-09-30",
+   "id": "1130773",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 3.0"
+  },
+  {
    "date": "2026-09-29",
    "id": "1130517",
    "parts": [
@@ -169,5 +177,5 @@
    "title": "Open Space - \"Caritas Chong Yuet Ming Secondary School"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }

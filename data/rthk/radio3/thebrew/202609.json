@@ -1,14 +1,27 @@
 {
  "episodes": [
   {
-   "date": "2026-09-29",
-   "id": "1130511",
+   "date": "2026-09-30",
+   "id": "1130767",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)"
    ],
-   "title": "The Brew"
+   "title": "Tracy Quan - New York correspondent / Philippe Dova - RTL France / Danny Hicks - Asian Games"
+  },
+  {
+   "date": "2026-09-29",
+   "id": "1130511",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Morris Miselowski - live from Melbourne",
+    "Jarrod Watt - Aussie news",
+    "Paul Archibald - Classical Music Day"
+   ],
+   "title": "Morris Miselowski - live from Melbourne / Jarrod Watt - Aussie news / Paul Archibald - Classical Music Day"
   },
   {
    "date": "2026-09-28",
@@ -242,5 +255,5 @@
    "title": "Jarrod Watt - live from Melbourne"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }

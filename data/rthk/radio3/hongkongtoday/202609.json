@@ -1,6 +1,35 @@
 {
  "episodes": [
   {
+   "date": "2026-09-30",
+   "id": "1130763",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "CE urges press to tell good stories of HK and nation",
+    "'Local nurses form core of public healthcare system'",
+    "Apple asked to review online transaction process",
+    "Five HK unis make world's top 100: survey",
+    "National Day holiday business boost expected",
+    "Catering sector expects up to 10pc rise in business",
+    "Cross-boundary travellers urged to plan ahead",
+    "Taxi drivers asked to provide courteous holiday service",
+    "First-ever Hong Kong Halloween Month to be launched",
+    "FS promotes HK as infrastructure finance hub at AIIB",
+    "NGO seeks more support for elderly from ethnic minorities",
+    "FM urges Japan to correct erroneous words, deeds",
+    "UK authorities says 'suspicious' vehicles carried fuel",
+    "Premier League confirms City's breach of rules",
+    "Israel kills Hamas commander in Gaza strike",
+    "Republicans express concern over Trump ads",
+    "Spain proposes ban on evictions amid protests",
+    "Hong Kong, China win bronze in men's cycling sprint",
+    "Spain and England victorious in Uefa Nations League"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-09-29",
    "id": "1130507",
    "parts": [
@@ -543,5 +572,5 @@
    "title": "Tuesday"
   }
  ],
- "fetchedAt": "2026-09-30"
+ "fetchedAt": "2026-10-01"
 }
