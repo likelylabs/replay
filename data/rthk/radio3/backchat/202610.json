@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-01"
+ "episodes": [
+  {
+   "date": "2026-10-01",
+   "id": "1130983",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)"
+   ],
+   "title": "Backchat"
+  }
+ ],
+ "fetchedAt": "2026-10-02"
 }

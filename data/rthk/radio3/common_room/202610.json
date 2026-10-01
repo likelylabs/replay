@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-01"
+ "episodes": [
+  {
+   "date": "2026-10-01",
+   "id": "1130988",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "In the Common Room"
+  }
+ ],
+ "fetchedAt": "2026-10-02"
 }

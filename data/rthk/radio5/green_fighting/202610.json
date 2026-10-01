@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-01"
+ "episodes": [
+  {
+   "date": "2026-10-01",
+   "id": "1131003",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "綠色 Fighting"
+  }
+ ],
+ "fetchedAt": "2026-10-02"
 }

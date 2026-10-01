@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-01"
+ "episodes": [
+  {
+   "date": "2026-10-01",
+   "id": "1130995",
+   "parts": [
+    "足本 Full (HKT 20:05 - 20:30)"
+   ],
+   "title": "2026 National Day Fireworks Display 2026年國慶煙花匯演"
+  }
+ ],
+ "fetchedAt": "2026-10-02"
 }
