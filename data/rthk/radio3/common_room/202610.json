@@ -1,13 +1,21 @@
 {
  "episodes": [
   {
+   "date": "2026-10-02",
+   "id": "1131151",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Sopphie Marrie"
+  },
+  {
    "date": "2026-10-01",
    "id": "1130988",
    "parts": [
     "足本 Full (HKT 21:05 - 22:00)"
    ],
-   "title": "In the Common Room"
+   "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-02"
+ "fetchedAt": "2026-10-03"
 }

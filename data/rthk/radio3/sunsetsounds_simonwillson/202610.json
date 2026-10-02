@@ -1,4 +1,16 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-02"
+ "episodes": [
+  {
+   "date": "2026-10-02",
+   "id": "1131150",
+   "parts": [
+    "足本 Full (HKT 18:30 - 21:00)",
+    "第一部份 Part 1 (HKT 18:30 - 19:00)",
+    "第二部份 Part 2 (HKT 19:05 - 20:00)",
+    "第三部份 Part 3 (HKT 20:05 - 21:00)"
+   ],
+   "title": "Sunset Sounds with Simon Willson"
+  }
+ ],
+ "fetchedAt": "2026-10-03"
 }

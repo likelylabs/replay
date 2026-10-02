@@ -1,4 +1,16 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-02"
+ "episodes": [
+  {
+   "date": "2026-10-02",
+   "id": "1131148",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Consumer Council - Supermarket Bulk Buying",
+    "Rahul Chawla - 2026 Salary Increase and Turnover Survey"
+   ],
+   "title": "The Close"
+  }
+ ],
+ "fetchedAt": "2026-10-03"
 }

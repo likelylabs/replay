@@ -6,9 +6,11 @@
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
-    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Philippe Dova - RTL France",
+    "Danny Hicks - Asian Games"
    ],
-   "title": "Tracy Quan - New York correspondent / Philippe Dova - RTL France / Danny Hicks - Asian Games"
+   "title": "Philippe Dova - RTL France / Danny Hicks - Asian Games"
   },
   {
    "date": "2026-09-29",
@@ -255,5 +257,5 @@
    "title": "Jarrod Watt - live from Melbourne"
   }
  ],
- "fetchedAt": "2026-10-02"
+ "fetchedAt": "2026-10-03"
 }

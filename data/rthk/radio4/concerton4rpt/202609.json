@@ -163,11 +163,6 @@
   {
    "date": "2026-09-02",
    "id": "1115655",
-   "parts": [
-    "足本 Full (HKT 15:00 - 17:00)",
-    "第一部份 Part 1 (HKT 15:00 - 16:00)",
-    "第二部份 Part 2 (HKT 16:05 - 17:00)"
-   ],
    "title": "NOSPR: Season finale - A Titan"
   },
   {
@@ -176,5 +171,5 @@
    "title": "Orchestre de la Suisse Romande: Eun Sun Kim Conducts Beethoven 5"
   }
  ],
- "fetchedAt": "2026-10-02"
+ "fetchedAt": "2026-10-03"
 }

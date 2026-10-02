@@ -1,4 +1,27 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-02"
+ "episodes": [
+  {
+   "date": "2026-10-02",
+   "id": "1131141",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "HK five-year plan 'aimed at growth and serving nation'",
+    "Mainland tourists flock to Hong Kong",
+    "Hotels almost fully booked for Golden Week holiday",
+    "Po Pin Chau trail quotas fully taken up",
+    "'More HK unis can make it into world top 100'",
+    "PolyU launches elderly fall-prevention programme",
+    "British police give little away on air-base case",
+    "British police arrest UK-Iranian national",
+    "Israeli prime minister meets flydubai passengers",
+    "France blames hard-left for student protests",
+    "More medals for Hong Kong, China at Asian Games",
+    "Portugal and Germany triumph at Nations League"
+   ],
+   "title": "Friday"
+  }
+ ],
+ "fetchedAt": "2026-10-03"
 }

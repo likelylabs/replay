@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-10-03",
+   "id": "1131375",
+   "title": "Aubade"
+  },
+  {
    "date": "2026-10-02",
    "id": "1131154",
    "parts": [
@@ -17,5 +22,5 @@
    "title": "Aubade"
   }
  ],
- "fetchedAt": "2026-10-02"
+ "fetchedAt": "2026-10-03"
 }

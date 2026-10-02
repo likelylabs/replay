@@ -1,13 +1,24 @@
 {
  "episodes": [
   {
+   "date": "2026-10-02",
+   "id": "1131143",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "\"Three Highs\" in young and middle-aged adults",
+    "Manchester City found guilty of \"sham\" contracts",
+    "OpenAI cancels release of new model"
+   ],
+   "title": "\"Three Highs\" in young and middle-aged adults / Manchester City found guilty of \"sham\" contracts / OpenAI cancels release of new model"
+  },
+  {
    "date": "2026-10-01",
    "id": "1130983",
    "parts": [
     "足本 Full (HKT 09:05 - 10:00)"
    ],
-   "title": "Backchat"
+   "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-02"
+ "fetchedAt": "2026-10-03"
 }
