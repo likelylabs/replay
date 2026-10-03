@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-03"
+ "episodes": [
+  {
+   "date": "2026-10-03",
+   "id": "1131278",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Travel trends over the \"Super Golden Week\""
+  }
+ ],
+ "fetchedAt": "2026-10-04"
 }

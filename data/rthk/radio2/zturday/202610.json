@@ -1,4 +1,15 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-03"
+ "episodes": [
+  {
+   "date": "2026-10-03",
+   "id": "1131332",
+   "parts": [
+    "足本 Full (HKT 15:04 - 17:00)",
+    "第一部份 Part 1 (HKT 15:04 - 16:00)",
+    "第二部份 Part 2 (HKT 16:04 - 17:00)"
+   ],
+   "title": "Gen Z 去跟峰-《乜都問GenZ》嘉賓: 港大機械人學會團隊成員 Jasmine, Kelvin, Sunny"
+  }
+ ],
+ "fetchedAt": "2026-10-04"
 }

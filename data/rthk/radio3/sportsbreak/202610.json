@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-03"
+ "episodes": [
+  {
+   "date": "2026-10-03",
+   "id": "1131369",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Series Finale / Asian Games wrap up with RTHK’s Nazvi Careem"
+  }
+ ],
+ "fetchedAt": "2026-10-04"
 }

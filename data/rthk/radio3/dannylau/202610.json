@@ -1,4 +1,16 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-03"
+ "episodes": [
+  {
+   "date": "2026-10-03",
+   "id": "1131373",
+   "parts": [
+    "足本 Full (HKT 22:05 - 01:00)",
+    "第一部份 Part 1 (HKT 22:05 - 23:00)",
+    "第二部份 Part 2 (HKT 23:10 - 24:00)",
+    "第三部份 Part 3 (HKT 00:05 - 01:00)"
+   ],
+   "title": "Danny’s Weekend Blenz"
+  }
+ ],
+ "fetchedAt": "2026-10-04"
 }
