@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-04",
+   "id": "1131521",
+   "parts": [
+    "足本 Full (HKT 18:15 - 18:50)"
+   ],
+   "title": "Hong Kong Heritage"
+  },
+  {
    "date": "2026-10-03",
    "id": "1131365",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Hong Kong Heritage"
   }
  ],
- "fetchedAt": "2026-10-04"
+ "fetchedAt": "2026-10-05"
 }

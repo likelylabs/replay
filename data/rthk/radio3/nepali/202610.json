@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131523",
+   "parts": [
+    "足本 Full (HKT 19:05 - 20:00)"
+   ],
+   "title": "Saptahik Sandesh साप्ताहिक सन्देश (Nepali)"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

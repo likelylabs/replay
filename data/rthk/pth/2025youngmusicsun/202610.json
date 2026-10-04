@@ -1,4 +1,15 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131246",
+   "parts": [
+    "足本 Full (HKT 14:05 - 16:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:05 - 16:00)"
+   ],
+   "title": "好young音樂 (週日版): MONOCHROME、elka"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

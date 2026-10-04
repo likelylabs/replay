@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131530",
+   "parts": [
+    "足本 Full (HKT 08:05 - 09:00)"
+   ],
+   "title": "Music from China 樂在神州"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

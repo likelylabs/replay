@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131408",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Canadian Sunset"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

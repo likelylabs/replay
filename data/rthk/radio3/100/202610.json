@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1130611",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Mary Foxworth - neurodivergent researcher"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

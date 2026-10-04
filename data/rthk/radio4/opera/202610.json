@@ -1,4 +1,16 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1130730",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "Mascagni: Cavalleria Rusticana 馬斯康尼：鄉村騎士 / Leoncavallo: Pagliacci 利安卡法洛：丑角"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

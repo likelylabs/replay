@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131513",
+   "parts": [
+    "足本 Full (HKT 08:10 - 08:30)"
+   ],
+   "title": "Snack Attack"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }

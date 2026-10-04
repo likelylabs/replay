@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-10-04"
+ "episodes": [
+  {
+   "date": "2026-10-04",
+   "id": "1131502",
+   "parts": [
+    "足本 Full (HKT 10:00 - 11:00)"
+   ],
+   "title": "Sun 生活"
+  }
+ ],
+ "fetchedAt": "2026-10-05"
 }
