@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-06",
+   "id": "1131884",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "iFX Expo Asia 2026",
+    "Central Kowloon Bypass",
+    "Direct Subsidy Scheme schools fee rises"
+   ],
+   "title": "iFX Expo Asia 2026 / Central Kowloon Bypass / Direct Subsidy Scheme schools fee rises"
+  },
+  {
    "date": "2026-10-05",
    "id": "1131633",
    "parts": [
@@ -32,5 +43,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-06"
+ "fetchedAt": "2026-10-07"
 }
