@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-10-05",
+   "id": "1131634",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Camille Thomas and Julien Brocal- Music",
+    "Michel Tirabosco – Panpipes",
+    "The Bright Side - Raphael Blet"
+   ],
+   "title": "Camille Thomas and  Julien Brocal- Music /  Michel Tirabosco – Panpipes / The Bright Side - Raphael Blet"
+  },
+  {
    "date": "2026-10-02",
    "id": "1131144",
    "parts": [
@@ -13,5 +26,5 @@
    "title": "Sophie Lee - Invisible Defense / Alishiba Matloob with Rahil Khan"
   }
  ],
- "fetchedAt": "2026-10-05"
+ "fetchedAt": "2026-10-06"
 }

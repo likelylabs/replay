@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-05",
+   "id": "1131645",
+   "parts": [
+    "足本 Full (HKT 07:05 - 10:00)",
+    "第一部份 Part 1 (HKT 07:05 - 08:00)",
+    "第二部份 Part 2 (HKT 08:05 - 09:00)",
+    "第三部份 Part 3 (HKT 09:05 - 10:00)",
+    "Today’s Playlist: Country Walk"
+   ],
+   "title": "First Notes 由聆開始"
+  },
+  {
    "date": "2026-10-02",
    "id": "1130202",
    "parts": [
@@ -24,5 +36,5 @@
    "title": "First Notes 由聆開始"
   }
  ],
- "fetchedAt": "2026-10-05"
+ "fetchedAt": "2026-10-06"
 }

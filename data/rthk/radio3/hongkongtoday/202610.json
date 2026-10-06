@@ -1,6 +1,41 @@
 {
  "episodes": [
   {
+   "date": "2026-10-06",
+   "id": "1131882",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)"
+   ],
+   "title": "Hong Kong Today"
+  },
+  {
+   "date": "2026-10-05",
+   "id": "1131631",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Lee hails HK's record showing at Asian Games",
+    "Chief Executive John Lee has hailed a record showing by Hong Kong, China at the Asian Games. The SAR swept up 11 gold, 19 silver and 24 bronze medals, their bes",
+    "HK deepens ties with Mideast, Global South: FS",
+    "Pilot scheme for foreign elderly carers begins in 2027",
+    "Kai Tak Hospital ready to begin services in phases",
+    "'HKIC drives market capital into promising firms'",
+    "Rita Fan pays tribute to late former CE Tung Chee-hwa",
+    "US Marine accused of murder and robbery in Okinawa",
+    "Trump tries to rally Republicans ahead of mid-terms",
+    "Trump confirms Clayton as White House AI chief",
+    "Bolsonaro leads as Brazilians go to the polls",
+    "Yemen in military drive to retake territory from Houthis",
+    "Cornell University faces outcry over gang-rape case",
+    "Ethiopia forces seize Tigray capital from rebels",
+    "Portugal reach Uefa Nations League quarter-finals"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-10-02",
    "id": "1131141",
    "parts": [
@@ -23,5 +58,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-05"
+ "fetchedAt": "2026-10-06"
 }

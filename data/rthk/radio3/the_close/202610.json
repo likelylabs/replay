@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-05",
+   "id": "1131638",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Richard Harris and Tak Lo",
+    "Startup Spotlight - Pauline Dizon",
+    "Andrew Barclay - Running A Company"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-02",
    "id": "1131148",
    "parts": [
@@ -12,5 +23,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-05"
+ "fetchedAt": "2026-10-06"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-05",
+   "id": "1131641",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Savvy Earth Savers - Disha Nishal"
+  },
+  {
    "date": "2026-10-02",
    "id": "1131151",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-05"
+ "fetchedAt": "2026-10-06"
 }
