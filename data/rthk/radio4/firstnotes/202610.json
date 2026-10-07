@@ -1,13 +1,26 @@
 {
  "episodes": [
   {
+   "date": "2026-10-07",
+   "id": "1132097",
+   "parts": [
+    "足本 Full (HKT 07:05 - 10:00)",
+    "第一部份 Part 1 (HKT 07:05 - 08:00)",
+    "第二部份 Part 2 (HKT 08:05 - 09:00)",
+    "第三部份 Part 3 (HKT 09:05 - 10:00)",
+    "First Notes Focus: 55th Hong Kong Arts Festival 2027"
+   ],
+   "title": "First Notes 由聆開始 / First Notes Focus: 55th Hong Kong Arts Festival 2027"
+  },
+  {
    "date": "2026-10-06",
    "id": "1131896",
    "parts": [
     "足本 Full (HKT 07:05 - 10:00)",
     "第一部份 Part 1 (HKT 07:05 - 08:00)",
     "第二部份 Part 2 (HKT 08:05 - 09:00)",
-    "第三部份 Part 3 (HKT 09:05 - 10:00)"
+    "第三部份 Part 3 (HKT 09:05 - 10:00)",
+    "Today's Playlist:Stretching"
    ],
    "title": "First Notes 由聆開始"
   },
@@ -47,5 +60,5 @@
    "title": "First Notes 由聆開始"
   }
  ],
- "fetchedAt": "2026-10-07"
+ "fetchedAt": "2026-10-08"
 }

@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-10-07",
+   "id": "1132083",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Govt to enforce law strictly over One Stanley case",
+    "Huanggang crossings faster with e-channel registration",
+    "WKCDA says deficit widens over K-West centre",
+    "Public urges to follow debates on policy blueprints",
+    "Global academic forum to focus on NM University Town",
+    "Hong Kong welcomes back iFX Expo Asia 2026",
+    "'Fee hikes necessary for some Direct Subsidy Scheme schools'",
+    "Apec finance ministers to meet in Hong Kong",
+    "Locals 'set for front-of-line place for nursing jobs'",
+    "Reform push awaits Wang Fuk probe report submission",
+    "RTHK to beef up public service, expand new media reach",
+    "'Ghostly messengers' pioneer wins Nobel physics prize",
+    "Protests growing over Cornell University case",
+    "Unions and teachers join students in French protests",
+    "Russia denies it is imposing anti-plague measures",
+    "Spain stay perfect with victory over Croatia"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-10-06",
    "id": "1131882",
    "parts": [
@@ -74,5 +100,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-07"
+ "fetchedAt": "2026-10-08"
 }

@@ -1,10 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-07",
+   "id": "1132077",
+   "parts": [
+    "足本 Full (HKT 19:04 - 20:00)"
+   ],
+   "title": "Albert Au 區瑞強"
+  },
+  {
    "date": "2026-10-06",
    "id": "1131876",
    "parts": [
-    "足本 Full (HKT 19:04 - 20:00)"
+    "足本 Full (HKT 19:00 - 20:00)"
    ],
    "title": "Albert Au 區瑞強"
   },
@@ -33,5 +41,5 @@
    "title": "Albert Au 區瑞強"
   }
  ],
- "fetchedAt": "2026-10-07"
+ "fetchedAt": "2026-10-08"
 }

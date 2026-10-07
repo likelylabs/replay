@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-07",
+   "id": "1132093",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 4.0 - \"A Ballpark Figure\""
+  },
+  {
    "date": "2026-10-06",
    "id": "1131892",
    "parts": [
@@ -33,5 +41,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-07"
+ "fetchedAt": "2026-10-08"
 }
