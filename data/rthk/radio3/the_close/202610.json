@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-08",
+   "id": "1132293",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Rich Chun - Bond Regulations",
+    "Oliver Miles - Creative Arts and Sports"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-07",
    "id": "1132090",
    "parts": [
@@ -45,5 +56,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-08"
+ "fetchedAt": "2026-10-09"
 }

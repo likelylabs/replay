@@ -1,6 +1,38 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1132511",
+   "parts": [
+    "第一部份 Part 1 (HKT 06:30 - 07:00)"
+   ],
+   "title": "Hong Kong Today"
+  },
+  {
+   "date": "2026-10-08",
+   "id": "1132286",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Legco debate on policy blueprints begins",
+    "Wine & Dine Festival expands, expects 168,000 visitors",
+    "Victoria Park CNY stall fetches HK$280k at auction",
+    "Four arrested over 'HK$70m mortgage fraud'",
+    "'Rural development a vast opportunity for HK firms'",
+    "Expert hails 11 Skies and Skytopia visions",
+    "HKU professor says mobile app can reduce hospitalisations",
+    "Duo wins Nobel chemistry prize for solving molecular 'mystery'",
+    "Pensioner who sparked Spain housing protests dies",
+    "Curfew and alcohol ban for US troops on Okinawa",
+    "WHO monitors ebola situation after Kenya death",
+    "WHO raises alarm over treatment for overweight children",
+    "UN says migrant children facing abuse and violence",
+    "South Korea moves to protect booming cultural cache"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-10-07",
    "id": "1132083",
    "parts": [
@@ -100,5 +132,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-08"
+ "fetchedAt": "2026-10-09"
 }

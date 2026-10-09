@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-08",
+   "id": "1132288",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "National Day Golden Week performance",
+    "French Science Festival: Food R(E)volutions exhibition",
+    "World first 3D-printed reef tile technology"
+   ],
+   "title": "National Day Golden Week performance / French Science Festival: Food (R)Evolutions exhibition / World first 3D-printed reef tile technology"
+  },
+  {
    "date": "2026-10-07",
    "id": "1132085",
    "parts": [
@@ -55,5 +66,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-08"
+ "fetchedAt": "2026-10-09"
 }
