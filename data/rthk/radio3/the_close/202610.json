@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1132518",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Ben Gilbey - Business of Travel"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-08",
    "id": "1132293",
    "parts": [
@@ -56,5 +66,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }

@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1132513",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Ten Outstanding Young Persons 2026",
+    "AI literacy in secondary students",
+    "How are businesses adapting to AI risks?"
+   ],
+   "title": "Ten Outstanding Young Persons 2026 / AI literacy in secondary students / How are businesses adapting to AI risks?"
+  },
+  {
    "date": "2026-10-08",
    "id": "1132288",
    "parts": [
@@ -66,5 +77,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }

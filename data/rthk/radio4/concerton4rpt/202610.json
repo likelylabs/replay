@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1121028",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "2025 Leipzig Bach First Prize Winner: Jan Čmejla"
+  },
+  {
    "date": "2026-10-08",
    "id": "1121023",
    "parts": [
@@ -51,5 +61,5 @@
    "title": "Asian Youth Orchestra – Hong Kong Tour Concert 1"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }

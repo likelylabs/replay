@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1132521",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Season Choi"
+  },
+  {
    "date": "2026-10-08",
    "id": "1132296",
    "parts": [
@@ -49,5 +57,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }

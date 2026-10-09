@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-09",
+   "id": "1128946",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "HK Phil: Chengdu Pre-Tour Concert: Eric Lu Plays Chopin"
+  },
+  {
    "date": "2026-10-08",
    "id": "1126096",
    "parts": [
@@ -71,5 +81,5 @@
    "title": "HK Phil: National Day Concert"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }

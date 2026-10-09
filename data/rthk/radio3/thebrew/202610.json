@@ -1,14 +1,26 @@
 {
  "episodes": [
   {
-   "date": "2026-10-08",
-   "id": "1132290",
+   "date": "2026-10-09",
+   "id": "1132515",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)"
    ],
    "title": "The Brew"
+  },
+  {
+   "date": "2026-10-08",
+   "id": "1132290",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "John Prymmer - Brewed in HK",
+    "JC Viens - Wine"
+   ],
+   "title": "John Prymmer - Brewed in HK /  JC Viens - Wine"
   },
   {
    "date": "2026-10-07",
@@ -72,5 +84,5 @@
    "title": "The Holiday Brew"
   }
  ],
- "fetchedAt": "2026-10-09"
+ "fetchedAt": "2026-10-10"
 }
