@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-10-11",
+   "id": "1132929",
+   "title": "Beautiful Sunday（與第二台聯播）"
+  },
+  {
    "date": "2026-10-04",
    "id": "1131539",
    "parts": [
@@ -9,5 +14,5 @@
    "title": "Beautiful Sunday（與第二台聯播）"
   }
  ],
- "fetchedAt": "2026-10-10"
+ "fetchedAt": "2026-10-11"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-10",
+   "id": "1132790",
+   "parts": [
+    "足本 Full (HKT 18:00 - 18:15)"
+   ],
+   "title": "Weekend Roundup"
+  },
+  {
    "date": "2026-10-04",
    "id": "1131520",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Weekend Roundup"
   }
  ],
- "fetchedAt": "2026-10-10"
+ "fetchedAt": "2026-10-11"
 }

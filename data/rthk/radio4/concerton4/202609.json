@@ -173,11 +173,6 @@
   {
    "date": "2026-09-10",
    "id": "1120971",
-   "parts": [
-    "足本 Full (HKT 20:05 - 22:00)",
-    "第一部份 Part 1 (HKT 20:05 - 21:00)",
-    "第二部份 Part 2 (HKT 21:00 - 22:00)"
-   ],
    "title": "Rundfunk-Sinfonieorchester Berlin: Jazzik #4 – Tango special “End of the Rainbow”"
   },
   {
@@ -226,5 +221,5 @@
    "title": "Wigmore Hall 125th Anniversary Festival: Gala Concert"
   }
  ],
- "fetchedAt": "2026-10-10"
+ "fetchedAt": "2026-10-11"
 }
