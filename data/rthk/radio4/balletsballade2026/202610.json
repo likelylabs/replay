@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-11",
+   "id": "1132921",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)"
+   ],
+   "title": "Ballet's Ballade 芭蕾的足印"
+  },
+  {
    "date": "2026-10-04",
    "id": "1131531",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Ballet's Ballade 芭蕾的足印"
   }
  ],
- "fetchedAt": "2026-10-11"
+ "fetchedAt": "2026-10-12"
 }

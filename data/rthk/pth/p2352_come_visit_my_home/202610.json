@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-11",
+   "id": "1127288",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 2: Cox's Bazar – The Longest Natural Unbroken Beach in the World"
+  },
+  {
    "date": "2026-10-04",
    "id": "1127287",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Episode 1: Dushanbe and Khujand – The Vibrant Capital and the Cultural Hub"
   }
  ],
- "fetchedAt": "2026-10-11"
+ "fetchedAt": "2026-10-12"
 }

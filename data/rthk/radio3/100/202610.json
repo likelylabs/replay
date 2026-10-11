@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-11",
+   "id": "1132196",
+   "parts": [
+    "足本 Full (HKT 15:05 - 16:00)"
+   ],
+   "title": "Emery Fung - Hong Kong–born DEI practitioner, founder of Awkward Conversation"
+  },
+  {
    "date": "2026-10-04",
    "id": "1130611",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Mary Foxworth - neurodivergent researcher"
   }
  ],
- "fetchedAt": "2026-10-11"
+ "fetchedAt": "2026-10-12"
 }
