@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-13",
+   "id": "1133289",
+   "parts": [
+    "足本 Full (HKT 14:00 - 15:00)"
+   ],
+   "title": "Music from China (Repeat) 樂在神州（重播）"
+  },
+  {
    "date": "2026-10-06",
    "id": "1131898",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Music from China (Repeat) 樂在神州（重播）"
   }
  ],
- "fetchedAt": "2026-10-13"
+ "fetchedAt": "2026-10-14"
 }

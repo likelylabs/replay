@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-13",
+   "id": "1133280",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Mark Bromhead - Getting The Right Medical Insurance",
+    "Brian Lee - Humanoid Robotics"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-12",
    "id": "1133046",
    "parts": [
@@ -77,5 +88,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-13"
+ "fetchedAt": "2026-10-14"
 }

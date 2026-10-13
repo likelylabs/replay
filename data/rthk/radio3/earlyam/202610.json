@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-14",
+   "id": "1133472",
+   "parts": [
+    "足本 Full (HKT 06:05 - 06:35)"
+   ],
+   "title": "Early AM"
+  },
+  {
    "date": "2026-10-13",
    "id": "1133272",
    "parts": [
@@ -65,5 +73,5 @@
    "title": "Early AM"
   }
  ],
- "fetchedAt": "2026-10-13"
+ "fetchedAt": "2026-10-14"
 }

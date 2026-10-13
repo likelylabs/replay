@@ -1,14 +1,26 @@
 {
  "episodes": [
   {
-   "date": "2026-10-12",
-   "id": "1133043",
+   "date": "2026-10-13",
+   "id": "1133277",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)"
    ],
-   "title": "The Brew"
+   "title": "Morris Miselowski - Live from Melbourne / Neil Runcieman – Vietnam news"
+  },
+  {
+   "date": "2026-10-12",
+   "id": "1133043",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "MoRbbie McRobbie - Live from the Kai Tak Sports Park",
+    "Tim Huxley - Formula 1"
+   ],
+   "title": "Robbie McRobbie - Live from the Kai Tak Sports Park / Tim Huxley  - Formula 1"
   },
   {
    "date": "2026-10-09",
@@ -96,5 +108,5 @@
    "title": "The Holiday Brew"
   }
  ],
- "fetchedAt": "2026-10-13"
+ "fetchedAt": "2026-10-14"
 }
