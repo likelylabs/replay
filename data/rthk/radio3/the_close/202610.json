@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-12",
+   "id": "1133046",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Richard Harris and Tak Lo",
+    "Startup Spotlight - Le-an Lai Lacaba",
+    "Andrew Barclay - SMEs and AI"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-09",
    "id": "1132518",
    "parts": [
@@ -66,5 +77,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-12"
+ "fetchedAt": "2026-10-13"
 }

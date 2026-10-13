@@ -1,6 +1,53 @@
 {
  "episodes": [
   {
+   "date": "2026-10-13",
+   "id": "1133273",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Smooth opening for Huanggang port: govt",
+    "Travellers welcome Huanggang Port convenience",
+    "WKCD 'to enter new phase with more facilities'",
+    "Lawmaker urges innovative ways to ensure WKCD profits",
+    "Carer arrested over elderly woman's death",
+    "RTHK to broadcast Asian Para Games",
+    "Care scheme 'can lessen impact of chronic diseases'",
+    "'Chronic disease co-carer scheme a game-changer'",
+    "DOJ in investigate whether Nixon was forced out",
+    "Saudi says ballistic missile shot down",
+    "US academics win Nobel economics prize",
+    "Hackers target French supermarkets",
+    "Thousands march to India's Supreme Court",
+    "Zverev set to become new world number one"
+   ],
+   "title": "Tuesday"
+  },
+  {
+   "date": "2026-10-12",
+   "id": "1133039",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Huanggang Port opening of great significance: CE",
+    "Huanggang opening to be smooth: security chief",
+    "'Huanggang convenient for frequent travellers'",
+    "Bar chief calls for transparency over proxy votes",
+    "Praise for Cyclothon's new WKCD route",
+    "Trump and Zelenskyy spar over energy facilities",
+    "US announces suprise diesel deal with Russia",
+    "Senator says Russia diesel deal may be illegal",
+    "Saudi FM says he spoke to Iranian counterpart",
+    "Mexico braces for powerful hurricane",
+    "World Bank seeking to help nations manage energy prices",
+    "India's 'cockroach' movement leaders vow to continue",
+    "Rampant City thrash Liverpool at Anfield"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-10-09",
    "id": "1132511",
    "parts": [
@@ -148,5 +195,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-12"
+ "fetchedAt": "2026-10-13"
 }

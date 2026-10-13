@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-10-12",
+   "id": "1133042",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Dilruk Jayasinha - Journey from accounting to comedy",
+    "Micah Sandt - The Story of Beethoven",
+    "The Bright Side - Raphael Blet"
+   ],
+   "title": "Dilruk Jayasinha - Journey from accounting to comedy / Micah Sandt - The Story of Beethoven / The Bright Side - Raphael Blet"
+  },
+  {
    "date": "2026-10-09",
    "id": "1132514",
    "parts": [
@@ -73,5 +86,5 @@
    "title": "Sophie Lee - Invisible Defense / Alishiba Matloob with Rahil Khan"
   }
  ],
- "fetchedAt": "2026-10-12"
+ "fetchedAt": "2026-10-13"
 }
