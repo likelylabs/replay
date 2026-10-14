@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-10-14",
+   "id": "1133473",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Huanggang all geared for Chung Yeung test: Mable Chan",
+    "Ex-AA chief Goh says Huangguang is 'plain sailing'",
+    "Police bust suspected transnational prostitution ring",
+    "Track switch insulation catches fire: MTR",
+    "People trapped in lifts in CLP voltage dip",
+    "CE says HK to be breeding ground for new technologies",
+    "Ombudsman starts probe into LCSD fitness room bookings",
+    "Engineer offers assurances on One Stanley safety",
+    "Visa gets go-ahead to prepare for business in China",
+    "IMF upgrades 2026 world economic growth forecast",
+    "Doctors diagnose Pope Leo with a form of lung cancer",
+    "Guilfoyle resigns as US ambassador to Greece",
+    "Unions say half a million join French protests",
+    "Sailors missing after drones strikes ships off Bulgaria",
+    "Football fans eligible for deals near Mong Kok Stadium",
+    "United continue to misfire in loss against Atletico"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-10-13",
    "id": "1133273",
    "parts": [
@@ -195,5 +221,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-14"
+ "fetchedAt": "2026-10-15"
 }

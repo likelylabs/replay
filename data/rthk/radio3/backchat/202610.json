@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-14",
+   "id": "1133475",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Spooky Halloween music carnival",
+    "Man City legend David Silva to play in the Hong Kong Premier League",
+    "Study on how the brain controls muscles",
+    "Chronic Disease Co-Care Pilot Scheme effectiveness study"
+   ],
+   "title": "Spooky Halloween music carnival / Man City legend David Silva to play in the Hong Kong Premier League / Study on how the brain controls muscles / Chronic Disease Co-Care Pilot Scheme effectiveness stu"
+  },
+  {
    "date": "2026-10-13",
    "id": "1133275",
    "parts": [
@@ -101,5 +113,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-14"
+ "fetchedAt": "2026-10-15"
 }
