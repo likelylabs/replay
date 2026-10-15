@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-15",
+   "id": "1133691",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:05 - 16:00)",
+    "第三部份 Part 3 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Steve James"
+  },
+  {
    "date": "2026-10-14",
    "id": "1133479",
    "parts": [
@@ -9,7 +20,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Tunesday Chat' - on a Wednesday! - after 4"
   },
   {
    "date": "2026-10-13",
@@ -31,7 +42,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With answers for \"How Are You?\" when you're not ok / The best things in life are"
   },
   {
    "date": "2026-10-09",
@@ -42,7 +53,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With bad horror movie titles / What’s your “this wins in an oddly specific talent show” talent?"
   },
   {
    "date": "2026-10-08",
@@ -53,7 +64,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 4"
   },
   {
    "date": "2026-10-07",
@@ -64,7 +75,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With text acronyms for dogs / What skill have you long lost?"
   },
   {
    "date": "2026-10-06",
@@ -75,7 +86,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Tunesday Chat' after 4"
   },
   {
    "date": "2026-10-05",
@@ -86,7 +97,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With weird things to ‘pumpkin spice’ / Signs your company won't win 'Business Of The Year'"
   },
   {
    "date": "2026-10-02",
@@ -97,7 +108,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 4"
   },
   {
    "date": "2026-10-01",
@@ -108,8 +119,8 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With a Happy Holiday Show"
   }
  ],
- "fetchedAt": "2026-10-15"
+ "fetchedAt": "2026-10-16"
 }

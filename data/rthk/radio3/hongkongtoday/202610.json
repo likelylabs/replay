@@ -1,6 +1,34 @@
 {
  "episodes": [
   {
+   "date": "2026-10-15",
+   "id": "1133685",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "'Sorry' MTR to probe Kwun Tong line disruptions",
+    "MTR passengers forced to take other transport",
+    "Franchised buses seek fare rises of 8.1 to 17.7 pct",
+    "Over 200 taxi drivers booked under demerit system",
+    "13 years for ex-assistant warden over care-home rapes",
+    "Smart fire systems now a go at high-rise buildings",
+    "Mong Kok sauna patrons urged to get Mpox tests",
+    "Finance minister to chair Apec meeting in HK",
+    "Event organiser urges stakeholders to promote Halloween month",
+    "'Star names helps to boost HK football popularity'",
+    "New China-DPRK river bridge set to officially open",
+    "Chinese exports surge 36.3 pct in September",
+    "Vietnam holds funeral rites for over 700 war dead",
+    "Ukraine says SpaceX put limit on satellite services",
+    "Houthis target Saudi Aramco facilities",
+    "Pope's post-surgery progress normal, doctors say",
+    "IMF urges nations to address fiscal balances",
+    "Holders PSG take down City in Champions League"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-10-14",
    "id": "1133473",
    "parts": [
@@ -221,5 +249,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-15"
+ "fetchedAt": "2026-10-16"
 }

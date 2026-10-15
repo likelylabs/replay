@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-15",
+   "id": "1133695",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - Ho Lap Primary School (Sponsored by Sik Sik Yuen)"
+  },
+  {
    "date": "2026-10-14",
    "id": "1133483",
    "parts": [
@@ -81,5 +89,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-15"
+ "fetchedAt": "2026-10-16"
 }
