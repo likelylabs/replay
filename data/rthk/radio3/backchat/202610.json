@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-16",
+   "id": "1133913",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Bus fare increases proposal",
+    "PolyU's fall management programme for the elderly",
+    "M+ Museum's Myths and Monsters exhibition",
+    "Grade retention's impact on SEN students"
+   ],
+   "title": "Bus fare increases proposal / PolyU's fall management programme for the elderly / M+ Museum's Myths and Monsters exhibition / Grade retention's impact on SEN students"
+  },
+  {
    "date": "2026-10-15",
    "id": "1133687",
    "parts": [
@@ -125,5 +137,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-16"
+ "fetchedAt": "2026-10-17"
 }

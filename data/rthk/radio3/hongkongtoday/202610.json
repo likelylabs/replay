@@ -1,6 +1,34 @@
 {
  "episodes": [
   {
+   "date": "2026-10-16",
+   "id": "1133911",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Bay watch with first approval for 5 mainland yachts",
+    "HK Yacht Club chief says more facilities needed",
+    "Visitor arrivals top 40mn in first three quarters",
+    "Teacher and student to carry flag at Asian Para Games",
+    "AI 'can be problem, not solution in retail services'",
+    "Retail sector urged to follow-up on complaints",
+    "Engineer describe MTR disruptions as 'weird'",
+    "Six held over HK$14m agarwood investment 'scam'",
+    "Record 99.2pc of HKers didn't encounter graft: ICAC",
+    "OpenAI files trade-secret claims against Apple",
+    "Eight states file lawsuits against OpenAI",
+    "Security chief Chris Tang receives scam call",
+    "Bridge opens new chapter in DPRK ties: Li Qiang",
+    "Biannual Canton Fair opens in Guangzhou",
+    "Ukraine to abandon oil refineries agreement: Zelenskyy",
+    "Funerals held for Pakistan roof collapse victims",
+    "Victories in Europe for Bournemouth and Sunderland",
+    "Tai Po fall to Singapore's Sailors in ACL II clash"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-10-15",
    "id": "1133685",
    "parts": [
@@ -249,5 +277,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-16"
+ "fetchedAt": "2026-10-17"
 }
