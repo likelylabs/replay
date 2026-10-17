@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-17",
+   "id": "1128953",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "HK Phil: Season Opening Manfred Honeck’s Pastoral and Elektra"
+  },
+  {
    "date": "2026-10-16",
    "id": "1128951",
    "parts": [
@@ -141,5 +151,5 @@
    "title": "HK Phil: National Day Concert"
   }
  ],
- "fetchedAt": "2026-10-17"
+ "fetchedAt": "2026-10-18"
 }

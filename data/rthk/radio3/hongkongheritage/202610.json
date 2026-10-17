@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-17",
+   "id": "1133608",
+   "parts": [
+    "足本 Full (HKT 07:30 - 08:00)"
+   ],
+   "title": "Hong Kong Heritage (repeat) – Tony Banham & Ron Taylor"
+  },
+  {
    "date": "2026-10-11",
    "id": "1132911",
    "parts": [
@@ -33,5 +41,5 @@
    "title": "Hong Kong Heritage (repeat) – Hong Kong Dolphin Watch & Bruce Lee"
   }
  ],
- "fetchedAt": "2026-10-17"
+ "fetchedAt": "2026-10-18"
 }
