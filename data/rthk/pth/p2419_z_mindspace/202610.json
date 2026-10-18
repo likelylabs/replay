@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1127953",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "EP3: Pressure to Succeed: Coping with Academic Stress and Exam Anxiety in the HK School System"
+  },
+  {
    "date": "2026-10-11",
    "id": "1127952",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "EP1: Let's Talk About It: Finding Mental Health Support"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }

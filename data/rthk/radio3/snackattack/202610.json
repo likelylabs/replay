@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1134277",
+   "parts": [
+    "足本 Full (HKT 08:10 - 08:30)"
+   ],
+   "title": "Snack Attack"
+  },
+  {
    "date": "2026-10-11",
    "id": "1132903",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Pizza craze: part 1"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }

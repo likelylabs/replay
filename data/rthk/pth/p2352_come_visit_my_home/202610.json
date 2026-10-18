@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1127289",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 3: Singapore – Passion Made Possible"
+  },
+  {
    "date": "2026-10-11",
    "id": "1127288",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Episode 1: Dushanbe and Khujand – The Vibrant Capital and the Cultural Hub"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }

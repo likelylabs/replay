@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1134279",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Vintage Chart Toppers"
+  },
+  {
    "date": "2026-10-11",
    "id": "1132650",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Canadian Sunset"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }

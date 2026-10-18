@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1133607",
+   "parts": [
+    "足本 Full (HKT 18:15 - 18:50)"
+   ],
+   "title": "Hong Kong Heritage (repeat)"
+  },
+  {
    "date": "2026-10-17",
    "id": "1133608",
    "parts": [
@@ -41,5 +49,5 @@
    "title": "Hong Kong Heritage (repeat) – Hong Kong Dolphin Watch & Bruce Lee"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }

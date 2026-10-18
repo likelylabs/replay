@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-18",
+   "id": "1134276",
+   "parts": [
+    "足本 Full (HKT 07:00 - 08:15)",
+    "第一部份 Part 1 (HKT 07:00 - 07:15)",
+    "第二部份 Part 2 (HKT 08:00 - 08:15)"
+   ],
+   "title": "RTHK News"
+  },
+  {
    "date": "2026-10-11",
    "id": "1132902",
    "parts": [
@@ -31,5 +41,5 @@
    "title": "RTHK News"
   }
  ],
- "fetchedAt": "2026-10-18"
+ "fetchedAt": "2026-10-19"
 }
