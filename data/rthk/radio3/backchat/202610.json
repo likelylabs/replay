@@ -1,12 +1,22 @@
 {
  "episodes": [
   {
+   "date": "2026-10-20",
+   "id": "1134535",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Northern Metropolis industral progress",
+    "Women excellence in business world"
+   ],
+   "title": "Northern Metropolis industral progress / Women excellence in business world"
+  },
+  {
    "date": "2026-10-19",
    "id": "1134408",
    "parts": [
     "足本 Full (HKT 09:05 - 10:00)"
    ],
-   "title": "Backchat"
+   "title": "Special holiday Backchat"
   },
   {
    "date": "2026-10-16",
@@ -145,5 +155,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-20"
+ "fetchedAt": "2026-10-21"
 }

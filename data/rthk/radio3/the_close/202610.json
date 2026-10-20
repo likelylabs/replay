@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-20",
+   "id": "1134540",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy and Xiaolin Chen",
+    "Startup Spotlight - Jace Payackapan",
+    "Arturo Bris - Hinrich-IMD Sustainable Trade Index 2026"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-16",
    "id": "1133918",
    "parts": [
@@ -120,5 +131,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-20"
+ "fetchedAt": "2026-10-21"
 }

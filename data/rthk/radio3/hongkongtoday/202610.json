@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-10-20",
+   "id": "1134533",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "France announces curfews amid street violence",
+    "China's GDP rebounds to beat expectations",
+    "Calls for tighter lift engineer qualifications",
+    "Key to leave Apec officials with good impression: FS",
+    "CE eyes stronger ties with AIIB for regional growth",
+    "FTU proposes setting up new building management body",
+    "Govt urged to build on initial success of yacht scheme",
+    "'High soy consumption in childhood could lower breast cancer risk'",
+    "Certain gut bacteria found linked to gastric cancers",
+    "Australian politician critically injured in car attack",
+    "Kenyan cult leader guilty of over 191 starvation deaths",
+    "HK, China make strong start at Asian Para Games"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-10-16",
    "id": "1133911",
    "parts": [
@@ -277,5 +299,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-20"
+ "fetchedAt": "2026-10-21"
 }
