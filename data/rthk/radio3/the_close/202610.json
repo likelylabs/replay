@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-21",
+   "id": "1134756",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Lance Noble - Investment in China's Education Sector",
+    "Tracy Cui - China's Semiconductor Sector"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-20",
    "id": "1134540",
    "parts": [
@@ -131,5 +142,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-21"
+ "fetchedAt": "2026-10-22"
 }

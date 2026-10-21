@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-21",
+   "id": "1134759",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 4.0 - \"Cold Turkey\""
+  },
+  {
    "date": "2026-10-20",
    "id": "1134543",
    "parts": [
@@ -113,5 +121,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-21"
+ "fetchedAt": "2026-10-22"
 }

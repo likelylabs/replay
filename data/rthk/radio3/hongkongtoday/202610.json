@@ -1,6 +1,30 @@
 {
  "episodes": [
   {
+   "date": "2026-10-21",
+   "id": "1134749",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Apec members urged to ensure stability, resilience",
+    "HK to showcase its development at Apec meeting: CE",
+    "Key to leave Apec officials with good impression: FS",
+    "Apec meeting 'highlights HK's super connector role'",
+    "IOMed settles Malaysian dispute on first anniversary",
+    "Owner fined HK$255K for not removing illegal structure",
+    "'NM also about creating suitable living space'",
+    "'Women still facing workplace challenges'",
+    "US agencies ordered to stop using DeepSeek AI tools",
+    "Zelenskyy says US intelligence sharing resumes",
+    "France admits failures in response to protests",
+    "More than 150 killed in Sudanese military strikes",
+    "Doctors amputate leg of Australian lawmaker",
+    "Dominant PSG end Barcelona's unbeaten streak"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-10-20",
    "id": "1134533",
    "parts": [
@@ -299,5 +323,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-21"
+ "fetchedAt": "2026-10-22"
 }

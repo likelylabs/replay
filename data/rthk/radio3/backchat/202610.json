@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-21",
+   "id": "1134751",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "New batch of signature tourism projects",
+    "Heritage Fiesta 2026",
+    "Recent rise in hand, foot and mouth disease"
+   ],
+   "title": "New batch of signature tourism projects / Heritage Fiesta 2026 / JC Nature Love Early Childhood Education Programme / Recent rise in hand, foot and mouth disease"
+  },
+  {
    "date": "2026-10-20",
    "id": "1134535",
    "parts": [
@@ -155,5 +166,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-21"
+ "fetchedAt": "2026-10-22"
 }
