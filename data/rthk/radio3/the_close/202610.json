@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-22",
+   "id": "1134959",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Eugene Lee - AI's Impact On The Philippines",
+    "Aaron Busch - Hong Kong Sixes 2026"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-21",
    "id": "1134756",
    "parts": [
@@ -142,5 +153,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-22"
+ "fetchedAt": "2026-10-23"
 }

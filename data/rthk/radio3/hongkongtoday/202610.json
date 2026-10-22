@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-10-22",
+   "id": "1134952",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Apec meeting 'achieves results, consensus'",
+    "'Apec meeting showcases Hong Kong's strengths'",
+    "'HK can contribute to Apec digital infrastructure'",
+    "Monthly salary system urged for construction industry",
+    "Govt says 16 contractors receive low ratings",
+    "Law vows balance between community and attractions",
+    "Academic urges quality before quantity in tourism",
+    "Historic buildings treat for Heritage Fiesta",
+    "Beijing hits out at Florida arrest warrant for Castro",
+    "Moscow open to resuming talks to end Ukraine conflict",
+    "Judge orders Meta to pay heavy fine over user data privacy",
+    "South Korea shark finally free from canal",
+    "UN says emissions cuts far short of Paris goals",
+    "'China achieves significant results in climate change'",
+    "Australian lawmaker has both legs amputated",
+    "Israeli strike in Gaza kills four Palestinians",
+    "Real stay unbeaten as United crash against Como"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-10-21",
    "id": "1134749",
    "parts": [
@@ -323,5 +350,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-22"
+ "fetchedAt": "2026-10-23"
 }

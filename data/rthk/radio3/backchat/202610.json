@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-22",
+   "id": "1134954",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "APEC Finance Ministers' Meeting",
+    "CUHK's Potato Turned Rice project",
+    "Cyclone risk in inland regions"
+   ],
+   "title": "APEC Finance Ministers' Meeting / CUHK's Potato Turned Rice project / Cyclone risk in inland regions"
+  },
+  {
    "date": "2026-10-21",
    "id": "1134751",
    "parts": [
@@ -166,5 +177,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-22"
+ "fetchedAt": "2026-10-23"
 }
