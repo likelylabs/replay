@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135148",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Richard Zen - Hong Kong's Commercial Property Sector",
+    "Chen Zheng - Outlook for China's Economy"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134959",
    "parts": [
@@ -153,5 +164,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

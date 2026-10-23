@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135143",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "APEC Finance Ministers' Meeting wrap-up",
+    "France protests",
+    "Hong Kong's first embodied AI research hub",
+    "Student innovations at InnoCarnival"
+   ],
+   "title": "APEC Finance Ministers' Meeting wrap-up / France protests / Hong Kong's first embodied AI research hub / Student innovations at InnoCarnival"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134954",
    "parts": [
@@ -177,5 +189,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

@@ -1,12 +1,24 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135145",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+   ],
+   "title": "James Marsh - Movie Time / Danny Hicks - Sports and All"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134956",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
-    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Mark Rawson - Brewed in HK",
+    "Danny Hicks - Sports and All Extra"
    ],
    "title": "Mark Rawson - Brewed in HK / Danny Hicks - Sports and All Extra"
   },
@@ -197,5 +209,5 @@
    "title": "The Holiday Brew"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

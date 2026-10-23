@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135144",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Walter Tsui - Co‑founder of CareER",
+    "Check in at 11: Inès Gafsi",
+    "Hiu Ching - The Hong Kong Boccia Competition for the Elderly"
+   ],
+   "title": "Walter Tsui - Co‑founder of CareER / Check in at 11: Inès Gafsi / Hiu Ching - The Hong Kong Boccia Competition for the Elderly"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134955",
    "parts": [
@@ -171,5 +184,5 @@
    "title": "Sophie Lee - Invisible Defense / Alishiba Matloob with Rahil Khan"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

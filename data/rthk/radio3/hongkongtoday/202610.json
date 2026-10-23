@@ -1,6 +1,32 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135141",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Wang Fuk Court fire report submitted to John Lee",
+    "'Summer flu season to last longer than last year's'",
+    "Officials pay tribute to late policeman Chu Chun-kwok",
+    "New strategic firms 'to help take HK to next level'",
+    "Apec meeting showcases HK's advantages: lawmaker",
+    "Xi Jinping invokes spirit of historic Long March",
+    "Analyst wary after Asian shares take a tumble",
+    "More awareness of sustainability, council says",
+    "'Turning potatoes to rice key to food security'",
+    "WHO issues warning over Africa's Ebola spread",
+    "New documentary charts China's elephants journey",
+    "Evegrande facing challenge to repay creditors",
+    "Tech moguls keep close eye on US mid-term elections",
+    "France places fresh restrictions on protests",
+    "Second gold for SAR at Asian Para Games",
+    "Bournemouth stun Milan in Champions League"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134952",
    "parts": [
@@ -350,5 +376,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

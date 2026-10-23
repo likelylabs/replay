@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135153",
+   "parts": [
+    "足本 Full (HKT 23:00 - 23:20)"
+   ],
+   "title": "News at Eleven"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134964",
    "parts": [
@@ -177,5 +185,5 @@
    "title": "News at Eleven"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

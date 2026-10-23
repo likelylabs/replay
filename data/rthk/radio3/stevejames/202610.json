@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135147",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:05 - 16:00)",
+    "第三部份 Part 3 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Steve James"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134958",
    "parts": [
@@ -9,7 +20,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With romcom Halloween movies / Your most unnecessary purchase that you’ll defend with your life"
   },
   {
    "date": "2026-10-21",
@@ -20,7 +31,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 4"
   },
   {
    "date": "2026-10-20",
@@ -31,7 +42,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Tunesday Chat' after 4"
   },
   {
    "date": "2026-10-19",
@@ -42,7 +53,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With a Happy Holiday Show"
   },
   {
    "date": "2026-10-16",
@@ -53,7 +64,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 4"
   },
   {
    "date": "2026-10-15",
@@ -64,7 +75,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With things never said in a hospital / What would be the 8th deadly sin?"
   },
   {
    "date": "2026-10-14",
@@ -86,7 +97,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With the name of your 'holiday', how do we celebrate it? / What's a random thing that reveals a lot about a person?"
   },
   {
    "date": "2026-10-12",
@@ -177,5 +188,5 @@
    "title": "Steve James - With a Happy Holiday Show"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }

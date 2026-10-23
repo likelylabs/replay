@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-23",
+   "id": "1135151",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Ruby Cheng"
+  },
+  {
    "date": "2026-10-22",
    "id": "1134962",
    "parts": [
@@ -129,5 +137,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-23"
+ "fetchedAt": "2026-10-24"
 }
