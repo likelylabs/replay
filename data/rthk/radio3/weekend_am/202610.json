@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-24",
+   "id": "1135345",
+   "parts": [
+    "足本 Full (HKT 07:00 - 08:35)",
+    "第一部份 Part 1 (HKT 07:00 - 07:35)",
+    "第二部份 Part 2 (HKT 08:00 - 08:35)"
+   ],
+   "title": "Weekend AM"
+  },
+  {
    "date": "2026-10-17",
    "id": "1134150",
    "parts": [
@@ -31,5 +41,5 @@
    "title": "Weekend AM"
   }
  ],
- "fetchedAt": "2026-10-24"
+ "fetchedAt": "2026-10-25"
 }

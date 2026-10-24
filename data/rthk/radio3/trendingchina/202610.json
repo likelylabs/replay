@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-24",
+   "id": "1135263",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Importance of Shenzhen's APEC Economic Leaders' Meeting"
+  },
+  {
    "date": "2026-10-17",
    "id": "1133617",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Travel trends over the \"Super Golden Week\""
   }
  ],
- "fetchedAt": "2026-10-24"
+ "fetchedAt": "2026-10-25"
 }

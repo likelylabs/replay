@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-24",
+   "id": "1135349",
+   "parts": [
+    "足本 Full (HKT 15:05 - 18:00)",
+    "第一部份 Part 1 (HKT 15:05 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)",
+    "第三部份 Part 3 (HKT 17:05 - 18:00)"
+   ],
+   "title": "Simon’s Rolled Gold"
+  },
+  {
    "date": "2026-10-17",
    "id": "1134154",
    "parts": [
@@ -33,5 +44,5 @@
    "title": "Simon’s Rolled Gold"
   }
  ],
- "fetchedAt": "2026-10-24"
+ "fetchedAt": "2026-10-25"
 }

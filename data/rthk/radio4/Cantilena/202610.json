@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-24",
+   "id": "1134827",
+   "parts": [
+    "第一部份 Part 1 (HKT 18:10 - 19:00)"
+   ],
+   "title": "Cantilena 自投羅網 / Guests: Romer Quartet, 陳啟揚, 陳錦標"
+  },
+  {
    "date": "2026-10-17",
    "id": "1134164",
    "parts": [
@@ -31,5 +39,5 @@
    "title": "Cantilena 自投羅網"
   }
  ],
- "fetchedAt": "2026-10-24"
+ "fetchedAt": "2026-10-25"
 }
