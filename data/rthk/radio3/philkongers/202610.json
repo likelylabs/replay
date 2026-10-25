@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-25",
+   "id": "1135485",
+   "parts": [
+    "足本 Full (HKT 16:05 - 18:00)",
+    "第一部份 Part 1 (HKT 16:05 - 17:00)",
+    "第二部份 Part 2 (HKT 17:05 - 18:00)"
+   ],
+   "title": "PhilKongers"
+  },
+  {
    "date": "2026-10-18",
    "id": "1134284",
    "parts": [
@@ -31,5 +41,5 @@
    "title": "PhilKongers"
   }
  ],
- "fetchedAt": "2026-10-25"
+ "fetchedAt": "2026-10-26"
 }

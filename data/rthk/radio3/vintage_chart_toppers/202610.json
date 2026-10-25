@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-25",
+   "id": "1135384",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Bye Bye Blackbird"
+  },
+  {
    "date": "2026-10-18",
    "id": "1134279",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Canadian Sunset"
   }
  ],
- "fetchedAt": "2026-10-25"
+ "fetchedAt": "2026-10-26"
 }

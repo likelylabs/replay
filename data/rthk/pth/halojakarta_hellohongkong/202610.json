@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-25",
+   "id": "1135514",
+   "parts": [
+    "足本 Full (HKT 09:30 - 10:00)"
+   ],
+   "title": "Halo Jakarta! Hello Hong Kong!"
+  },
+  {
    "date": "2026-10-18",
    "id": "1134314",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Halo Jakarta! Hello Hong Kong! Ep135： 企業品牌塑造公司創辦人 Khairine Artantia - 企業品牌塑造的靈感"
   }
  ],
- "fetchedAt": "2026-10-25"
+ "fetchedAt": "2026-10-26"
 }

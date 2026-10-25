@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-25",
+   "id": "1127290",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 4: Islamabad and Lahore – A Tale of Two Cities"
+  },
+  {
    "date": "2026-10-18",
    "id": "1127289",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Episode 1: Dushanbe and Khujand – The Vibrant Capital and the Cultural Hub"
   }
  ],
- "fetchedAt": "2026-10-25"
+ "fetchedAt": "2026-10-26"
 }
