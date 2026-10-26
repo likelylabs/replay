@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-10-26",
+   "id": "1135595",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Ensure smooth flow at boundary checkpoints: CS",
+    "'Strategic enterprise investments in HK hit HK$28bn'",
+    "Apec meeting showcases HK's role as a bridge: FS",
+    "Around 1m workers to benefit from MPF Full Portability",
+    "Lawmaker says public need not worry about web security",
+    "Concerns rise on possible US and Israeli attack on Iran",
+    "Houthis say they hit three targets in Saudi Arabia",
+    "Brazil in tight presidential run-off election",
+    "HK medical regulatory body aims to gain global trust",
+    "'Reasonable for private hospitals to explain bills'",
+    "Vucic concedes defeat in Serbian parliamentary elections",
+    "French candidate Le Pen vows to restore rule of law",
+    "El Nino adds to Sudan's food security problems",
+    "AI firm using classic game Jenga to train robots",
+    "American Catlin wins Hong Kong Open by five shots",
+    "Families enjoy final day of Fanling golf action",
+    "New low for United after defeat by Bournemouth"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-10-23",
    "id": "1135141",
    "parts": [
@@ -376,5 +403,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-26"
+ "fetchedAt": "2026-10-27"
 }
