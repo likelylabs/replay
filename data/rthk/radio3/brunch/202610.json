@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "id": "1135819",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Carlos Escueta - Link Golf tournament",
+    "Raj Shroff - AI",
+    "The Bright Side: Raphael Blet"
+   ],
+   "title": "Carlos Escueta - Link Golf tournament / Raj Shroff - AI / The Bright Side: Raphael Blet"
+  },
+  {
    "date": "2026-10-26",
    "id": "1135598",
    "parts": [
@@ -196,5 +209,5 @@
    "title": "Sophie Lee - Invisible Defense / Alishiba Matloob with Rahil Khan"
   }
  ],
- "fetchedAt": "2026-10-27"
+ "fetchedAt": "2026-10-28"
 }

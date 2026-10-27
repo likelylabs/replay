@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "id": "1135818",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Regulation on cross-boundary medical ads",
+    "Private healthcare price transparency",
+    "Global University Presidents and Leaders Summit 2026",
+    "Critical security flaws in PHP"
+   ],
+   "title": "Regulation on cross-boundary medical ads / Private healthcare price transparency / Global University Presidents and Leaders Summit 2026 / Critical security flaws in PHP"
+  },
+  {
    "date": "2026-10-26",
    "id": "1135597",
    "parts": [
@@ -201,5 +213,5 @@
    "title": "Special holiday Backchat"
   }
  ],
- "fetchedAt": "2026-10-27"
+ "fetchedAt": "2026-10-28"
 }

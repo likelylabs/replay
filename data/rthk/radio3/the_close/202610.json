@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "id": "1135823",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion - Peter Guy and Hebe Chen",
+    "Paul Chan - Climate Resilience in New Developments",
+    "Patrick Frater - Business of Media and Entertainment"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-26",
    "id": "1135602",
    "parts": [
@@ -175,5 +186,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-27"
+ "fetchedAt": "2026-10-28"
 }

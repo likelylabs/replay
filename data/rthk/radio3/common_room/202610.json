@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "id": "1135826",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Savvy Earth Savers - Eco-Friendly Halloween"
+  },
+  {
    "date": "2026-10-26",
    "id": "1135605",
    "parts": [
@@ -145,5 +153,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-27"
+ "fetchedAt": "2026-10-28"
 }

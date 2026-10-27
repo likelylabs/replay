@@ -1,6 +1,31 @@
 {
  "episodes": [
   {
+   "date": "2026-10-27",
+   "id": "1135816",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Xi opens Party plenum on governance",
+    "Pair rescued after working platform plunge",
+    "HK can assist green push within the Belt and Road: CE",
+    "HK aviation 'key lies in cooperation with Greater Bay'",
+    "Man bitten by dog in Yuen Long",
+    "HK gets world-first secondary tokenised funds trading",
+    "Specialist warns against 'cadaver skin injections'",
+    "Full MPF portability 'can help drive down fees'",
+    "Athletes honoured for historic Asian Games performance",
+    "Anthropic paves way for potentially huge November listing",
+    "Meta planning to raise US$95bn to fund AI buildout",
+    "Brazilian markets battered after Lula election win",
+    "Mecca bloc defence countries meet with Iranians",
+    "Serbia's Student List target clear parliamentary majority",
+    "Anthropic looks to raise US$100bn in IPO"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-10-26",
    "id": "1135595",
    "parts": [
@@ -403,5 +428,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-27"
+ "fetchedAt": "2026-10-28"
 }
