@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-28",
+   "id": "1136026",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Emma Dale - Applying For Jobs In The AI Age"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-27",
    "id": "1135823",
    "parts": [
@@ -186,5 +196,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-28"
+ "fetchedAt": "2026-10-29"
 }

@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-28",
+   "id": "1136020",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Markets Discussion - Peter Guy and Hebe Chen",
+    "Your Money",
+    "View from the Semiconductor Sector"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-10-27",
    "id": "1135817",
    "parts": [
@@ -204,5 +215,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-10-28"
+ "fetchedAt": "2026-10-29"
 }

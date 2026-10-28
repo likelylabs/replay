@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-10-28",
+   "id": "1136019",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "'Use technology to prevent future pipe bursts'",
+    "CE homes in on N Metropolis vigour in call to top unis",
+    "CUHK to bid for Hung Shui Kiu university town land",
+    "Over 1,600 affected in airline, retailer data breaches",
+    "HSBC net profit rises in Q3 but misses forecasts",
+    "Hung Hom skybridge 'to serve as viewing platform'",
+    "Three nabbed in wounding case linked to illegal fuel",
+    "Foreign Ministry chides Mbappe over Mao comments",
+    "Chinese industrial profits see sharp rise to 14.4pc",
+    "Republicans under pressure ahead of midterms",
+    "AI can also enhance cybersecurity, expert says",
+    "Lawmaker says grey area exists on medical ads",
+    "China welcomes German president in state visit",
+    "No clear majority for Israel's main contenders",
+    "Houthis fire at Saudi Arabia's biggest oil refinery",
+    "Finland and Norway leaders hold talks with Putin",
+    "Carrick stays in charge of United for Chelsea game"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-10-27",
    "id": "1135816",
    "parts": [
@@ -428,5 +455,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-28"
+ "fetchedAt": "2026-10-29"
 }
