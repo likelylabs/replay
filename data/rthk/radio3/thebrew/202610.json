@@ -1,12 +1,23 @@
 {
  "episodes": [
   {
+   "date": "2026-10-29",
+   "id": "1136226",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+   ],
+   "title": "John Prymmer - Brewed in HK / Tim Huxley - F1"
+  },
+  {
    "date": "2026-10-28",
    "id": "1136023",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
-    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Paul Archibald - Classical Music Day"
    ],
    "title": "Paul Archibald - Classical Music Day"
   },
@@ -244,5 +255,5 @@
    "title": "The Holiday Brew"
   }
  ],
- "fetchedAt": "2026-10-29"
+ "fetchedAt": "2026-10-30"
 }

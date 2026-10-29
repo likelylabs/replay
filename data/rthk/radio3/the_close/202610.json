@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-10-29",
+   "id": "1136229",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Kate Martin and Jenny Lee - Nature Financing in Hong Kong",
+    "James Lyons - UK Autumn Budget"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-10-28",
    "id": "1136026",
    "parts": [
@@ -196,5 +207,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-10-29"
+ "fetchedAt": "2026-10-30"
 }

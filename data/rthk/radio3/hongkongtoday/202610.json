@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-10-29",
+   "id": "1136222",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Wang Fuk fire report expected on Thurs: sources",
+    "Priority given to buses at Huanggang this weekend",
+    "Lawmaker welcomes Huanggang arrangement",
+    "SAR committed to driving sustainable growth: CE",
+    "Hung Hom plan will not block iconic Lion Rock view",
+    "Major progress in HK's third medical school: HKUST",
+    "'Waste facility fire caused by construction materials'",
+    "Ex-vice premier Liu Yandong passes away at 81",
+    "'CUHK Leap' participants hope to lure investors",
+    "HK's exports surge nearly 65pc in September",
+    "HK home prices rise for second straight month",
+    "World-first human infection for Shamonda virus",
+    "Apple introduces touchscreen laptops",
+    "Spain train crash kills 68, injures more than 100",
+    "Netanyahu likely to stay as caretaker PM",
+    "Bolsonaro flees to Florida after election loss",
+    "City and Liverpool through to quarter-finals"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-10-28",
    "id": "1136019",
    "parts": [
@@ -455,5 +482,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-29"
+ "fetchedAt": "2026-10-30"
 }
