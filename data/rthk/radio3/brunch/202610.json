@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-30",
+   "id": "1136474",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+   ],
+   "title": "Brunch"
+  },
+  {
    "date": "2026-10-29",
    "id": "1136225",
    "parts": [
@@ -234,5 +244,5 @@
    "title": "Sophie Lee - Invisible Defense / Alishiba Matloob with Rahil Khan"
   }
  ],
- "fetchedAt": "2026-10-30"
+ "fetchedAt": "2026-10-31"
 }

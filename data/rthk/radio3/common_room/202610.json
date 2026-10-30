@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-10-30",
+   "id": "1136481",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Ben Cullen"
+  },
+  {
    "date": "2026-10-29",
    "id": "1136232",
    "parts": [
@@ -169,5 +177,5 @@
    "title": "Open Space - HHCKLA Buddhist Wisdom Primary School"
   }
  ],
- "fetchedAt": "2026-10-30"
+ "fetchedAt": "2026-10-31"
 }

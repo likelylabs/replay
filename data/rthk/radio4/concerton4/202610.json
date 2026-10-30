@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-30",
+   "id": "1128942",
+   "parts": [
+    "足本 Full (HKT 20:00 - 22:00)",
+    "第一部份 Part 1 (HKT 20:00 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Premiere Performances of Hong Kong: Camille Thomas – Rendez-vous"
+  },
+  {
    "date": "2026-10-29",
    "id": "1128940",
    "parts": [
@@ -251,5 +261,5 @@
    "title": "HK Phil: National Day Concert"
   }
  ],
- "fetchedAt": "2026-10-30"
+ "fetchedAt": "2026-10-31"
 }

@@ -1,6 +1,33 @@
 {
  "episodes": [
   {
+   "date": "2026-10-30",
+   "id": "1136471",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Housing chief Winnie Ho resigns over Wang Fuk fire",
+    "Govt officers overseeing Wang Fuk works to be probed",
+    "Wang Fuk renovation operators bear accountability",
+    "Seven areas of reforms introduced after Wang Fuk blaze",
+    "Govt not proceeding with Peak lighting show",
+    "Shenzhen Bay port to open longer on Fri and Sat",
+    "HKMA warns of interest rate risks as Fed holds steady",
+    "Five-year plan 'all about finding new growth engines'",
+    "Plenum adopts resolution on Party self-governance",
+    "Privacy office publishes guidelines on smart glasses",
+    "Palace Museum to showcase Dutch masterpieces",
+    "3 killed after spire collapses at Turkiye's Cappadocia",
+    "Russian drone strike kills at least 14 in Ukraine",
+    "Death toll in Spain train crash rises to 69",
+    "US economy grows 3.4pc in third quarter",
+    "Everton beat Newcastle to reach League Cup last eight",
+    "Tai Po fall to Thai side in AFC Champions League Two"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-10-29",
    "id": "1136222",
    "parts": [
@@ -482,5 +509,5 @@
    "title": "Friday"
   }
  ],
- "fetchedAt": "2026-10-30"
+ "fetchedAt": "2026-10-31"
 }
