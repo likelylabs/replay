@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-10-31",
+   "id": "1136761",
+   "parts": [
+    "足本 Full (HKT 09:05 - 11:00)",
+    "第一部份 Part 1 (HKT 09:05 - 10:00)",
+    "第二部份 Part 2 (HKT 10:05 - 11:00)"
+   ],
+   "title": "The Classical and The Curious 爾想不到"
+  },
+  {
    "date": "2026-10-24",
    "id": "1135356",
    "parts": [
@@ -41,5 +51,5 @@
    "title": "The Classical and The Curious 爾想不到"
   }
  ],
- "fetchedAt": "2026-10-31"
+ "fetchedAt": "2026-11-01"
 }

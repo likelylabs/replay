@@ -3,6 +3,9 @@
   {
    "date": "2026-10-31",
    "id": "1136748",
+   "parts": [
+    "足本 Full (HKT 06:05 - 07:00)"
+   ],
    "title": "Saturday Early"
   },
   {
@@ -38,5 +41,5 @@
    "title": "Saturday Early"
   }
  ],
- "fetchedAt": "2026-10-31"
+ "fetchedAt": "2026-11-01"
 }
