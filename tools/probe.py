@@ -84,7 +84,13 @@ def main():
         try:
             d = json.loads(body.decode("utf-8"))
             n = len(d.get("content", []))
-            ok = st == 200 and d.get("status") == "1" and (n > 0 or off == 0)
+            # The current month may have no episodes yet (early in the month);
+            # RTHK answers that with {"status":"0"}, which crawl.py treats as
+            # valid. The previous month must have episodes.
+            if off == 0:
+                ok = st == 200 and d.get("status") in ("0", "1")
+            else:
+                ok = st == 200 and d.get("status") == "1" and n > 0
             dates += [e["date"] for e in d.get("content", [])]
             check(f"catchUpByMonth {CH}/{SLUG} m={m}", ok,
                   f"{st} {ct} {dtime:.1f}s status={d.get('status')} episodes={n} nextPage={d.get('nextPage')}")
