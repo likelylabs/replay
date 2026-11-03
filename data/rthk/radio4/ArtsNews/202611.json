@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-11-01"
+ "episodes": [
+  {
+   "date": "2026-11-02",
+   "id": "1137049",
+   "parts": [
+    "足本 Full (HKT 18:05 - 18:23)"
+   ],
+   "title": "Arts News 藝壇快訊"
+  }
+ ],
+ "fetchedAt": "2026-11-03"
 }

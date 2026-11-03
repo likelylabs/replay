@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-11-01"
+ "episodes": [
+  {
+   "date": "2026-11-01",
+   "id": "1136889",
+   "parts": [
+    "足本 Full (HKT 16:00 - 17:00)"
+   ],
+   "title": "嘉賓﹕動物醫院共同創辦人及行政總裁 Tammy Chau"
+  }
+ ],
+ "fetchedAt": "2026-11-03"
 }

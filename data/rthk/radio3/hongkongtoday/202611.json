@@ -1,4 +1,53 @@
 {
- "episodes": [],
- "fetchedAt": "2026-11-01"
+ "episodes": [
+  {
+   "date": "2026-11-03",
+   "id": "1137306",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "John Lee opens Hong Kong Fintech Week",
+    "Foreign firms debut in HK to access mainland market",
+    "HKMA eyes next level for Fintech 2030 with AI push",
+    "HSBC to set up AI institute in race to train staff",
+    "30pc of financial firms now employ agentic AI: survey",
+    "Govt pledges 'one-stop liaison service' for homeowners",
+    "'Govt faces challenges to implement recommendations'",
+    "HK striving to attrack global organisations: CE",
+    "ICAC charges two ex-cleaning firm executives",
+    "'Being Human Festival' debuts in Hong Kong",
+    "Mideast not battleground for great-power rivalry: Xi",
+    "Democrats out to unseat Republicans in midterms",
+    "Americans go to the polls for midterm elections",
+    "Europe hit by cyberattack on fridges and freezers"
+   ],
+   "title": "Tuesday"
+  },
+  {
+   "date": "2026-11-02",
+   "id": "1137030",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "HK Q3 growth set to beat forecasts: FS",
+    "'Revolutionary change aimed for building maintenance'",
+    "Bar Association backs criminalising bid-rigging",
+    "Hong Kong records warmest October since records begin",
+    "Lan Kwai Fong welcomes record 105k Halloween revellers",
+    "Runners unfazed by heat in first-ever NM marathon",
+    "'5th plenum aligns leadership for party congress'",
+    "Bangladesh to review minimum wage for garment workers",
+    "Democrat backs Republican in Senate race",
+    "Russia detains minor terror suspect after US tip-off",
+    "Iran and Qatar talks continue amid escalation fears",
+    "Kyiv says Russia refused offer to extend truce",
+    "India protesters demand election chief's resignation",
+    "Gunners beat Liverpool at Anfield to go top"
+   ],
+   "title": "Monday"
+  }
+ ],
+ "fetchedAt": "2026-11-03"
 }

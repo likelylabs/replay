@@ -1,4 +1,13 @@
 {
- "episodes": [],
- "fetchedAt": "2026-11-01"
+ "episodes": [
+  {
+   "date": "2026-11-02",
+   "id": "1137040",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Savvy Earth Savers - Matey Yordanov"
+  }
+ ],
+ "fetchedAt": "2026-11-03"
 }
