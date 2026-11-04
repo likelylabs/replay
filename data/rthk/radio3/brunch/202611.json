@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-11-03",
+   "id": "1137309",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Adrienne Ng - Outdoor education",
+    "Raphael Blet - The Bright Side"
+   ],
+   "title": "Adrienne Ng - Outdoor education / Raphael Blet - The Bright Side"
+  },
+  {
    "date": "2026-11-02",
    "id": "1137033",
    "parts": [
@@ -14,5 +26,5 @@
    "title": "Carlos Escueta - weekend sports round-up / Eoin Kearns - International Uilleann Piping Day / Raphael Blet - The Bright Side"
   }
  ],
- "fetchedAt": "2026-11-03"
+ "fetchedAt": "2026-11-04"
 }

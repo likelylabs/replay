@@ -1,13 +1,27 @@
 {
  "episodes": [
   {
+   "date": "2026-11-03",
+   "id": "1137313",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy and Xiaolin Chen",
+    "John Greenwood - Hong Kong Dollar Peg History",
+    "Marcel Fenez - Business of Entertainment and Media"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-02",
    "id": "1137037",
    "parts": [
-    "足本 Full (HKT 17:05 - 18:00)"
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Richard Harris and Tak Lo",
+    "Startup Spotlight - Yong Han Poh and Liam Appelson",
+    "Andrew Barclay - Hiring Staff"
    ],
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-03"
+ "fetchedAt": "2026-11-04"
 }

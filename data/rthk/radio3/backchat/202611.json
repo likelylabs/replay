@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-03",
+   "id": "1137308",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Wang Fuk Court fire report",
+    "M+'s fifth anniversary celebrations",
+    "Actor Patrick Stewart's legacy"
+   ],
+   "title": "Wang Fuk Court fire report / M+'s fifth anniversary celebrations / Actor Patrick Stewart's legacy"
+  },
+  {
    "date": "2026-11-02",
    "id": "1137032",
    "parts": [
@@ -12,5 +23,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-03"
+ "fetchedAt": "2026-11-04"
 }
