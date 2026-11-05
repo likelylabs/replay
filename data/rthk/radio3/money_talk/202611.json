@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-04",
+   "id": "1137522",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View on the US Midterms"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-11-03",
    "id": "1137307",
    "parts": [
@@ -23,5 +34,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-11-04"
+ "fetchedAt": "2026-11-05"
 }

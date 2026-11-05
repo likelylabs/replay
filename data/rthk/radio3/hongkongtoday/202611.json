@@ -1,12 +1,36 @@
 {
  "episodes": [
   {
+   "date": "2026-11-05",
+   "id": "1137735",
+   "title": "Hong Kong Today"
+  },
+  {
    "date": "2026-11-04",
    "id": "1137521",
    "parts": [
-    "第一部份 Part 1 (HKT 06:30 - 07:00)"
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Hong Kong economy grew 5.2pc in Q3 2026",
+    "HK recovery uneven despite high GDP: economist",
+    "HK takes five of top 10 in QS Asia university rankings",
+    "HK eager to help build 'enterprises of tomorrow'",
+    "HK blueprint 'gives investors the certainty they seek'",
+    "Software update triggers HK parking meter outage",
+    "Group calls for more allergy-friendly options",
+    "'Joint task force to target bid-rigging early'",
+    "Beijing approves removal of Winnie Ho as housing chief",
+    "New service to ease international travel via HK",
+    "M+ Museum invites public to 5th anniversary shows",
+    "CUHK Alzheimer's project 'improves cognitive function'",
+    "Late actor Stewart benefited from theatre background",
+    "UK king calls slave trade 'monstrous injustice'",
+    "US voters head to the polls",
+    "US launches new strikes on Iran",
+    "United battle back to beat Roma in Europe"
    ],
-   "title": "Hong Kong Today"
+   "title": "Wednesday"
   },
   {
    "date": "2026-11-03",
@@ -57,5 +81,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-04"
+ "fetchedAt": "2026-11-05"
 }
