@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-05",
+   "id": "1137742",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Markets Discussion",
+    "Justin McMahon - Business Insurance for F&B",
+    "Marcus Kam - Business of Sport"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-04",
    "id": "1137528",
    "parts": [
@@ -34,5 +45,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-05"
+ "fetchedAt": "2026-11-06"
 }

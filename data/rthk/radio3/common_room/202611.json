@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-05",
+   "id": "1137745",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Open Space - The Salvation Army Lam Butt Chung Memorial School"
+  },
+  {
    "date": "2026-11-04",
    "id": "1137531",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-05"
+ "fetchedAt": "2026-11-06"
 }

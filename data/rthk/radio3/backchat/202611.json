@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-05",
+   "id": "1137737",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "US midterm election results",
+    "CUHK Alzheimer's project",
+    "PolyU's Presidential Visiting Professors Scheme"
+   ],
+   "title": "US midterm election results / CUHK Alzheimer's project / PolyU's Presidential Visiting Professors Scheme"
+  },
+  {
    "date": "2026-11-04",
    "id": "1137523",
    "parts": [
@@ -35,5 +46,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-05"
+ "fetchedAt": "2026-11-06"
 }

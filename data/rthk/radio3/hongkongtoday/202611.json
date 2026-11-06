@@ -1,9 +1,40 @@
 {
  "episodes": [
   {
+   "date": "2026-11-06",
+   "id": "1137933",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)"
+   ],
+   "title": "Hong Kong Today"
+  },
+  {
    "date": "2026-11-05",
    "id": "1137735",
-   "title": "Hong Kong Today"
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "John Lee visits Shanghai to promote SAR businesses",
+    "CE calls for closer financial ties with Beijing",
+    "HK will continue to thrive in education: Eric Chan",
+    "University heads praise city's stance on education",
+    "HK offers businesses growth and capital: FS",
+    "ICAC charges former HKEX vice president",
+    "'Reservation effective in cutting Po Pin Chau visits'",
+    "Climate experts warns of worsening situation",
+    "Hong Kong International Wine & Spirits Fair opens",
+    "Democrats deliver rebuke to Trump",
+    "White House says Trump 'still your president'",
+    "China ready to work with US after elections",
+    "Trump says Iran war may have hurt Republicans",
+    "WHO approves clinical trials for Ebola vaccines",
+    "Australia to return stone sculptures to China",
+    "Victories for Arsenal, City and Real Madrid"
+   ],
+   "title": "Thursday"
   },
   {
    "date": "2026-11-04",
@@ -81,5 +112,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-05"
+ "fetchedAt": "2026-11-06"
 }

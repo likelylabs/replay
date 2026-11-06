@@ -1,8 +1,23 @@
 {
  "episodes": [
   {
+   "date": "2026-11-06",
+   "id": "1137946",
+   "parts": [
+    "足本 Full (HKT 06:05 - 08:00)",
+    "第一部份 Part 1 (HKT 06:05 - 07:00)",
+    "第二部份 Part 2 (HKT 07:05 - 08:00)"
+   ],
+   "title": "Aubade"
+  },
+  {
    "date": "2026-11-05",
    "id": "1137748",
+   "parts": [
+    "足本 Full (HKT 06:00 - 08:00)",
+    "第一部份 Part 1 (HKT 06:05 - 07:00)",
+    "第二部份 Part 2 (HKT 07:05 - 08:00)"
+   ],
    "title": "Aubade"
   },
   {
@@ -13,7 +28,7 @@
     "第一部份 Part 1 (HKT 06:05 - 07:00)",
     "第二部份 Part 2 (HKT 07:05 - 08:00)"
    ],
-   "title": "Aubade - Host: Colin Touchin"
+   "title": "Aubade"
   },
   {
    "date": "2026-11-03",
@@ -23,7 +38,7 @@
     "第一部份 Part 1 (HKT 06:05 - 07:00)",
     "第二部份 Part 2 (HKT 07:05 - 08:00)"
    ],
-   "title": "Aubade - Host: Colin Touchin"
+   "title": "Aubade"
   },
   {
    "date": "2026-11-02",
@@ -33,7 +48,7 @@
     "第一部份 Part 1 (HKT 06:05 - 07:00)",
     "第二部份 Part 2 (HKT 07:05 - 08:00)"
    ],
-   "title": "Aubade - Host: Colin Touchin"
+   "title": "Aubade"
   },
   {
    "date": "2026-11-01",
@@ -43,8 +58,8 @@
     "第一部份 Part 1 (HKT 06:05 - 07:00)",
     "第二部份 Part 2 (HKT 07:05 - 08:00)"
    ],
-   "title": "Aubade - Host: Jessica Ng"
+   "title": "Aubade"
   }
  ],
- "fetchedAt": "2026-11-05"
+ "fetchedAt": "2026-11-06"
 }
