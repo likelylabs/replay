@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-06",
+   "id": "1137935",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Hong Kong Legal Week 2026",
+    "Inter-island Festival",
+    "HKU Health Companion Programme for Smokers"
+   ],
+   "title": "Hong Kong Legal Week /  Inter-island Festival / HKU Health Companion Programme for Smokers"
+  },
+  {
    "date": "2026-11-05",
    "id": "1137737",
    "parts": [
@@ -46,5 +57,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-06"
+ "fetchedAt": "2026-11-07"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-06",
+   "id": "1137950",
+   "parts": [
+    "足本 Full (HKT 19:05 - 20:00)"
+   ],
+   "title": "Simply Classical 就是古典"
+  },
+  {
    "date": "2026-11-05",
    "id": "1137754",
    "parts": [
@@ -33,5 +41,5 @@
    "title": "Simply Classical 就是古典"
   }
  ],
- "fetchedAt": "2026-11-06"
+ "fetchedAt": "2026-11-07"
 }
