@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-08",
+   "id": "1138325",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:10 - 14:00)"
+   ],
+   "title": "The Latest and Greatest"
+  },
+  {
    "date": "2026-11-01",
    "id": "1136900",
    "parts": [
@@ -11,5 +21,5 @@
    "title": "The Latest and Greatest"
   }
  ],
- "fetchedAt": "2026-11-08"
+ "fetchedAt": "2026-11-09"
 }

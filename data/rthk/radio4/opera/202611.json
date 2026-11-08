@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-08",
+   "id": "1135921",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:00 - 16:00)",
+    "第三部份 Part 3 (HKT 16:00 - 17:00)"
+   ],
+   "title": "Vivaldi: Griselda 韋華第：格利素達"
+  },
+  {
    "date": "2026-11-01",
    "id": "1135912",
    "parts": [
@@ -12,5 +23,5 @@
    "title": "Giordano: Andrea Chenier 佐丹奴：安德里亞．尚尼耶"
   }
  ],
- "fetchedAt": "2026-11-08"
+ "fetchedAt": "2026-11-09"
 }

@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-08",
+   "id": "1127292",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 6: Goa – A City of Vibrant"
+  },
+  {
    "date": "2026-11-01",
    "id": "1127291",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Episode 5: Gunung Mulu National Park – A UNESCO Heritage Rainforest"
   }
  ],
- "fetchedAt": "2026-11-08"
+ "fetchedAt": "2026-11-09"
 }
