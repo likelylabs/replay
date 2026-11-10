@@ -1,14 +1,26 @@
 {
  "episodes": [
   {
-   "date": "2026-11-06",
-   "id": "1137937",
+   "date": "2026-11-09",
+   "id": "1138464",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)"
    ],
-   "title": "The Brew"
+   "title": "Robbie McRobbie -  Supreme Sha Tin / Tim Huxley - F1 / Ed Salter - Lantau Live music festival"
+  },
+  {
+   "date": "2026-11-06",
+   "id": "1137937",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "James Marsh - Movie Time",
+    "Danny Hicks - Sports and All"
+   ],
+   "title": "James Marsh - Movie Time / Danny Hicks - Sports and All"
   },
   {
    "date": "2026-11-05",
@@ -59,5 +71,5 @@
    "title": "Robbie McRobbie - Live from the Kai Tak Sports Park / Neil Runcieman - Vietnam report"
   }
  ],
- "fetchedAt": "2026-11-09"
+ "fetchedAt": "2026-11-10"
 }

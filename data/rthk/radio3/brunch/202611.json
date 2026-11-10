@@ -1,12 +1,29 @@
 {
  "episodes": [
   {
+   "date": "2026-11-09",
+   "id": "1138463",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Carlos Escueta - Sports",
+    "Septime Webre and Soloist Jessica Burrows - Ballet"
+   ],
+   "title": "Carlos Escueta - Sports / Septime Webre and Soloist Jessica Burrows - Ballet"
+  },
+  {
    "date": "2026-11-06",
    "id": "1137936",
    "parts": [
     "足本 Full (HKT 10:05 - 12:00)",
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
-    "第二部份 Part 2 (HKT 11:05 - 12:00)"
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Timothy Wong and Chris Chow - Resolve Foundation",
+    "Operation Santa Claus : Nam Nguyen",
+    "The Hong Kong Sixes",
+    "William Louey – Educational impact",
+    "Tiziana - Building bridges between Asia and Europe"
    ],
    "title": "Timothy Wong and Chris Chow - Resolve Foundation / Operation Santa Claus : Nam Nguyen / William Louey – Educational impact / The Hong Kong Sixes / Tiziana - Building bridges between Asia and Europe /"
   },
@@ -60,5 +77,5 @@
    "title": "Carlos Escueta - weekend sports round-up / Eoin Kearns - International Uilleann Piping Day / Raphael Blet - The Bright Side"
   }
  ],
- "fetchedAt": "2026-11-09"
+ "fetchedAt": "2026-11-10"
 }

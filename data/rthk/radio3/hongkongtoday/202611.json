@@ -1,6 +1,56 @@
 {
  "episodes": [
   {
+   "date": "2026-11-10",
+   "id": "1138738",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "China slams 'baseless' claims it spied on Nvidia boss",
+    "41 stranded in mid-air as Ocean Park Tower ride stalls",
+    "EMSD orders Taizoom to fix 720 non-compliant lifts",
+    "Contractors get non-compliance notice over MTR project",
+    "Non-binding motions to come with research data: Legco",
+    "Hong Kong must widen surgical robotics access: FS",
+    "Ta Kwu Ling new town to welcome residents by 2035",
+    "TDC exects strong attendance for IP Asia forum",
+    "'HK's university rankings only the first step'",
+    "Chinese inflation spikes at plants and cools in shops",
+    "'Ronaldo can leave strong legacy for Portugal'",
+    "US defence secretary faces possible impeachment",
+    "Russell Brand jailed for 10 years for rape, assault",
+    "Cop31 leaders want to speed up global warming fight"
+   ],
+   "title": "Tuesday"
+  },
+  {
+   "date": "2026-11-09",
+   "id": "1138460",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Government to boost high-value tourism and Mice",
+    "Substandard columns found at MTR site in Tung Chung",
+    "New buildings body to recruit about 90 staff: Linn",
+    "Three hurt after hit by landing paraglider",
+    "'Strong response to DSS schools programme'",
+    "DOJ eyes closer ties with legal sector for global push",
+    "Police develop anti-fraud AI engine in Interpol operation",
+    "More tech-related crimes using AI: police",
+    "Inter-Island Festival set for five straight weekends",
+    "British actor Brand faces likely lengthy prison term",
+    "Shocked Poles mourn victims of shooting attack",
+    "Trump says attack on Iran highly unlikely",
+    "Houthis claim attack on Saudi financial district",
+    "Egypt officials to probe deadly train crash",
+    "United drop to relegation zone despite fightback",
+    "Filipina Eala falls short in Hong Kong Open final"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-11-06",
    "id": "1137933",
    "parts": [
@@ -128,5 +178,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-09"
+ "fetchedAt": "2026-11-10"
 }
