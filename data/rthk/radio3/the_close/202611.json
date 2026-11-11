@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-10",
+   "id": "1138745",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion - Peter Guy and Xiaolin Chen",
+    "Amanda Ong - AI and Money Management",
+    "Raymond Davadass - Growth of Global Business Services"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-09",
    "id": "1138467",
    "parts": [
@@ -68,5 +79,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-10"
+ "fetchedAt": "2026-11-11"
 }

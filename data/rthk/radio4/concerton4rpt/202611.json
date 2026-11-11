@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-10",
+   "id": "1128985",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Sérgio & Odair Assad Guitar Duo Recital"
+  },
+  {
    "date": "2026-11-06",
    "id": "1128945",
    "parts": [
@@ -41,5 +51,5 @@
    "title": "Copenhagen Opera Festival: Freezing Italians"
   }
  ],
- "fetchedAt": "2026-11-10"
+ "fetchedAt": "2026-11-11"
 }

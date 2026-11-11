@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-11",
+   "id": "1138977",
+   "parts": [
+    "第一部份 Part 1 (HKT 06:30 - 07:00)"
+   ],
+   "title": "Hong Kong Today"
+  },
+  {
    "date": "2026-11-10",
    "id": "1138738",
    "parts": [
@@ -178,5 +186,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-10"
+ "fetchedAt": "2026-11-11"
 }
