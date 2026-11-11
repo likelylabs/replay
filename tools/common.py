@@ -19,6 +19,8 @@ RTHK_DATA = DATA / "rthk"
 METRO_DATA = DATA / "metro"
 PROGRAMMES_PATH = RTHK_DATA / "programmes.json"
 OVERRIDES_PATH = RTHK_DATA / "overrides.json"
+PLAYABLE_PATH = RTHK_DATA / "playable.json"                # SR-01: per-date archive probe answers
+BACKLOG_FAILURES_PATH = RTHK_DATA / "backlog_failures.json"  # failed-month markers (retry-after)
 METRO_WINDOW_PATH = METRO_DATA / "window.json"
 LAST_RUN_PATH = DATA / "last-run.json"
 INDEX_PATH = REPO / "index.json"
@@ -63,6 +65,8 @@ METRO_SEGMENT_MINUTES = 30
 # Canary only (crawl.py grid check: Content-Length × 8 ÷ this ≈ the slot's
 # seconds). Never published — the app never derives a duration from it.
 METRO_BITRATE_BPS = 64_000
+
+SNIPPET_BYTES = 120   # body bytes logged on a non-ok answer
 
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 "
       "(KHTML, like Gecko) Version/17.5 Safari/605.1.15")
@@ -118,20 +122,29 @@ class Client:
             req = urllib.request.Request(url, method=method, headers=req_headers)
             self.last_length = 0
             self.last_url = ""
+            server, snippet = "", b""
             try:
                 with urllib.request.urlopen(req, timeout=timeout) as r:
                     body = b"" if method == "HEAD" else r.read()
                     last = (r.status, r.headers.get("Content-Type", ""), body)
                     self.last_length = _content_length(r.headers)
                     self.last_url = getattr(r, "url", None) or url
+                    server, snippet = r.headers.get("Server", ""), body[:SNIPPET_BYTES]
             except urllib.error.HTTPError as e:
                 last = (e.code, e.headers.get("Content-Type", "") if e.headers else "", b"")
                 if e.code == 404:
                     return last
+                server = e.headers.get("Server", "") if e.headers else ""
+                snippet = _error_snippet(e)
             except Exception as e:  # DNS, TLS, timeout, reset
                 last = (-1, repr(e), b"")
             if last[0] in ok:
                 return last
+            # Observability: which hop
+            # answered, and what it said — so one read ties a 5xx to a hop and
+            # rules a runner-IP block in or out.
+            self.log(f"  non-ok {last[0]} {method} {url} server={server or '-'} "
+                     f"type={last[1][:60] or '-'} body={snippet!r}")
             self.failures += 1
             self._check_breaker()
             if attempt < tries - 1:
@@ -159,6 +172,14 @@ class Client:
             return st, json.loads(body.decode("utf-8"))   # JSON despite text/html
         except (UnicodeDecodeError, json.JSONDecodeError):
             return st, None
+
+
+def _error_snippet(e):
+    """The first SNIPPET_BYTES of an HTTPError's body ("" when unreadable)."""
+    try:
+        return e.read(SNIPPET_BYTES) or b""
+    except Exception:
+        return b""
 
 
 def _content_length(headers):

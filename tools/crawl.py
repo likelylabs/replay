@@ -28,9 +28,20 @@ Daily run (all bounded by --budget requests, serial ~1 req/s):
      12-month window only when missing from the cache (backfill drains over
      runs until the budget is spent). Months are cached immutably at
      data/rthk/{ch}/{slug}/{YYYYMM}.json.
+     A backlog month that fails is marked in data/rthk/backlog_failures.json
+     and asked again only after a growing retry-after (1 → 7 → 30 days), so a
+     month RTHK answers 500 for every day costs a request a month, not 3 a day.
   3. Stream spot-check — a sample of recent episodes per channel against the
      derived Akamai template; on a miss, getEpisode's authoritative `file:`
      is stored as a per-episode override (data/rthk/overrides.json).
+  3b. Playable latest (SR-01) — for every programme, newest first, one GET of
+     the derived playlist for up to 3 episode dates until one answers 200 +
+     #EXTM3U. A 404 / 410 marks that date unplayable (build_catalog drops it,
+     and a programme whose 3 newest are all unplayable is not published); any
+     other answer keeps everything (fail open). Answers are cached in
+     data/rthk/playable.json: a playable date is never asked again, an
+     unplayable one is re-asked daily for 7 days, then accepted. ~1 GET per
+     programme per new episode; at most 400 a run.
   4. Metro window — binary-search the earliest day still served per
      frequency (probing its 08:00 slot); confirm the latest day; one HEAD on a
      :30 slot per frequency as the half-hour grid canary (S31, warn-only).
@@ -51,10 +62,10 @@ import time
 import urllib.parse
 import xml.etree.ElementTree as ET
 
-from common import (BudgetExhausted, CircuitOpen, Client, INCREMENTAL_MONTHS,
+from common import (BACKLOG_FAILURES_PATH, BudgetExhausted, CircuitOpen, Client, INCREMENTAL_MONTHS,
                     METRO_BITRATE_BPS, METRO_CHANNELS, METRO_DATA, METRO_SEGMENT_MINUTES,
                     METRO_TEMPLATE, METRO_WINDOW_PATH,
-                    OVERRIDES_PATH, PROGRAMMES_PATH, RETENTION_MONTHS, RTHK_CHANNELS,
+                    OVERRIDES_PATH, PLAYABLE_PATH, PROGRAMMES_PATH, RETENTION_MONTHS, RTHK_CHANNELS,
                     RTHK_DATA, STREAM_TEMPLATE, WWW, HKT, LAST_RUN_PATH, iso_from_ddmmyyyy,
                     log, month_key, months_back, read_json, today_hkt, write_json)
 
@@ -97,6 +108,21 @@ LOGO_PROGRAMMES_PER_RUN = 60  # programmes checked per run (<= 4 HEADs each, the
 LOGO_PROBE_MAX_FAILURES = 3   # the step stops after this many failed HEADs in one run
 LOGO_HEAD_ANSWERS = (200, 403, 410)   # returned as answers, never retried or counted by the client
 LOGO_MISS_STREAK = 5          # this many programmes in a row with nothing larger stop the step (~6 % miss naturally)
+# SR-01 playable latest. RTHK lists some episodes it never archives: a
+# pre-empted broadcast (radio1/50YearsAfter 2026-11-07 → 404) and every
+# Radio 5 copy of a Radio 1 simulcast (radio5/hktoday → 404; the audio lives
+# under radio1/hktoday). A missing `parts` is NOT a test (part-less
+# radio4/concerton4 episodes answer 200), so the playlist itself is asked.
+PLAYABLE_HEAD_DATES = 3       # newest episode dates examined per programme
+PLAYABLE_RECHECK_DAYS = 7     # an unplayable date is re-asked daily this long, then accepted
+PLAYABLE_PROBES_PER_RUN = 400 # first pass ~323 programmes; then ~1 per new episode
+PLAYABLE_MAX_FAILURES = 5     # the step stops after this many no-answer probes in one run
+PLAYABLE_GONE = (404, 410)    # the archive says "no such file"
+PLAYABLE_GONE_STREAK = 15     # this many "no file" answers in a row with no playable one stop the
+                              # step and record none of them (a moved archive, not 5 dead programmes)
+# Failed-month marker (a month that answers 500 every day): consecutive failures
+# of one backlog month push its next attempt out by these many days.
+BACKLOG_BACKOFF_DAYS = (1, 7, 30)
 
 
 def clean_page_title(t):
@@ -121,9 +147,16 @@ def ajax_headers(ch, slug):
 def discover(client, programmes, only, run, limit=0):
     today = today_hkt().isoformat()
     st, _, body = client.get(f"{WWW}/sitemap.xml")
-    if st != 200:
-        raise RuntimeError(f"sitemap.xml {st}")
-    sm = body.decode("utf-8", "replace")
+    sm = ""
+    if st == 200:
+        sm = body.decode("utf-8", "replace")
+    else:
+        # Soft-fail like the channel pages: the registry (programmes.json)
+        # carries every slug ever seen and enumeration walks the registry, so
+        # a sitemap-miss day cannot shrink the catalog. A real outage is
+        # judged by the circuit breaker (§2.4) and the publish gate (§2.5).
+        log(f"  sitemap.xml: {st} (continuing from the {len(programmes)}-programme registry)")
+        run["warnings"].append(f"sitemap.xml {st} — continued from the registry")
     found = {}
     for ch in RTHK_CHANNELS:
         if only and ch not in only:
@@ -175,6 +208,9 @@ def discover(client, programmes, only, run, limit=0):
                     rec.setdefault("logo_sched", "https://webstatic.rthk.hk" + thumb)
         except ET.ParseError as e:
             run["warnings"].append(f"schedule xml: {e}")
+    else:
+        log(f"  now-airing xml: {st} (English titles / schedule-only slugs not refreshed this run)")
+        run["warnings"].append(f"now-airing xml {st}")
 
     # Merge into the persistent programme registry.
     for (ch, slug), rec in found.items():
@@ -550,7 +586,31 @@ def fetch_month(client, ch, slug, m):
     return True, episodes
 
 
-def enumerate_programmes(client, programmes, only, limit, backfill, run):
+def backlog_marker(prev, today):
+    """The failed-month marker after one more failure: {first_failed,
+    last_failed, failures, retry_after}; consecutive failures back off
+    BACKLOG_BACKOFF_DAYS (1, 7, then 30 days for every later one)."""
+    prev = prev if isinstance(prev, dict) else {}
+    n = int(prev.get("failures") or 0) + 1
+    wait = BACKLOG_BACKOFF_DAYS[min(n, len(BACKLOG_BACKOFF_DAYS)) - 1]
+    return {"first_failed": prev.get("first_failed") or today.isoformat(),
+            "last_failed": today.isoformat(), "failures": n,
+            "retry_after": (today + dt.timedelta(days=wait)).isoformat()}
+
+
+def backlog_deferred(marker, today):
+    """True while a failed month's retry_after is still in the future."""
+    after = _iso_date((marker or {}).get("retry_after"))
+    return after is not None and today < after
+
+
+def enumerate_programmes(client, programmes, only, limit, backfill, run, failed_months=None):
+    """`failed_months` (data/rthk/backlog_failures.json, mutated in place):
+    "{ch}/{slug}/{YYYYMM}" → backlog_marker. A marked month is skipped until
+    its retry_after (counted `backlog_deferred`, not failed); a success clears
+    the marker; markers outside the window or for a cached month are pruned."""
+    if failed_months is None:
+        failed_months = {}
     today = today_hkt()
     window = months_back(RETENTION_MONTHS, today)
     incremental = window[:INCREMENTAL_MONTHS]
@@ -562,6 +622,7 @@ def enumerate_programmes(client, programmes, only, limit, backfill, run):
     run["months_fetched"] = 0
     run["month_failures"] = 0
     backlog = []
+    deferred = 0
     for p in targets:
         ch, slug = p["channel"], p["slug"]
         p_ok = True
@@ -579,8 +640,17 @@ def enumerate_programmes(client, programmes, only, limit, backfill, run):
         run["enumerated"] += 1
         for m in window[INCREMENTAL_MONTHS:]:
             if not month_path(ch, slug, m).exists():
+                if backlog_deferred(failed_months.get(f"{ch}/{slug}/{m}"), today):
+                    deferred += 1
+                    continue
                 backlog.append((ch, slug, m))
-    run["backlog_months"] = len(backlog)
+    old_months = set(window[INCREMENTAL_MONTHS:])
+    for k in list(failed_months):
+        ch, slug, m = (k.split("/") + ["", "", ""])[:3]
+        if m not in old_months or month_path(ch, slug, m).exists():
+            failed_months.pop(k)
+    run["backlog_deferred"] = deferred
+    run["backlog_months"] = len(backlog) + deferred
     # Tidy: month files older than the retention window are dead weight.
     keep = set(months_back(RETENTION_MONTHS + 1, today))
     pruned = 0
@@ -597,13 +667,17 @@ def enumerate_programmes(client, programmes, only, limit, backfill, run):
     for ch, slug, m in backlog:
         ok, eps = fetch_month(client, ch, slug, m)
         run["months_fetched"] += 1
+        key = f"{ch}/{slug}/{m}"
         if ok:
             write_json(month_path(ch, slug, m), {"fetchedAt": today.isoformat(), "episodes": eps})
+            failed_months.pop(key, None)
             done += 1
         else:
             run["month_failures"] += 1
+            failed_months[key] = backlog_marker(failed_months.get(key), today)
+            log(f"  backlog month {key} failed — next try after {failed_months[key]['retry_after']}")
     run["backfilled_months"] = done
-    run["backlog_months"] = len(backlog) - done
+    run["backlog_months"] = len(backlog) - done + deferred
 
 
 # ---------------------------------------------------------------------------
@@ -646,6 +720,172 @@ def spot_check(client, programmes, overrides, only, run):
                 log(f"  stream drift {key}: derived {st} → override {m.group(1)}")
             else:
                 log(f"  stream check miss {key}: derived {st}, getEpisode {st2} (no override available — audio may be aged out)")
+
+
+# ---------------------------------------------------------------------------
+# 3b. Playable latest (SR-01)
+# ---------------------------------------------------------------------------
+def playable_key(ch, slug, date):
+    return f"{ch}/{slug}/{date}"
+
+
+def playable_filter(ch, slug, episodes, cache):
+    """The one rule both legs share (build_catalog imports it). `episodes`
+    newest first (dicts with "date", optional "streamUrl"); `cache` =
+    data/rthk/playable.json. Returns (kept, omit): `kept` drops every episode
+    whose date the cache records as unplayable ({"ok": false}) unless it
+    carries a per-episode override (getEpisode named a file); `omit` is True
+    when the PLAYABLE_HEAD_DATES newest dates are all unplayable — the
+    programme is then not offered at all. An unknown date is kept (fail open)."""
+    cache = cache if isinstance(cache, dict) else {}
+
+    def gone(ep):
+        if ep.get("streamUrl"):
+            return False
+        entry = cache.get(playable_key(ch, slug, ep["date"]))
+        return isinstance(entry, dict) and entry.get("ok") is False
+
+    kept = [ep for ep in episodes if not gone(ep)]
+    head, seen = [], set()
+    for ep in episodes:
+        if ep["date"] in seen:
+            continue
+        seen.add(ep["date"])
+        head.append(all(gone(e) for e in episodes if e["date"] == ep["date"]))
+        if len(head) == PLAYABLE_HEAD_DATES:
+            break
+    omit = len(head) == PLAYABLE_HEAD_DATES and all(head)
+    return kept, omit
+
+
+def probe_playable(client, ch, slug, date):
+    """One paced GET (tries=1) of the derived playlist through the shared
+    client — its UA, pacing, budget and breaker. True = 200 + #EXTM3U;
+    False = 404 / 410 (no archive file); None = anything else (timeout, 403,
+    5xx, a 200 that is not a playlist) — no answer, counted as a failure."""
+    url = STREAM_TEMPLATE.format(channel=ch, slug=slug, date=date.replace("-", ""))
+    st, _, body = client.get(url, tries=1, ok=(200,) + PLAYABLE_GONE)
+    if st == 200:
+        if body.startswith(b"#EXTM3U"):
+            return True
+        client.count_failure()                 # a 200 that is not a playlist: a block page
+        return None
+    if st in PLAYABLE_GONE:
+        return False
+    return None
+
+
+def programme_episodes(p, window, overrides):
+    """A programme's cached episodes in the window, newest first, with the
+    override flag build_catalog would publish (`streamUrl`)."""
+    ch, slug = p["channel"], p["slug"]
+    by_id = {}
+    for m in window:
+        for ep in (read_json(month_path(ch, slug, m)) or {}).get("episodes", []):
+            by_id.setdefault(ep["id"], ep)
+    out = []
+    for ep in sorted(by_id.values(), key=lambda e: (e["date"], e["id"]), reverse=True):
+        rec = {"id": ep["id"], "date": ep["date"]}
+        if overrides.get(f"{ch}/{slug}/{ep['id']}"):
+            rec["streamUrl"] = overrides[f"{ch}/{slug}/{ep['id']}"]
+        out.append(rec)
+    return out
+
+
+def playable_due(entry, today):
+    """Should this cached answer be asked again today? Never for a playable
+    date; daily for an unplayable one until PLAYABLE_RECHECK_DAYS after its
+    first miss; always for no entry."""
+    if not isinstance(entry, dict) or entry.get("ok") not in (True, False):
+        return True
+    if entry["ok"]:
+        return False
+    checked = _iso_date(entry.get("checkedAt"))
+    first = _iso_date(entry.get("firstMissAt")) or checked
+    if checked is not None and checked >= today:
+        return False                           # already asked today
+    return first is None or (today - first).days < PLAYABLE_RECHECK_DAYS
+
+
+def check_playable(client, programmes, overrides, cache, only, run, cap=PLAYABLE_PROBES_PER_RUN):
+    """SR-01: make sure the episode the app plays first ("Play latest" = the
+    newest row / index latestDate) has an archive file. Per programme, newest
+    date first, at most PLAYABLE_HEAD_DATES dates: a playable date (cached or
+    probed) ends the programme; an unplayable one is recorded and the next
+    date is tried; no answer keeps everything and ends the programme. Mutates
+    `cache` (data/rthk/playable.json); prunes dates outside the window."""
+    today = today_hkt()
+    iso = today.isoformat()
+    window = months_back(RETENTION_MONTHS, today)
+    keep_months = set(window)
+    for k in list(cache):
+        date = k.rsplit("/", 1)[-1]
+        if date[:7].replace("-", "") not in keep_months:
+            cache.pop(k)
+    probes = failed = 0
+    stopped = tripped = False
+    held = []                                  # "no file" answers, recorded once a playable one vouches
+    seen = []                                  # (key, ch, slug, episodes) for the end-of-run verdicts
+    for key, p in sorted(programmes.items()):
+        if only and p["channel"] not in only:
+            continue
+        ch, slug = p["channel"], p["slug"]
+        episodes = programme_episodes(p, window, overrides)
+        if not episodes:
+            continue
+        seen.append((key, ch, slug, episodes))
+        dates = []
+        for ep in episodes:
+            if ep["date"] not in dates:
+                dates.append(ep["date"])
+        for date in dates[:PLAYABLE_HEAD_DATES]:
+            if any(ep.get("streamUrl") for ep in episodes if ep["date"] == date):
+                break                          # getEpisode named a file: playable
+            k = playable_key(ch, slug, date)
+            entry = cache.get(k)
+            if not playable_due(entry, today):
+                if entry.get("ok"):
+                    break
+                continue                       # unplayable, answered today or accepted
+            if tripped:
+                break
+            if stopped or probes >= cap or failed >= PLAYABLE_MAX_FAILURES:
+                stopped = True
+                break
+            verdict = probe_playable(client, ch, slug, date)
+            probes += 1
+            if verdict is None:
+                failed += 1
+                log(f"  playable {key} {date}: no answer — kept, retry next run")
+                break
+            if verdict:
+                cache[k] = {"ok": True, "checkedAt": iso}
+                for hk, hv in held:
+                    cache[hk] = hv
+                held = []
+                break
+            prev = entry if isinstance(entry, dict) and entry.get("ok") is False else {}
+            held.append((k, {"ok": False, "checkedAt": iso, "firstMissAt": prev.get("firstMissAt") or iso}))
+            log(f"  playable {key} {date}: no archive file")
+            if len(held) >= PLAYABLE_GONE_STREAK:
+                tripped = True
+                break
+    if tripped:
+        run["warnings"].append(f"playable check stopped: {PLAYABLE_GONE_STREAK} playlists in a row had no "
+                               f"archive file — a moved archive? none of them recorded")
+    else:
+        for hk, hv in held:
+            cache[hk] = hv
+    unplayable = [key for key, ch, slug, episodes in seen if playable_filter(ch, slug, episodes, cache)[1]]
+    if stopped:
+        run["warnings"].append(f"playable check stopped after {probes} probes / {failed} failures "
+                               f"— the rest wait for the next run")
+    if unplayable:
+        run["warnings"].append(f"unplayable programmes (3 newest dates have no archive file; not "
+                               f"published): {', '.join(unplayable)}")
+    run["unplayable_programmes"] = unplayable
+    run["playable_probes"] = probes
+    run["playable_failures"] = failed
 
 
 # ---------------------------------------------------------------------------
@@ -730,6 +970,15 @@ def metro_window(client, window, run):
 
 
 # ---------------------------------------------------------------------------
+def egress_ip(client):
+    """The runner's egress IP, once per run (one budgeted request, as
+    probe.py does), so a block on runner ranges can be ruled in or out from
+    one log read. Logged only — never written to data/."""
+    st, _, body = client.get("https://api.ipify.org", tries=1)
+    text = body.decode("ascii", "replace").strip() if st == 200 else ""
+    return text if re.fullmatch(r"[0-9A-Fa-f:.]{3,45}", text) else f"unknown ({st})"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--budget", type=int, default=2500, help="max HTTP requests this run")
@@ -745,10 +994,14 @@ def main():
     programmes = read_json(PROGRAMMES_PATH, {})
     overrides = read_json(OVERRIDES_PATH, {})
     window = read_json(METRO_WINDOW_PATH, {})
+    playable = read_json(PLAYABLE_PATH, {})
+    failed_months = read_json(BACKLOG_FAILURES_PATH, {})
     run = {"startedAt": dt.datetime.now(HKT).isoformat(timespec="seconds"),
            "budget": args.budget, "warnings": [], "aborted": None}
     t0 = time.monotonic()
     try:
+        log("== runner")
+        log(f"   egress IP {egress_ip(client)}")
         log("== discovery")
         discover(client, programmes, only, run, args.limit)
         log(f"   {run['programmes_known']} programmes known ({run['sitemap_programmes']} from sitemap), meta refreshed {run.get('meta_refreshed', 0)}")
@@ -758,11 +1011,16 @@ def main():
         log(f"   {run['logo_small']} small logos, {run['logo_checked']} checked ({run['logo_probes']} HEADs), "
             f"{run['logo_upgraded']} publish larger, {run['logo_deferred']} deferred")
         log("== enumeration")
-        enumerate_programmes(client, programmes, only, args.limit, not args.no_backfill, run)
-        log(f"   {run['enumerated']} programmes, {run['months_fetched']} month fetches, {run['month_failures']} failed, backlog {run['backlog_months']} months")
+        enumerate_programmes(client, programmes, only, args.limit, not args.no_backfill, run, failed_months)
+        log(f"   {run['enumerated']} programmes, {run['months_fetched']} month fetches, {run['month_failures']} failed, "
+            f"backlog {run['backlog_months']} months ({run['backlog_deferred']} deferred by a failed-month marker)")
         log("== stream spot-check")
         spot_check(client, programmes, overrides, only, run)
         log(f"   {run['spot_checks']} checks, {run['spot_misses']} misses")
+        log("== playable latest")
+        check_playable(client, programmes, overrides, playable, only, run)
+        log(f"   {run['playable_probes']} probes, {run['playable_failures']} no-answer, "
+            f"{len(run['unplayable_programmes'])} programmes unplayable")
         if not args.skip_metro:
             log("== metro window")
             metro_window(client, window, run)
@@ -777,6 +1035,8 @@ def main():
         run["finishedAt"] = dt.datetime.now(HKT).isoformat(timespec="seconds")
         write_json(PROGRAMMES_PATH, programmes)
         write_json(OVERRIDES_PATH, overrides)
+        write_json(PLAYABLE_PATH, playable)
+        write_json(BACKLOG_FAILURES_PATH, failed_months)
         write_json(METRO_WINDOW_PATH, window)
         write_json(LAST_RUN_PATH, run)
         log(f"== done: {client.requests} requests, {client.failures} failures, {run['seconds']}s")
