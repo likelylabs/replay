@@ -810,9 +810,12 @@ def playable_due(entry, today):
 def check_playable(client, programmes, overrides, cache, only, run, cap=PLAYABLE_PROBES_PER_RUN):
     """SR-01: make sure the episode the app plays first ("Play latest" = the
     newest row / index latestDate) has an archive file. Per programme, newest
-    date first, at most PLAYABLE_HEAD_DATES dates: a playable date (cached or
-    probed) ends the programme; an unplayable one is recorded and the next
-    date is tried; no answer keeps everything and ends the programme. Mutates
+    date first, at most PLAYABLE_HEAD_DATES dates until a playable one (cached
+    or probed); an unplayable one is recorded and the next date is tried; no
+    answer keeps everything and ends the programme. Past the playable date,
+    every date whose cached "no file" answer is still due (playable_due) is
+    asked again, so an episode whose audio is uploaded late returns even when
+    a newer episode is already playable. Mutates
     `cache` (data/rthk/playable.json); prunes dates outside the window."""
     today = today_hkt()
     iso = today.isoformat()
@@ -838,15 +841,31 @@ def check_playable(client, programmes, overrides, cache, only, run, cap=PLAYABLE
         for ep in episodes:
             if ep["date"] not in dates:
                 dates.append(ep["date"])
-        for date in dates[:PLAYABLE_HEAD_DATES]:
-            if any(ep.get("streamUrl") for ep in episodes if ep["date"] == date):
-                break                          # getEpisode named a file: playable
+        vouched = False                        # a date of this programme is playable (newest-first walk)
+        for i, date in enumerate(dates):
             k = playable_key(ch, slug, date)
             entry = cache.get(k)
-            if not playable_due(entry, today):
-                if entry.get("ok"):
+            if vouched:
+                # Past a playable date only a due "no file" answer is asked again, on
+                # every date of the programme: an older date recorded unplayable while
+                # its archive was still being uploaded must get its 7 daily re-asks even
+                # after a newer episode answers 200 (or it would stay hidden until the
+                # prune). Bounded: an {ok:false} entry exists only for a date that was a
+                # head date, and is due for PLAYABLE_RECHECK_DAYS at most.
+                if not (isinstance(entry, dict) and entry.get("ok") is False and playable_due(entry, today)):
+                    continue
+                if any(ep.get("streamUrl") for ep in episodes if ep["date"] == date):
+                    continue                   # published via its override anyway
+            else:
+                if i >= PLAYABLE_HEAD_DATES:
                     break
-                continue                       # unplayable, answered today or accepted
+                if any(ep.get("streamUrl") for ep in episodes if ep["date"] == date):
+                    vouched = True             # getEpisode named a file: playable
+                    continue
+                if not playable_due(entry, today):
+                    if entry.get("ok"):
+                        vouched = True
+                    continue                   # unplayable, answered today or accepted
             if tripped:
                 break
             if stopped or probes >= cap or failed >= PLAYABLE_MAX_FAILURES:
@@ -860,13 +879,20 @@ def check_playable(client, programmes, overrides, cache, only, run, cap=PLAYABLE
                 break
             if verdict:
                 cache[k] = {"ok": True, "checkedAt": iso}
+                if vouched:
+                    log(f"  playable {key} {date}: archive file appeared — episode returns")
                 for hk, hv in held:
                     cache[hk] = hv
                 held = []
-                break
+                vouched = True
+                continue
             prev = entry if isinstance(entry, dict) and entry.get("ok") is False else {}
-            held.append((k, {"ok": False, "checkedAt": iso, "firstMissAt": prev.get("firstMissAt") or iso}))
+            miss = {"ok": False, "checkedAt": iso, "firstMissAt": prev.get("firstMissAt") or iso}
             log(f"  playable {key} {date}: no archive file")
+            if vouched:
+                cache[k] = miss                # a playable date of the same programme vouches
+                continue
+            held.append((k, miss))
             if len(held) >= PLAYABLE_GONE_STREAK:
                 tripped = True
                 break

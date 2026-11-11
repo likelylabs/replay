@@ -262,6 +262,59 @@ class PlayableLatest(unittest.TestCase):
         _, _, entries = self.box.build()
         self.assertEqual(entries["radio1/50YearsAfter"]["latestDate"], "2026-11-07")
 
+    # The 11-11 crawl shape: radio1/hktoday listed the same-day episode (only
+    # "Part 1" up) before its archive existed. An early crawl records it as
+    # "no file"; the next (late) crawl finds the NEXT day's episode already
+    # archived. The older date must still be re-asked daily until it answers.
+    def _late_upload_days(self, appears_on, days):
+        path = crawl.month_path("radio1", "hktoday", "202611")
+        late = cdn("radio1", "hktoday", "2026-11-11")
+        asked = []
+        for n in range(days):
+            day = dt.date(2026, 11, 11) + dt.timedelta(days=n)
+            if n:                                            # a new daily episode is listed and archived
+                doc = common.read_json(path)
+                doc["episodes"].insert(0, {"id": str(1139000 + n), "date": day.isoformat(),
+                                           "title": "晨早新聞天地"})
+                common.write_json(path, doc)
+            answers = {cdn("radio1", "hktoday", (dt.date(2026, 11, 11) + dt.timedelta(days=i)).isoformat()):
+                       (200, "", PLAYLIST) for i in range(1, n + 1)}
+            answers[cdn("radio1", "hktoday", "2026-11-10")] = (200, "", PLAYLIST)
+            answers[late] = (200, "", PLAYLIST) if appears_on is not None and n >= appears_on else (404, "", b"")
+            with mock.patch.object(crawl, "today_hkt", lambda d=day: d):
+                for _ in range(2):                           # a second run the same day asks nothing new
+                    client, _ = self.box.probe(answers)
+                    asked.append((n, client.urls.count(late)))
+        return late, asked
+
+    def test_late_archive_returns_even_after_a_newer_episode_is_playable(self):
+        key = crawl.playable_key("radio1", "hktoday", "2026-11-11")
+        late, asked = self._late_upload_days(appears_on=3, days=8)
+        # day 0: probed (404); days 1-2: re-asked once each although 11-12 / 11-13 answer 200;
+        # day 3: re-asked, now 200 (11-11 is already the 4th date by then); never again after.
+        per_day = {}
+        for n, c in asked:
+            per_day[n] = per_day.get(n, 0) + c
+        self.assertEqual(per_day, {0: 1, 1: 1, 2: 1, 3: 1, 4: 0, 5: 0, 6: 0, 7: 0})
+        self.assertEqual([c for _, c in asked[1::2]], [0] * 8)      # second run of each day
+        self.assertEqual(self.box.cache[key], {"ok": True, "checkedAt": "2026-11-14"})
+        _, progs, entries = self.box.build()
+        rows = progs["radio1/hktoday"]["episodes"]
+        self.assertIn("1138950", [r["id"] for r in rows])          # the 11-11 episode is back
+        self.assertEqual(entries["radio1/hktoday"]["latestDate"], "2026-11-18")
+
+    def test_archive_that_never_appears_is_asked_for_seven_days_then_accepted(self):
+        key = crawl.playable_key("radio1", "hktoday", "2026-11-11")
+        _, asked = self._late_upload_days(appears_on=None, days=10)
+        per_day = {}
+        for n, c in asked:
+            per_day[n] = per_day.get(n, 0) + c
+        self.assertEqual([per_day[n] for n in range(10)], [1] * crawl.PLAYABLE_RECHECK_DAYS + [0] * 3)
+        self.assertIs(self.box.cache[key]["ok"], False)
+        self.assertEqual(self.box.cache[key]["firstMissAt"], "2026-11-11")
+        _, progs, _ = self.box.build()
+        self.assertNotIn("1138950", [r["id"] for r in progs["radio1/hktoday"]["episodes"]])
+
     def test_an_override_episode_is_playable_without_a_request(self):
         self.box.overrides["radio1/50YearsAfter/1138162"] = "https://example.test/a.m3u8"
         client, _ = self.box.probe()

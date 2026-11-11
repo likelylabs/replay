@@ -20,7 +20,8 @@ on:
         default: ""
   schedule:
     # Scheduled 03:30 HKT daily (probe canary 03:15), but GitHub's scheduler lag
-    # means runs actually start ~05:24-06:39 HKT (the probe lands 3-11 min ahead).
+    # means runs actually start two to seven hours late: measured 05:28-10:17 HKT
+    # over the 45 runs to 2026-11-11 (late starts are common; probe.yml runs ahead).
     - cron: '30 19 * * *'
 
 permissions:

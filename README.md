@@ -13,7 +13,7 @@ Spec, tenets and decisions live in the private coordination repo
 ```
  broadcaster sites                this repo (GitHub Actions)              the app
  ─────────────────                ─────────────────────────────           ───────
- RTHK sitemap + channel pages ─┐  crawl.yml (daily, ~05:30 HKT)           GET index.json
+ RTHK sitemap + channel pages ─┐  crawl.yml (daily, 05:30-10:20 HKT)      GET index.json
  RTHK catchUp JSON (per month) ─┼─► tools/crawl.py   → data/  (cache)      → channel / programme browse
  RTHK Akamai HLS (spot/latest) ─┤  tools/build_catalog.py → index.json     GET prog/{ch}/{slug}.json
  Metro half-hour MP3 (window)  ─┘     (publish gate)      + prog/           → episode list → derived stream URL
@@ -53,7 +53,8 @@ Spec, tenets and decisions live in the private coordination repo
   3 dates until one answers 200 + `#EXTM3U`. A 404 / 410 marks the date
   unplayable in `data/rthk/playable.json`; any other answer keeps everything
   (fail open). A playable date is never asked again; an unplayable one is
-  re-asked daily for 7 days, then accepted. ≤ 400 GETs a run (first pass ~323,
+  re-asked daily for 7 days (even after a newer episode answers 200), then
+  accepted. ≤ 400 GETs a run (first pass ~323,
   then about one per new episode); stops after 5 no-answers.
   Resilience: a non-200 sitemap or now-airing XML is a `last-run.json`
   warning and the run continues from the programme registry — only the
