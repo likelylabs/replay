@@ -1,12 +1,56 @@
 {
  "episodes": [
   {
+   "date": "2026-11-12",
+   "id": "1139198",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Abby Choi killed by ex-husband, court heard",
+    "'Northern Link savings won't compromise quality'",
+    "'One Stanley steel work different from approved plans'",
+    "Five plead not guilty in renovation-bribery trial",
+    "'New light festivals must boost night economy'",
+    "Cathay orders 11 more Airbus jets in US$5bn deal",
+    "HK must target 'patient capital': FSDC",
+    "School told to step up values education in vaping case",
+    "HKUST develops AI platform for ASD",
+    "Shenzhen showcasing high-tech sector",
+    "Hong Kong opens international police academy",
+    "'Flexi hours and WFH helpful for carers'",
+    "Govt staff to get 12 hours of family care leave",
+    "'Science event boosts HK's tech hub standing'",
+    "Millions strike in Spain over housing shortage",
+    "Sri Lanka approves China company's air-taxi testing",
+    "UN chief slams oil & gas lobby at COP31",
+    "US envoys to meet Russia and Ukraine leaders"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-11-11",
    "id": "1138977",
    "parts": [
-    "第一部份 Part 1 (HKT 06:30 - 07:00)"
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "HK five-year plan offers UK long-term prospects: CE",
+    "Exco green lights part two of the Northern Link",
+    "'A Symphony of Lights' to go out with a bang",
+    "Lift expert wants better inspection process",
+    "Minibus driver arrested for alleged drug driving",
+    "China-US group to pay tribute to Tung Chee-hwa",
+    "HK still has much to offer: Yantian Port chief",
+    "Expert warns against taking Covid-19 lightly",
+    "China trade surplus tops US$1tn two years running",
+    "Fishermen can benefit from fishing trip programme",
+    "HK communities celebrate Diwali",
+    "Hegseth denounces effort to impeach him",
+    "Russia-Ukraine talks resume after nine-month break",
+    "Ex-Malaysia PM back home to observe house arrest"
    ],
-   "title": "Hong Kong Today"
+   "title": "Wednesday"
   },
   {
    "date": "2026-11-10",
@@ -186,5 +230,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-11"
+ "fetchedAt": "2026-11-12"
 }

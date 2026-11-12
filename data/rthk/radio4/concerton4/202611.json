@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-11",
+   "id": "1130649",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Shunske Sato and Shuann Chai: Beethoven Violin Sonatas"
+  },
+  {
    "date": "2026-11-10",
    "id": "1130647",
    "parts": [
@@ -81,5 +91,5 @@
    "title": "Renaud Capuçon at 50: An Anniversary Celebration"
   }
  ],
- "fetchedAt": "2026-11-11"
+ "fetchedAt": "2026-11-12"
 }
