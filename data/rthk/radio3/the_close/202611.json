@@ -1,10 +1,21 @@
 {
  "episodes": [
   {
+   "date": "2026-11-12",
+   "id": "1139205",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-11",
    "id": "1138984",
    "parts": [
-    "足本 Full (HKT 17:05 - 18:00)"
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Asian Economic Outlook",
+    "Hong Kong-Europe Business Links"
    ],
    "title": "The Close"
   },
@@ -87,5 +98,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-12"
+ "fetchedAt": "2026-11-13"
 }

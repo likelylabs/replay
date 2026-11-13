@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-12",
+   "id": "1139200",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Ta Kwu Ling University Town",
+    "Muse Fest HK 2026",
+    "CUHK launched joint exhibition with Cambridge’s Fitzwilliam Museum"
+   ],
+   "title": "Ta Kwu Ling University Town / Muse Fest HK 2026 / CUHK launched joint exhibition with Cambridge’s Fitzwilliam Museum"
+  },
+  {
    "date": "2026-11-11",
    "id": "1138979",
    "parts": [
@@ -93,5 +104,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-12"
+ "fetchedAt": "2026-11-13"
 }

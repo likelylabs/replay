@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-12",
+   "id": "1130656",
+   "parts": [
+    "足本 Full (HKT 20:05 - 22:00)",
+    "第一部份 Part 1 (HKT 20:05 - 21:00)",
+    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+   ],
+   "title": "Mahler Chamber Orchestra: Poème Symphonique"
+  },
+  {
    "date": "2026-11-11",
    "id": "1130649",
    "parts": [
@@ -14,9 +24,10 @@
    "date": "2026-11-10",
    "id": "1130647",
    "parts": [
-    "足本 Full (HKT 20:05 - 22:00)",
+    "足本 Full (HKT 20:00 - 22:00)",
     "第一部份 Part 1 (HKT 20:05 - 21:00)",
-    "第二部份 Part 2 (HKT 21:00 - 22:00)"
+    "第二部份 Part 2 (HKT 21:00 - 22:00)",
+    "第三部份 Part 3 (HKT 22:00 - 22:15)"
    ],
    "title": "Wigmore Hall 125th Anniversary Festival: Closing Gala Concert"
   },
@@ -91,5 +102,5 @@
    "title": "Renaud Capuçon at 50: An Anniversary Celebration"
   }
  ],
- "fetchedAt": "2026-11-12"
+ "fetchedAt": "2026-11-13"
 }
