@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-14",
+   "id": "1138892",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "China-Brazil relations following re-election of President Lula"
+  },
+  {
    "date": "2026-11-07",
    "id": "1137835",
    "parts": [
@@ -9,5 +17,5 @@
    "title": "Singles' Day and the evolution of online shopping"
   }
  ],
- "fetchedAt": "2026-11-14"
+ "fetchedAt": "2026-11-15"
 }
