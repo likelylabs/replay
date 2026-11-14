@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-13",
+   "id": "1130355",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "“Hong Kong Artists” Series 2026: Percussion Recital by Elise Liu and Friends"
+  },
+  {
    "date": "2026-11-12",
    "id": "1130344",
    "parts": [
@@ -71,5 +81,5 @@
    "title": "Copenhagen Opera Festival: Freezing Italians"
   }
  ],
- "fetchedAt": "2026-11-13"
+ "fetchedAt": "2026-11-14"
 }

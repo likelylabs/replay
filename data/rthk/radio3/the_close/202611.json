@@ -1,10 +1,24 @@
 {
  "episodes": [
   {
+   "date": "2026-11-13",
+   "id": "1139399",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "How is AI impacting Online Searches - David Ketchum",
+    "Challenges faced by SMEs and how to overcome them - Michael Tomordy"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-12",
    "id": "1139205",
    "parts": [
-    "足本 Full (HKT 17:05 - 18:00)"
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Oppurtunities in Digital Assets and Crypto Currencies Sector",
+    "Global Economic Outlook"
    ],
    "title": "The Close"
   },
@@ -98,5 +112,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-13"
+ "fetchedAt": "2026-11-14"
 }

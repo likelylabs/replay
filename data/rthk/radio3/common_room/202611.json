@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-13",
+   "id": "1139402",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Thomas Concu"
+  },
+  {
    "date": "2026-11-12",
    "id": "1139208",
    "parts": [
@@ -73,5 +81,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-13"
+ "fetchedAt": "2026-11-14"
 }

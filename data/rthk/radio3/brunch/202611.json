@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-11-13",
+   "id": "1139395",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Emeric Payer - Swimming",
+    "Hamish Williams - The Nutters Club",
+    "Vada Chung - Paws For Good"
+   ],
+   "title": "Emeric Payer - Swimming / Hamish Williams - The Nutters Club / Vada Chung - Paws For Good"
+  },
+  {
    "date": "2026-11-12",
    "id": "1139201",
    "parts": [
@@ -115,5 +128,5 @@
    "title": "Carlos Escueta - weekend sports round-up / Eoin Kearns - International Uilleann Piping Day / Raphael Blet - The Bright Side"
   }
  ],
- "fetchedAt": "2026-11-13"
+ "fetchedAt": "2026-11-14"
 }

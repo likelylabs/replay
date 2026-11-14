@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-11-13",
+   "id": "1139394",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "US-China Hong Kong Forum",
+    "Northern Link rail project agreement",
+    "Gen Z collectors survey",
+    "The Festival of Connoisseurs"
+   ],
+   "title": "US-China Hong Kong Forum / Northern Link rail project agreement / Gen Z collectors survey / The Festival of Connoisseurs"
+  },
+  {
    "date": "2026-11-12",
    "id": "1139200",
    "parts": [
@@ -104,5 +116,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-13"
+ "fetchedAt": "2026-11-14"
 }
