@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-15",
+   "id": "1139776",
+   "parts": [
+    "足本 Full (HKT 08:10 - 08:30)"
+   ],
+   "title": "Snack Attack"
+  },
+  {
    "date": "2026-11-08",
    "id": "1138322",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Wine & Dine Festival"
   }
  ],
- "fetchedAt": "2026-11-15"
+ "fetchedAt": "2026-11-16"
 }

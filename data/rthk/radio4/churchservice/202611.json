@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-15",
+   "id": "1139097",
+   "parts": [
+    "足本 Full (HKT 12:05 - 13:00)"
+   ],
+   "title": "Church Service from Union Church Hong Kong"
+  },
+  {
    "date": "2026-11-08",
    "id": "1137209",
    "parts": [
@@ -17,5 +25,5 @@
    "title": "Studio broadcast from the German Speaking Evangelical Lutheran Congregation of Hong Kong"
   }
  ],
- "fetchedAt": "2026-11-15"
+ "fetchedAt": "2026-11-16"
 }
