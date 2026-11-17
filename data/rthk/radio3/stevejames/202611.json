@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-16",
+   "id": "1139961",
+   "parts": [
+    "足本 Full (HKT 14:05 - 17:00)",
+    "第一部份 Part 1 (HKT 14:05 - 15:00)",
+    "第二部份 Part 2 (HKT 15:05 - 16:00)",
+    "第三部份 Part 3 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Steve James"
+  },
+  {
    "date": "2026-11-13",
    "id": "1139398",
    "parts": [
@@ -9,7 +20,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 4"
   },
   {
    "date": "2026-11-12",
@@ -20,7 +31,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With what not to say at the office party / This years rejected toy titles"
   },
   {
    "date": "2026-11-11",
@@ -31,7 +42,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With unusual Netflix categories / The special power you would like your phone to give you"
   },
   {
    "date": "2026-11-10",
@@ -42,7 +53,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Danny Lau is in the chair today"
   },
   {
    "date": "2026-11-09",
@@ -53,7 +64,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Monoday Chat' after 4"
   },
   {
    "date": "2026-11-06",
@@ -64,7 +75,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Harry Wong joining us after 3"
   },
   {
    "date": "2026-11-05",
@@ -75,7 +86,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With a band name sounds like it was decided in under 30 seconds / Signs you might be out of shape"
   },
   {
    "date": "2026-11-04",
@@ -86,7 +97,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With what  you wish your very first words had been / Signs you are a control freak"
   },
   {
    "date": "2026-11-03",
@@ -97,7 +108,7 @@
     "第二部份 Part 2 (HKT 15:05 - 16:00)",
     "第三部份 Part 3 (HKT 16:05 - 17:00)"
    ],
-   "title": "Steve James"
+   "title": "Steve James - With Perry Martin's 'Tunesday Chat' after 4"
   },
   {
    "date": "2026-11-02",
@@ -111,5 +122,5 @@
    "title": "Steve James - With as a child, what did you think would be awesome about being an adult, but isn’t quite as awesome as you thought?"
   }
  ],
- "fetchedAt": "2026-11-16"
+ "fetchedAt": "2026-11-17"
 }

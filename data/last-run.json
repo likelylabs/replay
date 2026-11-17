@@ -5,17 +5,17 @@
  "budget": 2500,
  "enumerated": 429,
  "failures": 3,
- "finishedAt": "2026-11-16T07:45:22+08:00",
- "logo_checked": 5,
+ "finishedAt": "2026-11-17T10:51:53+08:00",
+ "logo_checked": 1,
  "logo_deferred": 0,
- "logo_probes": 5,
- "logo_small": 274,
- "logo_upgraded": 251,
+ "logo_probes": 1,
+ "logo_small": 275,
+ "logo_upgraded": 252,
  "meta_refreshed": 25,
  "metro": {
-  "104": "2026-08-01..2026-11-16",
-  "1044": "2026-08-01..2026-11-16",
-  "997": "2026-08-01..2026-11-16"
+  "104": "2026-08-01..2026-11-17",
+  "1044": "2026-08-01..2026-11-17",
+  "997": "2026-08-01..2026-11-17"
  },
  "metro_segment_sec": {
   "104": 1791.1,
@@ -26,11 +26,11 @@
  "months_fetched": 859,
  "months_pruned": 0,
  "programmes_known": 429,
- "requests": 1138,
- "seconds": 1167,
+ "requests": 1190,
+ "seconds": 1212,
  "sitemap_programmes": 295,
  "spot_checks": 12,
  "spot_misses": 0,
- "startedAt": "2026-11-16T07:25:55+08:00",
+ "startedAt": "2026-11-17T10:31:41+08:00",
  "warnings": []
 }

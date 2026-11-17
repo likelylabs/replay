@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-11-17",
+   "id": "1140183",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View on Geopolitics"
+   ],
+   "title": "Money Talk"
+  },
+  {
+   "date": "2026-11-16",
+   "id": "1139956",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View on Hong Kong"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-11-13",
    "id": "1139393",
    "parts": [
@@ -111,5 +133,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-11-16"
+ "fetchedAt": "2026-11-17"
 }

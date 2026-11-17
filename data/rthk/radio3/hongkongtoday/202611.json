@@ -1,6 +1,57 @@
 {
  "episodes": [
   {
+   "date": "2026-11-17",
+   "id": "1140182",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "President Xi to discuss world peace with Trump, Putin",
+    "Shenzhen steps up security for Apec summit",
+    "Shenzhen puts its tech systems on display",
+    "NZ business leader marvels at Shenzhen changes",
+    "RTHK, CGTN join hands in Apec coverage",
+    "SAR is port in a storm for shipping owners: CE",
+    "Lawmaker backs cross-harbour swim organisers",
+    "HR expert welcomes 12-hour family care leave",
+    "Travel council leader says tourists want more from SAR",
+    "HKEX launches first offshore RMB bond index",
+    "Xi on Zhongshan inspection tour",
+    "COP31 delegates publish draft deal on fossil fuels",
+    "Ukraine launches biggest drone attack, Russia says",
+    "Five European countries unveil Rwanda plans",
+    "Li Qiang urges closer ties with Asean nations",
+    "Chinese output up 5.3pc on intelligent manufacturing",
+    "Germany thrash Dutch to top Nations League group"
+   ],
+   "title": "Tuesday"
+  },
+  {
+   "date": "2026-11-16",
+   "id": "1139955",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Police chief pledges cautious use of CCTV network",
+    "HK should prepare for AI slowdown: Algernon Yau",
+    "Hong Kong sees rising value in finance, trade: FS",
+    "Strong current forces organisers' hand in harbour swim",
+    "HZMB Half Marathon draws thousands of runners",
+    "'Runway painting robots save time, money'",
+    "One dead, 300 evacuated in Wong Tai Sin fire",
+    "Charity hopes to promote mental wellness",
+    "Xi, 11 regional leaders to attend Apec CEO Summit",
+    "Eye expert urges public to get regular check-ups",
+    "US airlines scramble to get back on schedule",
+    "Houthis release hundreds in 'humanitarian' initiative",
+    "Hamas confirms death of senior member in Israeli strike",
+    "England hang on to stun Spain in Nations League"
+   ],
+   "title": "Monday"
+  },
+  {
    "date": "2026-11-13",
    "id": "1139392",
    "parts": [
@@ -257,5 +308,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-16"
+ "fetchedAt": "2026-11-17"
 }
