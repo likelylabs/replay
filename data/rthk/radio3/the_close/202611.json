@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-17",
+   "id": "1140189",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Navigating Surging Bond Yields - Paul Kitney",
+    "Business of Media & Entertainment - Patrick Frater"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-16",
    "id": "1139962",
    "parts": [
@@ -123,5 +134,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-17"
+ "fetchedAt": "2026-11-18"
 }

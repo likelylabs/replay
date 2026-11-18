@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-17",
+   "id": "1130650",
+   "parts": [
+    "足本 Full (HKT 15:00 - 17:00)",
+    "第一部份 Part 1 (HKT 15:00 - 16:00)",
+    "第二部份 Part 2 (HKT 16:05 - 17:00)"
+   ],
+   "title": "Shunske Sato and Shuann Chai: Beethoven Violin Sonatas"
+  },
+  {
    "date": "2026-11-13",
    "id": "1130355",
    "parts": [
@@ -81,5 +91,5 @@
    "title": "Copenhagen Opera Festival: Freezing Italians"
   }
  ],
- "fetchedAt": "2026-11-17"
+ "fetchedAt": "2026-11-18"
 }

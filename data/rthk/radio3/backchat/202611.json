@@ -3,13 +3,21 @@
   {
    "date": "2026-11-17",
    "id": "1140184",
-   "title": "Backchat"
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Wave of data breaches and hacking incidents",
+    "Rodent infestation spike",
+    "Survey on citizens' attitude towards AI",
+    "Australia launches coral restoration drive"
+   ],
+   "title": "Wave of data breaches and hacking incidents / Rodent infestation spike / Survey on citizens' attitude towards AI / Australia launches coral restoration drive"
   },
   {
    "date": "2026-11-16",
    "id": "1139957",
    "parts": [
     "足本 Full (HKT 09:05 - 10:00)",
+    "Government workers to get 12 hours family care leave",
     "\"A Symphony of Lights\" to stage its finale",
     "Young Barristers' Committee Conference 2026",
     "Pochettino to become Man United head coach"
@@ -132,5 +140,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-17"
+ "fetchedAt": "2026-11-18"
 }

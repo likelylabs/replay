@@ -1,6 +1,30 @@
 {
  "episodes": [
   {
+   "date": "2026-11-18",
+   "id": "1140388",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Xi, Carney deepen strategic partnership in talks",
+    "Greater Bay Area a proven model of cooperation: CE",
+    "Battery-maker founder highlights Asia-Pacific benefits",
+    "President Xi to deliver Apec CEO Summit keynote speech",
+    "Talks ongoing on outcome document for meeting",
+    "John Lee says SAR can expand maritime role",
+    "Ovaries wrongly removed in private hospital op",
+    "Welding or smoking suspected in Shek Kwu Chau fire",
+    "HK urged to offer tax cut for small commodity traders",
+    "Lawmaker says firms keep data for too long",
+    "Expert hails Hong Kong's coral restoration projects",
+    "Ukraine hits bridge linking Russia to Crimea",
+    "Nvidia rules out return for ex-chief Huang",
+    "Norway and Portugal claim thrilling victories"
+   ],
+   "title": "Wednesday"
+  },
+  {
    "date": "2026-11-17",
    "id": "1140182",
    "parts": [
@@ -308,5 +332,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-17"
+ "fetchedAt": "2026-11-18"
 }

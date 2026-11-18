@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-17",
+   "id": "1140200",
+   "parts": [
+    "足本 Full (HKT 23:57 - 24:00)"
+   ],
+   "title": "Reflections 晚禱"
+  },
+  {
    "date": "2026-11-16",
    "id": "1139976",
    "parts": [
@@ -89,5 +97,5 @@
    "title": "Reflections 晚禱"
   }
  ],
- "fetchedAt": "2026-11-17"
+ "fetchedAt": "2026-11-18"
 }
