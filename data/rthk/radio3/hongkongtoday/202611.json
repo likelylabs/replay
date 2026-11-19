@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-11-19",
+   "id": "1140609",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "President Xi urges free and open trade for Apec region",
+    "Xi and Putin hold talks and hail bilateral ties",
+    "Xi personally greets Trump on US leader's arrival",
+    "John Lee holds talks with regional leaders in Shenzhen",
+    "Media professionals covering summit praise Shenzhen",
+    "Symphony of Lights switches off after final show",
+    "Doctor 'zoned out' in wrong ovary removal: CUHKMC",
+    "Operator to pay HK$1.3m over parking meter failure",
+    "Red Cross expert warns of 'killer robots'",
+    "Experts look at AI options to treat mental health issues",
+    "'Family harmony crucial to mental well-being'",
+    "Bancroft says whole team knew of sandpaper use"
+   ],
+   "title": "Thursday"
+  },
+  {
    "date": "2026-11-18",
    "id": "1140388",
    "parts": [
@@ -332,5 +354,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-18"
+ "fetchedAt": "2026-11-19"
 }

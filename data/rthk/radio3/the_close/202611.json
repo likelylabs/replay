@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-18",
+   "id": "1140395",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Navigating Surging Bond Yields - Paul Kitney",
+    "US Midterm Elections & their impact on International Trade - Angela Mancini"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-17",
    "id": "1140189",
    "parts": [
@@ -134,5 +145,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-18"
+ "fetchedAt": "2026-11-19"
 }
