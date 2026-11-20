@@ -11,6 +11,10 @@ Gate:
   - the last crawl must not have tripped the circuit breaker
   - every programme/episode validates against the shape below
   - programmes with 0 episodes in the retention window are dropped
+  - an episode whose date crawl.py found has no archive file (404 / 410 on
+    the derived playlist) is dropped, so latestDate / episodeCount / the
+    newest row are always playable; a programme whose 3 newest dates are all
+    unplayable is not published (crawl.playable_filter; SR-01)
   - uninformative episode titles (the programme name, a fixed label) are
     blanked to "" so the app falls back to the programme title (S31b)
   - a programme's small RTHK logo ("_s" / "{id}_115") publishes as the larger
@@ -30,10 +34,10 @@ from collections import Counter
 
 from common import (CRAWLER_VERSION, HKT, INDEX_PATH, LAST_RUN_PATH, METRO_CHANNELS,
                     METRO_SEGMENT_MINUTES, METRO_TEMPLATE, METRO_WINDOW_PATH,
-                    OVERRIDES_PATH, PROGRAMMES_PATH, PROG_DIR, RETENTION_MONTHS,
+                    OVERRIDES_PATH, PLAYABLE_PATH, PROGRAMMES_PATH, PROG_DIR, RETENTION_MONTHS,
                     RTHK_CHANNELS, RTHK_DATA, STREAM_TEMPLATE, STREAM_VERSION,
                     log, months_back, read_json, today_hkt)
-from crawl import logo_memo_answers   # the logo rule both legs share (no network at import)
+from crawl import logo_memo_answers, playable_filter   # rules both legs share (no network at import)
 
 ACTIVE_WINDOW_DAYS = 8          # seen on a channel schedule within this many days ⇒ active
 FLOOR_PROGRAMMES = 0.90
@@ -140,6 +144,7 @@ def main():
     programmes = read_json(PROGRAMMES_PATH, {})
     overrides = read_json(OVERRIDES_PATH, {})
     metro = read_json(METRO_WINDOW_PATH, {})
+    playable = read_json(PLAYABLE_PATH, {}) or {}
     window_months = months_back(RETENTION_MONTHS, today)
     active_cutoff = today - dt.timedelta(days=ACTIVE_WINDOW_DAYS)
 
@@ -149,6 +154,8 @@ def main():
     candidates = 0
     total_eps = 0
     blanked_titles = 0
+    unplayable_eps = 0
+    unplayable_progs = []
     for ch, meta in RTHK_CHANNELS.items():
         entries = []
         for p in sorted(programmes.values(), key=lambda p: p["slug"]):
@@ -157,6 +164,12 @@ def main():
             episodes = load_programme(p, window_months, overrides, today)
             if not episodes:
                 continue                                   # dormant: dropped (§2.5)
+            kept, omit = playable_filter(ch, p["slug"], episodes, playable)
+            if omit or not kept:
+                unplayable_progs.append(f"{ch}/{p['slug']}")
+                continue                                   # nothing playable on top: not offered (SR-01)
+            unplayable_eps += len(episodes) - len(kept)
+            episodes = kept
             # §2.1 fallbacks: no Chinese title anywhere → humanised slug.
             title_zh = (p.get("title_zh") or "").strip() or p["slug"].replace("_", " ")
             title_en = (p.get("title_en") or "").strip() or title_zh   # §2.1 fallback
@@ -242,7 +255,10 @@ def main():
         f"{sum(1 for c in channels if c['source']=='rthk')} RTHK + "
         f"{sum(1 for c in channels if c['source']=='metro')} Metro channels, {size_kb} KB; "
         f"{len(written)} prog files, {len(existing - written)} stale removed; "
-        f"{blanked_titles} uninformative episode titles blanked")
+        f"{blanked_titles} uninformative episode titles blanked; "
+        f"{unplayable_eps} episodes without an archive file dropped, "
+        f"{len(unplayable_progs)} programmes unplayable"
+        + (f" ({', '.join(unplayable_progs)})" if unplayable_progs else ""))
     return 0
 
 

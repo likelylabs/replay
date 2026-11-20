@@ -19,7 +19,10 @@ on:
         description: "extra crawl.py flags, e.g. --skip-metro --no-backfill"
         default: ""
   schedule:
-    - cron: '30 19 * * *'   # 03:30 HKT daily (probe canary runs 03:15)
+    # Scheduled 03:30 HKT daily (probe canary 03:15), but GitHub's scheduler lag
+    # means runs actually start two to seven hours late: measured 05:28-10:17 HKT
+    # over the 45 runs to 2026-11-11 (late starts are common; probe.yml runs ahead).
+    - cron: '30 19 * * *'
 
 permissions:
   contents: write

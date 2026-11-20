@@ -13,9 +13,9 @@ Spec, tenets and decisions live in the private coordination repo
 ```
  broadcaster sites                this repo (GitHub Actions)              the app
  ─────────────────                ─────────────────────────────           ───────
- RTHK sitemap + channel pages ─┐  crawl.yml (daily 03:30 HKT)             GET index.json
+ RTHK sitemap + channel pages ─┐  crawl.yml (daily, 05:30-10:20 HKT)      GET index.json
  RTHK catchUp JSON (per month) ─┼─► tools/crawl.py   → data/  (cache)      → channel / programme browse
- RTHK Akamai HLS (spot-check)  ─┤  tools/build_catalog.py → index.json     GET prog/{ch}/{slug}.json
+ RTHK Akamai HLS (spot/latest) ─┤  tools/build_catalog.py → index.json     GET prog/{ch}/{slug}.json
  Metro half-hour MP3 (window)  ─┘     (publish gate)      + prog/           → episode list → derived stream URL
                                    pages-deploy.yml → Pages (last-good)
 ```
@@ -47,8 +47,26 @@ Spec, tenets and decisions live in the private coordination repo
   (not a 200 image = no answer, counted as a failure), a published upgrade is
   withdrawn only when a later run agrees, and 5 programmes in a row with
   nothing larger stop the step without memoising any of them.
+  Playable latest (SR-01): RTHK lists some episodes it never archives (a
+  pre-empted broadcast; the Radio 5 copy of a Radio 1 simulcast), so for every
+  programme, newest date first, the crawler GETs the derived playlist for up to
+  3 dates until one answers 200 + `#EXTM3U`. A 404 / 410 marks the date
+  unplayable in `data/rthk/playable.json`; any other answer keeps everything
+  (fail open). A playable date is never asked again; an unplayable one is
+  re-asked daily for 7 days (even after a newer episode answers 200), then
+  accepted. ≤ 400 GETs a run (first pass ~323,
+  then about one per new episode); stops after 5 no-answers.
+  Resilience: a non-200 sitemap or now-airing XML is a `last-run.json`
+  warning and the run continues from the programme registry — only the
+  circuit breaker or the publish gate fails a day. Every non-ok answer logs
+  its `Server` header and the first 120 bytes of the body, and each run logs
+  the runner's egress IP once. A backlog month that fails is marked in
+  `data/rthk/backlog_failures.json` and retried after 1, then 7, then every
+  30 days (`backlog_deferred` in `last-run.json`), not every day.
 - `tools/build_catalog.py` — the only writer of `index.json` + `prog/`.
-  Validates, drops dormant programmes, blanks uninformative episode titles
+  Validates, drops dormant programmes, drops episodes the crawler found
+  without an archive file (and a programme whose 3 newest dates have none),
+  blanks uninformative episode titles
   (below), and refuses to publish a catalog that shrank past the safety floor
   (≥90% programmes / ≥80% episodes of last-good).
 - `pages-deploy.yml` — publishes the public surface (`index.json`, `prog/`,
