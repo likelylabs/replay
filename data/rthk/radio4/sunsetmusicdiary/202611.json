@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-11-19",
+   "id": "1140627",
+   "title": "Sunset Music Diary 日樂誌"
+  },
+  {
    "date": "2026-11-18",
    "id": "1140405",
    "parts": [
@@ -131,5 +136,5 @@
    "title": "Sunset Music Diary 日樂誌"
   }
  ],
- "fetchedAt": "2026-11-19"
+ "fetchedAt": "2026-11-20"
 }

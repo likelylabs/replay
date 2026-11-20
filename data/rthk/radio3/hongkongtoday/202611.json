@@ -1,6 +1,27 @@
 {
  "episodes": [
   {
+   "date": "2026-11-20",
+   "id": "1140828",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "President Xi hails 'groundbreaking' trilateral summit",
+    "Xi urges Apec leaders to build inclusive community",
+    "John Lee says solid outcomes for SAR at Apec session",
+    "Hotel slapped with heavier fine in price-fixing case",
+    "Arrests over HK$68m phone 'scams'",
+    "Euclid telescope helps to map universe",
+    "Digitial office launches 'Robots in the community'",
+    "UN court finds Myanmar guilty of genocide",
+    "Anthropic listing a milestone in AI boom",
+    "AI giant Anthropic shares soar on trading debut",
+    "COP31 draft fails to mention fossil fuels"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-11-19",
    "id": "1140609",
    "parts": [
@@ -15,9 +36,11 @@
     "Symphony of Lights switches off after final show",
     "Doctor 'zoned out' in wrong ovary removal: CUHKMC",
     "Operator to pay HK$1.3m over parking meter failure",
+    "HKU performs Asia's first histo-tripsy operation",
     "Red Cross expert warns of 'killer robots'",
     "Experts look at AI options to treat mental health issues",
     "'Family harmony crucial to mental well-being'",
+    "Millions of gamers welcome new Grand Theft Auto",
     "Bancroft says whole team knew of sandpaper use"
    ],
    "title": "Thursday"
@@ -354,5 +377,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-19"
+ "fetchedAt": "2026-11-20"
 }

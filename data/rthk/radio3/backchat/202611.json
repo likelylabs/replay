@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-11-19",
+   "id": "1140611",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Challenges for diners with food allergies",
+    "“Robots in the Community” pilot scheme",
+    "\"Forever cruise\" stranded",
+    "Euclid telescope 3D universe map"
+   ],
+   "title": "Challenges for diners with food allergies / “Robots in the Community” pilot scheme / \"Forever cruise\" stranded / Euclid telescope 3D universe map"
+  },
+  {
    "date": "2026-11-18",
    "id": "1140390",
    "parts": [
@@ -152,5 +164,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-19"
+ "fetchedAt": "2026-11-20"
 }

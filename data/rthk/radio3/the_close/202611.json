@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-11-19",
+   "id": "1140616",
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-18",
    "id": "1140395",
    "parts": [
@@ -145,5 +150,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-19"
+ "fetchedAt": "2026-11-20"
 }

@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-19",
+   "id": "1140623",
+   "parts": [
+    "足本 Full (HKT 08:05 - 10:00)",
+    "第一部份 Part 1 (HKT 08:05 - 09:00)",
+    "第二部份 Part 2 (HKT 09:05 - 10:00)",
+    "Under Cover: Which musical giant did Schumann secretly quote to send a coded love letter to Clara?"
+   ],
+   "title": "First Notes 由聆開始 / Under Cover: Which musical giant did Schumann secretly quote to send a coded love letter to Clara?"
+  },
+  {
    "date": "2026-11-18",
    "id": "1140402",
    "parts": [
@@ -120,9 +131,10 @@
    "parts": [
     "足本 Full (HKT 08:05 - 10:00)",
     "第一部份 Part 1 (HKT 08:05 - 09:00)",
-    "第二部份 Part 2 (HKT 09:05 - 10:00)"
+    "第二部份 Part 2 (HKT 09:05 - 10:00)",
+    "Under Cover: Who is the Baroque mastermind behind this jazzed-up aria?"
    ],
-   "title": "First Notes 由聆開始 / Under Cover: Vivaldi’s “Col piacer della mia fede” (Arr. by Craig Terry)"
+   "title": "First Notes 由聆開始 / Under Cover: Who is the Baroque mastermind behind this jazzed-up aria?"
   },
   {
    "date": "2026-11-02",
@@ -136,5 +148,5 @@
    "title": "First Notes 由聆開始 / Today's Playlist: Late Autumn"
   }
  ],
- "fetchedAt": "2026-11-19"
+ "fetchedAt": "2026-11-20"
 }
