@@ -1,12 +1,25 @@
 {
  "episodes": [
   {
+   "date": "2026-11-20",
+   "id": "1140832",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Marshy Movie Time",
+    "Sports and All with Danny Hicks"
+   ],
+   "title": "Marshy Movie Time / Sports and All with Danny Hicks"
+  },
+  {
    "date": "2026-11-19",
    "id": "1140613",
    "parts": [
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
-    "第二部份 Part 2 (HKT 13:15 - 14:00)"
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "'Brewed in HK' with Mark Rawson - The Big Picnic (Segement starts with our first two tracks)"
    ],
    "title": "'Brewed in HK' with Mark Rawson - The Big Picnic"
   },
@@ -172,5 +185,5 @@
    "title": "Robbie McRobbie - Live from the Kai Tak Sports Park / Neil Runcieman - Vietnam report"
   }
  ],
- "fetchedAt": "2026-11-20"
+ "fetchedAt": "2026-11-21"
 }

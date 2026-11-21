@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-20",
+   "id": "1140792",
+   "parts": [
+    "足本 Full (HKT 13:15 - 14:00)"
+   ],
+   "title": "Delight in a Bite 一時之選"
+  },
+  {
    "date": "2026-11-19",
    "id": "1140625",
    "parts": [
@@ -153,5 +161,5 @@
    "title": "Delight in a Bite 一時之選"
   }
  ],
- "fetchedAt": "2026-11-20"
+ "fetchedAt": "2026-11-21"
 }

@@ -1,0 +1,8 @@
+{
+ "radio3/backchat/202601": {
+  "failures": 1,
+  "first_failed": "2026-11-21",
+  "last_failed": "2026-11-21",
+  "retry_after": "2026-11-22"
+ }
+}

@@ -1,8 +1,25 @@
 {
  "episodes": [
   {
+   "date": "2026-11-20",
+   "id": "1140835",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Digital Money & Stablecoins- Amit Chopra",
+    "SME World Series - Jo Lodder"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-19",
    "id": "1140616",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Business of Wellness - Sonia Samtani",
+    "The Big Game – Business of Sports"
+   ],
    "title": "The Close"
   },
   {
@@ -150,5 +167,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-20"
+ "fetchedAt": "2026-11-21"
 }

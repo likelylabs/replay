@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-11-20",
+   "id": "1140831",
+   "parts": [
+    "足本 Full (HKT 10:00 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Operation Santa Claus feature: Nicholas Beckwith -Artistic Director of Shakespeare4All",
+    "Sky Siu - Mother's Choice Chief Executive Officer",
+    "Bruce Au -  Yidan Prize Foundation Secretary-General"
+   ],
+   "title": "Operation Santa Claus feature - Nicholas Beckwith from Shakespeare4All / Sky Siu - Mother's Choice Chief Executive Officer / Bruce Au -  Yidan Prize Foundation Secretary-General"
+  },
+  {
    "date": "2026-11-19",
    "id": "1140612",
    "parts": [
@@ -8,7 +21,7 @@
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
     "第二部份 Part 2 (HKT 11:05 - 12:00)"
    ],
-   "title": "Brunch"
+   "title": "Dr Rico Chan - Beyond Vision International Founder and CEO / Steven Yuen - Myco-tech specialist"
   },
   {
    "date": "2026-11-18",
@@ -18,7 +31,7 @@
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
     "第二部份 Part 2 (HKT 11:05 - 12:00)"
    ],
-   "title": "Brunch"
+   "title": "Jami Gong - Comedian and children's author"
   },
   {
    "date": "2026-11-17",
@@ -28,7 +41,7 @@
     "第一部份 Part 1 (HKT 10:05 - 11:00)",
     "第二部份 Part 2 (HKT 11:05 - 12:00)"
    ],
-   "title": "Brunch"
+   "title": "Ragnhild Hemsing - Norwegian violinist"
   },
   {
    "date": "2026-11-16",
@@ -171,5 +184,5 @@
    "title": "Carlos Escueta - weekend sports round-up / Eoin Kearns - International Uilleann Piping Day / Raphael Blet - The Bright Side"
   }
  ],
- "fetchedAt": "2026-11-20"
+ "fetchedAt": "2026-11-21"
 }
