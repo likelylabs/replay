@@ -12,7 +12,7 @@ before changing anything.
 - **Politeness is load-bearing**: serial, ~1 req/s, realistic UA + Referer,
   backoff, budget, circuit breaker. Never parallelise, never move any fetch
   into the app.
-- **No secrets, no internal notes** (tenet #10). This repo becomes public at
-  go-live; strategy, analytics and business notes stay in `radioapp-hq`.
+- **No secrets, no internal notes** (tenet #10). This repo is PUBLIC (since
+  2026-10-08); strategy, analytics and business notes stay in `radioapp-hq`.
 - A failed crawl must leave the committed catalog untouched — the publish gate
   exits non-zero before anything is written, and Pages keeps serving last-good.
