@@ -1,6 +1,16 @@
 {
  "episodes": [
   {
+   "date": "2026-11-21",
+   "id": "1141083",
+   "parts": [
+    "足本 Full (HKT 18:10 - 20:00)",
+    "第一部份 Part 1 (HKT 18:10 - 19:00)",
+    "第二部份 Part 2 (HKT 19:05 - 20:00)"
+   ],
+   "title": "Cantilena 自投羅網"
+  },
+  {
    "date": "2026-11-14",
    "id": "1139665",
    "parts": [
@@ -21,5 +31,5 @@
    "title": "Cantilena 自投羅網 / Guest: Breathless"
   }
  ],
- "fetchedAt": "2026-11-21"
+ "fetchedAt": "2026-11-22"
 }

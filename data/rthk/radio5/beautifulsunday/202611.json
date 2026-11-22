@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-22",
+   "id": "1141236",
+   "parts": [
+    "足本 Full (HKT 06:04 - 07:00)"
+   ],
+   "title": "Beautiful Sunday（與第二台聯播）"
+  },
+  {
    "date": "2026-11-15",
    "id": "1139801",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Beautiful Sunday（與第二台聯播）"
   }
  ],
- "fetchedAt": "2026-11-21"
+ "fetchedAt": "2026-11-22"
 }
