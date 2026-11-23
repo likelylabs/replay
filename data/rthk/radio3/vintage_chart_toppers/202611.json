@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-22",
+   "id": "1140872",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Black Magic"
+  },
+  {
    "date": "2026-11-15",
    "id": "1139689",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "The Halloween Show"
   }
  ],
- "fetchedAt": "2026-11-22"
+ "fetchedAt": "2026-11-23"
 }

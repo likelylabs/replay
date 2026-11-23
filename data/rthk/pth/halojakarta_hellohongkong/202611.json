@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-22",
+   "id": "1141247",
+   "parts": [
+    "足本 Full (HKT 09:30 - 10:00)"
+   ],
+   "title": "Halo Jakarta! Hello Hong Kong!"
+  },
+  {
    "date": "2026-11-15",
    "id": "1139720",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Halo Jakarta! Hello Hong Kong! Ep139： 在港印尼傭工Semiati - 我們也捐血，因這是生命的饋贈"
   }
  ],
- "fetchedAt": "2026-11-22"
+ "fetchedAt": "2026-11-23"
 }

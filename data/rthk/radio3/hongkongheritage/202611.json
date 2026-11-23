@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-22",
+   "id": "1141219",
+   "parts": [
+    "足本 Full (HKT 18:15 - 18:50)"
+   ],
+   "title": "Hong Kong Heritage"
+  },
+  {
    "date": "2026-11-21",
    "id": "1141069",
    "parts": [
@@ -54,5 +62,5 @@
    "title": "Hong Kong Heritage (repeat) – Haider Kikabhoy & Colin Aitchison"
   }
  ],
- "fetchedAt": "2026-11-22"
+ "fetchedAt": "2026-11-23"
 }

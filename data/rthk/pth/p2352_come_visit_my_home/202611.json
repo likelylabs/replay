@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-22",
+   "id": "1127294",
+   "parts": [
+    "足本 Full (HKT 20:05 - 21:00)"
+   ],
+   "title": "Episode 8: Borobudur – The Largest Buddhist Temple in the World"
+  },
+  {
    "date": "2026-11-15",
    "id": "1127293",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Episode 5: Gunung Mulu National Park – A UNESCO Heritage Rainforest"
   }
  ],
- "fetchedAt": "2026-11-22"
+ "fetchedAt": "2026-11-23"
 }
