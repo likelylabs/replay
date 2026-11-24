@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-23",
+   "id": "1141359",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Savvy Earth Savers - Estelle Davies, Living Oceans Education"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140838",
    "parts": [
@@ -121,5 +129,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-11-23",
+   "id": "1141353",
+   "parts": [
+    "足本 Full (HKT 12:05 - 14:00)",
+    "第一部份 Part 1 (HKT 12:05 - 13:00)",
+    "第二部份 Part 2 (HKT 13:15 - 14:00)",
+    "Robbie McRobbie @ Kai Tak",
+    "Tim Huxley - Macau GP and F1",
+    "Neil Runcieman live from Vietnam"
+   ],
+   "title": "Robbie McRobbie @ Kai Tak / Tim Huxley - Macau GP and F1 / Neil Runcieman live from Vietnam"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140832",
    "parts": [
@@ -19,7 +32,7 @@
     "足本 Full (HKT 12:05 - 14:00)",
     "第一部份 Part 1 (HKT 12:05 - 13:00)",
     "第二部份 Part 2 (HKT 13:15 - 14:00)",
-    "'Brewed in HK' with Mark Rawson - The Big Picnic (Segement starts with our first two tracks)"
+    "'Brewed in HK' with Mark Rawson - The Big Picnic (Segment starts with our first two tracks)"
    ],
    "title": "'Brewed in HK' with Mark Rawson - The Big Picnic"
   },
@@ -185,5 +198,5 @@
    "title": "Robbie McRobbie - Live from the Kai Tak Sports Park / Neil Runcieman - Vietnam report"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

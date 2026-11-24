@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-23",
+   "id": "1141356",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Startup Spotlight - Jason Dehni",
+    "How to Minimize Audit Costs for SMEs - Andrew Barclay"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140835",
    "parts": [
@@ -167,5 +178,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

@@ -1,14 +1,52 @@
 {
  "episodes": [
   {
+   "date": "2026-11-24",
+   "id": "1141561",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Jensen Huang reinstated as Nvidia CEO",
+    "Govt task force 'dismantles bid-rigging syndicate'",
+    "Upcoming Interpol event 'a vote of confidence in HK'",
+    "All drones, choppers to be grounded for Interpol meet",
+    "Chan Kin-por to take over reins at Hospital Authority",
+    "'Approval for major maintenance to take longer'",
+    "DAB party praises successful elections",
+    "Hong Kong to help build world-class bay area: CE",
+    "CE sees youth silver lining in WorldSkills showing",
+    "China unveils plan for elderly and young services",
+    "'RMB primed to be internationally attractive currency'",
+    "Deloitte expects HK$20.8b surplus for fiscal year",
+    "Fans debate choice of Pattinson as new Bond",
+    "Nvidia shares soar after Huang is reinstated",
+    "Zelenskyy confirms strike on Russian ship in Libya",
+    "UK police investigate 'unknown substance' at concert"
+   ],
+   "title": "Tuesday"
+  },
+  {
    "date": "2026-11-23",
    "id": "1141349",
    "parts": [
     "足本 Full (HKT 06:30 - 08:00)",
     "第一部份 Part 1 (HKT 06:30 - 07:00)",
-    "第二部份 Part 2 (HKT 07:00 - 08:00)"
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "CE congratulates winners of 'smooth' EC election",
+    "Voters praise atmosphere of EC election",
+    "Man arrested after fatal TST traffic accident",
+    "HK-Chile working-holiday scheme to start next year",
+    "'Apec must deepen GBA mutual understanding'",
+    "HK to contribute to global bay area cooperation: FS",
+    "Justice Without Borders benefits from Operation Santa Claus",
+    "HK's EV battery recycling levy fair, expert says",
+    "China calls on US to revoke phone number restrictions",
+    "Cruise industry sails into new era with vessel's debut",
+    "COP31 talks collapse over fossil fuel dispute",
+    "Nightmare start for Pochettino at United"
    ],
-   "title": "Hong Kong Today"
+   "title": "Monday"
   },
   {
    "date": "2026-11-20",
@@ -388,5 +426,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

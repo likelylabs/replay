@@ -1,6 +1,27 @@
 {
  "episodes": [
   {
+   "date": "2026-11-24",
+   "id": "1140899",
+   "parts": [
+    "足本 Full (HKT 08:05 - 10:00)",
+    "第一部份 Part 1 (HKT 08:05 - 09:00)",
+    "第二部份 Part 2 (HKT 09:05 - 10:00)"
+   ],
+   "title": "First Notes 由聆開始"
+  },
+  {
+   "date": "2026-11-23",
+   "id": "1141363",
+   "parts": [
+    "足本 Full (HKT 08:05 - 10:00)",
+    "第一部份 Part 1 (HKT 08:05 - 09:00)",
+    "第二部份 Part 2 (HKT 09:05 - 10:00)",
+    "Today's Playlist: Stretching"
+   ],
+   "title": "First Notes 由聆開始 / Today's Playlist: Stretching"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140842",
    "parts": [
@@ -159,5 +180,5 @@
    "title": "First Notes 由聆開始 / Today's Playlist: Late Autumn"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

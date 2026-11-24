@@ -1,6 +1,18 @@
 {
  "episodes": [
   {
+   "date": "2026-11-23",
+   "id": "1141351",
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Hong Kong to host 94th INTERPOL General Assembly",
+    "South Korea's struggling drama industry",
+    "Robert Pattinson becomes new James Bond",
+    "Think tank's proposal to strengthen HK's maritime services"
+   ],
+   "title": "Hong Kong to host 94th INTERPOL General Assembly / South Korea's struggling drama industry / Robert Pattinson becomes new James Bond / Think tank's proposal to strengthen HK's maritime services"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140830",
    "parts": [
@@ -174,5 +186,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }

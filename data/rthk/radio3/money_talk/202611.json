@@ -1,6 +1,28 @@
 {
  "episodes": [
   {
+   "date": "2026-11-24",
+   "id": "1141562",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View on Frontier Markets"
+   ],
+   "title": "Money Talk"
+  },
+  {
+   "date": "2026-11-23",
+   "id": "1141350",
+   "parts": [
+    "足本 Full (HKT 08:03 - 09:00)",
+    "Business and Market Discussion",
+    "Your Money",
+    "View on Portfolio Resilience"
+   ],
+   "title": "Money Talk"
+  },
+  {
    "date": "2026-11-20",
    "id": "1140829",
    "parts": [
@@ -166,5 +188,5 @@
    "title": "Money Talk"
   }
  ],
- "fetchedAt": "2026-11-23"
+ "fetchedAt": "2026-11-24"
 }
