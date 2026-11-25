@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-24",
+   "id": "1141568",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "The Ins & Outs of HALO Trade - William Kung",
+    "Business of Media & Entertainment - Paul Robinson"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-23",
    "id": "1141356",
    "parts": [
@@ -178,5 +189,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-24"
+ "fetchedAt": "2026-11-25"
 }

@@ -6,7 +6,7 @@
  "budget": 2500,
  "enumerated": 429,
  "failures": 0,
- "finishedAt": "2026-11-24T12:43:22+08:00",
+ "finishedAt": "2026-11-25T11:27:07+08:00",
  "logo_checked": 0,
  "logo_deferred": 0,
  "logo_probes": 0,
@@ -14,9 +14,9 @@
  "logo_upgraded": 252,
  "meta_refreshed": 0,
  "metro": {
-  "104": "2026-08-01..2026-11-24",
-  "1044": "2026-08-01..2026-11-24",
-  "997": "2026-08-01..2026-11-24"
+  "104": "2026-08-01..2026-11-25",
+  "1044": "2026-08-01..2026-11-25",
+  "997": "2026-08-01..2026-11-25"
  },
  "metro_segment_sec": {
   "104": 1791.1,
@@ -27,14 +27,14 @@
  "months_fetched": 858,
  "months_pruned": 0,
  "playable_failures": 0,
- "playable_probes": 92,
+ "playable_probes": 88,
  "programmes_known": 429,
- "requests": 1272,
- "seconds": 1365,
+ "requests": 1274,
+ "seconds": 1303,
  "sitemap_programmes": 295,
  "spot_checks": 12,
- "spot_misses": 0,
- "startedAt": "2026-11-24T12:20:37+08:00",
+ "spot_misses": 1,
+ "startedAt": "2026-11-25T11:05:25+08:00",
  "unplayable_programmes": [
   "radio5/hktoday"
  ],

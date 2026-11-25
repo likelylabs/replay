@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-24",
+   "id": "1141571",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Special Open Space - Speak to Peak English Public Speaking Circle"
+  },
+  {
    "date": "2026-11-23",
    "id": "1141359",
    "parts": [
@@ -129,5 +137,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-24"
+ "fetchedAt": "2026-11-25"
 }
