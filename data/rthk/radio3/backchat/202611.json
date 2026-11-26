@@ -1,12 +1,21 @@
 {
  "episodes": [
   {
+   "date": "2026-11-26",
+   "id": "1142054",
+   "title": "Backchat"
+  },
+  {
    "date": "2026-11-25",
    "id": "1141838",
    "parts": [
-    "足本 Full (HKT 09:05 - 10:00)"
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Hong Kong-Chile working holiday scheme",
+    "Graduate Employment Launch",
+    "HKU completes Asia’s first histotripsy treatment",
+    "Isolated indigenous group's rare appearance in Brazil"
    ],
-   "title": "Backchat"
+   "title": "Hong Kong-Chile working holiday scheme / Graduate Employment Launch / HKU completes Asia’s first histotripsy treatment / Isolated indigenous group's rare appearance in Brazil"
   },
   {
    "date": "2026-11-24",
@@ -205,5 +214,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-25"
+ "fetchedAt": "2026-11-26"
 }

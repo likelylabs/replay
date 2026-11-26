@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-25",
+   "id": "1141846",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Power Up Your English 4.0 - \"Take it with a pinch of salt\""
+  },
+  {
    "date": "2026-11-24",
    "id": "1141571",
    "parts": [
@@ -137,5 +145,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-25"
+ "fetchedAt": "2026-11-26"
 }
