@@ -1,9 +1,21 @@
 {
  "episodes": [
   {
+   "date": "2026-11-27",
+   "id": "1142268",
+   "title": "Backchat"
+  },
+  {
    "date": "2026-11-26",
    "id": "1142054",
-   "title": "Backchat"
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Building maintenance reforms",
+    "Asian Mathematical Union launched in Hong Kong",
+    "Protecting.Health Hong Kong Study",
+    "New water sports centre in Kai Tak"
+   ],
+   "title": "Building maintenance reforms / Asian Mathematical Union launched in Hong Kong / Protecting.Health Hong Kong Study / New water sports centre in Kai Tak"
   },
   {
    "date": "2026-11-25",
@@ -214,5 +226,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-26"
+ "fetchedAt": "2026-11-27"
 }

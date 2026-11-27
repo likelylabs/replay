@@ -1,6 +1,31 @@
 {
  "episodes": [
   {
+   "date": "2026-11-27",
+   "id": "1142266",
+   "parts": [
+    "足本 Full (HKT 06:30 - 08:00)",
+    "第一部份 Part 1 (HKT 06:30 - 07:00)",
+    "第二部份 Part 2 (HKT 07:00 - 08:00)",
+    "Govt pledges continued support for Wang Fuk residents",
+    "Stricter controls will deter unethical practices",
+    "Private home prices ease while rents go up",
+    "Odds 'favour car owners who passed ride-hailing tests'",
+    "Ex-lawmaker William Wong sentenced over CUHK crash",
+    "Universities and body launch MentAI Bot platform",
+    "New water sports facility aims to attract newcomers",
+    "Light rail, Tuen Ma Line disruptions hit MTR",
+    "US trading partners express dismay at tariffs",
+    "UN expects zero growth in maritime trade this year",
+    "US gives SpaceX green light for one million satellites",
+    "Bad weather disrupts US Thanksgiving festivities",
+    "Two Italians killed in drone attack in Kuwait",
+    "Israel centrist party makes deal with left-wing ally",
+    "WHO says meningitis on the rise in Gaza"
+   ],
+   "title": "Friday"
+  },
+  {
    "date": "2026-11-26",
    "id": "1142052",
    "parts": [
@@ -477,5 +502,5 @@
    "title": "Monday"
   }
  ],
- "fetchedAt": "2026-11-26"
+ "fetchedAt": "2026-11-27"
 }

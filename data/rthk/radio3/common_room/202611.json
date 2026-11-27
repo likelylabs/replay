@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-26",
+   "id": "1142062",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "Special Open Space - SOW Readathon"
+  },
+  {
    "date": "2026-11-25",
    "id": "1141846",
    "parts": [
@@ -145,5 +153,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-26"
+ "fetchedAt": "2026-11-27"
 }
