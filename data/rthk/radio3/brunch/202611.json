@@ -1,6 +1,19 @@
 {
  "episodes": [
   {
+   "date": "2026-11-27",
+   "id": "1142269",
+   "parts": [
+    "足本 Full (HKT 10:05 - 12:00)",
+    "第一部份 Part 1 (HKT 10:05 - 11:00)",
+    "第二部份 Part 2 (HKT 11:05 - 12:00)",
+    "Operation Santa Claus feature: Vivian Seo and Harinder Singh from Foundation for Shared Impact",
+    "Aurianne Ricquier - Redress Hong Kong",
+    "Dr Czarina Leung - Be Priceless founder"
+   ],
+   "title": "Operation Santa Claus feature - Foundation for Shared Impact / Aurianne Ricquier - Redress Hong Kong / Dr Czarina Leung - Be Priceless founder/ Sandy Chang - hypnotherapist / Tont Bruno - Weez Project"
+  },
+  {
    "date": "2026-11-26",
    "id": "1142055",
    "parts": [
@@ -226,5 +239,5 @@
    "title": "Carlos Escueta - weekend sports round-up / Eoin Kearns - International Uilleann Piping Day / Raphael Blet - The Bright Side"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

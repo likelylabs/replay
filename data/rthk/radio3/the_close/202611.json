@@ -1,6 +1,17 @@
 {
  "episodes": [
   {
+   "date": "2026-11-27",
+   "id": "1142273",
+   "parts": [
+    "足本 Full (HKT 17:05 - 18:00)",
+    "Business and Market Discussion",
+    "Trends in Consumer Credit - Weihan Sun",
+    "SME World Series - Andrew Cox"
+   ],
+   "title": "The Close"
+  },
+  {
    "date": "2026-11-25",
    "id": "1141843",
    "parts": [
@@ -200,5 +211,5 @@
    "title": "The Close"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

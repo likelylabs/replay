@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-28",
+   "id": "1142489",
+   "parts": [
+    "足本 Full (HKT 08:30 - 09:00)"
+   ],
+   "title": "Trending China"
+  },
+  {
    "date": "2026-11-21",
    "id": "1140940",
    "parts": [
@@ -25,5 +33,5 @@
    "title": "Singles' Day and the evolution of online shopping"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

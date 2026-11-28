@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-28",
+   "id": "1142500",
+   "parts": [
+    "第一部份 Part 1 (HKT 08:05 - 09:00)"
+   ],
+   "title": "Saturday Morning on 4 週六早晨"
+  },
+  {
    "date": "2026-11-21",
    "id": "1141080",
    "parts": [
@@ -31,5 +39,5 @@
    "title": "Saturday Morning on 4 週六早晨"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

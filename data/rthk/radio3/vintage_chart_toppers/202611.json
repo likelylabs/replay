@@ -1,6 +1,11 @@
 {
  "episodes": [
   {
+   "date": "2026-11-28",
+   "id": "1142527",
+   "title": "Truckin!"
+  },
+  {
    "date": "2026-11-22",
    "id": "1140872",
    "parts": [
@@ -33,5 +38,5 @@
    "title": "The Halloween Show"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

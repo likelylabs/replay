@@ -1,6 +1,14 @@
 {
  "episodes": [
   {
+   "date": "2026-11-27",
+   "id": "1142276",
+   "parts": [
+    "足本 Full (HKT 21:05 - 22:00)"
+   ],
+   "title": "SportsFix - Wallball World Championship"
+  },
+  {
    "date": "2026-11-26",
    "id": "1142062",
    "parts": [
@@ -153,5 +161,5 @@
    "title": "Savvy Earth Savers - Matey Yordanov"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }

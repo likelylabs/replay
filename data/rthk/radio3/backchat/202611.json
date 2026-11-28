@@ -3,7 +3,14 @@
   {
    "date": "2026-11-27",
    "id": "1142268",
-   "title": "Backchat"
+   "parts": [
+    "足本 Full (HKT 09:05 - 10:00)",
+    "Shenzhou-24 mission",
+    "Electricity tariff hikes",
+    "UK-EU post-Brexit \"reset\" treaty",
+    "HKU's 'dose-of-nature' benchmarks for mental health"
+   ],
+   "title": "Shenzhou-24 mission / Electricity tariff hikes / UK-EU post-Brexit \"reset\" treaty / HKU's 'dose-of-nature' benchmarks for mental health"
   },
   {
    "date": "2026-11-26",
@@ -226,5 +233,5 @@
    "title": "Wang Fuk Court fire report / The fifth plenary session of the 20th Central Committee of the Communist Party of China / Being Human Festival"
   }
  ],
- "fetchedAt": "2026-11-27"
+ "fetchedAt": "2026-11-28"
 }
